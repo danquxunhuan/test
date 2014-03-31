@@ -272,9 +272,16 @@
             $this->assign("QRcodeUrl", $QRCodeUrl);
         }
     }		  
-   }
-   
-   
- 
 
+   
+/*
+*投稿——验证码（wyj）
+*/
+Public function verify(){
+	 import('ORG.Util.Image');
+	 Image::buildImageVerify(4,5,'png',60,26);
+	 //Image::GBVerify();
+}
+
+   }
 ?>

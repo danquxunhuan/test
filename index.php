@@ -6,14 +6,15 @@
  //开启调试模式
  define('APP_DEBUG', true);
  
- define("MS_PATH",'/Conf/');
+ define("MS_ROOT",dirname(__FILE__));
+ define("MS_PATH",'./Conf/');
  
 //把css和img图片路径定义为常量，以便使用
 //公共图片
-define('HOME_IMG','/Public/images/'); 
+define('HOME_IMG',  __ROOT__.'/Public/images/'); 
 //建议反馈图片上传文件
-define('UPLOADS','/Uploads/'); 
-define('SUGPIC','/Uploads/suggest/'); 
+define('UPLOADS', __ROOT__.'/Uploads/'); 
+define('SUGPIC', __ROOT__.'/Uploads/suggest/'); 
  
  require './ThinkPHP/ThinkPHP.php';
  

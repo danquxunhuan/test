@@ -4,3 +4,9 @@ ERR: 非法操作:public
 [ 2014-03-31T13:56:40+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
 ERR: 非法操作:statics
 
+[ 2014-03-31T14:19:54+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-31T14:19:54+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
