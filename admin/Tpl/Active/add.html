@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加/编辑活动</title>
+<link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<!--时间插件开始-->
+<link href="__PUBLIC__/css/bootstrap/bootstrap.css" rel="stylesheet" media="screen">
+<link href="__PUBLIC__/css/bootstrap/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+<script src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
+<script src="__PUBLIC__/js/jquery.form.js"></script>
+<!--时间插件结束-->
+</head>
+
+<body>
+
+<include file="Common:header" />
+<!--***************************content--left---right******************************-->   
+             <div class="wapper">
+                <include file="Common:left" />
+                <div id="Right"  class="right">
+                    <div class="tab1">
+                        <div class="current">添加/编辑活动</div>
+                    </div>
+                    <form>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
+                            <tr>
+                                <th width="100">活动名称：</th>
+                                <td><input id="title" type="text" class="input" size="60" name="active_name" value="{ms:$info.active_name}" /> <!--a href="javascript:void(0)" id="checkArticleTitle">检测是否重复</a--></td>
+                            </tr>
+
+                            <tr>
+                                <th width="100">活动状态：</th>
+<td><label><input style="display:inline" type="radio" name="status" value="0" <if condition="$info.status eq 0"> checked="checked"</if> />未审核</label> &nbsp;<label><input style="display:inline" type="radio" name="status" value="1" <if condition="$info.status eq 1"> checked="checked"</if> />通过审核</label> </td>
+                            </tr>
+
+							    <tr>
+                                <th width="100">主办单位：</th>
+                                <td><label><input type="text" class="input" name="sponsor" value="{ms:$info.sponsor}" /> </label>
+									 </td>
+                            </tr>
+                             <tr>
+                                <th width="100">重要嘉宾：</th>
+                                <td><label><input type="text" class="input" name="superman" value="{ms:$info.superman}" /> </label>
+									 </td>
+                            </tr>
+                            <tr>
+                                <th>活动地点：</th>
+                                <td><input type="text" class="input" size="60" name="area" value="{ms:$info.area}"/></td>
+                            </tr>
+                            <tr>
+                                <th>活动链接：</th>
+                                <td><input type="text" class="input" size="60" name="link" value="{ms:$info.link}"/>&nbsp;注意：请以http://开头。</td>
+                            </tr>
+				
+							    <tr>
+                                <th>开始时间：</th>
+                                <td><!--input type="text" class="input date" size="30" name="start_time" id="start_time" value="{ms:$info.start_time}"/>
+								        <script language="javascript" type="text/javascript">
+                                            Calendar.setup({
+                                            inputField     :    "start_time",
+                                            ifFormat       :    "%Y-%m-%d",
+                                            showsTime      :    'true',
+                                            timeFormat     :    "24"
+                                            });
+                                          </script-->
+<input id="from_datetime" name="start_time" type="text" class="input date" value="{ms:$info.start_time}" data-date-format="yyyy-mm-dd hh:ii" data-date="<?php echo date('Y-m-d',time());?>T14:25:07Z" />
+									</td>
+                            </tr> 
+							    <tr>
+                                <th>结束时间：</th>
+                                <td><!--input type="text" class="input endDate" size="30" name="end_time" id="end_time" value="{ms:$info.end_time}"/>
+								        <script language="javascript" type="text/javascript">
+                                           Calendar.setup({
+                                           inputField     :    "end_time",
+                                           ifFormat       :    "%Y-%m-%d",
+                                           showsTime      :    'true',
+                                           timeFormat     :    "24"
+                                           });
+                                         </script-->
+<input id="to_datetime" name="end_time" type="text" class="input endDate" value="{ms:$info.end_time}" data-date-format="yyyy-mm-dd hh:ii" data-date="<?php echo date('Y-m-d',time());?>T14:25:07Z" />
+								    </td>
+                            </tr>
+                            <tr>
+                                <th>活动介绍：</th>
+                                <td><textarea class="input" cols="80" rows="10" id="introduce" name="introduce">{ms:$info.introduce}</textarea></td>
+                            </tr>
+
+                        </table>
+                        <input type="hidden" name="id" value="{ms:$info.id}" />
+                        <input type="hidden" name="year" value="<php> echo date('Y',strtotime($info['start_time']));</php>" />
+                        <input type="hidden" name="month" value="<php> echo date('m',strtotime($info['start_time']));</php>" />
+                        <input type="hidden" name="day" value="<php> echo date('d',strtotime($info['start_time']));</php>" />
+                        
+                    </form>
+                    <div class="commonBtnArea" >
+                        <button class="btn submit">提交</button>
+                    </div>
+            </div>
+			 </div>
+        <div class="clear"></div>
+        <script type="text/javascript">
+                $("#checkArticleTitle").click(function(){
+                    $.getJSON("__URL__/checkArticleTitle", { title:$("#title").val(),aid:"{ms:$info.id}"}, function(json){
+                        $("#checkArticleTitle").css("color",json.status==1?"#0f0":"#f00").html(json.info);
+                    });
+                });
+		  $(".submit").click(function(){
+            <if condition="ACTION_NAME neq 'edit'">
+            if($.trim($("input[name='active_name']").val())==''){
+            popup.alert("活动名称不能为空");
+            return false;
+            }
+             if($.trim($("input[name='sponsor']").val())==''){
+            popup.alert("主办方不能为空");
+            return false;
+            }
+			 if($.trim($("input[name='area']").val())==''){
+            popup.alert("地点不能为空");
+            return false;
+            }
+			if($.trim($("input[name='start_time']").val())==''){
+            popup.alert("开始时间不能为空");
+            return false;
+            }
+			if($.trim($("input[name='end_time']").val())==''){
+            popup.alert("结束时间不能为空");
+            return false;
+            }
+			if($.trim($("#introduce").val())==''){
+            popup.alert("请填写活动介绍");
+            return false;
+            }
+            </if>
+            commonAjaxSubmit();
+       });
+        </script>
+<!--时间插件开始-->
+<script type="text/javascript" src="__PUBLIC__/jquery/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="__PUBLIC__/jquery/bootstrap/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="__PUBLIC__/jquery/bootstrap/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('#from_datetime').datetimepicker({
+        language:  'zh-CN',
+        format: 'yyyy-mm-dd hh:ii',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1,
+		initialDate:2013-12-23
+        //pickerPosition: "bottom-left"
+    });
+    $('#to_datetime').datetimepicker({
+        language:  'zh-CN',
+        format: 'yyyy-mm-dd hh:ii',
+        weekStart: 1,
+        todayBtn:  0,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1,
+        //pickerPosition: "bottom-left"
+    });
+</script>
+ </body>
+</html>

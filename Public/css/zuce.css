@@ -1,0 +1,36 @@
+/* CSS Document */
+
+.xinzc_dl{margin-top:11px;height:29px;}
+.xinzc_dl dt{float:left;height:27px;line-height:27px;color:#656464;width:76px}
+.xinzc_dl dt.letter{letter-spacing:4px;}
+.xinzc_dl dt.letter1{letter-spacing:12px;}
+/*-下拉列表-*/
+.dd_posi,.dz_bei3{display:none}
+.dd_posi,.dd_posi1,.dd_posi3{position:relative}
+.dz_bei,.dz_bei3{position:absolute;left:0;top:29px;z-index:100;background:#fff;border:1px solid #dad8d8;border-bottom:0;border-top:0px;}
+.dz_bei li a{display:inline-block;width:65px;height:27px;padding-left:8px;line-height:27px;border-bottom:1px solid #dad8d8}
+.dz_bei li a:hover,.dz_bei1 li a:hover,.dz_bei2 li a:hover,.dz_bei3 li a:hover{background:#eee}
+.dz_bei1{position:absolute;left:0;top:29px;top:30px\9;z-index:100;background:#fff;border:1px solid #dad8d8;border-bottom:0;border-top:0px;}
+.dz_bei1 li a,.dz_bei2 li a{display:inline-block;width:119px;height:27px;padding-left:8px;line-height:27px;border-bottom:1px solid #dad8d8}
+.dz_bei2{position:absolute;left:137px;top:29px;top:30px\9;z-index:100;background:#fff;border:1px solid #dad8d8;border-bottom:0;border-top:0px;}
+.dz_bei1,.dz_bei2{display:none;}
+.dz_bei3 li a{display:inline-block;width:90px;height:27px;padding-left:8px;line-height:27px;border-bottom:1px solid #dad8d8}
+/*--*/
+.xinzc_div{width:264px;height:27px;border:1px solid #DBD9D9;background:#fff;}
+.xinzc_div .xinzc_input{display:inline-block;height:25px;line-height:25px;width:130px;float:left;padding-left:8px;}
+.xinzc_div i{float:right;color:red;text-align:right;padding-right:8px;margin-top:3px;display:inline-block;width:110px;}
+.xinzc_div178{width:179px}
+.xinzc_div178 i,.xinzc_div1 i{width:auto;font-weight:600;font-size:14px;line-height:18px;}
+.xinzc_dl .zc_input73{width:172px;}
+.xinzc_dl input.zc_bj{background:url(../images/input_bj.gif) no-repeat;border:0;height:29px;width:258px;cursor:pointer;color:#BBBBBB;padding-left:8px;}
+.xinzc_dl input.zc_bjdd{background:url(../images/zc_dd.gif) no-repeat;border:0;height:29px;width:121px;margin-right:8px;cursor:pointer;color:#BBBBBB;padding-left:8px;}
+.xinzc_dl dd{float:left}
+.zc_yz a{color:#799F04;padding:0 6px;display:inline-block;height:29px;line-height:29px;margin-left:12px;background:#DFDDDD}
+.xinzc_dl input.zc_cs{height:29px;width:67px;background:url(../images/in_bj.gif) no-repeat;border:0;margin-right:8px;cursor:pointer;padding-left:8px;}
+.xinzc_dl input.zc_css{width:92px;background:url(../images/zc_bjj.gif) no-repeat;margin-right:0;}
+.zc_check{margin:8px 0 0 76px;height:38px;line-height:34px;}
+.zc_check input{margin-top:11px;*margin-top:8px;margin-right:8px;}
+.zc_check a.zc_colo{color:#799F04}
+.zc_login{margin:14px 0 0 76px;}
+.zc_login a{width:98px;height:32px;color:#fff;font-weight:600;display:inline-block;background:#8E8E8C;line-height:32px;text-align:center;border:1px solid #858583;margin-right:10px;}
+.zc_login a:hover,.zc_login a.zc_mr{background:#7AA004;border:1px solid #739705}

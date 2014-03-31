@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dp XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/Dp/xhtml1-transitional.dp">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>活动日历列表页</title>
+<link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+</head>
+<body>
+<div class="box">
+	<include file="Common:header" />
+<!--***************************content--left---right******************************-->   
+	<div class="wapper">
+        <include file="Common:left" />
+        <div id="Right"  class="right">
+            <div class="tab1">
+                <div class="current">活动列表---<a href="__URL__/add">添加活动</a></div>
+            </div>
+            
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
+<tr>
+    <th>活动主题</th>
+    <th>主办单位</th>
+    <th>活动地点</th>
+    <th>活动链接</th>
+    <th>开始时间</th>
+    <th width="50">活动状态</th>
+    <th width="85">操作</th>
+</tr>
+<!--活动列表-->
+<volist name="list" id="vo">
+    <tr align="center" id="{ms:$vo.id}">
+        <td align="left">{ms:$vo.active_name}</td>
+        <td>{ms:$vo.sponsor}</td>
+        <td>{ms:$vo.area}</td>
+        <td><a href="{ms:$vo.link}" target="_blank">点击查看</a></td>
+        <td>{ms:$vo.start_time}</td>
+        <td>{ms:$vo.statusTxt}</td>
+        <td>[ <a href="__URL__/edit?id={ms:$vo.id}">编辑</a> ] [ <a link="__URL__/del/id/{ms:$vo.id}" href="javascript:void(0)" name="{ms:$vo.active_name}" class="del">删除</a> ]</td>
+    </tr>
+</volist>
+            </table>
+            
+            <div class="result page">{ms:$page}</div>
+            
+        </div>
+	</div>             
+	<div class="clear"></div>
+    <include file="Common:foot" />
+    <script type="text/javascript">
+        $(function(){
+            $(".del").click(function(){
+                var delLink=$(this).attr("link");
+                popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){
+                    if(action == 'ok'){
+                        top.window.location.href=delLink;
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+</div>
+</body>
+</html>

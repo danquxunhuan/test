@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+/*-----------------------------------header----------------------------------*/
+.top{background:url(../images/green.png) repeat-x;margin-bottom:30px;}
+.logo{width:1000px;margin:0 auto;}
+.logo_l{width:125px;height:80px;}
+.logo_r{height:40px;line-height:40px;color:#fff;padding-left:10px;}
+.lo_r{width:150px;width:160px\9;margin-right:14px;height:80px;}
+.bn{height:40px;line-height:40px;color:#fff}
+.lo_r .togao a{padding:0 10px;display:inline-block;height:40px;line-height:40px;color:#fff;float:left}
+.lo_r .togao a.a_nopad{padding:0;}
+.lo_a{background:#FB1508}
+.togao{text-align:right;height:40px;margin-left:-10px;}
+.togao a:hover{background:#f95950}
+.kefu{font-size:14px;width:160px;font-weight:600;height:40px;line-height:40px;color:#565656;text-align:right;position:relative}
+.kefu a{_margin-top:10px;zoom:1;}
+.kefu a:hover span{color:#7f7f7f;}
+.kefu a:hover i.kefu_pp{background:url(../images/phon2.png) no-repeat;}
+.kefu_dian a span,.kefu_dian a:hover span{color:#fa1508}{color:#fa1508}
+i.kefu_pp{display:inline-block;vertical-align:-9px;vertical-align:-7px\9;margin-right:5px;width:20px;height:21px;background:url(../images/phon1.png) no-repeat;}
+.kefu_dian a:hover i.kefu_pp{background:url(../images/phon1.png) no-repeat}
+.kefy_posi{position:absolute;left:16px;_left:30px;top:40px;}
+.togao a.to_bj:hover{background:#464545}
+div.phone_none{font-size:12px;line-height:20px;font-weight:100;color:#666666;text-align:center;width:138px;padding:7px 10px;background:#fff;border-radius:3px;border:1px solid e8e8e8;box-shadow:0px 1px 2px #e8e8e8;position:relative}
+div.phone_none i{display:inline-block;width:17px;height:10px;background:url(../images/sss.png) no-repeat;position:absolute;left:70px;top:-10px;}
+/*--------------------------------bottom------------------------------*/
+.bottom{height:40px;line-height:40px;background:#2D2D2D;text-align:center;margin-top:30px;}
+.bottom a{color:#B5B5B5}
+.bottom span{color:#626262;margin:0 14px;}
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>教学方案详情</title>
+<link rel="stylesheet" href="{ms:$MS_PUB_PATH}/css/style.css" type="text/css" />
+<link rel="stylesheet" href="{ms:$MS_PUB_PATH}/css/mstang.css" type="text/css" />
+<if condition ="$userDataInfo.style neq ''">
+<link rel="stylesheet" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
+<else/>
+<link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" />
+</if>
+<link rel="stylesheet"href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<link rel="stylesheet"href="__PUBLIC__/css/tanchu.css" type="text/css" />
+<load href="../Public/Js/Jquery/jquery.min.js" />
+<load href="../Public/Js/Jquery/jquery.form.js" />
+<style type="text/css">
+#tipa,#tipb,#tipc,#tipd{position:absolute;width:400px;height:100px;padding:20px;background:#fff;border:8px solid #ccc;left:32%;z-index:99;display:none;}
+.followMe{position: fixed;bottom: 0px;z-index:199;width:640px;border-left:0px;background:#F5F6F7;margin:auto 0px;height:30px;margin-top:0px;margin-right:-8px;}
+</style>
+<script language="javascript" src="__PUBLIC__/js/common.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/iepng.js"></script>
+<script language="javascript" src="__PUBLIC__/js/autoresize.js"></script>
+<script language="javascript" src="__PUBLIC__/js/ms_review.js"></script>
+<script language="javascript">
+function imgdragstart(){return false;}
+</script>
+
+</head>
+
+<body>
+<script language="javascript">
+for(i in document.images)document.images[i].ondragstart=imgdragstart;
+</script>
+
+<div class="box">
+<!--***************************top******************************-->
+<include file="Public:header_a" />  
+<!--***************************content******************************-->
+    <div class="content fix">
+        <div class="wz_content bk fix">
+        	<div class="wz_left fl">
+                <div class="wz_title wz_title_te"><a>教学方案</a></div>
+                <div class="wz_time xq_mt">
+                	<div class="a_a fr">
+		                 <a href="javascript:void(0)"  id="font_small" onclick="SetFont(14)">A-</a>
+				       <a href="javascript:void(0)" class="xq_amo" id="font_big" onclick="SetFont(16)">A+</a></div>
+				       <!--a href="__APP__/member/info/uid/{ms:$uid}" class="su">{ms:$uname}</a-->
+				       <i class="wz_lr">{ms:$fangan.creat_time|date="Y-m-d",###}</i>
+		               </div>
+                <div class="xq_neirong xq_neiron" id="neirong_box">
+                	<p>{ms:$fangan.content}</p>
+                </div>
+
+        	</div>
+            <div class="wz_right fr">
+<!--这里老师，应当显示需求信息-->
+<if condition="$tid eq 2">
+<div class="xq_outher">
+        <div class="xq_outher_til">需求详情:</div>
+        <div class="fff bj_pad">
+            <ul class="xuqiu_div fix">
+                <li><i>孩子年级：</i>{ms:$className}</li>
+                <li><i>辅导科目：</i>{ms:$objName}</li>
+                <li><i>上课区域：</i>{ms:$province}—{ms:$city}—{ms:$area}</li>
+                <li><i>上课时间：</i>{ms:$yueke.yueke_time}</li>
+                <li><i>课酬预算：</i>{ms:$yueke.budget}元/时</li>
+                <li class="xuqiu"><i>家长描述：</i><span>{ms:$yueke.msg}</span></li>
+            </ul>
+        </div>
+    </div>
+<!--这里家长的话，应当显示方案设计者的信息-->
+<else />
+	<include file="Public:authorinfo" />
+</if> 
+            </div>
+        </div>
+    </div>
+<!--***************************bottom******************************-->    
+<include file="Public:footer" />
+</div>
+<include file="Public:login" />
+<script type="text/javascript">
+<!--
+	function add_favorite(title,aid) {
+		var aid = parseInt(aid);
+		//$.getJSON('__URL__/addFavorite/title/'+encodeURIComponent(title)+'/url/'+encodeURIComponent(location.href)+'/'+Math.random()+'/callback=?', function(data){
+			$.ajax({
+                            type: "GET",
+                            url: "__APP__/index/addFavorite",
+                            datatype : "json",
+                            data: "&title="+encodeURIComponent(title)+"&aid="+encodeURIComponent(aid)+"&url="+encodeURIComponent(location.href)+"&math="+Math.floor(Math.random()*1000+1),
+                            success: function(data){
+      
+			  if(data > 0)	{//收藏成功
+					$("#favorite").html(data);
+					$('.xq_a3').addClass("yizan3");//五角星变色
+			    } else if (data == 0){//收藏过了
+			    	$('.xq_a3').addClass("yizan3");//五角星变色
+			    	$('#tipa,#tipb,#tipd').css('display','none');
+			    	$('#tipc').css("top",$(document).scrollTop()+($(window).height())/2-50+"px");
+					$('#tipc').css('display','block');
+					setTimeout(outc, 3000);
+			   }else{//收藏失败
+					$('#tipa,#tipb,#tipc').css('display','none');
+					$('#tipd').css("top",$(document).scrollTop()+($(window).height())/2-50+"px");
+					$('#tipd').css('display','block');
+					setTimeout(outd, 3000);
+			   }
+			}
+		});
+	}
+	
+	
+ //-->
+</script>
+<script>						
+// 中文字符判断
+function getStrLength(str) { 
+    var len = str.length; 
+    var reLen = 0; 
+    for (var i = 0; i < len; i++) {        
+        if (str.charCodeAt(i) < 27 || str.charCodeAt(i) > 126) { 
+            // 全角    
+            reLen += 2; 
+        } else { 
+            reLen++; 
+        } 
+    } 
+    return reLen;    
+}	
+</script>
+</body>
+</html>
+ 

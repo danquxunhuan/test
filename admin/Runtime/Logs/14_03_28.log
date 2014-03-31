@@ -1,0 +1,929 @@
+[ 2014-03-28T09:34:34+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:35:07+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:35:14+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:36:59+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:36:59+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:37:10+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:37:10+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:37:31+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:37:31+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:37:52+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:37:52+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:38:51+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:38:51+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:39:22+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:39:22+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:39:59+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:40:05+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:40:52+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:41:12+08:00 ] 127.0.0.1 /test/admin.php/access/opRoleStatus?id=3&status=0
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.002814s ]
+SQL: SHOW COLUMNS FROM `ms_role` [ RunTime:0.003043s ]
+SQL: UPDATE `ms_role` SET `status`=1 WHERE ( `id` = 3 ) [ RunTime:0.001462s ]
+
+[ 2014-03-28T09:41:16+08:00 ] 127.0.0.1 /test/admin.php/access/opRoleStatus?id=4&status=0
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.002822s ]
+SQL: SHOW COLUMNS FROM `ms_role` [ RunTime:0.003010s ]
+SQL: UPDATE `ms_role` SET `status`=1 WHERE ( `id` = 4 ) [ RunTime:0.000665s ]
+
+[ 2014-03-28T09:41:19+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:41:24+08:00 ] 127.0.0.1 /test/admin.php/access/opRoleStatus?id=2&status=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.002734s ]
+SQL: SHOW COLUMNS FROM `ms_role` [ RunTime:0.002966s ]
+SQL: UPDATE `ms_role` SET `status`=0 WHERE ( `id` = 2 ) [ RunTime:0.000694s ]
+
+[ 2014-03-28T09:41:27+08:00 ] 127.0.0.1 /test/admin.php/access/opRoleStatus?id=3&status=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.002868s ]
+SQL: SHOW COLUMNS FROM `ms_role` [ RunTime:0.003007s ]
+SQL: UPDATE `ms_role` SET `status`=0 WHERE ( `id` = 3 ) [ RunTime:0.000723s ]
+
+[ 2014-03-28T09:41:29+08:00 ] 127.0.0.1 /test/admin.php/access/opRoleStatus?id=4&status=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.002822s ]
+SQL: SHOW COLUMNS FROM `ms_role` [ RunTime:0.003154s ]
+SQL: UPDATE `ms_role` SET `status`=0 WHERE ( `id` = 4 ) [ RunTime:0.000705s ]
+
+[ 2014-03-28T09:41:35+08:00 ] 127.0.0.1 /test/admin.php/access/opRoleStatus?id=2&status=0
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.002793s ]
+SQL: SHOW COLUMNS FROM `ms_role` [ RunTime:0.002999s ]
+SQL: UPDATE `ms_role` SET `status`=1 WHERE ( `id` = 2 ) [ RunTime:0.000702s ]
+
+[ 2014-03-28T09:41:42+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:42:28+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:43:13+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:43:15+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:49:05+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:49:05+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:49:21+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:49:21+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:49:55+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:53:34+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:53:40+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:53:47+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:58:10+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:58:20+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T09:58:24+08:00 ] 127.0.0.1 /test/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T09:58:49+08:00 ] 127.0.0.1 /test/admin.php/article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001975s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.003617s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Model\ArticleModel.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.002796s ]
+NOTIC: [8] Use of undefined constant cid - assumed 'cid' D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Model\ArticleModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ms_category` WHERE ( `pid` = 1 ) AND ( `name` = '小学语文' ) LIMIT 1   [ RunTime:0.000394s ]
+SQL: INSERT INTO `ms_category` (`pid`,`name`) VALUES (1,'小学语文') [ RunTime:0.000414s ]
+
+[ 2014-03-28T10:00:21+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:00:26+08:00 ] 127.0.0.1 /test/admin.php/access/opRoleStatus?id=2&status=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001827s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001934s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003200s ]
+SQL: SHOW COLUMNS FROM `ms_role` [ RunTime:0.003515s ]
+SQL: UPDATE `ms_role` SET `status`=0 WHERE ( `id` = 2 ) [ RunTime:0.001069s ]
+
+[ 2014-03-28T10:02:57+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:06:19+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:06:23+08:00 ] 127.0.0.1 /test/admin.php/access/opRoleStatus?id=2&status=0
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001944s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003125s ]
+SQL: SHOW COLUMNS FROM `ms_role` [ RunTime:0.003333s ]
+SQL: UPDATE `ms_role` SET `status`=1 WHERE ( `id` = 2 ) [ RunTime:0.000843s ]
+
+[ 2014-03-28T10:06:27+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:07:33+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:08:49+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T10:08:54+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:08:56+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T10:09:03+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T10:09:04+08:00 ] 127.0.0.1 /test/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:09:25+08:00 ] 127.0.0.1 /test/admin.php/article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001989s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.003610s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Model\ArticleModel.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.003018s ]
+NOTIC: [8] Use of undefined constant cid - assumed 'cid' D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Model\ArticleModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ms_category` WHERE ( `pid` = 5 ) AND ( `name` = '删除不了？' ) LIMIT 1   [ RunTime:0.000813s ]
+SQL: INSERT INTO `ms_category` (`pid`,`name`) VALUES (5,'删除不了？') [ RunTime:0.000274s ]
+
+[ 2014-03-28T10:09:28+08:00 ] 127.0.0.1 /test/admin.php/article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001935s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.003608s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Model\ArticleModel.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.002761s ]
+NOTIC: [8] Use of undefined constant cid - assumed 'cid' D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Model\ArticleModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ms_category` WHERE ( `pid` = 5 ) AND ( `name` = '删除不了？' ) LIMIT 1   [ RunTime:0.000793s ]
+
+[ 2014-03-28T10:09:34+08:00 ] 127.0.0.1 /test/admin.php/article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001928s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.003629s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Model\ArticleModel.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.002986s ]
+NOTIC: [8] Use of undefined constant cid - assumed 'cid' D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Model\ArticleModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ms_category` WHERE ( `pid` = 5 ) AND ( `name` = '删除不了？' ) LIMIT 1   [ RunTime:0.000784s ]
+
+[ 2014-03-28T10:10:24+08:00 ] 127.0.0.1 /test/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:10:24+08:00 ] 127.0.0.1 /test/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:10:32+08:00 ] 127.0.0.1 /test/admin.php/article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001228s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.003653s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Model\ArticleModel.class.php 第 18 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.002724s ]
+NOTIC: [8] Use of undefined constant cid - assumed 'cid' D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Model\ArticleModel.class.php 第 23 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ms_category` WHERE ( `pid` = 6 ) AND ( `name` = '我勒个去了' ) LIMIT 1   [ RunTime:0.000333s ]
+SQL: INSERT INTO `ms_category` (`pid`,`name`) VALUES (6,'我勒个去了') [ RunTime:0.000263s ]
+
+[ 2014-03-28T10:12:48+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:13:19+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:13:23+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:13:28+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:17:41+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:17:44+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:17:50+08:00 ] 127.0.0.1 /test/admin.php/access/opRoleStatus?id=2&status=0
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003178s ]
+SQL: SHOW COLUMNS FROM `ms_role` [ RunTime:0.003868s ]
+SQL: UPDATE `ms_role` SET `status`=1 WHERE ( `id` = 2 ) [ RunTime:0.000875s ]
+
+[ 2014-03-28T10:17:55+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:18:15+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:18:20+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:18:25+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:19:39+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:19:39+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:19:41+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:19:45+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:19:51+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:19:55+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:23:46+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:23:52+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:23:55+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:23:59+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:24:05+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:24:29+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T10:41:10+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:53:04+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:53:05+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:53:13+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:54:11+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:56:17+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:56:17+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:56:22+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:56:46+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T10:56:53+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T10:57:03+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:01:40+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:01:40+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:02:38+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:03:06+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:03:06+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:03:21+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:03:22+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:03:44+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:03:44+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:04:04+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:04:07+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:04:33+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:04:34+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:04:37+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:04:42+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:04:46+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:04:52+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:13:41+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:13:43+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:17:11+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:17:14+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:17:17+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:18:13+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:19:42+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:19:44+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:19:46+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:19:47+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:20:23+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:21:06+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:21:22+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:22:27+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:22:28+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:22:34+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:24:37+08:00 ] 127.0.0.1 /test/admin.php/access/addAdmin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001239s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003252s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.002971s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ms_admin` WHERE ( `username`='kefu1' ) LIMIT 1   [ RunTime:0.000819s ]
+SQL: INSERT INTO `ms_admin` (`username`,`password`,`time`) VALUES ('kefu1','202cb962ac59075b964b07152d234b70',1395977077) [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `ms_role_user` [ RunTime:0.002695s ]
+SQL: INSERT INTO `ms_role_user` (`user_id`,`role_id`) VALUES (2,2) [ RunTime:0.000984s ]
+
+[ 2014-03-28T11:24:39+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:33:34+08:00 ] 127.0.0.1 /test/admin.php/access/addAdmin
+ERR: XML标签语法错误 : name="email" type="text" class="input" size="40" value="{ms:$info.email}" /
+
+[ 2014-03-28T11:34:25+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:34:26+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:34:45+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:34:51+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:37:15+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:37:50+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:37:53+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:51:21+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:51:21+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:51:30+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:52:53+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:52:57+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:53:45+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:53:46+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:58:40+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:59:02+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T11:59:07+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T11:59:12+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T12:00:21+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:03:44+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:04:06+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T13:04:26+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:10:35+08:00 ] 127.0.0.1 /test/admin.php/access/opNodeStatus?id=1&status=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002017s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003950s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.004577s ]
+SQL: UPDATE `ms_node` SET `status`=0 WHERE ( `id` = 1 ) [ RunTime:0.001362s ]
+
+[ 2014-03-28T13:10:37+08:00 ] 127.0.0.1 /test/admin.php/access/opNodeStatus?id=1&status=0
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001923s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003726s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.004473s ]
+SQL: UPDATE `ms_node` SET `status`=1 WHERE ( `id` = 1 ) [ RunTime:0.001032s ]
+
+[ 2014-03-28T13:10:42+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:11:24+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:11:25+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:11:41+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:11:46+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:12:10+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:12:11+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T13:13:15+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:13:18+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T13:13:22+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:13:30+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:14:30+08:00 ] 127.0.0.1 /test/admin.php/access/opNodeStatus?id=18&status=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=1 and node.status=1 [ RunTime:0.000604s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=2 and node.pid=1 and node.status=1 [ RunTime:0.001366s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=3 and node.status=1 [ RunTime:0.000608s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=2 and node.status=1 [ RunTime:0.000566s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=16 and node.status=1 [ RunTime:0.000574s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=13 and node.status=1 [ RunTime:0.000541s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=18 and node.status=1 [ RunTime:0.001342s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=35 and node.status=1 [ RunTime:0.000514s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=39 and node.status=1 [ RunTime:0.000518s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=3 and node.status=1 [ RunTime:0.000582s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=2 and node.status=1 [ RunTime:0.000554s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=16 and node.status=1 [ RunTime:0.000567s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=13 and node.status=1 [ RunTime:0.000529s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=18 and node.status=1 [ RunTime:0.001350s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=35 and node.status=1 [ RunTime:0.000533s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=39 and node.status=1 [ RunTime:0.000512s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=2 and node.pid=1 and node.status=1 [ RunTime:0.001326s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=3 and node.status=1 [ RunTime:0.000620s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=2 and node.status=1 [ RunTime:0.000546s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=16 and node.status=1 [ RunTime:0.000576s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=13 and node.status=1 [ RunTime:0.000549s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=18 and node.status=1 [ RunTime:0.001465s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=35 and node.status=1 [ RunTime:0.000565s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=39 and node.status=1 [ RunTime:0.000548s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=3 and node.status=1 [ RunTime:0.000610s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=2 and node.status=1 [ RunTime:0.000574s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=16 and node.status=1 [ RunTime:0.000585s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=13 and node.status=1 [ RunTime:0.000575s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=18 and node.status=1 [ RunTime:0.001341s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=35 and node.status=1 [ RunTime:0.000521s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='2' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=3 and node.pid=39 and node.status=1 [ RunTime:0.000513s ]
+
+[ 2014-03-28T13:14:50+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:14:53+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:14:59+08:00 ] 127.0.0.1 /test/admin.php/access/opNodeStatus?id=18&status=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003917s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.004621s ]
+SQL: UPDATE `ms_node` SET `status`=0 WHERE ( `id` = 18 ) [ RunTime:0.001162s ]
+
+[ 2014-03-28T13:17:39+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:17:41+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:20:03+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:20:03+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:20:15+08:00 ] 127.0.0.1 /test/admin.php/access/opNodeStatus?id=33&status=0
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001231s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.004030s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.004345s ]
+SQL: UPDATE `ms_node` SET `status`=1 WHERE ( `id` = 33 ) [ RunTime:0.001145s ]
+
+[ 2014-03-28T13:20:22+08:00 ] 127.0.0.1 /test/admin.php/access/opNodeStatus?id=32&status=0
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003742s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.004422s ]
+SQL: UPDATE `ms_node` SET `status`=1 WHERE ( `id` = 32 ) [ RunTime:0.001101s ]
+
+[ 2014-03-28T13:27:49+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:27:57+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:28:18+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:28:49+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:44:47+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T13:44:52+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:44:54+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:45:03+08:00 ] 127.0.0.1 /test/admin.php/access/changeRole?id=2
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.004228s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.004017s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.004969s ]
+SQL: DELETE FROM `ms_access` WHERE ( role_id=2 ) [ RunTime:0.002744s ]
+SQL: INSERT INTO `ms_access` (`role_id`,`node_id`,`level`,`pid`) VALUES (2,1,1,0) [ RunTime:0.000330s ]
+
+[ 2014-03-28T13:45:05+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:45:59+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:46:04+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:46:07+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:46:27+08:00 ] 127.0.0.1 /test/admin.php/access/changeRole?id=2
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003844s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003941s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.004451s ]
+SQL: DELETE FROM `ms_access` WHERE ( role_id=2 ) [ RunTime:0.001352s ]
+SQL: INSERT INTO `ms_access` (`role_id`,`node_id`,`level`,`pid`) VALUES (2,1,1,0),(2,3,2,1),(2,8,3,3),(2,9,3,3),(2,10,3,3),(2,11,3,3),(2,12,3,3),(2,13,2,1),(2,14,3,13),(2,31,3,13),(2,32,3,13),(2,33,3,13) [ RunTime:0.000544s ]
+
+[ 2014-03-28T13:46:29+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:47:35+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:47:41+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:47:42+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:47:48+08:00 ] 127.0.0.1 /test/admin.php/access/changeRole?id=2
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003873s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003891s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.004369s ]
+SQL: DELETE FROM `ms_access` WHERE ( role_id=2 ) [ RunTime:0.001584s ]
+SQL: INSERT INTO `ms_access` (`role_id`,`node_id`,`level`,`pid`) VALUES (2,1,1,0),(2,2,2,1),(2,4,3,2),(2,5,3,2),(2,6,3,2),(2,7,3,2),(2,3,2,1),(2,8,3,3),(2,9,3,3),(2,10,3,3),(2,11,3,3),(2,12,3,3),(2,13,2,1),(2,14,3,13),(2,31,3,13),(2,32,3,13),(2,33,3,13),(2,16,2,1),(2,17,3,16),(2,29,3,16),(2,30,3,16),(2,34,3,16),(2,18,2,1),(2,22,3,18),(2,19,3,18),(2,20,3,18),(2,21,3,18),(2,23,3,18),(2,24,3,18),(2,25,3,18),(2,26,3,18),(2,27,3,18),(2,28,3,18),(2,35,2,1),(2,36,3,35),(2,37,3,35),(2,38,3,35),(2,39,2,1),(2,40,3,39),(2,41,3,39),(2,42,3,39) [ RunTime:0.001070s ]
+
+[ 2014-03-28T13:47:50+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:47:54+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:49:22+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:49:31+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:50:30+08:00 ] 127.0.0.1 /test/admin.php/access/addNode
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.004050s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003600s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.004739s ]
+SQL: INSERT INTO `ms_node` (`name`,`title`,`status`,`level`,`pid`,`sort`,`remark`,`id`) VALUES ('Area','地区管理',1,2,0,0,'描述，地区管理',0) [ RunTime:0.001260s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Model\AccessModel.class.php 第 50 行.
+
+[ 2014-03-28T13:50:33+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:51:15+08:00 ] 127.0.0.1 /test/admin.php/access/opNodeStatus?id=43&status=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003654s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.004403s ]
+SQL: UPDATE `ms_node` SET `status`=0 WHERE ( `id` = 43 ) [ RunTime:0.001256s ]
+
+[ 2014-03-28T13:53:29+08:00 ] 127.0.0.1 /test/admin.php/access/opNodeStatus?id=43&status=0
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001249s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003705s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.004476s ]
+SQL: UPDATE `ms_node` SET `status`=1 WHERE ( `id` = 43 ) [ RunTime:0.000872s ]
+
+[ 2014-03-28T13:53:47+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:53:57+08:00 ] 127.0.0.1 /test/admin.php/access/editNode?id=43
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003928s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.003619s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.004468s ]
+SQL: UPDATE `ms_node` SET `name`='Area',`title`='地区管理',`status`=1,`level`=2,`pid`=1,`sort`=0,`remark`='描述，地区管理' WHERE ( `id` = 43 ) [ RunTime:0.000963s ]
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Model\AccessModel.class.php 第 45 行.
+
+[ 2014-03-28T13:54:00+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T13:55:05+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T14:29:00+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T14:38:46+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T14:38:50+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T14:38:50+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T14:38:54+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T14:39:04+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T14:39:25+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T14:40:05+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T14:40:05+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T14:40:34+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T14:40:35+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T15:11:03+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T15:11:08+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T15:11:32+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T15:12:28+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T15:22:37+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T15:25:53+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T15:25:53+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T15:26:13+08:00 ] 127.0.0.1 /test/admin.php/yueke/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T15:27:04+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T15:28:43+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T15:30:10+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T15:30:14+08:00 ] 127.0.0.1 /test/admin.php/active/edit?id=2
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003997s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003750s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004588s ]
+SQL: UPDATE `ms_active` SET `active_name`='从后台添加一个时间试下',`status`=1,`sponsor`='主板党委发的搜',`superman`='王余洁',`area`='发的规划',`link`='http://www.baidu.com',`start_time`='2014-03-18 12:00',`end_time`='2014-03-18 13:00',`introduce`='明天的午休时间',`year`='2014',`month`=3,`day`=18 WHERE ( `id` = 2 ) [ RunTime:0.000626s ]
+
+[ 2014-03-28T15:30:20+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-28T15:31:26+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T15:31:30+08:00 ] 127.0.0.1 /test/admin.php/active/edit?id=2
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000761s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.004226s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003777s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004530s ]
+SQL: UPDATE `ms_active` SET `active_name`='从后台添加一个时间试下',`status`=0,`sponsor`='主板党委发的搜',`superman`='王余洁',`area`='发的规划',`link`='http://www.baidu.com',`start_time`='2014-03-18 12:00',`end_time`='2014-03-18 13:00',`introduce`='明天的午休时间',`year`='2014',`month`=3,`day`=18 WHERE ( `id` = 2 ) [ RunTime:0.000891s ]
+
+[ 2014-03-28T15:31:33+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T15:32:21+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T15:32:30+08:00 ] 127.0.0.1 /test/admin.php/active/edit?id=2
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003981s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003835s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004700s ]
+SQL: UPDATE `ms_active` SET `active_name`='从后台添加一个时间试下',`status`=0,`sponsor`='主板党委发的搜',`superman`='王余洁',`area`='发的规划',`link`='http://www.baidu.com',`start_time`='2014-03-18 12:00',`end_time`='2014-03-31 14:25',`introduce`='明天的午休时间',`year`='2014',`month`=3,`day`=18 WHERE ( `id` = 2 ) [ RunTime:0.000848s ]
+
+[ 2014-03-28T15:32:33+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T15:34:27+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T15:34:27+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T16:22:03+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T16:22:03+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-28T16:22:19+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+

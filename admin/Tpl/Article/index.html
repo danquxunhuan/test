@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dp XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/Dp/xhtml1-transitional.dp">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文章列表</title>
+<link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+</head>
+
+<body>
+<include file="Common:header" />
+<!--***************************content--left---right******************************-->   
+             <div class="wapper">
+                <include file="Common:left" />
+                <div id="Right"  class="right">
+                    <div class="tab1">
+                        <div class="current">文章列表---<a href="__URL__/add">添加文章</a>----<a href="__URL__/category">分类管理</a></div>
+                    </div>			  
+<table width="93%" border="0" cellspacing="0" cellpadding="0" class="tab">
+	<tr><th>新闻标题</th><th>发布人</th><th>状态</th><th>发布时间</th><th>更新时间</th><th width="150">操作</th></tr>
+    <volist name="list['qian']" id="vo">
+        <tr align="center" id="{ms:$vo.aid}">
+            <td align="left">{ms:$vo.title}</td>
+            <td><empty name="vo['uname']">游客<else />{ms:$vo.uname}<if condition="$vo['ishid'] eq 1"><span style="color:red">[匿名]</span></if></empty>
+            <notempty name="vo['contact']"><span style="color:red">[{ms:$vo.contact}]</span></notempty></td>
+            <td><if condition="$vo['status'] eq 1">已发布<else />未审核</if></td>
+            <td>{ms:$vo.create_time|date="Y-m-d H:i",###}</td>
+            <td>{ms:$vo.up_time|date="Y-m-d H:i",###}</td>
+            <td>[ <a href="__URL__/edit?aid={ms:$vo.aid}">编辑 </a> ] [ <a link="__URL__/del/aid/{ms:$vo.aid}" href="javascript:void(0)" name="{ms:$vo.title}" class="del">删除 </a> ]</td>
+        </tr>
+    </volist>
+</table>
+					
+					<div class="result page">{ms:$page}</div>
+					 
+                </div>
+            </div>
+        <div class="clear"></div>
+        <include file="Common:foot" />
+        <script type="text/javascript">
+            $(function(){
+                $(".del").click(function(){
+                    var delLink=$(this).attr("link");
+                    popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){
+                        if(action == 'ok'){
+                            top.window.location.href=delLink;
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </body>
+</html>

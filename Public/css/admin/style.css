@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,input,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;}
+
+body {font-family:"Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;font-size: 12px; line-height:1.5; color:#393737; text-align:left; }
+body{font-family:"微软雅黑"}
+img{border:none}
+a{text-decoration:none;color:#333}
+a img{border:none;}
+li{list-style:none}
+input{vertical-align:middle;}
+.clear{clear:both}
+.fl{float:left}
+.fr{float:right}
+.hidden{ display:none;}
+i{ font-style:normal}
+.fix:after{display:block; content:'clear'; clear:both; line-height:0; visibility:hidden;} 
+/*-----------------------------------header----------------------------------*/
+.top{background:url(../../images/admin/top_10.png) repeat-x top;margin-bottom:45px;}
+.logo{width:1000px;margin:0 auto;}
+.logo_l{width:125px;height:80px;}
+.logo_r{height:40px;line-height:40px;color:#fff;padding-left:10px;}
+.lo_r{width:150px;width:160px\9;margin-right:14px;height:80px;}
+.bn i,.bn{display:inline-block;height:40px;line-height:40px;color:#fff}
+.bn i{margin-left:310px;}
+.index_lm a{display:inline-block;width:67px;height:28px;font-size:14px;color:#2D2D2D;line-height:28px;text-align:center;margin-top:10px;}
+.index_lm a:hover{background:url(../../images/admin/in_hui.png) no-repeat;}
+.index_lm a.in_mo{color:#fff;background:url(../../images/admin/top_10x.png) no-repeat;}
+.lo_r .togao a{padding:0 10px;display:inline-block;height:40px;line-height:40px;color:#fff;float:left}
+/*信息提醒*/
+.lo_r .togao a.a_nopad{padding:0;position:relative;z-index:1;}
+.tx_red{display:inline-block;width:12px;height:11px;position:absolute;right:0;top:29px;z-index:999}
+/*结束*/
+.lo_r .togao a.lo_a{background:#5cd504;}
+.togao{text-align:right;height:40px;margin-left:-10px;}
+.lo_r .togao a:hover{background:#64de0a}
+.togao a.to_bj:hover{background:#770ed9}
+/*--------------------------------bottom------------------------------*/
+.bottom{height:40px;line-height:40px;background:#6800c9;text-align:center;margin-top:45px;}
+.bottom a{color:#B5B5B5}
+.bottom span{color:#626262;margin:0 14px;}
+
+

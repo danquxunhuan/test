@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加/编辑角色</title>
+<link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<style>
+.wapper{width:100%;height:auto;margin:auto 0px;}
+.right{float:right;width:78%;height:600px;box-shadow:0px 3px 6px #BDBFBE}
+.left{float:left;width:20%;height:600px;border:solid 1px #F1F1F1;box-shadow:0px 3px 6px #BDBFBE}
+.footer{width:99%;height:100px;margin-top:20px;border:solid 1px #F1F1F1;clear:both;}
+.left ul li{list-style:none;height:35px;border-bottom:1px solid #F3F3F3;line-height:36px;font-weight: 700;tezt-align:center;}
+.left .cycz{background:#dedbdb no-repeat;}
+.tab1{width:100%;height:35px;margin-bottom:15px;line-height: 35px;}
+.current {border-bottom: 2px solid rgb(38, 106, 174);color: rgb(38, 106, 174);font-weight: 700;}
+tr{ height:34px;}
+th{ text-align:right;}
+</style>
+</head>
+
+<body>
+
+<include file="Common:header" />
+<!--***************************content--left---right******************************-->   
+             <div class="wapper">
+                <include file="Common:left" />
+                <div id="Right"  class="right">
+                <div class="contentArea">
+                    <div class="Item hr">
+                        <div class="current"><a href="__URL__/roleList">角色列表</a>---添加/编辑角色</div>
+                    </div>
+                    <form action="" method="post">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
+                            <tr>
+                                <th width="120">角色组名称：</th>
+                                <td><input name="name" type="text" class="input" size="40" value="{ms:$info.name}" /> </td>
+                            </tr>
+                            <tr>
+                                <th>状态：</th>
+                                <td><select name="status" style="width: 80px;"><if condition="$info.status eq 1"><option value="1" selected>启用</option><option value="0">禁用</option><else/><option value="1">启用</option><option value="0" selected>禁用</option></if></select></td>
+                            </tr>
+                            <tr>
+                                <th>父级组ID：</th>
+                                <td><select name="pid" style="min-width: 80px;">{ms:$info.pidOption}</select></td>
+                            </tr>
+                            <!--tr>
+                                <th>显示排序：</th>
+                                <td><input class="input" name="sort" type="text" size="40" value="{ms:$info.sort}" /> </td>
+                            </tr-->
+                            <tr>
+                                <th>描 述：</th>
+                                <td><textarea name="remark" style="width: 400px;">{ms:$info.remark}</textarea></td>
+                            </tr>
+                            <tr><td colspan="2"><button class="btn submit">提交</button></td></tr>
+                        </table>
+                        <input type="hidden" name="id" value="{ms:$info.id}"/>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    <div class="clear"></div>
+<include file="Common:foot" />
+<script type="text/javascript">
+    $(function(){
+        $(".submit").click(function(){
+            commonAjaxSubmit();
+        });
+    });
+</script>
+</body>
+</html>

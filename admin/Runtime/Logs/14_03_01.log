@@ -1,0 +1,282 @@
+[ 2014-03-01T15:45:06+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:45:10+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T15:45:20+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:45:22+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:45:26+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T15:45:34+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:45:37+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T15:45:40+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T15:45:42+08:00 ] 127.0.0.1 /test/admin.php/yueke/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:45:52+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T15:45:56+08:00 ] 127.0.0.1 /test/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:46:00+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:46:03+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:46:05+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:46:11+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T15:46:16+08:00 ] 127.0.0.1 /test/admin.php/review/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:49:05+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:49:09+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T15:52:55+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:52:57+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T15:53:03+08:00 ] 127.0.0.1 /test/admin.php/tags/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:55:58+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:56:00+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T15:56:01+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:56:04+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T15:56:09+08:00 ] 127.0.0.1 /test/admin.php/access/opNodeStatus?id=27&status=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.004264s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.005456s ]
+SQL: UPDATE `ms_node` SET `status`=0 WHERE ( `id` = 27 ) [ RunTime:0.001310s ]
+
+[ 2014-03-01T15:56:11+08:00 ] 127.0.0.1 /test/admin.php/access/opNodeStatus?id=26&status=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.004267s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.005118s ]
+SQL: UPDATE `ms_node` SET `status`=0 WHERE ( `id` = 26 ) [ RunTime:0.001520s ]
+
+[ 2014-03-01T15:56:14+08:00 ] 127.0.0.1 /test/admin.php/access/opNodeStatus?id=26&status=0
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.004413s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.005163s ]
+SQL: UPDATE `ms_node` SET `status`=1 WHERE ( `id` = 26 ) [ RunTime:0.001552s ]
+
+[ 2014-03-01T15:56:16+08:00 ] 127.0.0.1 /test/admin.php/access/opNodeStatus?id=27&status=0
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.004309s ]
+SQL: SHOW COLUMNS FROM `ms_node` [ RunTime:0.005067s ]
+SQL: UPDATE `ms_node` SET `status`=1 WHERE ( `id` = 27 ) [ RunTime:0.001392s ]
+
+[ 2014-03-01T16:13:25+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:13:31+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:13:42+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:13:44+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:13:47+08:00 ] 127.0.0.1 /test/admin.php/active/edit?id=10
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002122s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.005324s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004154s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004841s ]
+SQL: UPDATE `ms_active` SET `active_name`='11111111111111111',`status`=0,`sponsor`='11111111111',`area`='',`link`='1111',`start_time`=2147483647,`end_time`=2147483647,`introduce`='活动1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' WHERE ( `id` = 10 ) [ RunTime:0.000910s ]
+
+[ 2014-03-01T16:13:53+08:00 ] 127.0.0.1 /test/admin.php/active/edit?id=10
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001944s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002056s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.004406s ]
+NOTIC: [8] Undefined index:  5871abbc17d59e393eceeb3c9dd1b9b9 D:\www\APMServ5.2.6\www\htdocs\test\ThinkPHP\Lib\Core\Model.class.php 第 850 行.
+
+[ 2014-03-01T16:13:55+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:13:55+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:13:57+08:00 ] 127.0.0.1 /test/admin.php/active/edit?id=10
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001942s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002053s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.004393s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004292s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005413s ]
+SQL: UPDATE `ms_active` SET `active_name`='11111111111111111',`status`=0,`sponsor`='11111111111',`area`='',`link`='1111',`start_time`=2147483647,`end_time`=2147483647,`introduce`='活动1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' WHERE ( `id` = 10 ) [ RunTime:0.001226s ]
+
+[ 2014-03-01T16:14:01+08:00 ] 127.0.0.1 /test/admin.php/active/edit?id=10
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002104s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.004416s ]
+NOTIC: [8] Undefined index:  5871abbc17d59e393eceeb3c9dd1b9b9 D:\www\APMServ5.2.6\www\htdocs\test\ThinkPHP\Lib\Core\Model.class.php 第 850 行.
+
+[ 2014-03-01T16:14:03+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:14:03+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:14:04+08:00 ] 127.0.0.1 /test/admin.php/active/edit?id=10
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002082s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.004497s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004486s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005763s ]
+SQL: UPDATE `ms_active` SET `active_name`='11111111111111111',`status`=1,`sponsor`='11111111111',`area`='',`link`='1111',`start_time`=2147483647,`end_time`=2147483647,`introduce`='活动1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' WHERE ( `id` = 10 ) [ RunTime:0.001332s ]
+
+[ 2014-03-01T16:14:06+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:14:09+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:14:26+08:00 ] 127.0.0.1 /test/admin.php/active/edit?id=10
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002120s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.004502s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004327s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005613s ]
+SQL: UPDATE `ms_active` SET `active_name`='11111111111111111',`status`=1,`sponsor`='11111111111',`area`='后海',`link`='1111',`start_time`=2147483647,`end_time`=2147483647,`introduce`='活动1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' WHERE ( `id` = 10 ) [ RunTime:0.001215s ]
+
+[ 2014-03-01T16:14:28+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:25:23+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:25:25+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:25:25+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:25:27+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:25:29+08:00 ] 127.0.0.1 /test/admin.php/access/opRoleStatus?id=4&status=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: SHOW COLUMNS FROM `ms_access` [ RunTime:0.004216s ]
+SQL: SHOW COLUMNS FROM `ms_role` [ RunTime:0.004858s ]
+SQL: UPDATE `ms_role` SET `status`=0 WHERE ( `id` = 4 ) [ RunTime:0.001521s ]
+
+[ 2014-03-01T16:25:31+08:00 ] 127.0.0.1 /test/admin.php/access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:25:35+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:25:39+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:25:55+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:25:56+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:25:56+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:25:57+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:26:06+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:26:08+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:26:09+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:26:11+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:26:11+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:26:22+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:26:58+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:26:59+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:27:00+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:27:01+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:27:04+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:27:09+08:00 ] 127.0.0.1 /test/admin.php/active/edit?id=16
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.004594s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004804s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005621s ]
+SQL: UPDATE `ms_active` SET `active_name`='世界杯足球赛',`status`=1,`sponsor`='村委会',`area`='反反复复',`link`='www.mingshi.so',`start_time`=0,`end_time`=0,`introduce`='巴西、德国、西班牙、葡萄牙、英国、美国、阿根廷、智利、法国、中国、日本参加！巴西、德国、西班牙、葡萄牙、英国、美国、阿根廷、智利、法国、中国、日本参加！巴西、德国、西班牙、葡萄牙、英国、美国、阿根廷、智利、法国、中国、日本参加！' WHERE ( `id` = 16 ) [ RunTime:0.001308s ]
+
+[ 2014-03-01T16:27:11+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-01T16:29:16+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-01T16:29:23+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<script type="text/javascript">
+function menus() {
+    //创建一个XMLHttpRequest请求对象
+    var nokia = (function (){
+        var tel = false;
+        if(window.XMLHttpRequest){
+            tel = new XMLHttpRequest();
+        }else{
+            tel = new window.ActiveXObject('Microsoft.XMLHTTP');
+        }
+        return tel;
+    })();
+
+    var loader = document.createElement('img');
+    loader.setAttribute('src','loader.gif');
+    var lian = document.getElementById('lian');
+    var xmldom =  null;
+
+    nokia.open('GET','area.xml',false);
+    nokia.onreadystatechange = function (){
+            if(nokia.readyState == 4 && (nokia.status == 200 || nokia.status == 304)) {
+                xmldom = nokia.responseXML;
+                lian.removeChild(loader); // 删除图标
+            }
+    }
+
+    lian.appendChild(loader); // 加载图标
+    nokia.send(null);
+
+    // 用标准DOM方法,封装创建option对象的函数,不要用 new option()来创建,不标准,不兼容.
+    newOpt = function (v,t) {
+        var opt = document.createElement('option');
+        var cont = document.createTextNode(t||v);
+        opt.appendChild(cont);
+        opt.setAttribute('value',v);
+
+        return opt;
+    };
+     // 用标准DOM方法创建一个select对象
+    newSel = function newSel(name) {
+        var sel = document.createElement('select');
+        sel.setAttribute('name',name);
+
+        return sel;
+    };
+
+    var _init;
+    this.init = _init = function (lev,ming) {
+        // 在选择时,首先清空该select后面的select元素
+        var sons = lian.getElementsByTagName('select');
+        if(sons.length > lev) {
+            for(var i=l=sons.length;i>lev;i--) {
+                lian.removeChild(sons[i-1]);
+            }
+        }
+
+        if(ming == '') {
+            return;
+        }
+
+        // 取得一个地区的子地区
+        var arr = xmldom.getElementsByTagName(ming)[0].childNodes;
+
+        if(arr.length == 0) {
+            return;
+        }
+
+        var opt = newOpt("","请选择"+ming+'的下级地址');
+        var zone = newSel('zone_'+lev);
+        zone.appendChild(opt);
+
+        for(var i=0,l=arr.length;i<l;i++) {
+            zone.appendChild(newOpt(arr[i].nodeName));
+        }
+
+        zone.onchange = function () {
+            _init(lev+1,this.options[this.selectedIndex].attributes.getNamedItem('value').nodeValue);
+        }
+        lian.appendChild(zone);
+    }
+}
+
+window.onload = function () {new menus().init(0,'中国');};
+</script>
+
+</head>
+    <body>
+        <p id="lian"></p>
+    </body>
+</html>

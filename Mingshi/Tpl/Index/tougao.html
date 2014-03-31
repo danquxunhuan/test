@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>投稿</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<if condition ="$userDataInfo.style neq ''">
+<link rel="stylesheet" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
+<else/>
+<link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" />
+</if>
+<link rel="stylesheet" href="__PUBLIC__/js/asyncbox/skins/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/js/calendar/calendar-blue.css"/>
+<script src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
+<script src="__PUBLIC__/js/jquery.lazyload.js"></script>
+<script src="__PUBLIC__/js/functions.js"></script>
+<script src="__PUBLIC__/js/jquery.form.js"></script>
+<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<script src="__PUBLIC__/js/calendar/calendar.js"></script>
+<script language="javascript" src="__PUBLIC__/js/common.js"></script>
+<script language="javascript">
+function imgdragstart(){return false;}
+</script>
+<style type="text/css"><!--
+.tg_titl i{ float:left;}
+.tg_titl input{ float:left; margin-right:20px;}
+.tc_passwor{ float:right;}
+.tc_passwor .tc_inpu1 { float:right; width:60px; border: 1px solid #BAB9B9; color: #CCCCCC; height:24px; margin-right:20px; padding: 0 11px;}
+--></style>
+<script language="JavaScript">
+function changeVerify(){
+	var timenow =new Date().getTime();
+	document.getElementById('verifyImg').src='__URL__/verify/'+timenow;
+}
+</script>
+</head>
+
+<body>
+<script language="javascript">
+for(i in document.images)document.images[i].ondragstart=imgdragstart;
+</script>
+<div class="box">
+<!--***************************top******************************-->
+<include file="Public:header_a" />   
+<!--***************************content******************************-->
+    <div class="content fix">
+        <div class="tg_content bk">
+            <div class="togo">投稿</div>
+            <div class="tg_cont bk_b">
+            	<p>如何让孩子变得更优秀，而教育变得更简单？这是名师.SO正在试图解决的难题！如果您也希望如此，欢迎您投稿分享您的观点或者经验，让这一难题解决的更完美！</p>
+                <p><i>我们需要</i>：内容方面，关注家庭教育、素质教育、升学教育的方方面面。</p>
+                <p><i>我们希望</i>：您对K12教育具有深刻的认知，写作逻辑清晰、说服力强，传递正能量。</p>
+                <p><i>我们提供</i>：优秀来稿24小时内发布，并对作者在最佳位置曝光。定期评选“最佳来稿”，并奖励丰厚稿酬。</p>
+                <p><i>温馨提示</i>：投稿请注明您的QQ号或手机号，便于工作人员及时和您沟通稿件情况。</p>
+                <p><i>稿件请致</i>：<a href="javascript:;">tougao@mingshi.so</a>，期待您的积极参与！</p>
+            </div>
+			  <form>     
+            <div class="tg_titl"><i>标题：</i><input id="title" name="info[title]" class="inpu1" type="text" value="感谢您的投稿，我们将在后台审核排版后，呈现在网站上" /><input type="text" placeholder="QQ号、手机号等联系方式" name="info[contact]" class="inpu1" style="width:250px;" /></div>
+            <!--------编辑器-------->
+			  <div class="tg_bji">
+			    <textarea id="content"  style="height:560px; width:870px; resize: none; max-width:700px;
+max-height:560px;"  name="info[content]"></textarea>
+			  </div>
+			   <!--input type="hidden" name="{ms$userDataInfo.uid}" value="" /-->
+			   <div class="tg_ni"><input type="checkbox" name="info[ishid]" value="1" /> 我要匿名投稿</div>
+         
+
+<div class="tg_ck">
+    <a class="pj_fb submit" href="javascript:void(0);" >提 交</a>
+    <!--游客投稿的话，需要输入验证码-->
+    <empty name="_SESSION['ms_user_id']">
+        <div class="tc_passwor"> 
+            <input type="text" name="verify" placeholder="验证码" class="tc_inpu1"/><img src="__URL__/verify/" id="verifyImg" onclick="return changeVerify();" alt="点击刷新验证码" title="点击刷新验证码"/>&nbsp;
+        </div>
+    </empty>   
+</div>
+			  </form>
+			 
+
+        </div>
+    </div>
+<!--***************************bottom******************************--> 
+<include file="Public:footer" />
+</div>
+<script type="text/javascript" src="__PUBLIC__/js/iepng.js"></script>
+<script type="text/javascript"  src="__PUBLIC__/kindeditor/kindeditor.js"></script>
+<script type="text/javascript" src="__PUBLIC__/kindeditor/lang/zh_CN.js"></script>
+        <script type="text/javascript">
+		
+		function getLength(str) {
+           var realLength = 0, len = str.length;
+          return realLength;
+        };
+            $(function(){var  content ;
+                KindEditor.ready(function(K) {
+                    content = K.create('#content',{
+			        allowFileManager : true,
+			        autoHeightMode : true,
+		            fterCreate : function() {
+				    this.loadPlugin('autoheight');
+			       }
+		         }
+		         );
+                });
+
+                $(".submit").click(function(){
+				    <if condition="ACTION_NAME neq 'edit'">
+                     if($.trim($("input[name='info[title]']").val())==''){
+                     popup.alert("标题不能为空");
+                     return false;
+                     }
+					 if($.trim($("input[name='info[title]']").val())=='感谢您的投稿，我们将在后台审核排版后，呈现在网站上'){
+                     popup.alert("请填写标题");
+                     return false;
+                     }
+					 content.sync();
+					var len =$('#content').val().length;
+					 if($.trim($("#content").val().length) < 500){
+                       popup.alert("多多发挥一下,多于500个字哦");
+                       return false;
+                     }
+
+                    </if>
+                    content.sync();
+                    commonAjaxSubmit();
+                    return false;
+                });
+            });
+        </script>
+</body>
+</html>
+ 

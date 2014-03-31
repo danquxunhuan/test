@@ -1,0 +1,584 @@
+[ 2014-03-27T09:32:11+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.005021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005140s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.007272s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001303s ]
+
+[ 2014-03-27T09:32:53+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.006476s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001346s ]
+
+[ 2014-03-27T09:38:03+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004943s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.006436s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001174s ]
+
+[ 2014-03-27T09:38:08+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002925s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.007413s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.000960s ]
+
+[ 2014-03-27T09:43:16+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003132s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.006284s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.000947s ]
+
+[ 2014-03-27T09:51:37+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000604s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.006696s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001095s ]
+
+[ 2014-03-27T10:03:23+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.007950s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.002012s ]
+
+[ 2014-03-27T10:06:08+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.006607s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001307s ]
+
+[ 2014-03-27T10:06:24+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000709s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.006608s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001177s ]
+
+[ 2014-03-27T10:15:47+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.006911s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001689s ]
+
+[ 2014-03-27T10:16:07+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.007648s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001312s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.006686s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001558s ]
+
+[ 2014-03-27T10:16:24+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.007895s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001582s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.006981s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001441s ]
+
+[ 2014-03-27T10:20:14+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000666s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.006571s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001156s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005861s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001314s ]
+
+[ 2014-03-27T10:20:44+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.006427s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001155s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005799s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001281s ]
+
+[ 2014-03-27T10:20:50+08:00 ] 127.0.0.1 /test/index/addFavorite?&title=%E6%B8%B8%E5%AE%A2%E6%8A%95%E7%AF%87%E7%A8%BF%E4%BB%B6%EF%BC%8C%E7%9C%8B%E4%B8%8B%E6%95%88%E6%9E%9C&aid=5&url=http%3A%2F%2Flocalhost%2Ftest%2Findex%2Fcontent%2Faid%2F5&math=36
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.007622s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001386s ]
+SQL: SHOW COLUMNS FROM `ms_favorite` [ RunTime:0.006394s ]
+SQL: SELECT * FROM `ms_favorite` WHERE ( aid='5' and uid=5 ) LIMIT 1   [ RunTime:0.001642s ]
+SQL: INSERT INTO `ms_favorite` (`title`,`url`,`aid`,`adddate`,`uid`) VALUES ('游客投篇稿件，看下效果','http://localhost/test/index/content/aid/5',5,1395886850,5) [ RunTime:0.000552s ]
+SQL: SHOW COLUMNS FROM `ms_favorite` [ RunTime:0.006327s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `ms_favorite` WHERE ( aid =5 ) LIMIT 1   [ RunTime:0.001593s ]
+
+[ 2014-03-27T10:21:36+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000615s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000725s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.007585s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001398s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.006866s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001550s ]
+
+[ 2014-03-27T10:21:43+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.007940s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001180s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.007094s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.000677s ]
+
+[ 2014-03-27T10:22:31+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000612s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.006340s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001274s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005848s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001758s ]
+
+[ 2014-03-27T10:24:58+08:00 ] 127.0.0.1 /test/index/tougao
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.005128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005255s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.008673s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001098s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.008673s ]
+NOTIC: [2] Missing argument 3 for msubstr(), called in D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Lib\Model\ArticleModel.class.php on line 42 and defined D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Common\common.php 第 141 行.
+NOTIC: [8] Undefined variable: length D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Common\common.php 第 143 行.
+SQL: INSERT INTO `ms_article` (`title`,`contact`,`content`,`create_time`,`uid`,`summary`) VALUES ('投稿的时候，写上投稿人的联系方式','QQ：745760587','投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式投稿的时候，写上投稿人的联系方式',1395887098,5,'...') [ RunTime:0.001611s ]
+
+[ 2014-03-27T10:25:01+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.005009s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005133s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.007965s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001375s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.007892s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001632s ]
+
+[ 2014-03-27T10:26:14+08:00 ] 127.0.0.1 /test/index/tougao
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005017s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.007655s ]
+NOTIC: [8] Undefined index:  ms_user_id D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Lib\Model\ArticleModel.class.php 第 36 行.
+NOTIC: [2] Missing argument 3 for msubstr(), called in D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Lib\Model\ArticleModel.class.php on line 42 and defined D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Common\common.php 第 141 行.
+NOTIC: [8] Undefined variable: length D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Common\common.php 第 143 行.
+SQL: INSERT INTO `ms_article` (`title`,`contact`,`content`,`create_time`,`uid`,`summary`) VALUES ('但凡写了联系方式的都在后台列出来吧~！','tel：15210651512','但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！但凡写了联系方式的都在后台列出来吧~！',1395887174,0,'...') [ RunTime:0.001424s ]
+
+[ 2014-03-27T10:26:17+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.005287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005415s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.007336s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001512s ]
+
+[ 2014-03-27T11:30:33+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002028s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004241s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.000783s ]
+
+[ 2014-03-27T11:30:40+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001948s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003268s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.000778s ]
+
+[ 2014-03-27T11:31:49+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001263s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003315s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.000603s ]
+
+[ 2014-03-27T11:39:49+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001249s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005424s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001195s ]
+
+[ 2014-03-27T11:40:44+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005437s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001085s ]
+
+[ 2014-03-27T11:41:54+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004018s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001172s ]
+
+[ 2014-03-27T11:51:04+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001184s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001299s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005221s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001094s ]
+
+[ 2014-03-27T13:10:29+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005228s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001191s ]
+
+[ 2014-03-27T13:46:27+08:00 ] 127.0.0.1 /test/index/tougao
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+
+[ 2014-03-27T13:46:41+08:00 ] 127.0.0.1 /test/index/tougao
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.005546s ]
+NOTIC: [8] Undefined index:  ms_user_id D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Lib\Model\ArticleModel.class.php 第 36 行.
+NOTIC: [2] Missing argument 3 for msubstr(), called in D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Lib\Model\ArticleModel.class.php on line 42 and defined D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Common\common.php 第 141 行.
+NOTIC: [8] Undefined variable: length D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Common\common.php 第 143 行.
+SQL: INSERT INTO `ms_article` (`title`,`contact`,`content`,`create_time`,`uid`,`summary`) VALUES ('游客投稿的话，需要输入一次验证码','QQ号、手机号等联系方式','游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码',1395899201,0,'...') [ RunTime:0.000858s ]
+
+[ 2014-03-27T13:46:43+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005532s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001157s ]
+
+[ 2014-03-27T13:47:08+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004245s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001105s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003981s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001161s ]
+
+[ 2014-03-27T13:51:35+08:00 ] 127.0.0.1 /test/index/tougao
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000770s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004273s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.000913s ]
+NOTIC: [8] Undefined index:  verify D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Lib\Action\IndexAction.class.php 第 411 行.
+
+[ 2014-03-27T13:52:21+08:00 ] 127.0.0.1 /test/index/tougao
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004262s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.000952s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.004214s ]
+NOTIC: [2] Missing argument 3 for msubstr(), called in D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Lib\Model\ArticleModel.class.php on line 42 and defined D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Common\common.php 第 141 行.
+NOTIC: [8] Undefined variable: length D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Common\common.php 第 143 行.
+SQL: INSERT INTO `ms_article` (`title`,`contact`,`content`,`create_time`,`uid`,`summary`) VALUES ('登录会员投稿，无需输入验证码','QQ号、手机号等联系方式','登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码',1395899541,5,'...') [ RunTime:0.000917s ]
+
+[ 2014-03-27T13:52:24+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004240s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.000964s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003810s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001190s ]
+
+[ 2014-03-27T13:57:30+08:00 ] 127.0.0.1 /test/index/tougao
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001242s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004409s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001054s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.004163s ]
+NOTIC: [2] Missing argument 3 for msubstr(), called in D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Lib\Model\ArticleModel.class.php on line 44 and defined D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Common\common.php 第 141 行.
+NOTIC: [8] Undefined variable: length D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Common\common.php 第 143 行.
+SQL: INSERT INTO `ms_article` (`title`,`contact`,`content`,`create_time`,`uid`,`summary`) VALUES ('登录会员投稿，无需输入验证码','','登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码登录会员投稿，无需输入验证码',1395899850,5,'...') [ RunTime:0.000822s ]
+
+[ 2014-03-27T13:57:33+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001011s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004102s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.000939s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003695s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001365s ]
+
+[ 2014-03-27T13:58:06+08:00 ] 127.0.0.1 /test/index/tougao
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+NOTIC: [8] Undefined index:  ms_user_id D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Lib\Action\IndexAction.class.php 第 411 行.
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.004462s ]
+NOTIC: [8] Undefined index:  ms_user_id D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Lib\Model\ArticleModel.class.php 第 38 行.
+NOTIC: [2] Missing argument 3 for msubstr(), called in D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Lib\Model\ArticleModel.class.php on line 44 and defined D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Common\common.php 第 141 行.
+NOTIC: [8] Undefined variable: length D:\www\APMServ5.2.6\www\htdocs\test\Mingshi\Common\common.php 第 143 行.
+SQL: INSERT INTO `ms_article` (`title`,`contact`,`content`,`create_time`,`uid`,`summary`) VALUES ('游客投稿的话，需要输入一次验证码','来个联系方式','游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码游客投稿的话，需要输入一次验证码',1395899886,0,'...') [ RunTime:0.001117s ]
+
+[ 2014-03-27T13:58:09+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003918s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001134s ]
+
+[ 2014-03-27T14:19:25+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005116s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001269s ]
+
+[ 2014-03-27T14:31:04+08:00 ] 127.0.0.1 /test/public/getAreaName?&id=1&math=788
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001179s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001301s ]
+SQL: SHOW COLUMNS FROM `ms_area` [ RunTime:0.004167s ]
+SQL: SELECT `id`,`name` FROM `ms_area` WHERE ( pid=1 )  [ RunTime:0.000961s ]
+
+[ 2014-03-27T14:32:18+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004413s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001048s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003779s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001184s ]
+
+[ 2014-03-27T14:33:04+08:00 ] 127.0.0.1 /test/public/getAreaName?&id=undefined&math=575
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004323s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.000907s ]
+
+[ 2014-03-27T14:33:46+08:00 ] 127.0.0.1 /test/public/getAreaName?&id=undefined&math=670
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002312s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004438s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001098s ]
+
+[ 2014-03-27T14:36:41+08:00 ] 127.0.0.1 /test/public/getAreaName?&id=undefined&math=678
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001894s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002012s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004382s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001033s ]
+
+[ 2014-03-27T15:17:04+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003854s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = 'zfneh2' )  [ RunTime:0.001213s ]
+
+[ 2014-03-27T15:26:32+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001153s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001265s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003893s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = 'zfneh2' )  [ RunTime:0.001143s ]
+
+[ 2014-03-27T15:26:33+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003723s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = 'zfneh2' )  [ RunTime:0.001071s ]
+
+[ 2014-03-27T15:26:35+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003776s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = 'zfneh2' )  [ RunTime:0.001245s ]
+
+[ 2014-03-27T15:26:35+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003813s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = 'zfneh2' )  [ RunTime:0.001208s ]
+
+[ 2014-03-27T15:27:40+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003886s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = 'zfneh2' )  [ RunTime:0.001238s ]
+
+[ 2014-03-27T15:28:08+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003987s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = 'vltc7f' )  [ RunTime:0.001242s ]
+
+[ 2014-03-27T15:28:39+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.004173s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = 'vltc7f' )  [ RunTime:0.001457s ]
+
+[ 2014-03-27T16:01:17+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003860s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = '8k0ip3' )  [ RunTime:0.001242s ]
+
+[ 2014-03-27T16:01:19+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003806s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = '8k0ip3' )  [ RunTime:0.001242s ]
+
+[ 2014-03-27T16:01:21+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003838s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = '8k0ip2' )  [ RunTime:0.001267s ]
+
+[ 2014-03-27T16:01:24+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003869s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = '8k0ip2' )  [ RunTime:0.001149s ]
+
+[ 2014-03-27T16:01:27+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003783s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = '8k0ip3' )  [ RunTime:0.001123s ]
+
+[ 2014-03-27T16:01:58+08:00 ] 127.0.0.1 /test/member/checkRes
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004826s ]
+SQL: SELECT * FROM `ms_member` WHERE ( `uname` = '陈庆小翔' ) LIMIT 1   [ RunTime:0.000801s ]
+
+[ 2014-03-27T16:02:06+08:00 ] 127.0.0.1 /test/member/checkPhone
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004284s ]
+SQL: SELECT * FROM `ms_member` WHERE ( `phone` = '15210651512' ) LIMIT 1   [ RunTime:0.000926s ]
+
+[ 2014-03-27T16:09:29+08:00 ] 127.0.0.1 /test/member/checkPhone
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001289s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.005496s ]
+SQL: SELECT * FROM `ms_member` WHERE ( `phone` = '15210651512' ) LIMIT 1   [ RunTime:0.001067s ]
+
+[ 2014-03-27T16:09:35+08:00 ] 127.0.0.1 /test/member/checkPhone
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004275s ]
+SQL: SELECT * FROM `ms_member` WHERE ( `phone` = '15210651512' ) LIMIT 1   [ RunTime:0.001122s ]
+
+[ 2014-03-27T16:10:21+08:00 ] 127.0.0.1 /test/member/checkPhone
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000405s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004354s ]
+SQL: SELECT * FROM `ms_member` WHERE ( `phone` = '15210651512' ) LIMIT 1   [ RunTime:0.000967s ]
+
+[ 2014-03-27T16:10:21+08:00 ] 127.0.0.1 /test/member/checkPhone
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001258s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004285s ]
+SQL: SELECT * FROM `ms_member` WHERE ( `phone` = '15210651512' ) LIMIT 1   [ RunTime:0.000929s ]
+
+[ 2014-03-27T16:16:12+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001969s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003857s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = '8k0ip3' )  [ RunTime:0.001203s ]
+
+[ 2014-03-27T16:16:13+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001595s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003829s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = '8k0ip3' )  [ RunTime:0.001170s ]
+
+[ 2014-03-27T16:16:15+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001711s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003819s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = '8k0ip3' )  [ RunTime:0.001776s ]
+
+[ 2014-03-27T16:16:22+08:00 ] 127.0.0.1 /test/member/checkYqm
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001616s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.003961s ]
+SQL: SELECT * FROM `ms_yqm` WHERE ( status =0  and yqm_sn = '8k0ip3' )  [ RunTime:0.001104s ]
+
+[ 2014-03-27T16:16:53+08:00 ] 127.0.0.1 /test/member/checkRes
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001597s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004290s ]
+SQL: SELECT * FROM `ms_member` WHERE ( `uname` = '陈庆小翔' ) LIMIT 1   [ RunTime:0.000787s ]
+
+[ 2014-03-27T16:16:59+08:00 ] 127.0.0.1 /test/member/checkPhone
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001602s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004459s ]
+SQL: SELECT * FROM `ms_member` WHERE ( `phone` = '15210651512' ) LIMIT 1   [ RunTime:0.000911s ]
+
+[ 2014-03-27T17:50:15+08:00 ] 127.0.0.1 /test/public/getAreaName?&id=1&math=940
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000389s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `ms_area` [ RunTime:0.004134s ]
+SQL: SELECT `id`,`name` FROM `ms_area` WHERE ( pid=1 )  [ RunTime:0.001175s ]
+
+[ 2014-03-27T17:50:19+08:00 ] 127.0.0.1 /test/public/getAreaName?&id=9&math=985
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SHOW COLUMNS FROM `ms_area` [ RunTime:0.003867s ]
+SQL: SELECT `id`,`name` FROM `ms_area` WHERE ( pid=9 )  [ RunTime:0.001329s ]
+
+[ 2014-03-27T18:02:12+08:00 ] 127.0.0.1 /test/public/getAreaName?&id=1&math=708
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `ms_area` [ RunTime:0.003877s ]
+SQL: SELECT `id`,`name` FROM `ms_area` WHERE ( pid=1 )  [ RunTime:0.001436s ]
+
+[ 2014-03-27T18:27:57+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004373s ]
+SQL: SELECT `uid`,`tid`,`uname`,`phone`,`coin`,`lastdate`,`style` FROM `ms_member` WHERE ( uid=5 ) LIMIT 1   [ RunTime:0.001017s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005052s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001285s ]
+

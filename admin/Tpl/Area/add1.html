@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/formvalidator.js" charset="UTF-8"></script>
+<script type="text/javascript" src="__PUBLIC__/js/formvalidatorregex.js" charset="UTF-8"></script>
+<script type="text/javascript" src="__PUBLIC__/js/admin.js" charset="UTF-8"></script>
+<script type="text/javascript">
+$(function(){
+    checkSubmit();
+    $.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});      
+    $("#area_name").formValidator({onshow:"请输入分类名称",onfocus:"请输入分类名称"}).inputValidator({min:1,max:30,onerror:"分类名称长度为1到30位"});
+    $("#a_order").formValidator({onshow:"请输入排序",onfocus:"请输入排序"}).inputValidator({min:1,max:4,onerror:"排序长度为1到4位"}).regexValidator({regexp:"num1",datatype:"enum",onerror:"排序只允许为整数"});
+});
+</script>
+
+<script>
+     function delarea(){
+	 
+	      var id=document.getElementByid
+	 
+	 }
+</script>
+
+</head>
+<body>
+
+<include file="Common:header" />
+<!--***************************content--left---right******************************-->
+
+ <div class="wapper">
+     <include file="Common:left" />
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td height="30" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="12" height="30"></td>
+                            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="46%" valign="middle"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="5%"><div align="center"></div></td>
+                                                    <td width="95%" class="STYLE1"><span class="STYLE3">你当前的位置</span>：[区域管理] - [区域添加]</td>
+                                                </tr>
+                                            </table></td>
+                                        <td width="54%"><table border="0" align="right" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td width="60"></td>
+                                                    <td width="60"></td>
+                                                    <td width="60"></td>
+                                                    <td width="52"></td>
+                                                </tr>
+                                            </table></td>
+                                    </tr>
+                                </table></td>
+                            <td width="16"></td>
+                        </tr>
+                    </table></td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td width="8" >&nbsp;</td>
+                            <td>
+                                <div class="border_box">
+                                    <form name="myform" action="__URL__/insert" method="post" id="myform">
+                                        <input type="hidden" name="aid" value="{ms:$list.id}">
+                                        <input type="hidden" name="area_type" value="{ms:$list.type}">
+                                        <table width="100%" class="table_form contentWrap" >
+                                            <php>
+                                                if($id !=0 ){
+                                            </php>
+                                            <tr>
+                                                    <td width="130" >上级区域：</td>
+                                                    <td>
+                                                        {ms:$list.name}
+                                                    </td>
+                                            </tr>
+                                            <php>}</php>
+                                            <tr>
+                                                    <td>区域名称：</td>
+                                                    <td><input type="text" id="area_name" name="area_name" value=""  class="input-text" /></td>
+                                            </tr>
+                                            <tr>
+                                                    <td>排序：</td>
+                                                    <td><input type="text" id="a_order" name="a_order" value="0"  class="input-text" /></td>
+                                            </tr>
+                                        </table>
+                                        <div class="bk15"></div>
+                                        <input  type="submit" value="提交" class="button" />
+                                    </form>
+                                </div>
+                            </td>
+                            <td width="8">&nbsp;</td>
+                        </tr>
+                    </table></td>
+            </tr>
+            <tr>
+                <td height="35"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="12" height="35"></td>
+                            <td>&nbsp;</td>
+                            <td width="16"></td>
+                        </tr>
+                    </table></td>
+            </tr>
+        </table>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+@charset "utf-8";
+@import url("css.css");
+/* CSS Document */
+body{
+	background-color: #016aa9;
+	overflow:hidden;
+	font-size:12px;
+	position:absolute;   
+	top:50%;   
+	left:50%;   
+	margin:-266px 0 0 -462px;
+	width: 924px;
+	height: 532px;
+}
+.page{
+    width:924px;
+	height:532px;
+	margin: 0px auto;
+	}
+.login_top{
+    width:924px;
+	height:188px;
+	background:url(../images/login_03.gif) no-repeat;
+	}	
+.login_center{
+    width:924px;
+	height:170px;
+	overflow:hidden;
+	}
+.login_center .login_center_left{
+    width:361px;
+	height:170px;
+	background:url(../images/login_02_01.gif) no-repeat;
+	float:left;
+	}
+.login_center .login_center_center{
+    width:327px;
+	height:170px;
+	background:url(../images/login_02_bg.gif) repeat-x;
+	float:left;
+	}
+.login_center .login_center_right{
+    width:236px;
+	height:170px;
+	background:url(../images/login_02_03.gif) no-repeat;
+	float:right;
+	}
+.login_bottom{
+    width:924px;
+	height:173px;
+	background:url(../images/login_08.gif) no-repeat;
+	}
+.login_text{
+    border:1px solid #1dadf0;
+	background:#282828;
+	height:22px;
+	line-height:22px;
+	color:#fff;
+	font-size:12px;
+	width:200px;
+	margin:3px;
+	}
+.login_text_yz{
+    border:1px solid #1dadf0;
+	background:#282828;
+	height:22px;
+	line-height:22px;
+	color:#fff;
+	font-size:12px;
+	width:100px;
+	margin:3px 3px 8px 3px;
+	float:left;
+	}
+.login_text_yz_img{
+	margin:5px 5px 0px 5px;
+	width:60px;
+	float:left;
+	height:20px;
+	line-height:20px;
+	}
+.login_button {
+	margin:0px 6px 0px 3px;
+	}
+.login_tj{
+	border:1px solid #c77c4f;
+	background:#faeacc;
+	height:21px;
+	text-indent:6px;
+	line-height:20px;
+	margin:2px 0px;
+	width:260px;
+	}
+.login_tj span{
+	background:url(../images/tittle_1.gif) left center no-repeat;
+	padding-left:20px;
+	height:20px;
+	line-height:23px;
+	width:300px;
+	}

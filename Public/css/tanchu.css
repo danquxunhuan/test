@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+/*------------------------------------------极速分享------------------------------*/
+.jsu_box{width:427px;background:#fff;color:#4e4f50;font-size:14px;}
+.jsu_titl{font-size:20px;color:#fd1b03;margin-bottom:28px;width:425px;text-align:center}
+.jsu_titl span{font-weight:600;}
+.jsu_1 img{vertical-align:middle;display:inline-block;margin:0 11px;}
+.jsu_1 img.jsu_img{vertical-align:-14px;} 
+.jsu_1 span{color:#01bef4}
+.jsu_2{margin:20px 0}
+.jsu_3{width:143px;height:143px;background:#333;margin:0px 0 10px 125px;}
+.jsu_4{color:#0338fd;font-size:18px;margin-top:30px;margin-left:20px;zoom:1}
+.jsu_4 .zy_share{margin-top:0;margin-left:15px;}
+.jsu_1 img.jsu_jl{margin:0 3px 0 6px;vertical-align:-16px;}
+/*---------------------------------------------------邀请规则--------------------*/
+.yq_tanchu{width:540px;background:#fff;padding:22px 27px 25px 27px}
+.yqqq{font-weight:600;font-size:14px;margin-bottom:8px;}
+.yqqq a{float:right;font-size:24px;font-weight:600;color:#01ae05;line-height:24px;margin-top:-5px;}
+.yq_tanchu p{color:#585858;font-size:14px;line-height:24px;}
+/*-----------------------------登录弹出层------------------*/
+.tc_box{border-radius:3px;width:408px;
+    z-index:9999;
+	position:fixed;
+	top:30%;
+	left:35%;
+	width:408px;
+	margin:-280px 0 0 -280px;
+	border-radius:5px;
+	border:solid 2px #666;
+	background-color:#fff;
+	box-shadow: 0 0 10px #666;
+}
+.tc_title{height:40px;line-height:40px;background:#939292;font-size:14px;color:#fff;padding-left:14px;position:relative;z-index:1;}
+.tc_title a{display:block;width:30px;text-align:center;height:30px;line-height:30px;font-size:18px;border-radius:30px;background:#878686;color:#ddd;font-weight:600;position:absolute;right:-5px;top:-4px;z-index:100;line-height:1.5}
+.tc_title a:hover{background:#939292}
+.tc_forms{padding:43px 65px;background:#fafafc}
+.tc_inpu1{display:block;height:33px;width:254px;color:#CCC;border:1px solid #BAB9B9;padding:0 11px;*height:26px;*padding-top:7px;margin-bottom:17px;}
+.tc_passwor{margin-top:-4px;zoom:1;}
+.tc_passwor i{color:#6B6A6A}
+.tc_passwor a{line-height:12px;*line-height:14px;margin-left:20px;color:#6B6A6A}
+.tc_passwor a:hover{color:#86AF06}
+.tc_chk{margin-right:6px;vertical-align:-2px;}
+.tc_login{padding-top:29px;margin-right:-30px;}
+.tc_login a{display:inline-block;height:30px;width:129px;line-height:30px;text-align:center;color:#fff;font-weight:600}
+.tc_a1{border:1px solid #86AF06;background:#86AF06;margin-right:15px;}
+.tc_a1:hover{background:#99C708;border:1px solid #99C708}
+.tc_a2{border:1px solid #FF6F3D;background:#FF6F3D;}
+.tc_a2:hover{background:#FE8156;border:1px solid #FE8156}
+
+/*------小 初  高-----*/
+.tc_box1{width:372px
+    
+	position:absolute;
+	top:35%;
+	left:35%;
+	margin:-280px 0 0 -280px;
+	border-radius:5px;
+	border:solid 2px #666;
+	background-color:#fff;
+	box-shadow: 0 0 10px #666;
+}
+.tc_title1{background:#fafafc}
+.tc_forms1{padding:20px 0 43px 34px;}
+.tc_forms1 a{display:inline-block;width:86px;height:86px;margin-right:24px}
+a.xiao_chu1{background:url(../images/little1.png) no-repeat;}
+a.xiao_chu2{background:url(../images/little2.png) no-repeat;}
+a.xiao_chu3{background:url(../images/little3.png) no-repeat;}
+a.xiao_chu1:hover{background:url(../images/little1_1.png) no-repeat;}
+a.xiao_chu2:hover{background:url(../images/little1_2.png) no-repeat;}
+a.xiao_chu3:hover{background:url(../images/little1_3.png) no-repeat;}
+

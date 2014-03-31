@@ -1,0 +1,156 @@
+<link rel="stylesheet" href="__PUBLIC__/css/lr.css"/>
+<!-- js效果 -->
+<script type="text/javascript">
+$(function(){
+//400电话下的那个隐藏的div默认隐藏，且400默认黑色
+//$("#yincang").find('span').css("color","black");
+$('#kefy_posi').css('display','none');
+	//400电话
+	var runtel = false;//防止点击tel后触发document的点击事件，
+	var runxin = false;
+	$("#yincang").click(function(){
+		//$("#kefy_posi").toggle();
+		//$(this).find('span').css("color","black");
+		 $('#kefy_posi').fadeToggle();
+		$(this).find('span').css("color","red");
+		runtel = false;
+	});
+	$(document).click(function(e){
+		if(runtel){
+			var target  = $(e.target);
+			if(target.closest("#kefy_posi").length == 0){
+				$("#kefy_posi").css("display","none");
+				$("#yincang").find('span').css("color","black");
+			}
+		}
+		runtel = true;
+	});
+	
+	//400电话end
+});
+jQuery(document).ready(function($) {
+	$('.weixin').click(function(){
+		$('.theme-popover-mask').fadeIn(100);
+		$('.theme-popover').slideDown(200);
+	})
+	$('.theme-poptit .close').click(function(){
+		$('.theme-popover-mask').fadeOut(100);
+		$('.theme-popover').slideUp(200);
+	})
+
+})
+</script>	
+	<div class="xinlang">
+    	<div class="sina sina4"><a href="#"><i></i>用户手册</a></div>
+    	<div class="sina sina1"><a href="__APP__/about/jiyu"><i></i>名师寄语</a></div>
+        <div class="sina sina3"><a href="#"><i></i>合作机会</a></div>
+        <div class="sina sina5"><a href="__APP__/about/jianyi"><i></i>建议反馈</a></div>
+        <div class="sina sina2" style="background:none"><a href="javascript:;" class="weixin"><i></i>极速分享</a></div>  
+    </div>
+    <div class="bottom">
+	<a href="__APP__/about">名师.SO</a><span>|</span>
+	<a href="__APP__/about/contact">联系我们</a><span>|</span>
+	<a href="__APP__/about/job">招聘人才</a><span>|</span>
+	<a href="__APP__/about/map">网站地图</a><span>|</span>
+	<a href="__APP__/about/partner">合作伙伴</a>
+	</div>
+ 
+ 
+ 
+ <!-------极速分享弹出页面-------->
+ <div class="theme-popover">
+     <div class="theme-poptit">
+          <a href="javascript:;" title="关闭" class="close">×</a>
+          <h3>分享 是一种美德</h3>
+     </div>
+     <div class="theme-popbod dform">
+	      <div class="jsu_box">
+    	     <div class="jsu_titl"><span>分享</span> 这个页面，只需3步 <span>15</span>秒钟</div>
+             <div class="jsu_1">1、打开您的微信，点击<img src="__PUBLIC__/images/fx.png" />中的
+			   <img src="__PUBLIC__/images/fx1.png" />
+			   <span>扫一扫</span>
+			   </div>
+    	       <div class="jsu_2">2、对准下面的二维码扫描，跳转到这个页面</div>
+               <div class="jsu_3">
+			          <img width=155 height=155 src="{ms:$QRcodeUrl}"/>
+			     </div>
+                 <div class="jsu_1">3、点击微信右上角的<img src="__PUBLIC__/images/fx2.png" /> ,  就可以将这个页面分享、转发和收藏</div>	
+                        <div class="jsu_4 fix"><div class="fl">分享给更多人，点击</div>
+						<div class="zy_share fl">
+<script type="text/javascript">document.write('<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(location.href)+'&title={ms:$info.title}&desc=【{ms:$info.title}】{ms:$info.summary}...@名师网&pics={ms:$info.firstimage}&summary='+encodeURIComponent('{ms:$info.summary}')+'"  target="_blank"><img src="__PUBLIC__/images/share3.png" /></a>');</script>
+<script type="text/javascript">document.write('<a href="http://v.t.sina.com.cn/share/share.php?url='+encodeURIComponent(location.href)+'&appkey=3172366919&title='+encodeURIComponent('【{ms:$info.title}】{ms:$info.summary}...@名师网')+'&pic={ms:$info.firstimage}" title="分享到新浪微博"  target="_blank"><img src="__PUBLIC__/images/share1.png" /></a>');</script>
+ <a href="javascript:;"><img src="__PUBLIC__/images/share2.png"  onclick="postToWb();" class="cu" title="分享到腾讯微博"/></a>
+ <script type="text/javascript">
+	                   function postToWb(){
+		               var _url = encodeURIComponent(document.location);
+		               var _appkey = encodeURI("cba3558104094dbaa4148d8caa436a0b");
+		               var _pic = encodeURI('{ms:$info.firstimage}');
+		               var _site = '';
+		               var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title=【{ms:$info.title}】{ms:$info.summary}...名师网';
+		               window.open( _u,'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+	                   }
+ </script>
+ <script type="text/javascript">document.write('<a href="http://widget.renren.com/dialog/share?resourceUrl='+encodeURIComponent(location.href)+'&title='+encodeURIComponent('{ms:$info.title}')+'&pic={ms:$info.firstimage}&description='+encodeURIComponent('{ms:$info.summary}')+'" title="分享到人人" target="_blank"><img src="__PUBLIC__/images/share5.png" /></a>');</script>
+
+ <script type="text/javascript">
+ document.write('<a href="http://connect.qq.com/widget/shareqq/index.html?site='+encodeURIComponent('名师网')+'&pics='+encodeURIComponent('{ms:$info.firstimage}')+'&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent('{ms:$info.title}')+'&desc='+encodeURIComponent('名师网名师网')+'" target="_blank"><img src="__PUBLIC__/images/share4.png" /></a>');
+ </script>
+						</div>
+				</div>
+            </div>
+
+     </div>
+</div>
+<div class="theme-popover-mask"></div>
+
+<script type="text/javascript">
+$(document).ready(function(e) {	
+	   //点击评论弹出微信框
+	   $('.yincang1').click( function () {
+	       $('#k1').fadeToggle();
+	   });
+	   
+	   //点击日历
+	   $('.rili').click( function () {
+	       $('#showIformation').fadeToggle();
+		   var boxOff = $(this).position();
+           $("#showIformation").css('top',boxOff.top+20);
+           $(".i-jiao").css('left',boxOff.left+3);
+		   $('#showIformation a').on('mousedown', function(event){
+                return false;
+            });
+	        $('#showIformation').blur(function(){
+	        	$("#showIformation").hide();
+	        });
+			
+			$.ajax({
+             type: "POST",
+             url: "/Index/checkActive/time/",
+             datatype : "xml",
+             async:'false',
+             data: "&time="+encodeURIComponent(time)+"&math="+Math.floor(Math.random()*1000+1),
+             success: function(data){
+             var flag = $(r_msg).find("flag").text();
+             if(flag=='true'){
+               $("#showIformation").empty().html('<h2>'+data.title+'</h2><p></p>').show();
+               ispost = true;
+              }else{
+                //isUserName = true;
+               $("#showIformation").empty().html('<div class="error"></div>').show();
+               return false;
+             }
+            }
+          });
+	   });
+	  
+	  $("#search").click(function(){
+      var tagval=$.trim($("input[name='tag']").val());
+      if($.trim($("input[name='tag']").val())==''){
+      alert('请填写查询标签');
+	  return false;
+       }else{
+       window.location.href="__URL__/search/tag/" + tagval;
+       }
+       });
+	});
+</script>

@@ -1,0 +1,118 @@
+@charset "utf-8";
+@import url("css.css");
+/* CSS Document */
+.vip_center_cp{
+	height:auto;
+	display:block;
+	text-align:left;
+	border:1px solid #c1c1c1;
+	position:relative;
+	margin:6px;
+}
+.vip_center_cp .tittle_top{
+	height:35px;
+	background:url(../images/vip_tittle_bg.gif);
+	line-height:35px;
+	border-bottom:1px solid #c1c1c1;
+	
+}
+.tittle_top ul li{
+	float:left;
+	font-size:14px;
+	width:80px;
+	height:33px;
+	line-height:33px;
+	text-indent:10px;
+	list-style-type:none;
+	
+}
+.tittle_top ul li a{
+	display:block;
+	width:80px;
+	color:#666;
+	height:33px;
+	font:14px/33px  "Trebuchet MS",Arial, Helvetica, sans-serif;
+	background-color:inherit;
+	text-decoration:none;
+	text-align:center;
+	
+	
+}
+.tittle_top ul li a:hover{
+	border-top:2px solid #1573aa;
+	border-left:1px solid #c1c1c1;
+	border-right:1px solid #c1c1c1;
+	background:#fff;
+	color:#666;
+	height:33px;
+	text-decoration:none;
+	text-align:center;
+	cursor:pointer;
+	font:14px/33px  "Trebuchet MS",Arial, Helvetica, sans-serif;
+	display:block;
+}
+.tittle_top ul li.now a{
+	border-top:2px solid #1573aa;
+	border-left:1px solid #c1c1c1;
+	border-right:1px solid #c1c1c1;
+	background-color:inherit;
+	height:35px;
+	width:79px;
+	background:#fff;
+	color:#666;
+	text-decoration:none;
+	text-align:center;
+	cursor:pointer;
+	font:14px/35px  "Trebuchet MS",Arial, Helvetica, sans-serif;
+	display:block;
+	z-index:999;
+	top:-1px;
+	left:-1px;
+}
+
+.vip_cp{
+padding:6px;
+	
+}
+
+.button{
+	height:24px;
+	width:100%;
+	display:block;
+}
+.button_left{
+	background:url(../images/button_bg_left.gif) no-repeat;
+	width:4px;
+	height:24px;
+	text-align:center;
+	float:left;
+}
+.button_bg{
+	background:url(../images/button_bg.gif) repeat-x;
+	height:24px;
+	line-height:24px;
+	float:left;
+	padding:0px 10px;
+}
+.button_bg a{
+	height:24px;
+	background-color:inherit;
+	line-height:24px;
+	float:left;
+	color:#666;
+	text-decoration:none;
+	padding:0px 5px;
+	cursor:pointer;
+	display:block;
+}
+.button_bg a:hover{
+	cursor:pointer;
+	display:block;
+	text-decoration:none;
+}
+.button_right{
+	background:url(../images/button_bg_right.gif) no-repeat;
+	width:4px;
+	height:24px;
+	float:left;
+}

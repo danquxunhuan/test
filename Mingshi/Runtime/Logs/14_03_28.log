@@ -1,0 +1,19 @@
+[ 2014-03-28T09:29:21+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002125s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.015460s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.010693s ]
+
+[ 2014-03-28T09:34:44+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003194s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.000784s ]
+
+[ 2014-03-28T15:26:14+08:00 ] 127.0.0.1 /test/public/getAreaName?&id=undefined&math=273
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000859s ]
+

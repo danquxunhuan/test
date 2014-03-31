@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//Dp XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/Dp/xhtml1-transitional.dp">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理—教学方案列表</title>
+<link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+</head>
+<body>
+<include file="Common:header" />
+<!--***************************content--left---right******************************-->   
+             <div class="wapper">
+                <include file="Common:left" />
+                <div id="Right"  class="right">
+                    <div class="tab1">
+                        <div class="current">教学方案列表</div>
+                    </div>
+					 <div class="right_list"> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
+<tr><th>方案ID</th><th>老师姓名</th><th>约课人姓名</th><th>约课人联系方式</th><th>设计时间</th><th>当前状态</th><th>操作</th></tr>
+<!--约课信息-->
+<volist name="list" id="vo">
+    <tr align="center" id="{ms:$vo.id}">
+        <td>{ms:$vo.id}</td>
+        <td>{ms:$vo.lsName}</td>
+        <td>{ms:$vo.jzName}</td>
+        <td>{ms:$vo.phone}</td>
+        <td>{ms:$vo.creat_time|date="Y-m-d",###}</td>
+        <td>
+<if condition="$vo.status eq 0"><span style="color:red;">未审核</span>
+<elseif condition="$vo.status eq 1"/>已审核
+<else />已结束
+</if></td>
+        <td>[ <a href="__URL__/edit?id={ms:$vo.id}">编辑 </a> ] [ <a link="__URL__/del/id/{ms:$vo.id}" href="javascript:void(0)" name="此教学方案" class="del">删除 </a> ]</td>
+    </tr>
+</volist>
+                    </table>
+					
+					<div class="result page">{ms:$page}</div>
+					 </div>
+                </div>
+            </div>
+        <div class="clear"></div>
+        <include file="Common:foot" />
+        <script type="text/javascript">
+            $(function(){
+                $(".del").click(function(){
+                    var delLink=$(this).attr("link");
+                    popup.confirm('你真的打算删除'+$(this).attr("name")+'吗?','温馨提示',function(action){
+                        if(action == 'ok'){
+                            top.window.location.href=delLink;
+                        }
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </body>
+</html>

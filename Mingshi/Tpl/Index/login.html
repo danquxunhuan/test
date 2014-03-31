@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>名师.SO</title>
+<link rel="stylesheet" href="__APP__/Public/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__APP__/Public/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__APP__/Public/css/tanchu.css" type="text/css" />
+<link rel="stylesheet" href="__APP__/Public/css/mstang123.css" type="text/css" />
+<if condition ="$userDataInfo.style neq ''">
+    <link rel="stylesheet" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
+<else/>
+    <link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" />
+</if>
+<script language="javascript" src="__PUBLIC__/js/jquery-1.10.2.js"></script>
+<script language="javascript" src="__PUBLIC__/js/common.js"></script>
+
+</head>
+<body>
+<div class="box">
+<include file="Public:header" />
+<!--***************************content******************************-->
+    <div class="shipin fix">
+    	<div class="left fl"><img src="__APP__/Public/images/sx2.png" /></div>
+        <div class="right fr bk">
+        	<!--div class="change" id="banner1" style="overflow:hidden">
+        		<img src="__APP__/Public/images/change.jpg" />
+				<img src="__APP__/Public/images/change1.jpg" />
+				<img src="__APP__/Public/images/change2.jpg" />
+				<img src="__APP__/Public/images/change3.jpg" />
+			</div-->
+            <div class="change"><a href="javascript:;"></a></div>
+            <div class="user">用户登录</div>
+			<form name="frm1" method="post" action="__URL__/login">
+            <div class="forms">
+            	<input type="text" value="用户名/手机号" class="inpu1" id="uname" name="uname" />
+                <input type="text" value="密码" class="inpu1" id="password" name="password" />
+                <div class="passwor">
+                	<input type="checkbox" class="chk" name="remember" checked="true" />
+					<i>下次自动登录</i>
+					<a href="javascript:;">忘记密码？</a></div>
+                <div class="login">
+                	<a href="javascript:fsubmit(document.frm1);" class="a1">登 录</a>
+					<a href="__APP__/Member/regjz" class="a2">注 册</a>
+				</div>
+            </div>
+			</form>
+        </div>
+    </div>
+	
+    <div class="center fix">
+    	<div class="mingshi fix">
+        	<div class="titl"><span>顶级名师</span><a href="__APP__/member/all" target="_blank" class="fr you yoo">有<i>{ms:$teaNum}</i>位名师在这里</a></div>
+            <div class="ms_list">
+<volist name="topMem" id="topVo">
+    <dl class="dl_list fl bk">
+        <dt><a href="__APP__/member/info/uid/{ms:$topVo.uid}" target="_blank"><img src="__PUBLIC__/images/90.png"  /><div class="a_posi"></div></a></dt>
+        <dd>
+            <p class="ms_name"><a href="__APP__/member/info/uid/{ms:$topVo.uid}" target="_blank">{ms:$topVo.uname}</a></p>
+            <p>学 科：{ms:$topVo.subject}</p>
+            <p>教 龄：{ms:$topVo.teach_age}年</p>
+            <p>身 份：{ms:$topVo.identity}</p>
+            <p>得 分：<i><php>echo number_format($topVo['pingfen'],1)</php></i>分</p>
+        </dd>
+    </dl>
+</volist>
+                      
+            </div>
+        </div>
+        <div class="mingshi fix">
+        	<div class="titl"><span>名师推荐</span><a href="__APP__/member/all" target="_blank" class="fr you yoo">挖掘名师中的黑马</a></div>
+            <div class="ms_list">         
+<volist name="tjMem" id="tjVo">
+    <dl class="dl_list fl bk">
+        <dt><a href="__APP__/member/info/uid/{ms:$tjVo.uid}" target="_blank"><img src="__PUBLIC__/images/90.png"  /><div class="a_posi"></div></a></dt>
+        <dd>
+            <p class="ms_name"><a href="__APP__/member/info/uid/{ms:$tjVo.uid}" target="_blank">{ms:$tjVo.uname}</a></p>
+            <p>学 科：{ms:$tjVo.subject}</p>
+            <p>教 龄：{ms:$tjVo.teach_age}年</p>
+            <p>身 份：{ms:$tjVo.identity}</p>
+            <p>得 分：<i><php>echo number_format($tjVo['pingfen'],1)</php></i>分</p>
+        </dd>
+    </dl>
+</volist>
+            </div>
+        </div>
+    	<div class="wenzhang fix">
+        	<div class="titl"><span>热门文章</span><a href="#"class="fr you">有<i>{ms:$jzNum}</i>位家长在阅读</a></div>
+            <div class="wz_list fix">
+<volist name="hot" id="vo" >
+    <dl class="dl_wz bk fl">
+        <dt><a href="__URL__/content/aid/{ms:$vo.aid}" title="{ms:$vo.title}">
+            
+<if condition="empty($vo[firstimage])">
+	<img src="__PUBLIC__/images/thumb.jpg" alt="{ms:$vo.title}" width="120" height="100" />						     
+<else/>
+	<img src="{ms:$Think.const.UPLOADS}article/{ms:$vo.firstimage}" alt="{ms:$vo.title}" width="120" height="100" />
+</if>
+
+           </a></dt>
+        <dd>
+            <p class="p_title"><a href="__APP__/Index/review/aid/{ms:$vo.aid}" class="fr spann"><i></i>{ms:$vo.rNum}</a><a href="__URL__/content/aid/{ms:$vo.aid}" title="{ms:$vo.title}">{ms:$vo.title|msubstr=0,20,'utf-8',false}</a></p>
+            <p><span class="fr bqia">
+<volist name="vo.tag" id="vo2">
+    <a href="__APP__/Index/search/tag/{ms:$vo2}" class="wz_lixian">{ms:$vo2}</a>
+</volist>
+            </span><span class="nam">
+            
+<if condition="$vo['uid'] eq 0"><!--游客-->
+	<a>游客</a>
+<else />
+    <if condition="$vo['ishid'] eq 1"><!--匿名投稿-->
+    	<a>佚名</a>
+    <else />
+        <if condition="$vo['tid'] eq 2"><!--作者为老师即可跳转到其个人空间-->
+        	<a href="__APP__/member/info/uid/{ms:$vo.uid}">{ms:$vo.uname}</a>  				     
+        <else/>
+            <a>{ms:$vo.uname}</a>	
+        </if>
+    </if>
+</if>          
+            
+            </span><span class="hui"></span></p>
+            <p>摘要：{ms:$vo.summary|msubstr=0,46,'utf-8',false}...</p>
+        </dd>
+    </dl>
+</volist>
+            </div>
+        </div>
+    </div>
+<!--***************************bottom******************************-->
+<include file="Public:footer" />
+</div>
+
+</body>
+</html>
+ 

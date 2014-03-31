@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>博客专用的JS日历控件</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<style type="text/css"> 
+.Calendar { 
+font-family:Verdana; 
+font-size:9pt; 
+background-color:#EEE; 
+text-align:center; 
+width:268px; 
+height:258px; 
+padding:10px; 
+line-height:2.0em; 
+} 
+.Calendar a{ 
+color:#0066CC; 
+} 
+.Calendar table{ 
+width:100%; 
+border:0; 
+} 
+.Calendar table thead{color:#acacac;} 
+.Calendar table td { 
+font-size: 11px; 
+padding:1px; 
+height:28px;
+} 
+#idCalendarPre{ 
+cursor:pointer; 
+float:left; 
+padding-right:5px; 
+} 
+#idCalendarNext{ 
+cursor:pointer; 
+float:right; 
+padding-right:5px; 
+} 
+#idCalendar td.onToday { 
+font-weight:bold; 
+color:#C60; 
+} 
+#idCalendar td.onSelect { 
+font-weight:bold; 
+background: url("./images/btn_bg.png") no-repeat scroll 0px -756px rgb(241, 241, 241);
+    color: rgb(68, 68, 68);
+    cursor: pointer;
+}
+
+#showIformation {
+    display: none;
+    position: absolute;
+    text-align: left;
+    border: 1px solid rgb(204, 204, 204);
+    background: none repeat scroll 0% 0% rgb(255, 255, 255);
+    box-shadow: 3px 3px 1px rgb(204, 204, 204);
+    outline: medium none;
+    width: 260px;
+    right: 10px;
+    margin: 15px 0px 0px;
+} 
+</style>
+<script type="text/javascript"> </script>
+
+</head>
+<body>  
+<div class="Calendar"> 
+<div id="idCalendarPre"><<</div> 
+<div id="idCalendarNext">>></div> 
+<span id="idCalendarYear">2008</span>年 <span id="idCalendarMonth">8</span>月 
+<table cellspacing="0"> 
+<thead> 
+<tr> 
+<td>日</td> 
+<td>一</td> 
+<td>二</td> 
+<td>三</td> 
+<td>四</td> 
+<td>五</td> 
+<td>六</td> 
+</tr> 
+</thead> 
+<tbody id="idCalendar"> 
+</tbody> 
+</table> 
+<div id="showIformation" tabindex="0" style="display: none; top: 190px;">
+</div>
+</div> 
+<script src="style/calendar.js"></script>
+</body>
+</html>

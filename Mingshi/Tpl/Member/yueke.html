@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>{ms:$info.uname}的个人空间—约课</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<if condition ="$userDataInfo.style neq ''">
+<link rel="stylesheet" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
+<else/>
+<link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" />
+</if>
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/Js/asyncbox/skins/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/js/calendar/calendar-blue.css"/>
+<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script src="__PUBLIC__/js/jquery.lazyload.js"></script>
+<script src="__PUBLIC__/js/functions.js"></script>
+<script src="__PUBLIC__/js/jquery.form.js"></script>
+<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<script src="__PUBLIC__/js/calendar/calendar.js"></script>
+<script language="javascript" src="__PUBLIC__/js/common.js"></script>
+
+<script src="__PUBLIC__/js/reg.js"></script>
+<script language="javascript">
+function imgdragstart(){return false;}
+</script>
+<script language="javascript" src="__PUBLIC__/js/autoresize.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/ms_case.js"></script>
+<style type="text/css"><!--
+.hui{ color:#ccc;}
+--></style>
+</head>
+
+<body>
+<script language="javascript">
+for(i in document.images)document.images[i].ondragstart=imgdragstart;
+</script>
+<div class="box">
+<!--***************************top******************************-->
+<include file="Public:header_m" />       
+<!--***************************content******************************-->
+    <div class="content fix">
+        <div class="zy_content bk fix">
+        	<div class="zy_title">
+            	<div class="zy_one fl"><A href="__URL__/info/uid/{ms:$_GET['uid']}">名师主页</A>
+				<A href="__URL__/review/uid/{ms:$_GET['uid']}">评价信息</A>
+				<A href="__URL__/base/uid/{ms:$_GET['uid']}">基本资料</A></div>
+                <div class="zy_yuyue fr">
+				<a href="__URL__/yueke/uid/{ms:$_GET['uid']}">约&nbsp;&nbsp;课</a>
+				</div>
+            </div>
+            <div class="zy_con fix">
+                <div class="zy_left">
+                	<div class="yk_title">约课需知</div>
+                    <p class="yk_p">为了确保您预约的教师更适合您的孩子，您还需要了解教师的如下信息</p>
+                    <div class="yk_list">
+                    	   <dl style="border:none">
+                        	<dt><img src="__PUBLIC__/images/yk1.png" /></dt>
+                            <dd>
+                            	<h3>教学风格</h3>
+                                <div><volist name="mytag" id="vom"><span style="padding-right:10px;">{ms:$vom.name}</span></volist></div>
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><img src="__PUBLIC__/images/yk1.png" /></dt>
+                            <dd>
+                            	<h3>职称</h3>
+                                <div>{ms:$info.identity}</div>
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><img src="__PUBLIC__/images/yk1.png" /></dt>
+                            <dd>
+                            	<h3>退课次数</h3>
+                                <div>{ms:$info.tuike}次</div>
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><img src="__PUBLIC__/images/yk1.png" /></dt>
+                            <dd>
+                            	<h3>可上课时间</h3>
+                                <div>{ms:$info.sk_time}</div>
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><img src="__PUBLIC__/images/yk1.png" /></dt>
+                            <dd>
+                            	<h3>距离</h3>
+                                <div>{ms:$info.distence}</div>
+                            </dd>
+                        </dl>
+                        <dl>
+                        	<dt><img src="__PUBLIC__/images/yk1.png" /></dt>
+                            <dd>
+                            	<h3>课时费</h3>
+                                <div>{ms:$info.keshifei}元/小时</div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="yk_biao">
+                    	<div class="yk_tt">填写约课信息表</div>
+                        <div class="yk_bb fix">
+<form>
+<input type="hidden" name="tid" value="{ms:$info.uid}" />
+<div class="ms_dlall fix">
+	<dl class="ms_form fix">
+                            <dt>孩子年级：</dt>
+                            <dd class="ms_fu">
+                            	<select id="m1" name="class" class="select5">
+							          <option value="" class="hui">-选择年级-</option>
+					                  <volist name="class" id="voo">
+					                  <option value="{ms:$voo.id}">{ms:$voo['name']}</a></li>
+								       </volist>
+							        </select>
+                            </dd>
+                        </dl>
+                        <dl class="ms_form fix">
+                            <dt>上课时间：</dt>
+                            <dd class="ms_time"><input type="text" class="inpu1"  id="yueke_time" name="yueke_time" /></dd>
+                        </dl>
+                        <dl class="ms_form fix">
+                            <dt>辅导科目：</dt>
+                            <dd class="ms_fu" style="z-index:101">
+                            	<select id="m1" name="obj" class="select5">
+							          <option value="" class="hui">-选择科目-</option>
+					                   <volist name="obj" id="vob">
+					                     <option value="{ms:$vob.id}">{ms:$vob['subject']}</a></li>
+								       </volist>
+							    </select>
+                            </dd>
+                        </dl>  
+						
+                        
+                        <dl class="ms_form fix">
+                            <dt>上课区域：</dt>
+                            <dd class="zc_tab">
+                                        <div class="zc_text_box">
+                                               <select id="province" name="province">
+                                                    <!--option value="" class="hui">市</option-->
+                                                    <volist name="areaData"  id="val">
+                                                         <option value="{ms:$val.id}">{ms:$val.name}</option>
+                                                    </volist>
+                                                </select>&nbsp;&nbsp;
+                                                <select id="city" name="city" class="select6">
+                                                    <option value="" class="hui">区</option>
+                                                </select>&nbsp;&nbsp;
+                                                <select id="area" name="area" class="select6">
+                                                    <option value="" class="hui">县</option>
+                                                </select>
+					                    </div>
+				            </dd>	
+                        </dl>            
+                        <dl class="ms_form fix">
+                            <dt>您手机号：</dt>
+                            <dd class="ms_ph"><input type="tetx" name="phone" class="inpu1" value="" /></dd>
+                        </dl>
+                        <dl class="ms_form fix">
+                            <dt>具体地址：</dt>
+                            <dd class="ms_time"><input type="text" name="address" value="具体上课地址" class="inpu1" /></dd>
+                        </dl> 
+</div>
+
+<div class="ms_area fix"><textarea name="msg" id="msg" class="inpu1" >请您描述孩子要辅导的学科现状、辅导需求，以及您期望达到的辅导效果等</textarea></div>
+<div class="ms_our">我们会尽快联系教师，查看您填写的上述信息，并帮您的孩子精心设计教学辅导方案。</div>
+<div class="ms_kchou"><a href="javascript:void(0);" class="ms_sub submit">提 交</a><div>课 酬<input type="text" value="" name="budget" /><i>元/时</i></div></div>                   
+</form>
+                   		</div>
+                  </div>
+				    <div class="yk_title yk_anli">我的故事</div>
+                    <p class="yk_p">为了确保您预约的教师更适合您的孩子，建议您了解教师的约课信息</p>
+                    <div class="yk_list yk_list24" id="list">
+				      <volist name="storyReview" id="vo">
+                    	<dl class="fix pinglun-box" style="border:none">
+                        	<dt><img src="__PUBLIC__/images/gs.png" /></dt>
+                            <dd>
+                            	<h3>{ms:$vo.title}</h3>
+                                <div><a href="__URL__/iii/{ms:$vo.id}">{ms:$vo.msg}</a></div>
+                                <div class="pj_time">
+								<div class="fr">
+								<if condition = "$userDataInfo.uid eq $vo['uid']">
+							      <!--a class="view-delete-btn no_icon_color" title="确定删除?" reviewid="{ms:$vo.id}" action="del_post" href="javascript:void(0);">删除</a-->
+							    </if>
+								<a href="javascript:void(0);" class="pj_zan">0</a>
+								<A href="javascript:void(0);" class="pl_a ms_reply"><i></i>
+								   <if condition="$vo.countPid gt 0">
+									评论({ms:$vo.countPid})
+									<else/>
+									评论(0)
+									</if>
+							    </A>
+								</div>
+								<i>{ms:$vo.create_time|date="Y-m-d",###}</i>
+								</div>
+                                <!-----点评------>
+								<div class="pl_hfu jb_pl_hfu dianping-list fix">
+                            	<div class="pl_hfu_top fix">
+                                	<p class="pl_hfu_p"></p>
+									<form>
+									<textarea class="msg1 pj_textarea textarea-ter" id="msg{ms:$vo.id}"></textarea>
+									 <input type="hidden" value="{ms:$info.uid}" name="perid"></input>
+							         <input type="hidden" value="add_story_post" name="act"></input>
+								     <input type="hidden" value='{ms:$vo.id}' name="id"></input>
+									<button class="xq_sub ms-btn">发 布</button>
+									</form>
+                                </div>
+								<div id="commentList{ms:$vo.id}" >
+                                <volist name="vo.listR" id="vor">
+	                             	 <dl class="dianping-box">
+	                                    <dt><a href="__APP__/member/info/uid/"><img src="{ms:$MS_PUB_PATH}/images/90_1.png" width="40" height="40" /></a></dt>
+	                                    <dd class="dianping-box-text">
+	                                        <div class="xq_name">
+											<a href="__APP__/member/info/uid/{ms:$vor.uid}" title="{ms:$vor.uname}" class="ms_name">{ms:$vor.uname}</a>
+											</div>
+	                                        <p class="dd-s">{ms:$vor.msg|nl2p}</p>
+	                                        <div class="pj_time xq_pj_time">
+											<div class="fr">
+											<if condition = "$userDataInfo.uid eq $vor['uid']">
+											<a class="no_icon_color view-del-btn" title="确定删除?" id="pinlun{ms:$vor.id}" action="del_post_story" sid="{ms:$vor.id}" href="javascript:void(0);">删除</a>
+											</if>
+											<A href="javascript:void(0);" title="回复" class="no_tu pinglun-reply-btn">回复</A>
+											</div>
+											<i>{ms:$vor.pl_time|date="Y-m-d H:i",###}</i>
+											</div>
+	                                    </dd>
+	                                </dl>
+                                </volist>
+								</div>
+                                <div class="xq_guanbi dianping-close"><A href="javascript:void(0);"></A></div>
+                            </div>
+                            </dd>
+					 <eq name= "vo.listR|count" value=" 1">
+                        <div class="xq_pl_hfu pl_hfu fix dianping-mini-list" >
+						   <volist name="vo.listR" id="voll">
+                            <p class="pl_hfu_p"></p>
+                            <div class="max_wid fix"><a href="#"><img src="{ms:$MS_PUB_PATH}/images/90_1.png" width="40" height="40" /></a>{ms:$voll.msg|msubstr=1,10,'utf-8',false}...</div>
+					       </volist>
+                        </div>
+				     </eq>
+				     <egt name = "vo.listR|count" value="2">	
+						<div class="xq_pl_hfu pl_hfu fix dianping-mini-list">
+                            <p class="pl_hfu_p"></p>
+                            <div class="max_wid fix">
+							    <volist name="vo.listR" id="voll" offset="0" length='3'>
+							       <a href="__URL__/content/id/{ms:$voll.id}"><img src="{ms:$MS_PUB_PATH}/images/90_1.png" width="40" height="40" /></a>
+							    </volist>...
+							 </div>
+                        </div>
+					 </egt>
+				     <lt name = "vo.listR|count"  value="1">
+						<div style="display:none" ></div>
+				     </lt>
+                        </dl>
+				       </volist>
+                     </div>
+                </div>
+                <div class="zy_right">
+					<!--名师个人信息--><include file="Public:memberinfo"/>
+                    <div class="zy_tonghang zy_tonghang2">我欣赏的教师</div>
+                    <div class="xintian_ms">
+                    	<dl class="dl_list fl bk">
+                            <dt><a href="mingshizhuye.html"><img src="__PUBLIC__/images/90.png"  /><div class="a_posi"></div></a></dt>
+                            <dd>
+                                <p class="ms_name"><a href="#">胡先友</a></p>
+                                <p>学 科：小学奥数</p>
+                                <p>教 龄：7年</p>
+                                <p>课 酬：300元/时</p>
+                                <p>评 分：<i>92.7</i>分</p>
+                            </dd>
+                        </dl>
+                        <dl class="dl_list fl bk">
+                            <dt><a href="mingshizhuye.html"><img src="__PUBLIC__/images/90.png"  /><div class="a_posi"></div></a></dt>
+                            <dd>
+                                <p class="ms_name"><a href="#">胡先友</a></p>
+                                <p>学 科：小学奥数</p>
+                                <p>教 龄：7年</p>
+                                <p>课 酬：300元/时</p>
+                                <p>评 分：<i>92.7</i>分</p>
+                            </dd>
+                        </dl>
+                        <dl class="dl_list fl bk">
+                            <dt><a href="mingshizhuye.html"><img src="__PUBLIC__/images/90.png"  /><div class="a_posi"></div></a></dt>
+                            <dd>
+                                <p class="ms_name"><a href="#">胡先友</a></p>
+                                <p>学 科：小学奥数</p>
+                                <p>教 龄：7年</p>
+                                <p>课 酬：300元/时</p>
+                                <p>评 分：<i>92.7</i>分</p>
+                            </dd>
+                        </dl>
+                        <dl class="dl_list fl bk">
+                            <dt><a href="mingshizhuye.html"><img src="__PUBLIC__/images/90.png"  /><div class="a_posi"></div></a></dt>
+                            <dd>
+                                <p class="ms_name"><a href="#">胡先友</a></p>
+                                <p>学 科：小学奥数</p>
+                                <p>教 龄：7年</p>
+                                <p>课 酬：300元/时</p>
+                                <p>评 分：<i>92.7</i>分</p>
+                            </dd>
+                        </dl>
+                        <dl class="dl_list fl bk">
+                            <dt><a href="mingshizhuye.html"><img src="__PUBLIC__/images/90.png"  /><div class="a_posi"></div></a></dt>
+                            <dd>
+                                <p class="ms_name"><a href="#">胡先友</a></p>
+                                <p>学 科：小学奥数</p>
+                                <p>教 龄：7年</p>
+                                <p>课 酬：300元/时</p>
+                                <p>评 分：<i>92.7</i>分</p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--***************************bottom******************************-->
+<include file="Public:footer" />    
+</div>
+<script type="text/javascript" src="__PUBLIC__/js/iepng.js"></script>
+        <script type="text/javascript">		
+            $(function(){
+
+                $(".submit").click(function(){
+				     <if condition="ACTION_NAME neq 'edit'">
+                     if($.trim($("input[name='budget']").val())==''){
+                     popup.alert("课酬不能为空");
+                     return false;
+                     }
+					 if($.trim($("input[name='phone']").val())==''){
+                     popup.alert("手机不能为空");
+                     return false;
+                     }
+					 //content.sync();
+					 if($.trim($("#yueke_time").val())==''){
+                       popup.alert('请填写约课时间');
+                       return false;
+                     }
+					 if($.trim($("#msg").val())==''){
+                       popup.alert('备注信息必填');
+                       return false;
+                     }
+					 if($.trim($("#msg").val())=='请您描述孩子要辅导的学科现状、辅导需求，以及您期望达到的辅导效果等'){
+                       popup.alert('备注信息好像不对呦');
+                       return false;
+                     }
+                    </if>
+                    commonAjaxSubmit();
+                    return false;
+                });
+            });
+        </script>
+</body>
+</html>
+ 

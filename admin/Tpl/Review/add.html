@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+</head>
+
+<body>
+
+<include file="Common:header" />
+<!--***************************content--left---right******************************-->   
+             <div class="wapper">
+                <include file="Common:left" />
+                <div id="Right"  class="right">
+				   <div class="contentArea">
+                    <div class="tab1">
+                        <div class="current">添加编辑评论</div>
+                    </div>
+                    <form>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
+                            <tr>
+                                <th width="100">评论状态：</th>
+                                <td><label><input type="radio" name="status" value="0" <if condition="$info.status eq 0"> checked="checked"</if> /> 评论审核状态</label> &nbsp;
+								        <label><input type="radio" name="status" value="1" <if condition="$info.status eq 1"> checked="checked"</if> /> 评论已发布状态</label> 
+									 </td>
+                            </tr>
+                            
+							    <tr>
+                                <th width="100">文章显示级别：</th>
+                                <td><label><input type="checkbox" name="info[flag][]" value="a" <if condition="explode('',$info[flag]) eq t"> checked="checked"</if> /> 推荐</label> &nbsp;
+								        <label><input type="checkbox" name="info[flag][]" value="t" <if condition="explode('',$info[flag]) eq h"> checked="checked"</if> />热门 </label>
+									 </td>
+                            </tr>
+							
+							    <tr>
+                                <th width="100">评论人：</th>
+                                <td>
+								        <label><input type="text" class="input" name="username" value="{ms:$info.username}" /> </label> &nbsp;
+									 </td>
+                            </tr>
+							    <tr>
+                                <th>评论时间：</th>
+                                <td><input type="text" class="input" size="60" name="pl_time" value="{ms:$info.pl_time}"/></td>
+                            </tr>
+                            <tr>
+                                <th>评论内容：</th>
+                                <td><textarea class="input" style="height: 60px; width: 600px;" id="msg" name="msg">{ms:$info.msg}</textarea> 评论介绍</td>
+                            </tr>
+
+                        </table>
+                        <input type="hidden" name="id" value="{ms:$info.id}" />
+                    </form>
+                    <div class="commonBtnArea" >
+                        <button class="btn submit">提交</button>
+                    </div>
+                </div>
+            </div>
+			 </div>
+        <div class="clear"></div>
+        <script type="text/javascript">
+		  $(".submit").click(function(){
+            <if condition="ACTION_NAME neq 'edit'">
+			if($.trim($("input[name='pl_time']").val())==''){
+            popup.alert("评论时间不能为空");
+            return false;
+            }
+			if($.trim($("#msg").val())==''){
+            popup.alert("请填写活动介绍");
+            return false;
+            }
+            </if>
+            commonAjaxSubmit();
+       });
+        </script>
+ </body>
+</html>

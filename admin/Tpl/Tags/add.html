@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>添加/编辑标签</title>
+<link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<style type="text/css"><!--
+tr{ height:34px;}
+--></style>
+</head>
+
+<body>
+<include file="Common:header" />
+
+<!--***************************content--left---right******************************-->
+
+ <div class="wapper">
+   <include file="Common:left" />
+   <div class="right">
+          <div class="tab1"> <div class="current"><a href="__URL__/index">标签列表</a></div></div>
+		   <div class="tj_article">
+<table>
+<form method="post" action="">
+    <tr><td>标签：</td><td><input class="input" type="text" value="{ms:$info.tag}" size='30' name="tag" /></td></tr>
+    <input type="hidden" name="id" value="{ms:$info.id}"/>
+    <tr><td colspan="2"><button class="btn submit">提交</button></td></tr>
+</form>
+</table>
+			         <!--div class="commonBtnArea">
+                        <button class="btn submit">提交</button>
+                    </div-->
+		   </div>
+   </div>
+   
+   <div class="footer"></div>
+  </div>
+  <script type="text/javascript">
+    $(".submit").click(function(){
+            <if condition="ACTION_NAME neq 'edit'">
+            if($.trim($("input[name='tag']").val())==''){
+            popup.alert("标签不能为空");
+            return false;
+            }
+            </if>
+            commonAjaxSubmit();
+    });
+</script>	   
+</body>
+</html>

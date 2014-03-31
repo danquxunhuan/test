@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>联系我们</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/tanchu.css" type="text/css" />
+<if condition ="$userDataInfo.style neq ''">
+<link rel="stylesheet" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
+<else/>
+<link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" />
+</if>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<script language="javascript">
+function imgdragstart(){return false;}
+</script>
+</head>
+
+<body>
+<script language="javascript">
+for(i in document.images)document.images[i].ondragstart=imgdragstart;
+</script>
+<div class="box">
+<!--***************************top******************************-->
+<include file="Public:header_a" />   
+<!--***************************content******************************-->
+    <div class="content fix jianyi_content">
+ <!--***************************left******************************-->   
+		<include file="Public:left_a" />  
+ <!--***************************right******************************--> 
+        <div class="lx_right fr bk">
+        	<div class="lx_titl">联系我们</div>
+            <div class="line_san"><a href="#"><img src="__PUBLIC__/images/line1.png" />名师.SO 微博</a><a href="#"><img src="__PUBLIC__/images/line2.png" />名师.SO 微信</a><a href="#"><img src="__PUBLIC__/images/line3.png" />给创始人留言</a></div>
+            <p class="nm_lx_neiron">
+                <i>联系地址：北京海淀区中关村东路16号唐宁one-2B-105</i>
+                <i>联系电话：4000-710-910</i>
+                <i>邮政编码：100028</i>
+                <i>官方 QQ：1487291883</i>
+                <i>新浪微博：@名师SO</i>
+                <i>微信账号：mingshi12345</i>
+            </p>
+            <div class="lx_titl">公司位置</div>
+            <div class="ditu"><img src="__PUBLIC__/images/ditu.png" /></div>
+        </div>
+    </div>
+<!--***************************bottom******************************-->    
+<include file="Public:footer" /> </div>
+<script type="text/javascript" src="../js/iepng.js"></script>
+</body>
+</html>
+ 

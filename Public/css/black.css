@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+/*-----------------------------------header----------------------------------*/
+.top{background:url(../images/bj.jpg) repeat-x top;margin-bottom:30px;}
+.logo{width:1000px;margin:0 auto;}
+.logo_l{width:125px;height:80px;}
+.logo_l a{display:inline-block;background:url(../images/logo.png) no-repeat;width:125px;height:80px;}
+.logo_r{height:40px;line-height:40px;color:#fff;padding-left:10px;}
+.lo_r{width:150px;width:160px\9;height:80px;}
+.bn i,.bn{display:inline-block;height:40px;line-height:40px;color:#fff}
+.bn i{margin-left:310px;}
+.index_lm a{display:inline-block;width:67px;height:28px;font-size:14px;color:#2D2D2D;line-height:28px;text-align:center;margin-top:10px;}
+.index_lm a:hover{background:url(../images/in_hui.png) no-repeat;}
+.index_lm a.in_mo{color:#fff;background:url(../images/index.png) no-repeat;}
+.lo_r .togao a{padding:0 10px;display:inline-block;height:40px;line-height:40px;color:#fff;float:left}
+/*信息提醒*/
+.lo_r .togao a.a_nopad{padding:0;position:relative;z-index:1;}
+.tx_red{display:inline-block;width:12px;height:11px;position:absolute;right:0;top:29px;z-index:999}
+/*结束*/
+.lo_a{background:#FB1508}
+.togao{text-align:right;height:40px;margin-left:-10px;position:relative;z-index:10}
+.togao a:hover{background:#f95950}
+.kefu{font-size:14px;width:160px;font-weight:600;height:26px;padding-top:14px;color:#565656;text-align:right;position:relative}
+.kefu a{_margin-top:10px;zoom:1;}
+.kefu a:hover span{color:#7f7f7f;}
+.kefu a:hover i.kefu_pp{background:url(../images/phon2.png) no-repeat;}
+.kefu_dian a span,.kefu_dian a:hover span{color:#fa1508}
+i.kefu_pp{display:inline-block;vertical-align:-9px;vertical-align:-7px\9;margin-right:5px;width:20px;height:21px;background:url(../images/phon1.png) no-repeat;}
+.kefu_dian a:hover i.kefu_pp{background:url(../images/phon1.png) no-repeat}
+.kefy_posi{position:absolute;left:16px;_left:30px;top:47px;}
+.togao a.to_bj:hover{background:#464545}
+div.phone_none{font-size:12px;line-height:20px;font-weight:100;color:#666666;text-align:center;width:138px;padding:7px 10px;background:#fff;border-radius:3px;border:1px solid e8e8e8;box-shadow:0px 1px 2px #e8e8e8;border:1px solid #ececec;position:relative}
+div.phone_none i{display:inline-block;width:17px;height:10px;background:url(../images/sss.png) no-repeat;position:absolute;left:70px;top:-10px;}
+/**/
+.lo_r .togao a.lo_abj{background:#4c4c4c;padding:0 3px;}
+.lo_r .togao a.lo_abj:hover{background:#626262}
+.lo_r .togao .lo_abj_ul{position:absolute;right:0;top:40px;z-index:999}
+.lo_r .togao .lo_abj_ul{position:absolute;right:0;top:40px;background:#fff;width:78px;z-index:999}
+.lo_r .togao .lo_abj_ul li a{padding:0;display:inline-block;width:63px;padding-left:15px;height:27px;line-height:27px;border-bottom:1px solid #f0f0f0;text-align:left;color:#333;float:none}
+.lo_r .togao .lo_abj_ul li a:hover{background:#fff;color:#03b5f6}
+.lo_r .togao .lo_abj_ul i{vertical-align:middle;display:inline-block;width:16px;height:16px;margin-right:9px;}
+/**/
+/*--------------------------------bottom------------------------------*/
+.bottom{height:40px;line-height:40px;background:#2D2D2D;text-align:center;margin-top:30px;}
+.bottom a{color:#B5B5B5}
+.bottom span{color:#626262;margin:0 14px;}

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>邀请码列表</title>
+<link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<style>
+.wapper{width:100%;height:auto;margin:auto 0px;}
+.right{float:right;width:78%;height:600px;box-shadow:0px 3px 6px #BDBFBE}
+.left{float:left;width:20%;height:600px;border:solid 1px #F1F1F1;box-shadow:0px 3px 6px #BDBFBE}
+.footer{width:99%;height:100px;margin-top:20px;border:solid 1px #F1F1F1;clear:both;}
+.left ul li{list-style:none;height:35px;border-bottom:1px solid #F3F3F3;line-height:36px;font-weight: 700;tezt-align:center;}
+.left .cycz{background:#dedbdb no-repeat;}
+.tab1{width:100%;height:35px;margin-bottom:15px;line-height: 35px;}
+.current {border-bottom: 2px solid rgb(38, 106, 174);color: rgb(38, 106, 174);font-weight: 700;}
+.right_list{width:100%,height:auto;}
+.right_list ul li{height:40px;}
+.right_list ul li p{width:130px;float:left;border:solid 1px #F1F1F1;height:30px;font-size:12px;line-height:30px;text-align:center}
+div.result{border:1px solid #d4d4d4; background:#FFC;color:#393939; padding:8px 10px;float:auto; width:99%;margin:2px}
+div.page{border:1px solid #d4d4d4; background:#111;color:white; padding:5px 15px;float:auto; width:91%;margin:2px;text-align:right}
+div.page a{color:white;}
+</style>
+</head>
+
+<body>
+
+<include file="Common:header" />
+<!--***************************content--left---right******************************-->
+
+ <div class="wapper">
+     <include file="Common:left" />
+   <div class="right">
+          <div class="tab1"> <div class="current">  邀请码管理   --- <a href="__URL__/html_add" > 添加邀请码 </a></div></div>
+		     <table width="93%" border="0" cellspacing="0" cellpadding="0" class="tab">
+			     <tr><th>邀请码ID</th><th>邀请码</th><th>使用人</th><th>状态</th><th>添加时间 </th><th>删除</th></tr>
+				  <volist name="yqm_list" id="vo">
+				  <tr>
+				   <td>{ms:$vo.id}</td>   
+				   <td>{ms:$vo.yqm_sn}</td>
+				   <td>{ms:$vo.user_id}</td>
+				   <td>{ms:$vo.status}</td>
+				   <td>{ms:$vo.use_time|date='Y-m-d H:i',###}</td>
+				   <td><a href="__URL__/del_yqm/id/{ms:$vo.id}">删除</a></td>
+				  </tr>
+                </volist>
+		     </table>
+			 <div class="result page">{ms:$page}</div>		  
+   </div>
+   
+   <div class="footer"></div>
+  </div>	   
+</body>
+</html>

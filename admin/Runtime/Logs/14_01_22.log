@@ -1,0 +1,27 @@
+[ 2014-01-22T16:16:47+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-01-22T16:16:50+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-01-22T16:16:55+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-01-22T16:17:06+08:00 ] 127.0.0.1 /test/admin.php/Article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-01-22T16:17:25+08:00 ] 127.0.0.1 /test/admin.php/Article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-01-22T16:17:29+08:00 ] 127.0.0.1 /test/admin.php/Article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-01-22T16:17:29+08:00 ] 127.0.0.1 /test/admin.php/Article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-01-22T16:17:39+08:00 ] 127.0.0.1 /test/admin.php/Article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-01-22T16:17:45+08:00 ] 127.0.0.1 /test/admin.php/Article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+

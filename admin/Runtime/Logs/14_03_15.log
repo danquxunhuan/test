@@ -1,0 +1,45 @@
+[ 2014-03-15T13:13:18+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-15T13:13:22+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-15T13:13:39+08:00 ] 127.0.0.1 /test/admin.php/review/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-15T13:13:47+08:00 ] 127.0.0.1 /test/admin.php/review/edit?id=789
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002287s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003893s ]
+SQL: SHOW COLUMNS FROM `ms_review` [ RunTime:0.003726s ]
+SQL: SHOW COLUMNS FROM `ms_review` [ RunTime:0.004694s ]
+SQL: UPDATE `ms_review` SET `status`=1,`username`='',`pl_time`=0,`msg`='' WHERE ( `id` = 0 ) [ RunTime:0.001034s ]
+
+[ 2014-03-15T14:55:50+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-15T14:55:54+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-15T14:57:36+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-15T14:57:42+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-15T14:58:11+08:00 ] 127.0.0.1 /test/admin.php/active/edit?id=17
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003704s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003706s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004558s ]
+SQL: UPDATE `ms_active` SET `active_name`='11111111111111',`status`=1,`sponsor`='1111111111111111',`area`='',`link`='111111111111111111',`start_time`=2013,`end_time`=2013,`introduce`='111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111' WHERE ( `id` = 17 ) [ RunTime:0.000547s ]
+
+[ 2014-03-15T14:58:14+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-15T14:58:51+08:00 ] 127.0.0.1 /test/admin.php/active/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+

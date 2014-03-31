@@ -1,0 +1,302 @@
+[ 2014-03-10T09:41:29+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T09:41:34+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-10T09:42:12+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/20
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003418s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.043313s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.009784s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.009642s ]
+SQL: UPDATE `ms_member` SET `uname`='王家长',`password`='202cb962ac59075b964b07152d234b70',`status`=1,`tid`=1,`classid`='3',`rankid`=1,`coin`=0 WHERE ( `uid` = 20 ) [ RunTime:0.030040s ]
+NOTIC: [8] Undefined variable: roleStatus D:\amp\apache\htdocs\test\admin\Lib\Model\MemberModel.class.php 第 73 行.
+
+[ 2014-03-10T09:42:16+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T09:42:39+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:03:13+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:11:47+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:11:50+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-10T10:12:04+08:00 ] 127.0.0.1 /test/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:17:43+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-10T10:17:58+08:00 ] 127.0.0.1 /test/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:18:12+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-10T10:18:35+08:00 ] 127.0.0.1 /test/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:20:07+08:00 ] 127.0.0.1 /test/admin.php/article/edit?aid=30
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003471s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.009883s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.008532s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.009578s ]
+NOTIC: [8] Undefined variable: arr D:\amp\apache\htdocs\test\admin\Lib\Model\ArticleModel.class.php 第 158 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\amp\apache\htdocs\test\admin\Lib\Model\ArticleModel.class.php 第 158 行.
+SQL: UPDATE `ms_article` SET `title`='耍一耍：一句话描述你在虎嗅的定位 ',`status`=1,`cid`=1,`click`=549,`tag`='小学',`keywords`='',`description`='',`summary`='当巧舌如簧的商业时代到来当巧舌如簧的商业时代到来，公关是堂皇柜台上最为华贵的一件消费品，当巧舌如簧的商业时代到来，公关是堂皇柜台上最为华贵的一件消费品当巧舌如簧的关是堂皇柜',`image`='',`firstimage`='/test/Public/upload/image/20131121/20131121032521_37254.jpg',`content`='&nbsp;&nbsp;&nbsp; 大家好，我是水命，一名深入浅出的城乡结合部作者，文风略为奇葩。<br />\n&nbsp;&nbsp;&nbsp; 为什么能够如此精准地找到自己的定位，源于前几天虎嗅推送快刀青衣文章时说他是“虎嗅人气最高的情色IT作家”。当然，这里貌似有两个字并不得体。我们在虎嗅作者群一致认为这“IT”二字，太多余。而快刀自己却执着地认为自己是“青涩”而不是情色，这货真是个骚包。<br />\n&nbsp;&nbsp;&nbsp;虎嗅给快刀的定位如此准确，就像阑夕的深度长文、脱不花妹妹把管理写得都那么亲切、罗超的重体力劳动（...），以及葛大爷的闹情绪一样一目了然。作为一个深度用户，有时候看文风猜作者也是一件挺有意思的事儿。<br />\n正好虎嗅也快发妹儿（F&amp;M）了，不如我们先耍一耍，用一句话描述自己在虎嗅的定位。不管你是个作者也好，或者好写两句评论，甚至就是个点赞快手，咱也都来说一嘴~<br />\n&nbsp;&nbsp;&nbsp;一句话，说不出吃亏，说不出上当，或许还能有个小惊喜。<br />\n<p>\n	&nbsp;&nbsp;&nbsp;据说，12.22那天，在国家会议中心的现场会有一块巨大的“虎嗅作者墙”，墙上会有你数不过来的作者群像（都附带微信公号）。你说都密密麻麻的了，该关注谁好呢？这个时候准确的定位就比较有优势了。比如说快刀老师，发妹那天当着全场几十万人让人给认出来了：“快看！左边第三个！对，快刀青衣！就是那个整天在虎嗅上写大数据的情色作家！”\n</p>\n<p>\n	<br />\n</p>\n多有意思啊~快刀你说是不？<br />\nps：你眼中的作者都是啥样的呢？让我们展开一场轰轰烈烈/花样翻新/惨无人道的打标签运动！<br />\n<br />\n<br />',`up_time`=1394418007,`flag`=null WHERE ( `aid` = 30 ) [ RunTime:0.001405s ]
+
+[ 2014-03-10T10:20:12+08:00 ] 127.0.0.1 /test/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:31:01+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-10T10:31:13+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003225s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.011930s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.010839s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.010034s ]
+SQL: UPDATE `ms_member` SET `uname`='易中天',`status`=0,`tid`=2,`classid`='2',`rankid`=1,`coin`=0 WHERE ( `uid` = 3 ) [ RunTime:0.001166s ]
+NOTIC: [8] Undefined variable: roleStatus D:\amp\apache\htdocs\test\admin\Lib\Model\MemberModel.class.php 第 73 行.
+
+[ 2014-03-10T10:31:18+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:31:35+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:31:48+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:31:55+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:32:04+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:32:12+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:32:20+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:32:32+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:32:43+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:32:58+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:33:14+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:33:22+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:33:31+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:33:39+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:33:55+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:45:53+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002863s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.008570s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.009606s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.009151s ]
+SQL: UPDATE `ms_member` SET `uname`='易中天师',`status`=0,`tid`=2,`classid`='3',`rankid`=1,`coin`=0 WHERE ( `uid` = 3 ) [ RunTime:0.001096s ]
+NOTIC: [8] Undefined variable: roleStatus D:\amp\apache\htdocs\test\admin\Lib\Model\MemberModel.class.php 第 73 行.
+
+[ 2014-03-10T10:45:58+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T10:46:10+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002806s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.010257s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.011112s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.010326s ]
+SQL: UPDATE `ms_member` SET `uname`='易中天师',`status`=0,`tid`=2,`classid`='3',`rankid`=1,`coin`=0 WHERE ( `uid` = 3 ) [ RunTime:0.000791s ]
+NOTIC: [8] Undefined variable: roleStatus D:\amp\apache\htdocs\test\admin\Lib\Model\MemberModel.class.php 第 75 行.
+
+[ 2014-03-10T10:46:16+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002810s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.008963s ]
+NOTIC: [8] Undefined index: 08740d70d5e78de75bd227e41f668f6b D:\amp\apache\htdocs\test\ThinkPHP\Lib\Core\Model.class.php 第 850 行.
+
+[ 2014-03-10T11:13:52+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T11:13:57+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-10T11:14:10+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004131s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.009188s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.010628s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.011993s ]
+SQL: UPDATE `ms_member` SET `uname`='易中天师',`status`=0,`tid`=2,`sbj_id`=2,`classid`='3',`rankid`=1,`coin`=0 WHERE ( `uid` = 3 ) [ RunTime:0.001324s ]
+NOTIC: [8] Undefined variable: roleStatus D:\amp\apache\htdocs\test\admin\Lib\Model\MemberModel.class.php 第 73 行.
+
+[ 2014-03-10T11:14:15+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T11:56:12+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T11:57:25+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-10T11:58:11+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-10T11:58:31+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002792s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.008976s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.009893s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.012586s ]
+SQL: UPDATE `ms_member` SET `uname`='刘创',`status`=1,`tid`=2,`sbj_id`=3,`classid`='3',`rankid`=1,`coin`=0 WHERE ( `uid` = 1 ) [ RunTime:0.001839s ]
+NOTIC: [8] Undefined variable: roleStatus D:\amp\apache\htdocs\test\admin\Lib\Model\MemberModel.class.php 第 73 行.
+
+[ 2014-03-10T11:58:36+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T13:01:23+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002888s ]
+NOTIC: [8] Undefined index: authId D:\amp\apache\htdocs\test\ThinkPHP\Extend\Library\ORG\Util\RBAC.class.php 第 173 行.
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=1 and node.status=1 [ RunTime:0.005695s ]
+NOTIC: [8] Undefined index: authId D:\amp\apache\htdocs\test\admin\Lib\Action\CommonAction.class.php 第 17 行.
+
+[ 2014-03-10T13:01:23+08:00 ] 127.0.0.1 /test/admin.php/Public/login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002821s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.037452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037932s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.003107s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.003251s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002227s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002728s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.012608s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002400s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002709s ]
+
+[ 2014-03-10T13:01:45+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T13:01:50+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-10T13:02:13+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002814s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.009048s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.009475s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.008958s ]
+SQL: UPDATE `ms_member` SET `uname`='刘创',`status`=1,`tid`=2,`sbj_id`=3,`classid`='3',`rankid`=1,`coin`=0 WHERE ( `uid` = 1 ) [ RunTime:0.000973s ]
+NOTIC: [8] Undefined variable: roleStatus D:\amp\apache\htdocs\test\admin\Lib\Model\MemberModel.class.php 第 75 行.
+
+[ 2014-03-10T13:09:04+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003045s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.008265s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.009249s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.009025s ]
+SQL: UPDATE `ms_member` SET `uname`='刘创',`status`=1,`tid`=2,`sbj_id`=3,`classid`='3',`rankid`=1,`coin`=0 WHERE ( `uid` = 1 ) [ RunTime:0.000954s ]
+NOTIC: [8] Undefined variable: roleStatus D:\amp\apache\htdocs\test\admin\Lib\Model\MemberModel.class.php 第 75 行.
+
+[ 2014-03-10T13:09:17+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002889s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.008487s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.008966s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.009224s ]
+SQL: UPDATE `ms_member` SET `uname`='刘创',`status`=1,`tid`=2,`sbj_id`=3,`classid`='3',`rankid`=1,`coin`=0 WHERE ( `uid` = 1 ) [ RunTime:0.000928s ]
+NOTIC: [8] Undefined variable: roleStatus D:\amp\apache\htdocs\test\admin\Lib\Model\MemberModel.class.php 第 75 行.
+
+[ 2014-03-10T13:09:21+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-10T13:10:27+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002698s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.012054s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.009939s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.009947s ]
+SQL: UPDATE `ms_member` SET `uname`='易中天师',`status`=0,`tid`=2,`obj_id`=2,`classid`='3',`rankid`=1,`coin`=0 WHERE ( `uid` = 3 ) [ RunTime:0.000974s ]
+NOTIC: [8] Undefined variable: roleStatus D:\amp\apache\htdocs\test\admin\Lib\Model\MemberModel.class.php 第 75 行.
+
+[ 2014-03-10T13:13:34+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002975s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.009427s ]
+NOTIC: [8] Undefined index: 08740d70d5e78de75bd227e41f668f6b D:\amp\apache\htdocs\test\ThinkPHP\Lib\Core\Model.class.php 第 850 行.
+
+[ 2014-03-10T13:13:46+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003723s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.009014s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.012035s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.010176s ]
+SQL: UPDATE `ms_member` SET `uname`='易中天师',`status`=1,`tid`=2,`obj_id`=2,`classid`='3',`rankid`=1,`coin`=0 WHERE ( `uid` = 3 ) [ RunTime:0.001315s ]
+NOTIC: [8] Undefined variable: roleStatus D:\amp\apache\htdocs\test\admin\Lib\Model\MemberModel.class.php 第 73 行.
+
+[ 2014-03-10T13:13:51+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T13:23:52+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-03-10T13:24:57+08:00 ] 127.0.0.1 /test/admin.php/member/editMember/uid/2
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003025s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.010462s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.009091s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.010242s ]
+SQL: UPDATE `ms_member` SET `uname`='梵高',`status`=0,`tid`=2,`obj_id`=6,`classid`='2',`rankid`=1,`coin`=0 WHERE ( `uid` = 2 ) [ RunTime:0.001371s ]
+NOTIC: [8] Undefined variable: roleStatus D:\amp\apache\htdocs\test\admin\Lib\Model\MemberModel.class.php 第 73 行.
+
+[ 2014-03-10T13:25:02+08:00 ] 127.0.0.1 /test/admin.php/member/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-03-10T13:42:56+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+

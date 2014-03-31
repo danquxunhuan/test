@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>节点列表</title>
+<link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<style>
+.wapper{width:100%;height:auto;margin:auto 0px;}
+.right{float:right;width:78%;height:600px;box-shadow:0px 3px 6px #BDBFBE}
+.left{float:left;width:20%;height:600px;border:solid 1px #F1F1F1;box-shadow:0px 3px 6px #BDBFBE}
+.footer{width:99%;height:100px;margin-top:20px;border:solid 1px #F1F1F1;clear:both;}
+.left ul li{list-style:none;height:35px;border-bottom:1px solid #F3F3F3;line-height:36px;font-weight: 700;tezt-align:center;}
+.left .cycz{background:#dedbdb no-repeat;}
+.tab1{width:100%;height:35px;margin-bottom:15px;line-height: 35px;}
+.current {border-bottom: 2px solid rgb(38, 106, 174);color: rgb(38, 106, 174);font-weight: 700;}
+</style>
+</head>
+
+<body>
+
+<include file="Common:header" />
+<!--***************************content--left---right******************************-->   
+             <div class="wapper">
+                <include file="Common:left" />
+                <div id="Right"  class="right">
+                    <div class="Item hr">
+                        <div class="current">节点管理--<a href="__URL__/addNode" title="添加节点" >添加节点</a></div>
+                    </div>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>节点结构  <b title="单击分类隐藏/显示该分类下在子类">[i]</b></th>
+                                <th>节点ID</th>
+                                <th>名称</th>
+                                <th>显示名</th>
+                                <th>排序名称</th>
+                                <th>类型</th>
+                                <th>状态</th>
+                                <th width="150">操作</th>
+                            </tr>
+                        </thead>
+                        <volist name="list" id="vo" key="k">
+                            <tr align="center" id="{ms:$vo.id}" pid="{ms:$vo.pid}">
+                                <td>{ms:$k}</td>
+                                <td align="left" class="tree" style="cursor: pointer;">{ms:$vo.fullname}</td>
+                                <td>{ms:$vo.id}</td>
+                                <td>{ms:$vo.name}</td>
+                                <td>{ms:$vo.title}</td>
+                                <td edit="0" fd="sort">{ms:$vo.sort}</td>
+                                <td>{ms:$vo.level}</td>
+                                <td>{ms:$vo.statusTxt}</td>
+                                <td>[ <a href="javascript:void(0);" class="opStatus" val="{ms:$vo.status}">{ms:$vo.chStatusTxt}</a> ] [ <a href="__URL__/editNode?id={ms:$vo.id}" class="edit">编辑</a> ] [ <a link="__URL__/delNode/id/{ms:$vo['id']}" href="javascript:void();" name="{ms:$vo['name']}" class="del" onclick="delarea();" >删除</a> ]</td>
+                            </tr>
+                        </volist>
+                    </table>
+                </div>
+            </div>
+        <div class="clear"></div>
+        <include file="Common:foot" />
+<script type="text/javascript">
+    $(function(){
+        $(".del").click(function(){ 
+            var delLink=$(this).attr("link"); 
+            popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){ 
+                if(action == 'ok'){ 
+                    top.window.location.href=delLink; 
+                } 
+            }); 
+            return false; 
+        }); 
+    });
+</script>
+        <script type="text/javascript">
+            $(function(){
+                //快捷启用禁用操作
+                $(".opStatus").click(function(){
+                    var obj=$(this);
+                    var id=$(this).parents("tr").attr("id");
+                    var status=$(this).attr("val");
+                    $.getJSON("__URL__/opNodeStatus", { id:id, status:status }, function(json){
+                        if(json.status==1){
+                            popup.success(json.info);
+                            $(obj).attr("val",json.data.status).html(status==1?"启用":"禁用").parents("td").prev().html(status==1?"禁用":"启用");
+                        }else{
+                            popup.alert(json.info);
+                        }
+                    });
+                });
+
+                //快捷改变操作排序dblclick
+                $("tbody>tr>td[fd]").click(function(){
+                    var inval = $(this).html();
+                    var infd = $(this).attr("fd");
+                    var inid =  $(this).parents("tr").attr("id");
+                    if($(this).attr('edit')==0){
+                        $(this).attr('edit','1').html("<input class='input' size='5' id='edit_"+infd+"_"+inid+"' value='"+inval+"' />").find("input").select();
+                    }
+                    $("#edit_"+infd+"_"+inid).focus().bind("blur",function(){
+                        var editval = $(this).val();
+                        $(this).parents("td").html(editval).attr('edit','0');
+                        if(inval!=editval){
+                            $.post("__URL__/opSort",{id:inid,fd:infd,sort:editval});
+                        }
+                    })
+                });
+
+                var chn=function(cid,op){
+                    if(op=="show"){
+                        $("tr[pid='"+cid+"']").each(function(){
+                            $(this).removeAttr("status").show();
+                            chn($(this).attr("id"),"show");
+                        });
+                    }else{
+                        $("tr[pid='"+cid+"']").each(function(){
+                            $(this).attr("status",1).hide();
+                            chn($(this).attr("id"),"hide");
+                        });
+                    }
+                }
+                $(".tree").click(function(){
+                    if($(this).attr("status")!=1){
+                        chn($(this).parent().attr("id"),"hide");
+                        $(this).attr("status",1);
+                    }else{
+                        chn($(this).parent().attr("id"),"show");
+                        $(this).removeAttr("status");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

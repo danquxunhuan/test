@@ -1,0 +1,603 @@
+[ 2013-12-17T17:26:12+08:00 ] 127.0.0.1 /ms.so/admin.php/Article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T17:26:12+08:00 ] 127.0.0.1 /ms.so/admin.php/Article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T17:26:21+08:00 ] 127.0.0.1 /ms.so/admin.php/Article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003695s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003993s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.011152s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.013046s ]
+NOTIC: [8] Use of undefined constant cid - assumed 'cid' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 28 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ms_category` WHERE ( `pid` = 0 ) AND ( `name` = 'nih' ) LIMIT 1   [ RunTime:0.003277s ]
+SQL: INSERT INTO `ms_category` (`pid`,`name`) VALUES (0,'nih') [ RunTime:0.000673s ]
+
+[ 2013-12-17T17:33:32+08:00 ] 127.0.0.1 /ms.so/admin.php/article/category/time/1387272381.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001289s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.010613s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.012944s ]
+NOTIC: [8] Use of undefined constant cid - assumed 'cid' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 28 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ms_category` WHERE ( `pid` = 0 ) AND ( `name` = 'fdgd' ) LIMIT 1   [ RunTime:0.004887s ]
+SQL: INSERT INTO `ms_category` (`pid`,`name`) VALUES (0,'fdgd') [ RunTime:0.001244s ]
+
+[ 2013-12-17T17:47:54+08:00 ] 127.0.0.1 /ms.so/admin.php/article/category/time/1387272812.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005169s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.014274s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.018871s ]
+SQL: DELETE FROM `ms_category` WHERE ( `cid` = 0 ) [ RunTime:0.007109s ]
+NOTIC: [8] Undefined index:  name E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 42 行.
+
+[ 2013-12-17T17:51:44+08:00 ] 127.0.0.1 /ms.so/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T17:51:48+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T17:52:21+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T17:54:13+08:00 ] 127.0.0.1 /ms.so/admin.php/Article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T17:56:17+08:00 ] 127.0.0.1 /ms.so/admin.php/Article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004869s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.011115s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.012686s ]
+NOTIC: [8] Use of undefined constant cid - assumed 'cid' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 28 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `ms_category` WHERE ( `pid` = 0 ) AND ( `name` = 'dfsfd' ) LIMIT 1   [ RunTime:0.004415s ]
+SQL: INSERT INTO `ms_category` (`pid`,`name`) VALUES (0,'dfsfd') [ RunTime:0.001085s ]
+
+[ 2013-12-17T18:00:53+08:00 ] 127.0.0.1 /ms.so/admin.php/article/%7B$site.WEB_ROOT%7DPublic/Min/?f=/ms.so/admin/Tpl/Public/Css/base.css|/ms.so/admin/Tpl/Public/Css/layout.css|/ms.so/Public/Js/asyncbox/skins/default.css{$addCss}
+ERR: 非法操作:{$site.web_root}public
+
+[ 2013-12-17T18:00:53+08:00 ] 127.0.0.1 /ms.so/admin.php/article/%7B$site.WEB_ROOT%7DPublic/Min/?f=/ms.so/Public/Js/jquery-1.9.0.min.js|/ms.so/Public/Js/jquery.lazyload.js|/ms.so/Public/Js/functions.js|/ms.so/admin/Tpl/Public/Js/base.js|/ms.so/Public/Js/jquery.form.js|/ms.so/Public/Js/asyncbox/asyncbox.js{$addJs}
+ERR: 非法操作:{$site.web_root}public
+
+[ 2013-12-17T18:01:26+08:00 ] 127.0.0.1 /ms.so/admin.php/article/%7B$site.MS_ROOT%7DPublic/Min/?f=/ms.so/Public/Js/jquery-1.9.0.min.js|/ms.so/Public/Js/jquery.lazyload.js|/ms.so/Public/Js/functions.js|/ms.so/admin/Tpl/Public/Js/base.js|/ms.so/Public/Js/jquery.form.js|/ms.so/Public/Js/asyncbox/asyncbox.js{$addJs}
+ERR: 非法操作:{$site.ms_root}public
+
+[ 2013-12-17T18:01:26+08:00 ] 127.0.0.1 /ms.so/admin.php/article/%7B$site.MS_ROOT%7DPublic/Min/?f=/ms.so/admin/Tpl/Public/Css/base.css|/ms.so/admin/Tpl/Public/Css/layout.css|/ms.so/Public/Js/asyncbox/skins/default.css{$addCss}
+ERR: 非法操作:{$site.ms_root}public
+
+[ 2013-12-17T18:01:31+08:00 ] 127.0.0.1 /ms.so/admin.php/article/%7B$site.MS_ROOT%7DPublic/Min/?f=/ms.so/Public/Js/jquery-1.9.0.min.js|/ms.so/Public/Js/jquery.lazyload.js|/ms.so/Public/Js/functions.js|/ms.so/admin/Tpl/Public/Js/base.js|/ms.so/Public/Js/jquery.form.js|/ms.so/Public/Js/asyncbox/asyncbox.js{$addJs}
+ERR: 非法操作:{$site.ms_root}public
+
+[ 2013-12-17T18:01:32+08:00 ] 127.0.0.1 /ms.so/admin.php/article/%7B$site.MS_ROOT%7DPublic/Min/?f=/ms.so/admin/Tpl/Public/Css/base.css|/ms.so/admin/Tpl/Public/Css/layout.css|/ms.so/Public/Js/asyncbox/skins/default.css{$addCss}
+ERR: 非法操作:{$site.ms_root}public
+
+[ 2013-12-17T18:02:11+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/Min/?f=/ms.so/admin/Tpl/Public/Css/base.css|/ms.so/admin/Tpl/Public/Css/layout.css|/ms.so/Public/Js/asyncbox/skins/default.css{$addCss}
+ERR: 非法操作:min
+
+[ 2013-12-17T18:02:11+08:00 ] 127.0.0.1 /ms.so/admin.php/PPublic/Min/?f=/ms.so/Public/Js/jquery-1.9.0.min.js|/ms.so/Public/Js/jquery.lazyload.js|/ms.so/Public/Js/functions.js|/ms.so/admin/Tpl/Public/Js/base.js|/ms.so/Public/Js/jquery.form.js|/ms.so/Public/Js/asyncbox/asyncbox.js{$addJs}
+ERR: 无法加载模块:PPublic
+
+[ 2013-12-17T18:02:13+08:00 ] 127.0.0.1 /ms.so/admin.php/PPublic/Min/?f=/ms.so/Public/Js/jquery-1.9.0.min.js|/ms.so/Public/Js/jquery.lazyload.js|/ms.so/Public/Js/functions.js|/ms.so/admin/Tpl/Public/Js/base.js|/ms.so/Public/Js/jquery.form.js|/ms.so/Public/Js/asyncbox/asyncbox.js{$addJs}
+ERR: 无法加载模块:PPublic
+
+[ 2013-12-17T18:02:13+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/Min/?f=/ms.so/admin/Tpl/Public/Css/base.css|/ms.so/admin/Tpl/Public/Css/layout.css|/ms.so/Public/Js/asyncbox/skins/default.css{$addCss}
+ERR: 非法操作:min
+
+[ 2013-12-17T18:03:05+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/Min/?f=/ms.so/admin/Tpl/Public/Css/base.css|/ms.so/admin/Tpl/Public/Css/layout.css|/ms.so/Public/Js/asyncbox/skins/default.css{$addCss}
+ERR: 非法操作:min
+
+[ 2013-12-17T18:03:05+08:00 ] 127.0.0.1 /ms.so/admin.php/PPublic/Min/?f=/ms.so/Public/Js/jquery-1.9.0.min.js|/ms.so/Public/Js/jquery.lazyload.js|/ms.so/Public/Js/functions.js|/ms.so/admin/Tpl/Public/Js/base.js|/ms.so/Public/Js/jquery.form.js|/ms.so/Public/Js/asyncbox/asyncbox.js{$addJs}
+ERR: 无法加载模块:PPublic
+
+[ 2013-12-17T18:03:10+08:00 ] 127.0.0.1 /ms.so/admin.php/PPublic/Min/?f=/ms.so/Public/Js/jquery-1.9.0.min.js|/ms.so/Public/Js/jquery.lazyload.js|/ms.so/Public/Js/functions.js|/ms.so/admin/Tpl/Public/Js/base.js|/ms.so/Public/Js/jquery.form.js|/ms.so/Public/Js/asyncbox/asyncbox.js{$addJs}
+ERR: 无法加载模块:PPublic
+
+[ 2013-12-17T18:03:10+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/Min/?f=/ms.so/admin/Tpl/Public/Css/base.css|/ms.so/admin/Tpl/Public/Css/layout.css|/ms.so/Public/Js/asyncbox/skins/default.css{$addCss}
+ERR: 非法操作:min
+
+[ 2013-12-17T18:04:28+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:04:29+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:04:52+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:04:52+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:05:27+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:05:28+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:05:41+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:05:41+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:07:57+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:07:57+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:08:30+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:08:30+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:08:43+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:08:44+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:09:37+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:09:38+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:10:18+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:10:19+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:10:46+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:10:46+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:11:40+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:11:41+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:11:55+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:11:56+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:13:22+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:13:23+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:13:59+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:13:59+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:14:40+08:00 ] 127.0.0.1 /ms.so/admin.php/article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005256s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.022488s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 24 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.018040s ]
+SQL: DELETE FROM `ms_category` WHERE ( `cid` = 0 ) [ RunTime:0.002948s ]
+NOTIC: [8] Undefined index:  name E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 42 行.
+
+[ 2013-12-17T18:19:22+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:19:24+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:21:20+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:21:21+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:22:01+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:23:29+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:23:32+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:23:37+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:23:38+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:26:24+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:33:17+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:33:17+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:35:52+08:00 ] 127.0.0.1 /ms.so/admin.php/article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005090s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.011134s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.009729s ]
+SQL: UPDATE `ms_category` SET `pid`=0 WHERE ( `cid` = 0 ) [ RunTime:0.004355s ]
+NOTIC: [8] Undefined index:  name E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 46 行.
+
+[ 2013-12-17T18:35:56+08:00 ] 127.0.0.1 /ms.so/admin.php/article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004835s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.010964s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.010710s ]
+SQL: UPDATE `ms_category` SET `pid`=0 WHERE ( `cid` = 0 ) [ RunTime:0.005463s ]
+NOTIC: [8] Undefined index:  name E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 46 行.
+
+[ 2013-12-17T18:36:01+08:00 ] 127.0.0.1 /ms.so/admin.php/article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004708s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.012563s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.014530s ]
+SQL: DELETE FROM `ms_category` WHERE ( `cid` = 0 ) [ RunTime:0.014825s ]
+NOTIC: [8] Undefined index:  name E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 48 行.
+
+[ 2013-12-17T18:37:31+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:37:31+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:37:57+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:37:58+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:38:08+08:00 ] 127.0.0.1 /ms.so/admin.php/article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.006070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006402s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.011581s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.037440s ]
+SQL: DELETE FROM `ms_category` WHERE ( `cid` = 5 ) [ RunTime:0.008552s ]
+NOTIC: [8] Undefined index:  name E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 48 行.
+
+[ 2013-12-17T18:38:18+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:38:22+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:38:50+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:38:55+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:39:21+08:00 ] 127.0.0.1 /ms.so/admin.php/article/category
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.007994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010862s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.011437s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.010408s ]
+SQL: UPDATE `ms_category` SET `name`='小学' WHERE ( `cid` = 1 ) [ RunTime:0.005898s ]
+
+[ 2013-12-17T18:39:31+08:00 ] 127.0.0.1 /ms.so/admin.php/article/category/time/1387276761.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005073s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.014482s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.017783s ]
+SQL: UPDATE `ms_category` SET `name`='初中' WHERE ( `cid` = 2 ) [ RunTime:0.008528s ]
+
+[ 2013-12-17T18:39:41+08:00 ] 127.0.0.1 /ms.so/admin.php/article/category/time/1387276771.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005052s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.011216s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.009418s ]
+SQL: UPDATE `ms_category` SET `name`='高中' WHERE ( `cid` = 3 ) [ RunTime:0.004544s ]
+
+[ 2013-12-17T18:39:54+08:00 ] 127.0.0.1 /ms.so/admin.php/article/category/time/1387276781.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004781s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.010562s ]
+NOTIC: [8] Use of undefined constant act - assumed 'act' E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 30 行.
+SQL: SHOW COLUMNS FROM `ms_category` [ RunTime:0.018826s ]
+SQL: DELETE FROM `ms_category` WHERE ( `cid` = 4 ) [ RunTime:0.008349s ]
+NOTIC: [8] Undefined index:  name E:\ampserver\APMServ5.2.6\www\htdocs\ms.so\admin\Lib\Model\ArticleModel.class.php 第 48 行.
+
+[ 2013-12-17T18:40:26+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:40:28+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:40:37+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:41:39+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:41:48+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:41:49+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:43:39+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:43:39+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:43:48+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:43:51+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:44:47+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:44:50+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:45:16+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:46:05+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:46:06+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:46:09+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:46:12+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:46:31+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:46:32+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:48:09+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:48:10+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:48:42+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:48:42+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:49:14+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:49:14+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:49:29+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:49:30+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:49:47+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:50:40+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:50:40+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:51:10+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:51:11+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:51:20+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:51:21+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:51:51+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:51:54+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:52:05+08:00 ] 127.0.0.1 /ms.so/admin.php/article/edit?aid=62
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.006772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007080s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.011345s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.013956s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.017056s ]
+SQL: UPDATE `ms_article` SET `title`='内容方面，关注家庭教育和升学教育的方方面面。',`status`=0,`flag`='t,j',`cid`=2,`click`=0,`tag`='',`keywords`='',`description`='',`summary`='',`image`='',`firstimage`='',`content`='<p>\n	内容方面，关注家庭教育和升学教育的方方面面。内容方面，关注家庭教育和升学教育的方方面面。内容方面，关注家庭教育和升学教育的方方面面。内容方面，关注家庭教育和升学教育的方方面面。内容方面，关注家庭教育和升学教育的方方面面。内容方面，关注家庭教育和升学教育的方方面面。内容方面，关注家庭教育和升学教育的方方面面。\n</p>\n<p>\n	内容方面，关注家庭教育和升学教育的方方面面。内容方面，关注家庭教育和升学教育的方方面面。内容方面，关注家庭教育和升学教育的方方面面。内容方面，关\n注家庭教育和升学教育的方方面面。内容方面，关注家庭教育和升学教育的方方面面。内容方面，关注家庭教育和升学教育的方方面面。内容方面，关注家庭教育和\n升学教育的方方面面。\n</p>',`up_time`=1387277525 WHERE ( `aid` = 62 ) [ RunTime:0.001692s ]
+
+[ 2013-12-17T18:52:10+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:53:46+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:53:47+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:53:52+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:54:03+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:54:29+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:54:57+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:55:00+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:56:51+08:00 ] 127.0.0.1 /ms.so/admin.php/article/add
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003080s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.010012s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.011226s ]
+SQL: INSERT INTO `ms_article` (`images`,`title`,`status`,`flag`,`cid`,`click`,`tag`,`keywords`,`description`,`summary`,`image`,`firstimage`,`content`,`aid`,`create_time`) VALUES ('/ms.so/Public/upload/image/20131217/20131217105624_29698.jpg','世界市值最高的公司还能增长么？',1,'a,t,j',1,0,'苹果','','','��开始分红，今年随着股价跳水宣布大规模股票回购，目前已经宣布的分红和股票回购\n计划的总金额高达1,600亿美元。公司的这些举动显然与乔布斯主政时期大不相同，一些激进股东——比如卡尔·伊坎（Karl \nIcahn）和大卫·埃因霍恩（David Einhorn）——指出公司还应当把更多的现金返还给股东，但公司的行为总体上受到股东欢迎。\n</p>\n<div>\n	<br />\n</div>\n<div>\n	然而，一家公司的价值并不会因为分红或者股票回购而发生变化，最终改变公司价值的还是公司的业务进展。诚如我在<a target=\"_blank\" href=\"http://www.huxiu.com/article/24220/1.html\">《苹果的护城河》</a>所言，苹果可以<b>从扩大顾客规模</b>和<b>让老顾客付更多的钱购买公司更多的产品</b>这两个角度来推动公司业务向前发展。扩大用户规模即拓宽自己的护城河，让老用户购买更多的产品或服务就是挖深自己的护城河。\n</div>\n<div>\n	<br />\n</div>\n<div>\n	在我看来，信息技术已经像汽车、铁路、电力一样渗透到我们每个人的生活，它已经或正在改变我们工作和生活的方式，使人类社会交流、获取信息、娱乐和工作等都发生很大的变化，在这个新时代，无论是扩大用户规模还是让老用户消费更多，苹果都有机会。\n</div>\n<div>\n	<br />\n</div>\n<div>\n	下面我就尝试从拓宽和挖深护城河这两个方向分析苹果的增长机会。\n</div>\n<div>\n	<br />\n</div>\n<b><span>如何拓宽护城河，即扩大用户规模？</span></b><br />\n<div>\n	<br />\n</div>\n<div>\n	<span style=\"line-height:1.8em;\">对于苹果如何扩大用户规模，我想方法至少有以下四个，即推出具吸引力的产品或服务、运用价格弹性、全球扩张和消费者教育。</span>\n</div>\n<div>\n	<br />\n</div>\n<div>\n	首先，扩大用户规模最重要的莫过于推出有吸引力的新产品或者服务了。在现有产品系列中推出新产品不仅会促使老顾客重复购买，而且会吸引到新顾客。\n</div>\n<div>\n	<br />\n</div>\n<div>\n	关\n于这一点，苹果公司最近一年饱受质疑，是在推出iPhone \n5之后，市场认为这个产品不够有吸引力，或者说创新不足。在苹果2007年推出第一代iPhone后，智能手机的外观形态就基本上被固定下来了。然而，在\n“大就是好”这种根深蒂固的观念作用下，去年大屏幕手机突然风靡起来，但苹果固执地拒绝推大屏幕手机，因为苹果非常看重手机的单手操作，所以\niPhone5只增加了高度，保持了上一代的宽度，我猜苹果的固执应该让它失去了一些用户。事实上，不断在自己的产品上堆砌竞争对手已经有的特色是一个经\n常使用的策略，我对这种“创新”方式实在不敢恭维，像苹果这样的以创新、创意而被其用户所赞赏、热爱的公司，绝对不是人家有什么自己也有什么就能够达到其\n用户期望的，如果执意去迎合潮流只会让它丧失个性，最终也会损害自己的品牌、流失忠诚用户。由此来看，今年9月苹果推出iPhone \n5S是一个非常好的苹果式答案，它按照自己的步骤推出了外观形态改变不大、可单手操作的新一代机型，但指纹识别，64位架构的全新芯片、对照相功能的改\n进、新的操作系统iOS7等等，令市场耳目一新，在外界认为手机已经很难创新的时候，苹果向市场证明仍然有创新的可能。最新的消息是，在苹果发布\niPhone \n5S和5C之后，市场份额在中国大陆已经跃升至第三位。网上流传的下一代iPhone仍然没有增加宽度，只是去掉了现在的屏幕外面的边框——我不知道是真\n是假，但很像是苹果的做法。\n</div>','','/ms.so/Public/upload/image/20131217/20131217105624_29698.jpg','<p>\n	<img src=\"/ms.so/Public/upload/image/20131217/20131217105624_29698.jpg\" alt=\"\" />\n</p>\n<p>\n	迫于股东的压力，同时可能也因为自己的现金累积得实在惊人，苹果公司从去年开始分红，今年随着股价跳水宣布大规模股票回购，目前已经宣布的分红和股票回购\n计划的总金额高达1,600亿美元。公司的这些举动显然与乔布斯主政时期大不相同，一些激进股东——比如卡尔·伊坎（Karl \nIcahn）和大卫·埃因霍恩（David Einhorn）——指出公司还应当把更多的现金返还给股东，但公司的行为总体上受到股东欢迎。\n</p>\n<div>\n	<br />\n</div>\n<div>\n	然而，一家公司的价值并不会因为分红或者股票回购而发生变化，最终改变公司价值的还是公司的业务进展。诚如我在<a target=\"_blank\" href=\"http://www.huxiu.com/article/24220/1.html\">《苹果的护城河》</a>所言，苹果可以<b>从扩大顾客规模</b>和<b>让老顾客付更多的钱购买公司更多的产品</b>这两个角度来推动公司业务向前发展。扩大用户规模即拓宽自己的护城河，让老用户购买更多的产品或服务就是挖深自己的护城河。\n</div>\n<div>\n	<br />\n</div>\n<div>\n	在我看来，信息技术已经像汽车、铁路、电力一样渗透到我们每个人的生活，它已经或正在改变我们工作和生活的方式，使人类社会交流、获取信息、娱乐和工作等都发生很大的变化，在这个新时代，无论是扩大用户规模还是让老用户消费更多，苹果都有机会。\n</div>\n<div>\n	<br />\n</div>\n<div>\n	下面我就尝试从拓宽和挖深护城河这两个方向分析苹果的增长机会。\n</div>\n<div>\n	<br />\n</div>\n<b><span>如何拓宽护城河，即扩大用户规模？</span></b><br />\n<div>\n	<br />\n</div>\n<div>\n	<span style=\"line-height:1.8em;\">对于苹果如何扩大用户规模，我想方法至少有以下四个，即推出具吸引力的产品或服务、运用价格弹性、全球扩张和消费者教育。</span>\n</div>\n<div>\n	<br />\n</div>\n<div>\n	首先，扩大用户规模最重要的莫过于推出有吸引力的新产品或者服务了。在现有产品系列中推出新产品不仅会促使老顾客重复购买，而且会吸引到新顾客。\n</div>\n<div>\n	<br />\n</div>\n<div>\n	关\n于这一点，苹果公司最近一年饱受质疑，是在推出iPhone \n5之后，市场认为这个产品不够有吸引力，或者说创新不足。在苹果2007年推出第一代iPhone后，智能手机的外观形态就基本上被固定下来了。然而，在\n“大就是好”这种根深蒂固的观念作用下，去年大屏幕手机突然风靡起来，但苹果固执地拒绝推大屏幕手机，因为苹果非常看重手机的单手操作，所以\niPhone5只增加了高度，保持了上一代的宽度，我猜苹果的固执应该让它失去了一些用户。事实上，不断在自己的产品上堆砌竞争对手已经有的特色是一个经\n常使用的策略，我对这种“创新”方式实在不敢恭维，像苹果这样的以创新、创意而被其用户所赞赏、热爱的公司，绝对不是人家有什么自己也有什么就能够达到其\n用户期望的，如果执意去迎合潮流只会让它丧失个性，最终也会损害自己的品牌、流失忠诚用户。由此来看，今年9月苹果推出iPhone \n5S是一个非常好的苹果式答案，它按照自己的步骤推出了外观形态改变不大、可单手操作的新一代机型，但指纹识别，64位架构的全新芯片、对照相功能的改\n进、新的操作系统iOS7等等，令市场耳目一新，在外界认为手机已经很难创新的时候，苹果向市场证明仍然有创新的可能。最新的消息是，在苹果发布\niPhone \n5S和5C之后，市场份额在中国大陆已经跃升至第三位。网上流传的下一代iPhone仍然没有增加宽度，只是去掉了现在的屏幕外面的边框——我不知道是真\n是假，但很像是苹果的做法。\n</div>',0,1387277811) [ RunTime:0.004644s ]
+
+[ 2013-12-17T18:56:55+08:00 ] 127.0.0.1 /ms.so/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:56:59+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T18:57:04+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:57:16+08:00 ] 127.0.0.1 /ms.so/admin.php/article/edit?aid=1
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001858s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.010781s ]
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.014145s ]
+SQL: SHOW COLUMNS FROM `ms_article` [ RunTime:0.014553s ]
+SQL: UPDATE `ms_article` SET `title`='世界市值最高的公司还能增长么？',`status`=1,`flag`='t',`cid`=2,`click`=0,`tag`='苹果',`keywords`='',`description`='',`summary`='',`image`='',`firstimage`='/ms.so/Public/upload/image/20131217/20131217105624_29698.jpg',`content`='<p>\n	<img src=\"/ms.so/Public/upload/image/20131217/20131217105624_29698.jpg\" alt=\"\" /> \n</p>\n<p>\n	迫于股东的压力，同时可能也因为自己的现金累积得实在惊人，苹果公司从去年开始分红，今年随着股价跳水宣布大规模股票回购，目前已经宣布的分红和股票回购\n计划的总金额高达1,600亿美元。公司的这些举动显然与乔布斯主政时期大不相同，一些激进股东——比如卡尔·伊坎（Karl \nIcahn）和大卫·埃因霍恩（David Einhorn）——指出公司还应当把更多的现金返还给股东，但公司的行为总体上受到股东欢迎。\n</p>\n<div>\n	<br />\n</div>\n<div>\n	然而，一家公司的价值并不会因为分红或者股票回购而发生变化，最终改变公司价值的还是公司的业务进展。诚如我在<a target=\"_blank\" href=\"http://www.huxiu.com/article/24220/1.html\">《苹果的护城河》</a>所言，苹果可以<b>从扩大顾客规模</b>和<b>让老顾客付更多的钱购买公司更多的产品</b>这两个角度来推动公司业务向前发展。扩大用户规模即拓宽自己的护城河，让老用户购买更多的产品或服务就是挖深自己的护城河。\n</div>\n<div>\n	<br />\n</div>\n<div>\n	在我看来，信息技术已经像汽车、铁路、电力一样渗透到我们每个人的生活，它已经或正在改变我们工作和生活的方式，使人类社会交流、获取信息、娱乐和工作等都发生很大的变化，在这个新时代，无论是扩大用户规模还是让老用户消费更多，苹果都有机会。\n</div>\n<div>\n	<br />\n</div>\n<div>\n	下面我就尝试从拓宽和挖深护城河这两个方向分析苹果的增长机会。\n</div>\n<div>\n	<br />\n</div>\n<b><span>如何拓宽护城河，即扩大用户规模？</span></b><br />\n<div>\n	<br />\n</div>\n<div>\n	<span style=\"line-height:1.8em;\">对于苹果如何扩大用户规模，我想方法至少有以下四个，即推出具吸引力的产品或服务、运用价格弹性、全球扩张和消费者教育。</span> \n</div>\n<div>\n	<br />\n</div>\n<div>\n	首先，扩大用户规模最重要的莫过于推出有吸引力的新产品或者服务了。在现有产品系列中推出新产品不仅会促使老顾客重复购买，而且会吸引到新顾客。\n</div>\n<div>\n	<br />\n</div>\n<div>\n	关\n于这一点，苹果公司最近一年饱受质疑，是在推出iPhone \n5之后，市场认为这个产品不够有吸引力，或者说创新不足。在苹果2007年推出第一代iPhone后，智能手机的外观形态就基本上被固定下来了。然而，在\n“大就是好”这种根深蒂固的观念作用下，去年大屏幕手机突然风靡起来，但苹果固执地拒绝推大屏幕手机，因为苹果非常看重手机的单手操作，所以\niPhone5只增加了高度，保持了上一代的宽度，我猜苹果的固执应该让它失去了一些用户。事实上，不断在自己的产品上堆砌竞争对手已经有的特色是一个经\n常使用的策略，我对这种“创新”方式实在不敢恭维，像苹果这样的以创新、创意而被其用户所赞赏、热爱的公司，绝对不是人家有什么自己也有什么就能够达到其\n用户期望的，如果执意去迎合潮流只会让它丧失个性，最终也会损害自己的品牌、流失忠诚用户。由此来看，今年9月苹果推出iPhone \n5S是一个非常好的苹果式答案，它按照自己的步骤推出了外观形态改变不大、可单手操作的新一代机型，但指纹识别，64位架构的全新芯片、对照相功能的改\n进、新的操作系统iOS7等等，令市场耳目一新，在外界认为手机已经很难创新的时候，苹果向市场证明仍然有创新的可能。最新的消息是，在苹果发布\niPhone \n5S和5C之后，市场份额在中国大陆已经跃升至第三位。网上流传的下一代iPhone仍然没有增加宽度，只是去掉了现在的屏幕外面的边框——我不知道是真\n是假，但很像是苹果的做法。\n</div>',`up_time`=1387277836 WHERE ( `aid` = 1 ) [ RunTime:0.003426s ]
+
+[ 2013-12-17T18:57:21+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:57:21+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:58:29+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:58:29+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:58:31+08:00 ] 127.0.0.1 /ms.so/admin.php/index/login
+ERR: 非法操作:login
+
+[ 2013-12-17T18:58:35+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:58:56+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:58:57+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:59:19+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T18:59:20+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:00:08+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:00:09+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:00:19+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:00:20+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:00:45+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:00:46+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:01:19+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:01:20+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:01:30+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:01:35+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T19:01:37+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:43:14+08:00 ] 127.0.0.1 /ms.so/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:44:04+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T19:44:07+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:44:10+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T19:44:13+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T19:51:10+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T19:51:16+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T20:01:47+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T20:01:53+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T20:01:55+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2013-12-17T20:05:35+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T20:05:49+08:00 ] 127.0.0.1 /ms.so/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2013-12-17T20:05:53+08:00 ] 127.0.0.1 /ms.so/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+

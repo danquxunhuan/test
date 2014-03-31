@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+/*-----------------------------------header----------------------------------*/
+.top{background:url(../images/bj.jpg) repeat-x top;margin-bottom:30px;}
+.logo{width:1000px;margin:0 auto;}
+.logo_l{width:125px;height:80px;}
+.logo_r{height:40px;line-height:40px;color:#fff;padding-left:10px;}
+.lo_r{width:150px;width:160px\9;margin-right:14px;height:80px;}
+.bn i,.bn{display:inline-block;height:40px;line-height:40px;color:#fff}
+.bn i{margin-left:310px;}
+.index_lm a{display:inline-block;width:67px;height:28px;font-size:14px;color:#2D2D2D;line-height:28px;text-align:center;margin-top:10px;}
+.index_lm a:hover{background:url(../images/in_hui.png) no-repeat;}
+.index_lm a.in_mo{color:#fff;background:url(../images/index.png) no-repeat;}
+.lo_r .togao a{padding:0 10px;display:inline-block;height:40px;line-height:40px;color:#fff;float:left}
+/*信息提醒*/
+.lo_r .togao a.a_nopad{padding:0;position:relative;z-index:1;}
+.tx_red{display:inline-block;width:12px;height:11px;position:absolute;right:0;top:29px;z-index:999}
+/*结束*/
+.lo_a{background:#FB1508}
+.togao{text-align:right;height:40px;margin-left:-10px;}
+.togao a:hover{background:#f95950}
+.togao a.to_bj:hover{background:#464545}
+/*--------------------------------bottom------------------------------*/
+.bottom{height:40px;line-height:40px;background:#2D2D2D;text-align:center;margin-top:30px;}
+.bottom a{color:#B5B5B5}
+.bottom span{color:#626262;margin:0 14px;}
+/*----------------------------------------------个人中心头部----------------------------------------*/
+.color_box{width:85px;float:right;text-align:right;}
+.color_div11{width:17px;height:16px;margin:20px 15px 0 0;}
+.color_box_a11{display:inline-block;width:17px;height:16px;}
+.color_div1{width:16px;height:14px;position:relative;margin:20px 15px 0 0;z-index:1}
+.color_div1 a.color_box_a1{display:inline-block;width:16px;height:14px;}
+.color_ul{position:absolute;left:0;top:20px;z-index:999}
+.color_div2{width:21px;height:21px;margin-top:15px;position:relative;z-index:1}
+.color_div2 a.color_box_a2{display:inline-block;width:21px;height:21px}
+.color_ul2{position:absolute;left:-43px;top:27px;background:#fff;width:78px;z-index:999}
+.color_ul2 li a{display:inline-block;width:78px;height:22px;border-bottom:1px solid #f0f0f0;text-align:center;padding-top:5px;}
+.color_ul2 li a:hover{color:#03b5f6}
+.color_ul2 i{vertical-align:middle;display:inline-block;width:16px;height:16px;margin-right:9px;}

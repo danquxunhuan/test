@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<title>找名师</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<if condition ="$userDataInfo.style neq ''">
+<link rel="stylesheet" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
+<else/>
+<link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" />
+</if>
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/Js/asyncbox/skins/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/js/calendar/calendar-blue.css"/>
+<script src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
+<script src="__PUBLIC__/js/jquery.lazyload.js"></script>
+<script src="__PUBLIC__/js/functions.js"></script>
+<script src="__PUBLIC__/js/jquery.form.js"></script>
+<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<script src="__PUBLIC__/js/calendar/calendar.js"></script>
+<script language="javascript" src="__PUBLIC__/js/common.js"></script>
+<script src="__PUBLIC__/js/reg.js"></script>
+<script language="javascript">
+function imgdragstart(){return false;}
+</script>
+</head>
+
+<body>
+<script language="javascript">
+for(i in document.images)document.images[i].ondragstart=imgdragstart;
+</script>
+<div class="box">
+<!--***************************top******************************-->
+  <include file="Public:header_m" />       
+<!--***************************content******************************-->
+    <div class="content fix">
+        <div class="ms_content bk fix">
+            <div class="ms_title">五种方式 帮您孩子找名师</div>
+            <p class="ms_p">名师.SO聘请各科名师，并将名师信息以文字、图片、视频等多种方式全面展现，还请顶级专家为名师评价打分。在这里，家长们可以真的了解名师，找到自己孩子的名师，因材施教，高效培优。
+</p>
+            <ul class="ms_5 fix">
+            	<li class="ms_no1">
+                	<a href="__APP__/member/all" target="_blank" class="ms_a1"><img src="__PUBLIC__/images/ms_5.png" /><span class="ms_phone">自助找名师</span>
+                    <div class="ms_a2"><span class="ms_phone ms_phone1">自助找名师</span><p>您在排行榜或名师库中查找名师，看中谁就预约谁上课试讲。<br /><span class="ms_zx">马上查找</span>
+</p></div></a>
+                </li>
+            	<li class="ms_no1">
+                	<a class="ms_a1"><img src="__PUBLIC__/images/ms_1.png" /><span class="ms_phone">400电话</span>
+                	<div class="ms_a2"><span class="ms_phone ms_phone1">400电话</span><p>拨打<i>4000-710-910</i>，让对名师了如指掌的教育咨询师帮助您一步到位。</p></div></a>
+                </li>
+                <li class="ms_no1">
+                	<a href="#ppp" class="ms_a1" ><img src="__PUBLIC__/images/ms_4.png" /><span class="ms_phone">填表找名师</span>
+                    <div class="ms_a2"><span class="ms_phone ms_phone1">填表找名师</span><p>请您填写找名师的需求信息，教育咨询师帮您精挑细选。<br /><span class="ms_zx sj_x">现在填写</span><span class="ms_zx sj_s dis_no">关闭填写</span></p></div></a>
+                </li>
+                <li class="ms_no1">
+                	<a class="ms_a1"><img src="__PUBLIC__/images/ms_3.png" /><span class="ms_phone">微 信</span>
+                    <div class="ms_a2"><span class="ms_phone ms_phone1">微 信</span><p>查找名师.SO微信号：<i>mingshi12345</i>，或扫描二维码加好友，手机沟通更便捷。</p></div></a>
+                </li>
+                <li class="ms_no1">
+                	<a href="#" class="ms_a1"><img src="__PUBLIC__/images/ms_2.png" /><span class="ms_phone">在线咨询</span>
+                    <div class="ms_a2"><span class="ms_phone ms_phone1">在线咨询</span><p>点击即可联系教育咨询师，高效沟通，事半功倍。<br /><span class="ms_zx">现在咨询</span></p></div></a>
+                </li>
+            </ul>
+            <div class="ms_zuce fix" id="ppp">
+            	<div class="ms_ce"></div>
+            	<div class="ms_sjiao"></div>
+                <div class="ms_all fix">
+                	<div class="ms_tx">填写需求表</div>
+					  <form action="" method="POST">
+                    <div class="ms_dlall fix">
+                        <dl class="ms_form fix">
+                            <dt>孩子年级：</dt>
+                            <dd class="ms_ph">
+                            	<select id="m1" name="class" class="select5">
+							          <option value="">-选择年级-</option>
+					                  <volist name="class" id="voo">
+					                  <option value="{ms:$voo.id}">{ms:$voo['name']}</a></li>
+								       </volist>
+							        </select>
+                            </dd>
+                        </dl>
+                        <dl class="ms_form fix">
+                            <dt>辅导科目：</dt>
+                            <dd class="ms_fu" style="z-index:101">
+                            	<select id="m1" name="obj" class="select3">
+							          <option value="">-选择科目-</option>
+					                  <volist name="obj" id="vob">
+					                  <option value="{ms:$vob.id}">{ms:$vob['subject']}</a></li>
+								       </volist>
+							        </select>
+                            </dd>
+                        </dl>
+                         <dl class="ms_form fix">
+                            <dt>上课区域：</dt>
+                            <dd class="zc_tab">
+                                        <div class="zc_text_box">
+                                               <select id="province" name="province">
+                                                    <!--option value="1">市</option-->
+                                                <volist name="areaData"  id="val">
+                                                     <option value="{ms:$val.id}">{ms:$val.name}</option>
+                                                </volist>
+                                                </select>&nbsp;&nbsp;&nbsp;
+                                                <select id="city" name="city" class="select6">
+                                                    <option value="">区</option>
+                                                </select>&nbsp;&nbsp;&nbsp;
+                                                <select id="area" name="area" class="select6">
+                                                    <option value="">县</option>
+                                                </select>
+					                        </div>
+				                </dd>
+                          </dl>
+						<dl class="ms_form fix">
+                            <dt>上课时间：</dt>
+                            <dd class="ms_ph"><input type="text"  class="select5 inpu1" name="yueke_time" id="yueke_time" /></dd>
+                        </dl>  
+                        <dl class="ms_form fix">
+                            <dt>您手机号：</dt>
+                            <dd class="ms_ph ms_ph1"><input type="text" class="inpu1"  name="phone" /></dd>
+                        </dl>
+                        <dl class="ms_form fix">
+                            <dt></dt>
+                            <dd class="ms_time"><input type="text"  value="具体上课地址" name="address" class="inpu1 co_hui"/></dd>
+                        </dl>
+
+                    </div>
+                    <div class="ms_area fix"><textarea name="msg" id="msg" class="inpu1" />请您描述孩子要辅导的学科现状、辅导需求，以及您期望达到的辅导效果等</textarea></div>
+                    <div class="ms_our">我们会根据您填写的上述信息，为您孩子精选3位名师，他们将精心为您孩子设计教学方案。您三选其一，来体验教学！</div>
+                    <div class="ms_kchou"><a href="javascript:void(0);" class="ms_sub submit">提 交</a><div>课 酬<input type="text" name="budget" value="" /><i>元/时</i></div></div>
+					 </form>
+                </div>
+                <div class="ms_ce ms_ddd"></div>
+            </div>
+        </div>
+    </div>
+	
+	<div class="content fix bk mrt10">
+    	<div class="ms_title ms_title1">服务流程</div>
+            <div class="lc_box fix">
+            	
+            	<dl class="lc_dl">
+                	<dt><img src="__PUBLIC__/images/lcx1.png" /></dt>
+                    <dd>
+                    	<div>告知需求，帮您精选</div>
+                        <p>告诉我们您想要找什么样的教师？我们免费帮您精挑细选，24小时内给您回复。</p>
+                    </dd>
+                </dl>
+                <dl class="lc_dl lc_dl2">
+                	<dt><img src="__PUBLIC__/images/lcx2.png" /></dt>
+                    <dd>
+                    	<div>三位名师，三个方案</div>
+                        <p>一位主选，两位备选，他们都将精心为您孩子设计教学方案。</p>
+                    </dd>
+                </dl>
+                <dl class="lc_dl lc_dl3">
+                	<dt><img src="__PUBLIC__/images/lcx3.png" /></dt>
+                    <dd>
+                    	<div>选定名师，体验教学</div>
+                        <p>您对比三位教师的信息和教学方案，选定一位体验教学，并预交2次课的学费。</p>
+                    </dd>
+                </dl>
+                <dl class="lc_dl lc_dl4">
+                	<dt><img src="__PUBLIC__/images/lcx4.png" /></dt>
+                    <dd>
+                    	<div>正式上课，全程服务</div>
+                        <p>体验课不满意，更换教师；满意，签订协议正式上课。名师.SO将全程为您服务。</p>
+                    </dd>
+                </dl>
+            	<!--<div class=" fw_tltl fl">服务流程</div>
+                <ul class="fw_ul fl">
+                	<li class="fw_li1 fw_li1_mo"><a href="#">告知需求，有求必应</a></li>
+                    <li class="fw_li2"><a href="#">三位名师，三个方案</a></li>
+                    <li class="fw_li3"><a href="#">选定名师，体验教学</a></li>
+                    <li class="fw_li4"><a href="#">签订协议，正式上课</a></li>
+                    <li class="fw_li5"><a href="#">全程服务，提升效果</a></li>
+                </ul>
+                <div class="heiban fl">
+                	<div>告知需求，有求必应</div>
+                	<p>告诉我们您想找什么样的名师？我们免费帮您精挑细选。告诉我们您想找什么样的名师？我们免费帮您精挑细选。告诉我们您想找什么样的名师？我们免费帮您精挑细选。告诉我们您想找什么样的名师？我们免费帮您精挑细选。告诉我们您想找什么样的名师？我们免费帮您精挑细选。告诉我们您想找什么样的名师？我们免费帮您精挑细选。告诉我们您想找什么样的名师？我们免费帮您精挑细选。告诉我们您想找什么样的名师？我们免费帮您精挑细选。</p>
+                </div>-->
+            </div>
+            
+    </div>
+    <div class="content fix bk mrt10">
+    	<div class="ms_title ms_title1">名师.SO<i>6</i>个不一样</div>
+            <div class="six fix">
+            	<div class="pubu">
+                	<div class="six_bold">1、教师精挑细选</div>
+                	<div><img src="__PUBLIC__/images/six1.png" height="180" width="283" /></div>
+                    <div class="six_div">
+                        <p class="six_p">只有帮助孩子找到了好老师，名师.SO才会有收益，而前期名师.SO为教师制作网站、录制视频、宣传推广的费用总和极高，赢利模式决定了我们必须对老师精挑细选。</p>
+                    </div>
+                </div>
+                <div class="pubu">
+                	<div class="six_bold">2、教师信息透明</div>
+                	<div><img src="__PUBLIC__/images/six2.png" height="180" width="283" /></div>
+                    <div class="six_div">
+                        <p class="six_p">名师.SO的每一位教师信息都非常真实全面：包括教师介绍、教学经历、讲课视频、评价评分等应有尽有，家长可以自助为孩子选择最合适的教师。</p>
+                    </div>
+                </div>
+                <div class="pubu">
+                	<div class="six_bold">3、师生精准匹配</div>
+                	<div><img src="__PUBLIC__/images/six3.png" height="180" width="283" /></div>
+                    <div class="six_div">
+                        <p class="six_p">孩子的弱项先和教师的强项匹配，然后在强项相同的教师之间对比细选三位，让他们写教学方案，根据教学方案确定教师试讲。</p>
+                    </div>
+                </div>
+                <div class="pubu pubu4">
+                	<div class="six_bold">4、厚待每位教师</div>
+                	<div><img src="__PUBLIC__/images/six4.png" height="180" width="283" /></div>
+                    <div class="six_div">
+                        <p class="six_p">名师.SO发现并帮助实力派教师展现自我，让苦于找不到好教师的家长们知道他们，更重要的是，学生交的学费90%以上给教师。</p>
+                    </div>
+                </div>
+                <div class="pubu">
+                	<div class="six_bold">5、学习效果更好</div>
+                	<div><img src="__PUBLIC__/images/six5.png" height="180" width="283" /></div>
+                    <div class="six_div">
+                        <p class="six_p">为什么更好呢？原因是名师.SO紧盯三个关键点：第一，学前紧盯师生精准匹配；第二，学中紧盯教师的教学内容；第三，全程跟踪，紧盯家长的评价反馈。</p>
+                    </div>
+                </div>
+                <div class="pubu">
+                	<div class="six_bold">6、家长培优帮手</div>
+                	<div><img src="__PUBLIC__/images/six6.png" height="180" width="283" /></div>
+                    <div class="six_div">
+                        <p class="six_p">除了帮助孩子找名师，名师.SO还能为家长们做些啥呢？如果您不想在家上课，想找个教学场地，名师.SO能帮您；如果您想参加线下活动或者听讲座，名师.SO能帮您；如果您想用最少的时间来获取孩子教育的重要信息，名师.SO还能帮您；还有……。总之，在您育才成龙的过程中，名师.SO总能助您一臂之力！</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+<!--***************************bottom******************************-->  
+  <include file="Public:footer" />  
+  </div>
+<script type="text/javascript" src="__PUBLIC__/js/iepng.js"></script>
+    <script>
+        $("#news li").click(function () {
+            var a = $(this).find(".mli").get(0);
+            var id = a.id;
+            var index = id.replace("mli", "");
+            $("#news .num_current").removeClass("num_current");
+            $(".cons").hide();
+            $("#con" + index).show();
+            return false;
+        });
+    </script>
+<script type="text/javascript">		
+$(function(){
+	$(".submit").click(function(){
+		 <if condition="ACTION_NAME neq 'edit'">
+		 if($.trim($("select[name='class']").val())==''){
+			 popup.alert("请选择孩子年级");
+			 return false;
+		 }
+		 if($.trim($("select[name='obj']").val())==''){
+			 popup.alert("请选择辅导科目");
+			 return false;
+		 }
+		 if($.trim($("select[name='province']").val())==''){
+			 popup.alert("您所在市？");
+			 return false;
+		 }
+		 if($.trim($("select[name='city']").val())==''){
+			 popup.alert("您所在区？");
+			 return false;
+		 }
+		 if($.trim($("select[name='area']").val())==''){
+			 popup.alert("您所在县？");
+			 return false;
+		 }
+		 if($.trim($("#yueke_time").val())==''){
+			 popup.alert('请填写约课时间');
+			 return false;
+		 }
+		 if($.trim($("input[name='phone']").val())=='' ){
+			 popup.alert("手机号不能为空");
+			 return false;
+		 }
+		 if($.trim($("input[name='address']").val())=='' || $("input[name='address']").val()=='具体上课地址'){
+			 popup.alert('请填写具体上课地址');
+			 return false;
+		 }
+		 if($.trim($("#msg").val())==''){
+			 popup.alert('备注信息必填');
+			 return false;
+		 }
+		 if($.trim($("#msg").val())=='请您描述孩子要辅导的学科现状、辅导需求，以及您期望达到的辅导效果等'){
+			 popup.alert('备注信息好像不对呦');
+			 return false;
+		 }
+		 if($.trim($("input[name='budget']").val())==''){
+			 popup.alert("课酬不能为空");
+			 return false;
+		 }
+		</if>
+		commonAjaxSubmit();
+		return false;
+	});
+});
+</script>	
+</body>
+</html>
+ 

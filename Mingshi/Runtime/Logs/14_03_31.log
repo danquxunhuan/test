@@ -1,0 +1,21 @@
+[ 2014-03-31T09:42:48+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.005014s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.001188s ]
+
+[ 2014-03-31T11:37:46+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.004348s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.000447s ]
+
+[ 2014-03-31T11:55:23+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003418s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.000398s ]
+
