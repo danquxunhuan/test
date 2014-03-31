@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>家长注册</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/Js/asyncbox/skins/zcms.css"/>
+<link rel="stylesheet" href="__PUBLIC__/css/zuce.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/tanchu.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/js/calendar/calendar-blue.css"/>
+<script src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
+<script src="__PUBLIC__/js/jquery.lazyload.js"></script>
+<script src="__PUBLIC__/js/functions.js"></script>
+<script src="__PUBLIC__/js/jquery.form.js"></script>
+<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<script src="__PUBLIC__/js/calendar/calendar.js"></script>
+<script language="javascript" src="__PUBLIC__/js/common.js"></script>
+<script src="__PUBLIC__/js/reg.js"></script>
+<script src="__PUBLIC__/js/iepng.js"></script>
+<style type="text/css"><!--
+body{ font-size:12px;}
+--></style>
+</head>
+
+<body>
+<div class="box">
+<!--***************************top******************************-->
+<include file="Public:header" />
+<!--***************************content******************************-->
+    <div class="content">
+        <div class="zc_content bk">
+            <div class="zc_title">
+                <div class="zc_left fl" >
+				<ul id="news">
+				<li class="zc_momo"><a  href="javascript:;"  class="mli zc_moo" id="mli1">家长注册</a></li>
+				<li><a href="__URL__/regms" class="mli zc_moo" id="mli2" >名师注册</a></li>
+				</ul>
+				</div>
+                <div class="zc_right fr">已有<i>名师.SO</i>账号<a href="index.html" class="zc_ys">登录</a></div>
+            </div>
+			  <div class="jianzhang cons" id="con1">
+             <div class="zc_zuo">
+			    <form method="post" action="__URL__/insert" id='form1' name='fm'  >
+            	  <!--dl class="xinzc_dl">
+                	  <dt class="letter">邀请码：</dt>
+                    <dd>
+					<div class="xinzc_div">
+					<input type="text" id="yqm_sn" name="yqm_sn" class="xinzc_input" onfocus='msgEvent("yqm_sn",1);' onblur='msgEvent("yqm_sn",0)' />
+					<div id="msg_yqm" style="display:none;float:right" class="error"></div>
+					</div>   
+					</dd>
+                </dl-->
+            	  <dl class="xinzc_dl">
+				    <dt class="letter">用户名：</dt>
+					  <dd>
+                	  <div class="xinzc_div">
+					    <input type="text" id="uname" name="uname" class="xinzc_input"   onfocus='msgEvent("uname",1);' onblur='msgEvent("uname",0)' />
+						 <div id="msg_username" style="display: none;float:right"class="error" ></div>
+					  </div>
+					  </dd>
+                </dl>
+                
+                <dl class="xinzc_dl"><table><tr><td><dt class="letter">手机号：</dt></td><td><dd><div class="xinzc_div xinzc_div178"> 
+					    <input type="text" id="phone" name="phone" class="xinzc_input xinzc_div73" onfocus='msgEvent("phone",1);' onblur='msgEvent("phone",0)' />
+						 <div id="msg_phone" style="display:none;float:left" class="error" ></div>
+					</div>
+					</dd></td><td><div class="inptyqm zc_yz fr"><a href="#">获取验证码</a></div></td></tr></table></dl>
+                <dl class="xinzc_dl">
+                	<dt class="letter">验证码：</dt>
+                    <dd><div class="xinzc_div xinzc_div1"><input type="text" class="xinzc_input" /></div></dd>
+                </dl>
+                <dl class="xinzc_dl">
+                	<dt>孩子年级：</dt>
+                    <dd class="dd_posi1">
+					     
+		                     <select id="m1" name="classid" class="select1">
+							     <option value="">-选择年级-</option>
+					               <volist name="class" id="voo">
+					                  <option value="{ms:$voo.id}">{ms:$voo['name']}</a></li>
+								     </volist>
+							    </select>
+						 
+					  </dd>
+                </dl>
+                <dl class="xinzc_dl">
+                	<dt>常住地区：</dt>
+				   
+				   
+				    <dd class="zc_tab">
+                                        <div class="zc_text_box">
+                                               <select id="province" name="province" class="select2">
+                                                    <option value="">市</option>
+                                                <volist name="areaData"  id="val">
+                                                     <option value="{ms:$val.id}">{ms:$val.name}</option>
+                                                </volist>
+                                                </select>&nbsp;&nbsp;
+                                                <select id="city" name="city" class="select2">
+                                                    <option value="">区</option>
+                                                </select>&nbsp;&nbsp;
+                                                <select id="area" name="area" class="select2">
+                                                    <option value="">县</option>
+                                                </select>
+					                        </div>
+				    </dd>				   
+                </dl>	
+                <dl class="xinzc_dl">
+                	<dt class="letter1">密码：</dt>
+                    <dd>
+					<div class="xinzc_div">
+					     <input type="password" id="password" name="password" class="xinzc_input" onfocus='msgEvent("password",1);' onblur='msgEvent("password",0)' />
+					     <div id="msg_password" style="display: none;float:left" class="error"></div>
+					</div>
+					</dd>
+                </dl>
+                <dl class="xinzc_dl">
+                	<dt>确认密码：</dt>
+                    <dd>
+					<div class="xinzc_div">
+					<input type="password" id="confirmpwd"  name="confirmpwd"  class="xinzc_input" onfocus='msgEvent("confirmpwd",1);' onblur='msgEvent("confirmpwd",0)' />
+					      <div id="msg_confirmpwd" style="display: none;float:left"  class="error" ></div>
+					</dd>
+                </dl>
+				   <input type="hidden" name="tid" value="1" />
+				  
+                <div class="zc_check"><p class="fl"><input type="checkbox"  id="chk_treaty" /></p><p class="fl">我已阅读并同意<a href="#" class="zc_colo">《名师.SO用户使用协议》</a></p></div>
+                <div class="zc_login"><a href="javascript:void(0);" class="zc_mr submit">免费注册</a><a href="index.html">返回登录</a></div>
+               </form>
+			</div>
+            <div class="zc_you">
+                <div class="apple_title"><span>我们为家长做三件很酷的事情</span></div>
+                <div class="apple_fff fff">
+                    <dl class="zc_5tiao">
+                            <dt><img src="__PUBLIC__/images/zc_4.png" /></dt>
+                            <dd>
+                                <p class="zc_sx">第一，帮您孩子找名师</p>
+                                <p class="zc_p">勤奋聪明的学生只有幸遇良师才能如虎添翼，我们乐此不疲！</p>
+                            </dd>
+                        </dl>
+                        <dl class="zc_5tiao">
+                            <dt><img src="__PUBLIC__/images/zc_5.png" /></dt>
+                            <dd>
+                                <p class="zc_sx">第二，帮您监管教学内容</p>
+                                <p class="zc_p">教学目标、计划、内容都有学科专家帮您层层把关，学习效果当然更好！</p>
+                            </dd>
+                        </dl>
+                        <dl class="zc_5tiao">
+                            <dt><img src="__PUBLIC__/images/zc_6.png" /></dt>
+                            <dd>
+                                <p class="zc_sx">第三，帮您获取重要信息</p>
+                                <p class="zc_p">百里挑一，让您用最少的时间实现最想要的阅读！</p>
+                            </dd>
+                        </dl>
+                </div>
+            </div>
+			</div>			 
+			<!-------------------------------------------------名师----------------------------------------------------------->
+        </div>
+    </div>
+<!--***************************bottom******************************-->    
+<include file="Public:footer" />
+</div>
+<script type="text/javascript">
+ $(".submit").click(function(){
+             regSubmit();
+            commonAjaxSubmit('insert');
+});
+ $(".submit1").click(function(){
+            regSubmit1();
+            commonAjaxSubmit('insert1');
+});	   
+</script>
+
+</body>
+</html>
+ 

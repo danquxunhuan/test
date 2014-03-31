@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>文章评论列表页</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<if condition ="$userDataInfo.style neq ''">
+<link rel="stylesheet" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
+<else/>
+<link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" />
+</if>
+<link rel="stylesheet"href="__PUBLIC__/css/tanchu.css" type="text/css" />
+<load href="../Public/Js/Jquery/jquery.min.js" />
+<load href="../Public/Js/Jquery/jquery.form.js" />
+
+<style type="text/css">
+dd .pl_hfu{display:none;}
+</style>
+<script language="javascript" src="__PUBLIC__/js/common.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/iepng.js"></script>
+<script language="javascript" src="__PUBLIC__/js/autoresize.js"></script>
+<script language="javascript" src="__PUBLIC__/js/ms_review.js"></script>
+<script language="javascript">
+function imgdragstart(){return false;}
+</script>
+<script type="text/javascript">
+//提示框 3秒之后框框消失
+function outa(){$('#tipa').css('display','none');} //已提交过了
+function outb(){$('#tipb').css('display','none');} //已表过态了
+function titye(){alert('刷新页面试试');}
+</script>
+<script language="javascript">
+$(function(){
+        $('#form1').ajaxForm({
+            beforeSubmit:  checkForm,  // pre-submit callback
+            success:       complete,  // post-submit callback
+            dataType: 'json'
+        });
+		
+		 function checkForm(){
+		 var goo='g';
+		  var msgr =trim($("#msg").val(),goo);
+		  if( '' == msgr){
+		      $("#notice").html("亲，写点内容哦");
+              return false;
+             }
+            //可以在此添加其它判断
+			if( msgr.length < 10){
+                 alert("亲,再多写点哦");
+                 return false;
+			}
+			if(msgr.length >500){
+                 alert("亲,只能输入500个字哦");
+                 return false;
+			}
+        }
+		function complete(data){
+            if (data.status==1){
+                $('#notice').html("<em id='notice_span'>10-500</em>字");
+				$('#msg').css({'height':'68px'});
+				// 更新列表
+                data = data.data;
+                var html =  '<dl class="result pinglun-box"><dt><a href="#"><img src="__PUBLIC__/images/90_1.png" width="50" height="50" /></a></dt><dd><div class="xq_name"><a href="#">'+data.uname+'</a></div><p>'+data.msg+'</p><div class="pj_time xq_pj_time"><div class="fr"><a class="view-delete-btn no_icon_color" action="del_post" title="确定删除?" reviewid="'+data.id+'" href="javascript:void(0);">删除</a><a href="javascript:void(0);" onclick="titye()" class="pj_zan">0</a><a href="javascript:void(0);" onclick="titye()" class="xq_a2">0</a><A href="javascript:void(0);" onclick="titye()" class="pl_a ms_reply"><i></i>评论</A></div><i>'+data.pl_time+'</i></div></dd> </dl>';
+				$('#list').prepend(html);
+				$("#msg").val("");//评论成功后清除输入框
+            }else{
+                $('#notice').html(data.info).show();
+            }
+        }
+
+		 //给文章点赞
+		 var azid;
+		$("a.zhan").click(function(){
+			var id = $(this).attr("id");
+			azid = id;
+			var aid=id.match(/\d+/).join("");
+			var aid = parseInt(aid);
+		    $.ajax({
+		        type:"post",
+		        url:"__APP__/Article/add_zan?aid="+aid+" & action=article",
+		        data:"idid="+new Date(),
+		        dataType:"html",
+		        success:function(msg){
+		        	if(msg == "已赞"){
+		        			$('#tipb').css('display','none');
+		        			$('#tipa').css("top",$(document).scrollTop()+($(window).height())/2-100+"px");
+		        			$('#tipa').css('display','block');
+		        			setTimeout(outa, 3000);
+		        	}else if(msg == "已踩不能赞"){
+		        			$('#tipa').css('display','none');
+		        			$('#tipb').css("top",$(document).scrollTop()+($(window).height())/2-100+"px");
+		        			$('#tipb').css('display','block');
+		        			setTimeout(outb, 3000);
+		        	}else{
+		        		$("#"+id).html(msg);
+		        	}
+		    	  }
+		    });
+		});
+        //给文章点踩
+        $(".xq_a2").click(function(){
+        	if("acai" == $(this).attr("name"))
+        	{
+	        	var id = $(this).attr("id");
+				var aid=id.replace(/[^\d]*/ig,"");
+				var aid = parseInt(aid);
+	        		$.ajax({
+	    		        type:"post",
+	    		        url:"__APP__/index.php/Article/add_cai?aid="+aid+" & action=article",
+	    		        data:"idid="+new Date(),
+	    		        dataType:"html",//注意
+	    		        success:function(msg){
+	    		        	if(msg == "已踩"){
+			        			$('#tipb').css('display','none');
+			        			$('#tipa').css("top",$(document).scrollTop()+($(window).height())/2-100+"px");
+			        			$('#tipa').css('display','block');
+			        			setTimeout(outa, 3000);
+			        	}else if(msg == "已赞不踩"){
+			        			$('#tipa').css('display','none');
+			        			$('#tipb').css("top",$(document).scrollTop()+($(window).height())/2-100+"px");
+			        			$('#tipb').css('display','block');
+			        			setTimeout(outb, 3000);
+			        	}else{
+			        		$("#"+id).html(msg);
+			        	}
+	    		    	}
+	    		    });
+        		}
+        });
+
+        //给评论点踩
+        $(".xq_a2").click(function(){
+        	if($(this).attr("name") !== "acai")
+        	{
+	        	var rid = $(this).attr("name");
+	        	var id = $(this).attr("id");
+		    		$.ajax({
+				        type:"post",
+				        url:"__APP__/index.php/Article/add_cai?rid="+rid+" & action=review",
+				        data:"idid="+new Date(),
+				        dataType:"html",//注意
+				        success:function(msg){
+				        	if(msg == "已踩"){
+			        			$('#tipb').css('display','none');
+			        			$('#tipa').css("top",$(document).scrollTop()+($(window).height())/2-50+"px");
+			        			$('#tipa').css('display','block');
+								$("#"+id).addClass("yizan2");//小手变色
+			        			setTimeout(outa, 3000);
+			        	}else if(msg == "已赞不踩"){
+			        			$('#tipa').css('display','none');
+			        			$('#tipb').css("top",$(document).scrollTop()+($(window).height())/2-50+"px");
+			        			$('#tipb').css('display','block');
+			        			setTimeout(outb, 3000);
+			        	}else{
+							$("#"+id).addClass("yizan2");//小手变色
+			        		$("#"+id).html(msg);
+			        	}
+				    	  }
+				    });
+        	}
+    	});
+        //给评论点赞
+        $(".pj_zan").click(function(){
+        	 var rid = $(this).attr("id");
+        	 $.ajax({
+        	        type:"post",
+        	        url:"__APP__/index.php/Article/add_zan?rid="+$(this).attr('id')+" & action=review",
+        	        data:"idid="+new Date(),
+        	        dataType:"html",
+        	        success:function(msg){
+        	        	if(msg == "已赞"){
+		        			$('#tipb').css('display','none');
+		        			$('#tipa').css("top",$(document).scrollTop()+($(window).height())/2-50+"px");
+		        			$('#tipa').css('display','block');
+							$("#"+rid).addClass("yizan1");//小手变色
+		        			setTimeout(outa, 3000);
+		        	}else if(msg == "已踩不赞"){
+		        			$('#tipa').css('display','none');
+		        			$('#tipb').css("top",$(document).scrollTop()+($(window).height())/2-50+"px");
+		        			$('#tipb').css('display','block');
+		        			setTimeout(outb, 3000);
+		        	}else{
+						$("#"+rid).addClass("yizan1");//小手变色
+		        		$("#"+rid).html(msg);
+		        	}
+        	    	  }
+        	    });
+        });
+        //给评论点赞结束		
+		
+	//点击展开1-9条评论
+
+    });
+</script>
+</head>
+
+<body>
+<script language="javascript">
+for(i in document.images)document.images[i].ondragstart=imgdragstart;
+</script>
+<!-- 提示框 start -->
+<div style="font-family:'微软雅黑';" >
+	<div id="tipa">
+		<div style="font-size:20px;"><b>提示信息</b></div>
+		<div style="font-size:14px;margin-top:5px;margin-left:2px;">您已经提交过了</div>
+		<div style="font-size:14px;margin-top:5px;margin-left:2px;"><span style="cursor:pointer" onclick="outa()">关闭</span></div>
+	</div>
+	<!-- ------提交-表态-分割线------- -->
+	<div id="tipb">
+	<div style="font-size:20px;"><b>提示信息</b></div>
+		<div style="font-size:14px;margin-top:5px;margin-left:2px;">您已经表过态了</div>
+		<div style="font-size:14px;margin-top:5px;margin-left:2px; color:red;"><span style="cursor:pointer" onclick="outb()">关闭</span></div>
+	</div>
+</div>
+<!-- 提示框  end-->
+<div class="box">
+<!--***************************top******************************-->
+<include file="Public:header_a" />  
+<!--***************************content******************************-->
+    <div class="content fix">
+        <div class="wz_content bk fix">
+        	<div class="wz_left fl">
+                <div class="wz_title wz_title_te">{ms:$info.title}</div>
+                <p class="wz_p wz_p14">{ms:$info.summary}<a href="__URL__/content/aid/{ms:$info.aid}">查看全文</a></p>
+                  <dl class="xq_ping fix">
+                	<dt><a href="__APP__/member/info/uid/{ms:$info.uid}"><if condition="empty($userDataInfo[image])">
+							 <img src="__PUBLIC__/images/90_1.png" width="50" height="50" /></a>					     
+							 <else/>
+							 <img src="{ms:$userDataInfo.image}" />
+							 </if>
+							 </dt>
+                    <dd>
+                    	<form action="__URL__/insertReview" method="POST" id="form1">
+                    	<div class="xq_text">
+                    		 <textarea class="pj_textarea textarea-txt" name="msg" id="msg" wrap="virtual"></textarea>
+                    	</div>
+                        <div class="xq_text_b">
+                        		<input type="hidden" name="ajax" value="1">
+							    <input type="hidden" name="aid" value="{ms:$info.aid}">
+								<input type="hidden" name="username" value="{ms:$userDataInfo.uname}">
+						        <if condition="$userDataInfo">
+						         <button type="submit" class="xq_sub ms-btn">发 布</button>
+								 <else/>
+								 <a class="xq_sub ms-btn-nologin" href="javascript:void(0);">发 布</a>
+								 </if>
+								<span class="s-num" id="notice"><em id="notice_span">10-500</em>字</span>
+						</div>
+						</form>
+                    </dd>
+                </dl>
+	 
+			 
+           <div class="xq_list" id="list">
+		   			<if condition="($_GET['p'] eq 1) OR ($_GET['p'] eq '')">
+			    <if condition="$_GET['type'] eq yin">
+				<div class="xq_zhankai" ><A href="javascript:void(0)" id="moreReview">展开</A></div>
+				              <script>
+			  $(function(){$('#list dl:lt(9)').css('display','none'); $('#moreReview').click(function(){$('#list dl:lt(9)').slideToggle();if($('#moreReview').text() == "展开"){$('#moreReview').text('隐藏');}else{$('#moreReview').text('展开');}});});
+			 </script>
+				</if>
+				
+				<if condition="$_GET['type'] eq zhan">
+				<div class="xq_zhankai" ><A href="javascript:void(0)" id="moreReview">隐藏</A></div>
+				<script>
+			  $(function(){$('#list dl:lt(9)').css('display','block'); $('#moreReview').click(function(){$('#list dl:lt(9)').slideToggle();if($('#moreReview').text() == "展开"){$('#moreReview').text('隐藏');}else{$('#moreReview').text('展开');}});});
+			 </script>
+				</if>
+		     <!--<div class="wz_more" id="moreReview"><a href="javascript:void(0);">展 开</a></div>	-->
+           	</if>	
+                <volist name="listR" id="vo">
+					<if condition = "$vo.flag eq h">
+                        <dl class="result pinglun-box jiaobiao_box fix" id="auto_{ms:$vo.id}1">
+					<else/>
+						<dl class="result pinglun-box fix" id="auto_{ms:$vo.id}1">
+					</if>
+					  <script type=”text/javascript”>     
+                       $(function(){     
+                         window.location.hash = "#auto_{ms:$vo.id}1";     
+                        })     
+                     </script>
+                    	<dt>
+                    	<if condition = "empty($vo[image])">
+
+<if condition="$vo['tid'] eq 2"><!--作者为老师即可跳转到其个人空间-->
+	<a href="__APP__/member/info/uid/{ms:$vo.uid}"><img src="__PUBLIC__/images/90_1.png" width="50" height="50" alt="{ms:$vo.uname}"/></a>	
+<else />
+	<a><img src="__PUBLIC__/images/90_1.png" width="50" height="50" alt="{ms:$vo.uname}"/></a>					     
+</if>
+						
+						   <if condition = "$info.uid eq $vo['uid']">
+						     <div class="author_name">本文作者</div>
+						   </if> 
+						<else/>
+						<a href="__APP__/member/info/uid/{ms:$vo.uid}"><img src="{ms:$vo.image}" width="50" height="50"  alt="{ms:$vo.id}"/></a>
+						  <if condition = "$info.uid eq $vo['uid']">
+						    <div class="author_name">本文作者</div>
+						   </if> 
+						</if>
+                    	</dt>                   	                   	
+                        <dd>
+                        	<div class="xq_name">							
+<if condition="$vo['tid'] eq 2"><!--作者为老师即可跳转到其个人空间-->
+<a href="__APP__/member/info/uid/{ms:$vo['uid']}" class="ms_name">{ms:$vo.uname}</a>
+<else />
+<a class="ms_name">{ms:$vo.uname}</a>					     
+</if>
+                            </div>
+                            <p>{ms:$vo.msg|nl2p}</p>
+                            <div class="pj_time xq_pj_time">
+                            	<div class="fr">
+								<if condition = "$userDataInfo.uid eq $vo['uid']">
+							      <a class="view-delete-btn no_icon_color" title="确定删除?" reviewid="{ms:$vo.id}" action="del_post" href="javascript:void(0);">删除</a>
+							      </if>
+                                	<a id="{ms:$vo.id}" href="javascript:void(0);" class="pj_zan">{ms:$vo.up}</a>
+		                            <a id="rcai{ms:$vo.id}" name="{ms:$vo.id}" href="javascript:void(0);" class="xq_a2">{ms:$vo.down}</a>
+									<A href="javascript:void(0)" class="pl_a ms_reply" id="div_{ms:$vo.id}" >
+									<i></i>
+									<if condition="$vo.countPid gt 0">
+									评论({ms:$vo.countPid})
+									<else/>
+									评论(0)
+									</if>
+									</A>
+                                </div>
+                                 <i> {ms:$vo.pl_time|date="Y-m-d H:i",###}</i>
+                            </div>
+                            
+                            
+                            
+                            
+                            <!-- 下边这个是点击评论展开的那个框，里边有输入框和回复列表 -->
+                            <div class="pl_hfu fix dianping-list" id="div_{ms:$vo.id}_1"><!-- 这个id号是用来控制其显示与隐藏的 这个框写的是回复框 有输入框和回复列表 -->
+                            <script type="text/javascript">	
+$(function(){
+//不同的提交框
+ $('#form{ms:$vo.id}').ajaxForm({
+beforeSubmit:  checkForm1,  // pre-submit callback
+success:       complete,  // post-submit callback
+dataType: 'json'
+});
+$('#msg{ms:$vo.id}').keyup(function(){
+//定义最少输入数字
+var min=10;
+var max=500;
+var middle=400;
+not_state = '1';
+var g='g';
+var mvalue =trim($(this).val(),g);
+var length = mvalue.length;
+//取得用户输入的字符的长度
+		if(length == 0){
+		$('#notice{ms:$vo.id}').html("<em id='notice_span'>10-500</em>字");
+		}
+		if(length<min){
+		    $('#notice{ms:$vo.id}').html("<span style='color:rgb(127, 127, 127)'>"+(length)+"个字<span>");
+			}
+		if(length>= min){
+			$("#notice{ms:$vo.id}").html("<span style='color:#01ae05'>"+(length)+"个字<span>");
+		}
+		if(length>middle){
+		 $("#notice{ms:$vo.id}").html("<span style='color:rgb(255, 102, 0)"+(max-length)+"个字<span>");
+		}
+		if(length>max){
+		 $("#notice{ms:$vo.id}").html("<span style='color:#f30'>("+(max-length)+"个字)<span>");
+		}
+});
+function checkForm1(){
+var gg='g';										
+if( '' == trim($('#msg{ms:$vo.id}').val(),gg)){
+$("#notice{ms:$vo.id}").html("亲，写点内容哦");
+return false;
+}else{
+if( $.trim($('#msg{ms:$vo.id}').val(),gg).length < 10){
+alert("亲，再多写点哦");
+return false;
+}
+if($.trim($('#msg{ms:$vo.id}').val(),gg).length > 500){
+alert("亲，只能输入500个字哦");
+return false;
+}
+}
+}
+function complete(data){
+if (data.status==1){
+$('#notice{ms:$vo.id}').html("<em id='notice_span'>10-500</em>字");
+$('#msg{ms:$vo.id}').css({'height':'50px'});
+// 更新列表
+data = data.data;
+var html = '<dl class="dianping-box" > <dt><a href="#"><img src="{ms:$MS_PUB_PATH}/images/90_1.png" width="50" height="50" /></a></dt><dd class="dianping-box-text"><div class="xq_name"><a href="#" title="" class="ms_name">'+data.uname+'</a></div> <p>'+data.msg+'</p><div class="pj_time xq_pj_time"><div class="fr"><a class="view-del-btn no_icon_color" title="确定删除?" reviewid="'+data.id+'" action="del_postcomment" href="javascript:void(0);">删除</a><A href="javascript:void(0);" title="回复" class="no_tu pinglun-reply-btn">回复</A></div><i>'+data.pl_time+'</i></div></dd></dl>';
+$('#commentList{ms:$vo.id}').prepend(html);
+$("#msg{ms:$vo.id}").val("");
+  }else{
+$('#notice{ms:$vo.id}').html(data.info).show();
+}
+}
+	
+});
+</script>
+                                     
+                              <div class="pl_hfu_top fix"><!-- 这是回复框进行回复的 -->
+								<p class="pl_hfu_p"></p>
+	                            	<form  id="form{ms:$vo.id}" action="__URL__/addReviewComment" method="post">
+	                                	
+	                                	<!--span id="comment{ms:$vo.id}"><!-- 回复成功这几个字返回到这儿 --><!--/span-->
+	                                	<div class="xq_text1"><textarea name="msg1" id="msg{ms:$vo.id}" class="msg1 pj_textarea textarea-txt"  value="请输入您的点评"></textarea></div>
+										<div class="xq_text_b1">
+	                                	<input type="hidden" name="aid" id="aid" value="{ms:$info.aid}" />
+	                                	<input type="hidden" name="id"  value="{ms:$vo.id}" />
+										<input type="hidden" name="uid"  value="{ms:$userDataInfo.uid}" />
+	                                	<if condition="$userDataInfo">
+						                <button type="submit" class="xq_sub ms-btn subscribe-btn">发布</button>
+								        <else/>
+								        <a href="javascript:void(0);" class="xq_sub ms-btn-nologin subscribe-btn">发 布</a>
+								        </if>
+										  <span id="notice{ms:$vo.id}"><em id="notice_span">10-500</em>字</span>
+										  <span id="review{ms:$vo.id}" class="review" style="display:none;color:rgb(3, 181, 246);margin:40px 0 0 0;"></span>
+	                                     </div>
+									</form>
+                                </div>
+                                <div id="commentList{ms:$vo.id}">
+                                <volist name="vo.listR" id="vor">
+	                             	 <dl class="dianping-box">
+	                                    <dt><a href="__APP__/member/info/uid/"><img src="{ms:$MS_PUB_PATH}/images/90_1.png" width="40" height="40" /></a></dt>
+	                                    <dd class="dianping-box-text">
+	                                        <div class="xq_name">
+											<a href="__APP__/member/info/uid/" title="{ms:$vor.uname}" class="ms_name">{ms:$vor.uname}</a>
+	
+											</div>
+	                                        <p class="dd-s">{ms:$vor.msg|nl2p}</p>
+	                                        <div class="pj_time xq_pj_time">
+											<div class="fr ">
+											<if condition = "$userDataInfo.uid eq $vor['uid']">
+											<a class="no_icon_color view-del-btn" title="确定删除?" action="del_postcomment" reviewid="{ms:$vor.id}" href="javascript:void(0);">删除</a>
+											</if>
+											<A href="javascript:void(0);" title="" class="pinglun-reply-btn no_tu">回复</A>
+											</div>
+											<i>{ms:$vor.pl_time|date="Y-m-d H:i",###}</i>
+											</div>
+	                                    </dd>
+	                                </dl>
+                                </volist>
+                            
+                                </div>
+                                <!-- 上边这个循环遍历的是回复列表 -->
+
+                                <!-- 下边这个是回复列表最下边显示的那个关闭按钮 -->
+                                <div class="xq_guanbi dianping-close"><A href="javascript:void(0)"></A></div>
+                            </div><!-- 到这儿一个回复框包含回复输入框和所有回复的内容算是结束了 这个默认是隐藏的 -->
+                            <!-- 上边这个是点击评论展开的那个框，里边有输入框和回复列表 -->
+                        </dd>
+                        <!-- 下边这个div是只有一条回复时显示的样式 -->
+						  <eq name= "vo.listR|count" value=" 1">
+                               <div class="xq_pl_hfu pl_hfu fix dianping-mini-list" id="div_{ms:$vo.id}_1" >
+						          <volist name="vo.listR" id="voll">
+                                     <p class="pl_hfu_p"></p>
+                                     <div class="max_wid fix"><a href="#"><img src="{ms:$MS_PUB_PATH}/images/90_1.png" width="40" height="40" /></a>{ms:$voll.msg|msubstr=1,10,'utf-8',false}...</div>
+							      </volist>
+                               </div>
+						  </eq>
+						   <egt name = "vo.listR|count" value="2">	
+						      <div class="xq_pl_hfu pl_hfu fix dianping-mini-list" id="div_{ms:$vo.id}_1">
+                               <p class="pl_hfu_p"></p>
+                                <div class="max_wid fix">
+							       <volist name="vo.listR" id="voll" offset="0" length='3'>
+							         <a href="__URL__/content/id/{ms:$voll.id}"><img src="{ms:$MS_PUB_PATH}/images/90_1.png" width="40" height="40" /></a>
+							       </volist>...
+							    </div>
+                               </div>
+						   </egt>
+						   <lt name = "vo.listR|count"  value="1">
+						    <div style="display:none" ></div>
+						   </lt>
+                        <!-- 上边这个div是有两个评论是显示的样式 -->
+						<!--兼容ie6-->
+						<if condition = "$vo.flag eq h">
+                        <div><div class="youliao"></div></div>
+						</if>
+                    </dl>
+
+                    </volist><!-- 这个循环遍历的是这篇文章所有的评论 -->
+                    
+                    <div class="zy_fenye xq_fen">{ms:$page}</div>
+                </div>
+        	</div>
+            <div class="wz_right fr">
+            	<div class="wz_so">
+                	<div class="wz_so_t">
+					  <volist name="tags" id="vo">
+					  <a href="__URL__/search/tag/{ms:$vo.tag}">{ms:$vo.tag}</a><span>|</span>
+					  </volist>
+					</div>
+                    <div class="wz_so_b"><input type="text" value=""  placeholder="搜索"  id="tag" /><a href="javascript:void(0);" id="search">搜 索</a></div>
+                </div>
+                <!--如果是教师的话，显示个人信息-->
+<if condition="$tid eq 2"><include file="Public:authorinfo" /></if>
+
+            </div>
+        </div>
+    </div>
+<!--***************************bottom******************************-->    
+<include file="Public:footer" /> 
+</div>
+<include file="Public:login" />
+</body>
+</html>
+ 

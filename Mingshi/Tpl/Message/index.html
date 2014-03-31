@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>教学案例</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/tanchu.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<link rel="stylesheet" id="change_css" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script language="javascript" src="__PUBLIC__/js/autoresize.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/ms_center.js"></script>
+<script language="javascript">
+function imgdragstart(){return false;}
+$("document").ready(function(){
+ $("#all").click(function(){
+    var str=""; 
+    if(this.checked){  
+        $("input[name='checkbox']").each(function(){this.checked=true; 
+		str+=$(this).val()+"\r\n";
+		});  
+		  alert(str); 
+    }else{  
+        $("input[name='checkbox']").each(function(){this.checked=false;
+		 str+=$(this).val()+"\r\n";
+		});  
+		  alert(str); 
+    }  
+ });
+}) 
+</script>
+</head>
+
+<body>
+<script language="javascript">
+for(i in document.images)document.images[i].ondragstart=imgdragstart;
+</script>
+<div class="box">
+<!--***************************top******************************-->
+<include file="Public:header_c" />     
+<!--***************************content******************************-->
+    <div class="content_geren fix">
+    <div class="jbxx_con fix">
+      	 <div class="jbxx_left fr">
+       		<include file="Public:left"/>           
+       </div>
+       <div class="jbxx_right fl">
+            <div class="zyxx_box">
+            	<ul class="zhanxin">
+				   <volist name="list" id="vo">
+                    <li class="zhan_normal fix">
+                    	<div class="fix">
+                        	<span class="zhan165"><input type="checkbox" value="{ms:$vo.id}" name="checkbox" />系统消息</span>
+							
+                            <span class="zhan340"><a href="javascript:;" class="xtxx">{ms:$vo.title}...</a></span>
+                            <span class="zhan127">{ms:$vo.create_time|date="Y-m-d",###}</span>
+                        </div>
+                        <dl class="zhan_none">
+                        	<dt><img src="__PUBLIC__/images/zhan_logo.png" /></dt>
+                            <dd>
+                            	<p class="zhan_8">{ms:$vo.title}</p>
+                                <div class="zhan_nei">{ms:$vo.msg}<a href="http://www.mingshi.so" target="_blank">www.mingshi.so</a></div>
+                                <div class="zhan_time">{ms:$vo.create_time|date="Y-m-d h-i-s",###}</div>
+                                
+                            </dd>
+                        </dl>                   
+                    </li>
+				   </volist>	
+                </ul>
+                <div class="zhan_del">
+                	<div class="zhan_quan fl"><input type="checkbox" id="all" />全选</div>
+                    <div class="zhan_shanchu fr"><a class="zyxx_pj_fb" href="javascript:;">删除选中消息</a></div>
+                </div>
+            </div>
+       </div>
+    </div>
+    </div>
+<!--***************************bottom******************************-->  
+<include file="Public:footer" />   
+</div>
+<script type="text/javascript" src="../js/iepng.js"></script>
+</body>
+</html>
+ 

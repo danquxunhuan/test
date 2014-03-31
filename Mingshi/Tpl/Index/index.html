@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>精读</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<if condition ="$userDataInfo.style neq ''">
+<link rel="stylesheet" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
+<else/>
+<link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" />
+</if>
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/tanchu.css" type="text/css" />
+<script language="javascript" charset="utf-8" src="__PUBLIC__/js/jquery.js"></script>
+<script language="javascript" charset="utf-8" src="__PUBLIC__/js/hx_act_calendar.js"></script>
+<script language="javascript" charset="utf-8" src="__PUBLIC__/js/common.js"></script>
+<script src="__PUBLIC__/js/search.js"></script>  
+<script language="javascript">
+function imgdragstart(){return false;}
+</script>
+
+</head>
+
+<body>
+<script language="javascript">
+for(i in document.images)document.images[i].ondragstart=imgdragstart;
+</script>
+
+<div class="box">
+<!--***************************top******************************-->
+<include file="Public:header_a" /> 
+<!--***************************content******************************-->
+    <div class="content">
+        <div class="wz_content bk fix">
+        	<div class="wz_left fl">
+			   <if condition="($_GET['p'] eq 1) OR ($_GET['p'] eq '')">
+                <div class="wz_title"><a href="__URL__/content/aid/{ms:$top.aid}">{ms:$top.title}</a></div>
+                <p class="wz_p">{ms:$top.summary|msubstr=0,100,'utf-8',false}</p>
+                <div class="wz_img"><a href="__URL__/content/aid/{ms:$top.aid}"><img src="{ms:$Think.const.UPLOADS}article/{ms:$top.firstimage}" alt="{ms:$top.title}" /></a></div>
+                    <div class="wz_time">
+
+<if condition="$top['tid'] eq 2"><!--作者为老师即可跳转到其个人空间-->
+    <a href="__APP__/member/info/uid/{ms:$top.uid}">{ms:$top.uname}</a>  				     
+<else/>
+    <a>{ms:$top.uname}</a>	
+</if>
+  
+                    <i class="wz_lr">{ms:$top.create_time|date="Y-m-d",###}</i>
+				          <!------tag标签----->
+      <php>
+       for($i=0;$i<$tagCount;$i++){
+       echo "<a href='__URL__/search/tag/$tagInfo[$i]' class='wz_lixian'>".$tagInfo[$i]."</a>";
+       }
+      </php>
+						<a href="__URL__/review/aid/{ms:$top.aid}" class="wz_xinxi">{ms:$top.rnum}</a>
+				    </div>
+				</if>
+<!--------左侧.文章列表--------->	
+                <div class="wz_lists">
+				   <volist name="info" id="vo">
+                	  <dl class="fix">
+                      	<dt><a href="__URL__/content/aid/{ms:$vo.aid}">
+						     <if condition="empty($vo[firstimage])">
+							 	<img src="__PUBLIC__/images/thumb.jpg" />						     
+							 <else/>
+							 	<img src="{ms:$Think.const.UPLOADS}article/{ms:$vo.firstimage}" alt="{ms:$vo.title}" />
+							 </if>
+						     </a>
+						 </dt>
+                        <dd>
+<p class="wz_p1"><a href="__URL__/content/aid/{ms:$vo.aid}">{ms:$vo.title}</a></p>
+<p class="wz_p2">
+<if condition="$vo['uid'] eq 0"><!--游客-->
+	<a>游客</a>
+<else />
+    <if condition="$vo['ishid'] eq 1"><!--匿名投稿-->
+    	<a>佚名</a>
+    <else />
+        <if condition="$vo['tid'] eq 2"><!--作者为老师即可跳转到其个人空间-->
+        	<a href="__APP__/member/info/uid/{ms:$vo.uid}">{ms:$vo.uname}</a>  				     
+        <else/>
+            <a>{ms:$vo.uname}</a>	
+        </if>
+    </if>
+</if>
+{ms:$vo.up_time|date="Y-m-d",###}</p>
+<p class="wz_p3">摘要：{ms:$vo.summary|msubstr=1,95,'utf-8',false}</p>
+<p class="wz_p4">
+      <a href="__URL__/review/aid/{ms:$vo.aid}" class="wz_a1 fr">{ms:$vo.rNum}</a>
+          <foreach name="vo.tag" item="vo2">
+       <a href='__URL__/search/tag/{ms:$vo2}' class='wz_lixian'>{ms:$vo2}</a>
+          </foreach>
+</p>
+                        </dd>
+                     </dl>
+                  </volist>
+                </div>
+                <div class="zy_fenye">{ms:$page}</div>
+        	</div>
+<!--------右侧---------->
+            <div class="wz_right fr">
+            <!--------右侧.搜索---------->
+            	<div class="wz_so">
+                	<div class="wz_so_t">
+					  <volist name="tags" id="vo">
+					  <a href="__URL__/search/tag/{ms:$vo.tag}">{ms:$vo.tag}</a><span>|</span>
+					  </volist>
+					</div>
+					<div class="wz_so_b"><input type="text" value="" name="tag" placeholder="搜索" id="tag" /><a href="javascript:void(0);" id="search">搜索</a></div>
+                </div>
+              <!--------右侧.活动日历----------> 
+				  <div class="wz_rili">
+                	<div class="wz_hot_titl wz_hot_titlyy"><a href="__APP__/active/active">添加活动</a>活动日历</div>
+                    <div class="wz_rili_img Calendar">
+						<div id="idCalendarPre">&lt;&lt;</div>
+                        <div id="idCalendarNext">&gt;&gt;</div>
+                          <span id="idCalendarYear"></span>年 <span id="idCalendarMonth"></span>月
+                      <table cellspacing="0" class="table-top">
+                        <thead>
+                            <tr>
+                             <td>日</td>
+                             <td>一</td>
+                             <td>二</td>
+                             <td>三</td>
+                             <td>四</td>
+                             <td>五</td>
+                             <td>六</td>
+                            </tr>
+                        </thead>
+                      </table>
+                       <table cellspacing="0">
+                         <tbody id="idCalendar"></tbody>
+                       </table>
+                      <div id="showIformation" tabindex="0"></div>
+                    </div>
+                </div>
+                <!--------右侧.活动日历----------> 
+<!--热门文章--><!--精彩评论--><!--最新评论-->
+<include file="Public:newsRight" />  
+            </div>
+        </div>
+    </div>
+<!-----------bottom--------> 
+<script src="__PUBLIC__/js/jquery.min.js"></script>  
+<include file="Public:footer" />
+</div>
+<if condition="$userDataInfo.uid neq ''">
+    <div id="overlay" class="box" style="padding-top:30px;display:none">
+<else/>
+    <div id="overlay" class="box" style="padding-top:30px;">
+</if>
+	<div class="tc_box tc_box1" style="margin:0 auto">
+    	<div class="tc_title tc_title1 screenAdClose"><a href="javascript:;">×</a></div>
+        <div class="tc_forms tc_forms1">
+		<a href="__APP__/index/index/type/1" class="xiao_chu1"></a>
+		<a href="__APP__/index/index/type/2" class="xiao_chu2"></a>
+		<a href="__APP__/index/index/type/3" class="xiao_chu3"></a>
+		</div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        //遮罩层
+        var tipOverlay = $('#overlay');
+        if (tipOverlay.length> 0) {
+            $(".screenAdClose,.xiao_chu1,.xiao_chu2,.xiao_chu3", tipOverlay).click(function () { tipOverlay.fadeOut(); });
+            window.setTimeout(function () { tipOverlay.fadeOut(); }, 5000);
+        }
+    });
+</script>
+<script type="text/javascript">
+function add_favorite(title) {
+		$.getJSON('__URL__/add_favorite/title/'+encodeURIComponent(title)+'/url/'+encodeURIComponent(location.href)+'&'+Math.random()+'/callback/?', function(data){
+			if(data.status==1)	{
+				$("#favorite").html('收藏成功');
+			} else {
+				alert('请登录');
+			}
+		});
+	}
+</script>
+<script language="javascript" for="document" event="onkeydown"> 
+if(event.keyCode==13) 
+document.getElementById("search").click();
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/iepng.js"></script>
+</body>
+
+</html>
+ 

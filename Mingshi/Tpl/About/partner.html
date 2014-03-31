@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>合作伙伴</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/tanchu.css" type="text/css" />
+<if condition ="$userDataInfo.style neq ''">
+<link rel="stylesheet" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
+<else/>
+<link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" />
+</if>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<script language="javascript">
+function imgdragstart(){return false;}
+</script>
+</head>
+
+<body>
+<script language="javascript">
+for(i in document.images)document.images[i].ondragstart=imgdragstart;
+</script>
+<div class="box">
+<!--***************************top******************************-->
+<include file="Public:header_a" />   
+<!--***************************content******************************-->
+    <div class="content fix jianyi_content">
+ <!--***************************left******************************-->   
+		<include file="Public:left_a" />  
+ <!--***************************right******************************--> 
+        <div class="lx_right fr bk">
+        	<div class="lx_titl">合作伙伴</div>
+            <div class="huoban"><a href="#"><img src="__PUBLIC__/images/huoban1.png" /></a><a href="#"><img src="__PUBLIC__/images/huoban2.png" /></a><a href="#"><img src="__PUBLIC__/images/huoban3.png" /></a><a href="#"><img src="__PUBLIC__/images/huoban1.png" /></a><a href="#"><img src="__PUBLIC__/images/huoban2.png" /></a><a href="#"><img src="__PUBLIC__/images/huoban3.png" /></a></div>
+        </div>
+    </div>
+<!--***************************bottom******************************-->    
+<include file="Public:footer" /> </div>
+<script type="text/javascript" src="../js/iepng.js"></script>
+</body>
+</html>
+ 

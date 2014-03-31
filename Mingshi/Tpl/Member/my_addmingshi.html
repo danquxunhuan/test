@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>我的收藏-名师收藏</title>
+<link rel="stylesheet" href="{ms:$MS_PUB_PATH}/css/style.css" type="text/css" />
+<link rel="stylesheet" href="{ms:$MS_PUB_PATH}/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="{ms:$MS_PUB_PATH}/css/mstang123.css" type="text/css" />
+<link rel="stylesheet" href="{ms:$MS_PUB_PATH}/css/tanchu.css" type="text/css" />
+<link rel="stylesheet" id="change_css" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script language="javascript" src="__PUBLIC__/js/common.js"></script>
+<script language="javascript" src="__PUBLIC__/js/autoresize.js"></script>
+<script language="javascript" src="__PUBLIC__/js/ms_center.js"></script>
+<style type="text/css">
+.mssc dl dd .mssc_a{display:none;}
+</style>
+<script language="javascript">
+function imgdragstart(){return false;}
+</script>
+<script type="text/javascript">
+function delect_Ft(id){
+	//需要给dl加个id，删除之后隐藏之
+	if(confirm("您确定要删除？")){
+		$.ajax({
+	        type:"post",
+	        url:"__APP__/Member/delect_Ft?id="+id,
+	        data:"idid="+new Date(),
+	        dataType:"html",
+	        success:function(msg){
+	        	if(msg=="已删除"){
+	        		$("#ft_"+id).fadeOut();
+	        	}else{alert(msg);}
+	    	  }
+	    });
+	}
+}
+$(function(){
+	$("dl").mouseenter(function(){
+		$(this).find(".mssc_a").css("display","block");
+	});
+	$("dl").mouseleave(function(){
+		$(this).find(".mssc_a").css("display","none");
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<script language="javascript">
+for(i in document.images)document.images[i].ondragstart=imgdragstart;
+</script>
+<div class="box">
+<!--***************************top******************************-->
+<include file="Public:header_c"/>    
+<!--***************************content******************************-->
+    <div class="content_geren fix">
+    <div class="jbxx_con fix">
+      	 <div class="jbxx_left fr">
+           <if condition ="$i eq 2">
+            <include file="Public:left"/>   
+           <else />
+            <include file="Public:left_jz"/> 		   
+           </if>           
+         </div>
+       <div class="jbxx_right nob_jbxx_right fl">
+            <div class="zyxx_box zyxx_box_fff">
+            	<div class="yk_title">收藏</div>
+				<p class="yk_p">填写完整的认证信息，你的网站才精彩！</p>
+				<ul class="yq_tab">
+                	<span class="ge ge2"></span>
+                	<li><a href="__APP__/Member/favorite/uid/{ms:$_GET['uid']}/action/myFavorite_article">文章收藏</a></li>
+                    <li class="yq_amo"><a href="__APP__/Member/favorite/uid/{ms:$_GET['uid']}/action/myFavorite_teacher">名师收藏</a></li>
+                </ul>
+                <div class="yq_box">
+                	<div class="mssc_box">
+                        <div class="mssc fix">
+<!--收藏名师列表-->                    
+<volist name="mtList" id="vo">
+    <dl class="dl_list fl" id="ft_{ms:$vo.id}">
+        <dt><a href="__APP__/member/info/uid/{ms:$vo.t_uid}"><img src="{ms:$MS_PUB_PATH}/images/90.png" alt="{ms:$vo.uname}" /><div class="a_posi"></div></a></dt>
+        <dd>
+            <p class="ms_name">
+            <a  href="javascript:void(0);" onclick="delect_Ft({ms:$vo.id})" class="mssc_a fr">×</a>
+            <a href="__APP__/member/info/uid/{ms:$vo.t_uid}">{ms:$vo.uname}</a></p>
+            <p>学 科：{ms:$vo.subject}</p>
+            <p>教 龄：{ms:$vo.teach_age}年</p>
+            <p>身 份：{ms:$vo.identity}</p>
+            <p>评 分：<i><php>echo number_format($vo['fen'],1);</php></i>分</p>
+        </dd>
+    </dl>
+</volist>
+
+                        </div>
+                        <div class="zy_fenye xq_fen">
+							{ms:$page}
+                        </div>
+                    </div>
+                </div>
+            </div>            	
+       </div>
+    </div>
+    </div>
+<!--***************************bottom******************************-->  
+<include file="Public:footer"/></div>
+<script type="text/javascript" src="{ms:$MS_PUB_PATH}/js/iepng.js"></script>
+</body>
+</html>
+ 

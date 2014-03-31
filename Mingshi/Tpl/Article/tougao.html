@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>投稿</title>
+<link rel="stylesheet" href="{ms:$MS_PUB_PATH}/css/black.css" type="text/css" />
+<link rel="stylesheet" href="{ms:$MS_PUB_PATH}/css/style.css" type="text/css" />
+<link rel="stylesheet" href="{ms:$MS_PUB_PATH}/css/mstang.css" type="text/css" />
+<script type="text/javascript" src="{ms:$MS_PUB_PATH}/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="{ms:$MS_PUB_PATH}/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="{ms:$MS_PUB_PATH}/ueditor/ueditor.all.js"></script>
+<script type="text/javascript">
+	//点击默认文字消失，效果
+
+$(function(){
+	$('#title').bind({ 
+		focus:function(){ 
+		//这几句是消除默认显示内容的
+			$(this).css("color","black");
+			//$(this).css("font-size","16px");
+			$(this).css("font-family","微软雅黑");
+			//$(this).css("borderColor","#f6b37f");
+			if (this.value == this.defaultValue){
+			this.value=""; 
+			} 
+		}, 
+		//mouseover:function(){$(this).css("borderColor","#f6b37f");},
+		//mouseout:function(){$(this).css("borderColor","#CCC");},
+		blur:function(){ 
+			//$(this).css("borderColor","#CCC");
+			if (this.value == ""){ //如果为空，则恢复默认文字且字体恢复到12px颜色恢复到默认浅黑色。
+			this.value = this.defaultValue; 
+			$(this).css("color","#CCC");
+			//$(this).css("font-size","12px");
+			$(this).css("font-family","宋体");
+			} 
+		} 
+	});
+});
+
+</script>
+
+</head>
+
+<body>
+<div class="box">
+<!--***************************top******************************-->
+	<div class="top">
+    	<div class="logo fix">
+        	<div class="logo_l fl"><a href="index.html"><img src="{ms:$MS_PUB_PATH}/images/logo.png" /></a></div>
+            <div class="bn fl">帮您孩子找名师</div>
+            <div class="lo_r fr">
+            	<div class="togao fr"><a href="wenzhang.html" class="a_nopad"><img src="{ms:$MS_PUB_PATH}/images/touxiang.png" /></a><a href="tougao.html" class="to_bj">投 稿</a><a href="__APP__/index.php/Member/findTeacher" class="lo_a">找名师</a></div>
+                <div class="kefu fr">客服：4000-710-910</div>
+            </div>
+        </div>
+    </div>     
+<!--***************************content******************************-->
+    <div class="content">
+        <div class="tg_content bk">
+            <div class="togo">投稿</div>
+            <div class="tg_cont bk_b">
+            	<p>如何让您的孩子变得更优秀，而您对孩子的教育变得更简单？名师.SO正在帮您解决这一难题！如果您认同我们如此，欢迎您投稿分享您的观点或者经验，让这一难题解决的更完美！</p>
+                <p><i>我们需要</i>：内容方面，关注家庭教育和升学教育的方方面面。一句话：能真正帮助家长教育孩子的内容我们都欢迎！</p>
+                <p><i>我们希望</i>：您对教育孩子有深刻的认知，或者深度参与教育事业，下笔逻辑清晰、说服力强，结论具有正能量。</p>
+                <p><i>我们提供</i>：优秀来稿24小时内发布，并对作者在最佳位置曝光，让更多的家长和名师认识你。另外月度“最佳来稿”奖励稿酬。</p>
+                <p><i>温馨提示</i>：投稿请注明您的QQ号或手机号，便于名师.SO及时和您沟通稿件情况。</p>
+                <p><i>稿件请致</i>：<a href="#">mingshi12345@qq.com</a>，期待您的积极参与！</p>
+            </div>
+			<form name="form1" id="form1" method="post" action="__APP__/index.php/Article/upload">
+            <div class="tg_titl"><i>标题：</i><input type="text" name="title" id="title" value="感谢您的投稿，我们将在后台审核排版后，呈现在网站上"/></div>
+            <div class="tg_bji" style="width:860px;margin:20px auto 20px;">
+			<!-- 创建编辑器容器start -->
+				<div >
+					<script type="text/plain" id="editor" name="content" style="width:100%;height:500px;"></script>
+				</div>
+			<!-- 创建编辑器容器end -->
+			</div>
+            <div class="tg_ck"><div class="tg_anniu fr"><a href="javascript:fsubmit(document.form1)">提 交</a></div><div class="tg_ni"><input type="checkbox" />我要匿名投稿</div></div>
+			</form>
+			<!-- 加载编辑器start -->
+				<script type="text/javascript" charset="utf-8">
+					var ue = UE.getEditor('editor',{
+						toolbars:[
+							['insertimage','attachment','pasteplain','FontSize','link','unlink']
+						],
+          				wordCount:true, //开启字数统计
+        				elementPathEnabled : false,//是否启用元素路径，默认是显示
+        				maximumWords:10000,       //允许的最大字符数
+        				initialContent:'欢迎使用ueditor!',    //初始化编辑器的内容,也可以通过textarea/script给值，看官网例子
+        				autoClearinitialContent:true, //是否自动清除编辑器初始内容，注意：如果focus属性设置为true,这个也为真，那么编辑器一上来就会触发导致初始化的内容看不到了
+        				pasteplain:true,  //是否默认为纯文本粘贴。false为不使用纯文本粘贴，true为使用纯文本粘贴
+					});
+				</script>
+				<!-- 加载编辑器end -->
+        </div>
+    </div>
+<!--***************************bottom******************************--> 
+	<div class="xinlang">
+    	<div class="sina"><a href="#"><img src="{ms:$MS_PUB_PATH}/images/log_1.gif" />名师寄语</a></div>
+        <div class="sina"><a href="#"><img src="{ms:$MS_PUB_PATH}/images/log_2.gif" />新浪微博</a></div>
+        <div class="sina"><a href="#"><img src="{ms:$MS_PUB_PATH}/images/log_3.gif" />腾讯微信</a></div>
+        <div class="sina" style="background:none"><a href="#"><img src="{ms:$MS_PUB_PATH}/images/log_4.gif" />用户手册</a></div>
+    </div>   
+    <div class="bottom"><a href="#">名师.SO</a><span>|</span><a href="lianxiwomen.html">联系我们</a><span>|</span><a href="#">招聘人才</a><span>|</span><a href="#">网站地图</a><span>|</span><a href="#">合作伙伴</a></div>
+</div>
+<script type="text/javascript" src="{ms:$MS_PUB_PATH}/js/iepng.js"></script>
+<script type="text/javascript">
+    function getLength(str) {
+        var realLength = 0, len = str.length, charCode = -1;
+        for (var i = 0; i < len; i++) {
+            charCode = str.charCodeAt(i);
+            if (charCode >= 0 && charCode <= 128) realLength += 1;
+            else realLength += 2;
+        }
+        return realLength;
+    };
+    function sent_reg(){
+        var title = document.getElementById("title").value;
+        var txtlen = UE.getEditor('editor').getContent();
+        if(getLength(title) < 4){
+            alert("标题貌似不对头");
+            return false;
+        }
+		if(title == "感谢您的投稿，我们将在后台审核排版后，呈现在网站上"){
+			alert("请填写标题");
+			return false;
+		}
+        if(getLength(txtlen)< 300){
+            alert("内容似乎太短了");
+            return false;
+        }
+        return ture;
+    }
+	function fsubmit(obj){
+		if(sent_reg()){
+			obj.submit();
+		}
+	}
+</script>
+</body>
+</html>
+ 

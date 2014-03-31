@@ -1,0 +1,49 @@
+<!--***************************top******************************-->
+		<div class="top">
+    	<div class="logo fix">
+        	<div class="logo_l fl"><a href="__APP__/index/login"></a></div>
+            <div class="bn fl">
+            	<i></i>
+            	<div class="index_lm"><a href="__APP__/Member">名师</a><a href="__APP__/Index">精读</a></div>
+            </div>
+            <div class="lo_r fr">
+            	<div class="togao fr">
+				<a href="__APP__/index/find" class="lo_a">找名师</a>				
+				<a href="__APP__/index/tougao" class="to_bj">投 稿</a>
+				<a href="__APP__/member/center/uid/{ms:$userDataInfo.uid}" class="a_nopad">{ms:$userDataInfo.uname}</a>
+				<a href="javascript:;" class="lo_abj index_xiala"></a>
+                    <ul class="lo_abj_ul" id="index_show">
+                    	<li><a href="__APP__/index/loginout">退出登录</a></li>
+                    	<li><a href="#">小学版</a></li>
+                        <li><a href="#">初中版</a></li>
+                        <li><a href="#">高中版</a></li>
+                    </ul>
+				</div>
+                <div class="kefu fr"><A class="yincang" id="yincang" href="javascript:void(0);"><i class="kefu_pp"></i><span>4000-710-910</span></A>
+				    <!--***************************点击显示的内容******************************-->
+                	  <div class="kefy_posi" id="kefy_posi">
+                    <div class="phone_none"><i></i>有什么问题？尽管拨打！<br /><sapn style="margin-top:6px;text-align:left;display:block;margin-left:4px;">分享，不仅是一种美德，还传递着我们之间的友谊。把精彩信息分享给你的朋友吧！</span>
+                     <img width=110 height=110 src="{ms:$QRcodeUrl}" style="margin:10px"/>
+                 <script type="text/javascript">document.write('<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(location.href)+'" title="分享到QQ空间"  target="_blank"><img src="__PUBLIC__/images/share3.png" /></a>');</script>
+                 <script type="text/javascript">document.write('<a href="http://v.t.sina.com.cn/share/share.php?url='+encodeURIComponent(location.href)+'&appkey=3172366919&title='+encodeURIComponent('{ms:$info.title}')+'" title="分享到新浪微博"  target="_blank"><img src="__PUBLIC__/images/share1.png" /></a>');</script>
+                 <a href="javascript:void(0);"><img src="__PUBLIC__/images/share2.png"  onclick="postToWb();" title="分享到腾讯微博"/></a>
+				    <script type="text/javascript">
+	                   function postToWb(){
+		               var _t = encodeURI('【{ms:$info.title}】{ms:$info.summary}');
+		               var _url = encodeURIComponent(document.location);
+		               var _appkey = encodeURI("cba3558104094dbaa4148d8caa436a0b");
+		               var _pic = encodeURI('{ms:$info.firstimage}');
+		               var _site = '';
+		               var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title='+_t;
+		               window.open( _u,'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+	                   }
+                    </script>
+ <script type="text/javascript">
+ document.write('<a href="http://connect.qq.com/widget/shareqq/index.html?site='+encodeURIComponent('{ms:$info.firstimage}')+'&pics='+encodeURIComponent('{ms:$info.firstimage}')+'&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent('{ms:$info.summary}')+'&desc='+encodeURIComponent('{ms:$info.summary}')+'" target="_blank"><img src="__PUBLIC__/images/share4.png" /></a>');
+ </script>	</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+       </div>   

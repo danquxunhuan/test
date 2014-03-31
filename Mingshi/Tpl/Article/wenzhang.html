@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>文章首页</title>
+<link rel="stylesheet" href="{ms:$MS_PUB_PATH}/css/style.css" type="text/css" />
+<link rel="stylesheet" href="{ms:$MS_PUB_PATH}/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="{ms:$MS_PUB_PATH}/css/black.css" type="text/css" />
+</head>
+
+<body>
+<div class="box">
+<!--***************************top******************************-->
+	<div class="top">
+    	<div class="logo fix">
+        	<div class="logo_l fl"><a href="index.html"><img src="{ms:$MS_PUB_PATH}/images/logo.png" /></a></div>
+            <div class="bn fl">帮您孩子找名师</div>
+            <div class="lo_r fr">
+            	<div class="togao fr"><a href="#" class="a_nopad"><img src="{ms:$MS_PUB_PATH}/images/touxiang.png" /></a><a href="tougao.html" class="to_bj">投 稿</a><a href="__APP__/index.php/Member/findTeacher" class="lo_a">找名师</a></div>
+                <div class="kefu fr">客服：4000-710-910</div>
+            </div>
+        </div>
+    </div>     
+<!--***************************content******************************-->
+    <div class="content">
+        <div class="wz_content bk fix">
+        	<div class="wz_left fl">
+                <div class="wz_title"><a href="#">总理，北京的小升初乱象丛生，您打解决？</a></div>
+                <p class="wz_p">这事好办，看我的</p>
+                <div class="wz_img"><a href="#"><img src="{ms:$MS_PUB_PATH}/images/wz_1.png" /></a></div>
+                <div class="wz_time"><a href="#" class="su">苏伟</a><i class="wz_lr">2013-11-12</i><a href="#" class="wz_lixian">历险</a><a href="#" class="wz_lixian">历险</a><a href="#" class="wz_xinxi">28</a></div>
+                
+                <!-- 最新文章start--------------------------- -->
+                <div class="wz_lists">
+                <foreach name="newArticle" item="vo">
+                	<dl class="fix">
+                    	<dt><a href="#"><img src="{ms:$MS_PUB_PATH}/images/wz_3.png" /></a></dt>
+                        <dd>
+                        	<p class="wz_p1"><a href="__APP__/index.php/Article/articleDetail?id={ms:$vo.aid}">{ms:$vo.title}</a></p>
+                            <p class="wz_p2"><a href="#">{ms:$vo.uname}</a>{ms:$vo.create_time}</p>
+                            <p class="wz_p3">{ms:$vo.summary}</p>
+                            <p class="wz_p4"><a href="#" class="wz_a1 fr">{ms:$vo.acNum}</a><a href="#" class="wz_lixian">{ms:$vo.tag}</a></p>
+                        </dd>
+                    </dl>
+				</foreach>
+                </div>
+                <!-- 最新文章end------------------- -->
+                
+                <div class="wz_more"><a href="#">更 多</a></div>
+        	</div>
+            <div class="wz_right fr">
+            	<div class="wz_so">
+                	<div class="wz_so_t"><a href="#">SO集</a><span>|</span><a href="#">家长课堂</a><span>|</span><a href="#">小升初</a><span>|</span><a href="#">分享</a><span>|</span><a href="#">创意</a><span>|</span><a href="#">优惠课</a></div>
+                    <div class="wz_so_b"><input type="text" value="搜索" /><a href="#">搜 索</a></div>
+                </div>
+                <div class="wz_hot">
+                	<div class="wz_hot_titl">热门文章</div>
+                	<foreach name="hot" item="vo">
+                	<dl class="wz_p_no">
+                    	<dt><a href="#"><img src="{ms:$MS_PUB_PATH}/images/100.png" /></a></dt>
+                        <dd>
+                        	<p><a href="#">{ms:$vo.title}</a></p>
+                            <div><a href="#">{ms:$vo.uname}</a></div>
+                            <p class="wz_hot_p"><a href="#">{ms:$vo.rNum}</a><span>{ms:$vo.create_time}</span></p>
+                        </dd>
+                    </dl>
+					</foreach>
+
+                </div>
+                <div class="wz_jingcai">
+                	<div class="wz_hot_titl wz_hot_titl2">精彩评论</div>
+                	<foreach name="comment" item="vo">
+                    <div class="wz_bor">
+                        <p class="wz_y"><a href="#">原文：{ms:$vo.title}</a></p>
+                        <dl class="wz_y_dl">
+                            <dt><a href="#"><img src="{ms:$MS_PUB_PATH}/images/37.png" /></a></dt>
+                            <dd>
+                                <p class="wz_mi"><a href="#">{ms:$vo.username}</a></p>
+                                <p class="wz_mi_b">详细内容奥迪司机阿斯</p>
+                            </dd>
+                        </dl>
+                        <div class="wz_posi"><i></i><a href="#">{ms:$vo.msg}</a></div>
+                    </div>
+                    </foreach>
+                </div>
+                <div class="wz_rili">
+                	<div class="wz_hot_titl"><a href="#">添加活动</a>活动日历</div>
+                    <div class="wz_rili_img">
+                    	<div class="wz_lispan"><a href="#"><<</a><span>2013年10月</span><a href="#">>></a></div>
+                        <div class="wz_lispan1"><span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--***************************bottom******************************-->    
+	<div class="xinlang">
+    	<div class="sina"><a href="#"><img src="{ms:$MS_PUB_PATH}/images/log_1.gif" />名师寄语</a></div>
+        <div class="sina"><a href="#"><img src="{ms:$MS_PUB_PATH}/images/log_2.gif" />新浪微博</a></div>
+        <div class="sina"><a href="#"><img src="{ms:$MS_PUB_PATH}/images/log_3.gif" />腾讯微信</a></div>
+        <div class="sina" style="background:none"><a href="#"><img src="{ms:$MS_PUB_PATH}/images/log_4.gif" />用户手册</a></div>
+    </div>
+    <div class="bottom"><a href="#">名师.SO</a><span>|</span><a href="lianxiwomen.html">联系我们</a><span>|</span><a href="#">招聘人才</a><span>|</span><a href="#">网站地图</a><span>|</span><a href="#">合作伙伴</a></div>
+</div>
+<script type="text/javascript" src="{ms:$MS_PUB_PATH}/js/iepng.js"></script>
+</body>
+</html>
+ 

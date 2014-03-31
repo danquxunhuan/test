@@ -1,0 +1,180 @@
+               <volist name="userReview" id="vo">
+                        <dl class="result pinglun-box fix" id="auto_{ms:$vo.id}1">
+						<script type=”text/javascript”>     
+                       $(function(){     
+                         window.location.hash = "#auto_{ms:$vo.id}1";     
+                        })     
+                     </script>
+                    	<dt>
+                    	<if condition = "empty($vo[image])">
+						<a href="__URL__/index/content/id/{ms:$vo.id}"><img src="__PUBLIC__/images/90_1.png" width="50" height="50" alt="{ms:$vo.id}"/></a>	
+						   <if condition = "$info.uid eq $vo['uid']">
+						     <div class="author_name">本文作者</div>
+						   </if> 
+						<else/>
+						<a href="__URL__/index/content/id/{ms:$vo.id}"><img src="{ms:$vo.image}" width="50" height="50"  alt="{ms:$vo.id}"/></a>
+						  <if condition = "$info.uid eq $vo['uid']">
+						    <div class="author_name">本文作者</div>
+						   </if> 
+						</if>
+                    	</dt>
+                    	
+                    	
+                        <dd>
+                        	<div class="xq_name">
+							<a href="__APP__/member/info/uid/" title="{ms:$vo.uname}" class="ms_name">{ms:$vo.uname}</a>
+							</div>
+                            <p>{ms:$vo.msg|nl2p}</p>
+                            <div class="pj_time xq_pj_time">
+                            	<div class="fr">
+								<if condition = "$userDataInfo.uid eq $vo['uid']">
+							      <a class="view-delete-btn no_icon_color" title="确定删除?" reviewid="{ms:$vo.id}" action="del_post" href="javascript:void(0);">删除</a>
+							      </if>
+                                	<a id={ms:$vo.id} href="javascript:void(0);" class="pj_zan">{ms:$vo.up}</a>
+		                            <a id="rcai{ms:$vo.id}" name={ms:$vo.id} href="javascript:void(0);" class="xq_a2">{ms:$vo.down}</a>
+									<A href="javascript:void(0)" class="pl_a ms_reply" id="div_{ms:$vo.id}" ><i></i>评论</A>
+                                </div>
+                                 <i> {ms:$vo.pl_time|date="Y-m-d",###}</i>
+                            </div>
+                            
+                            
+                            
+                            
+                            <!-- 下边这个是点击评论展开的那个框，里边有输入框和回复列表 -->
+                            <div class="pl_hfu fix dianping-list" id="div_{ms:$vo.id}_1"><!-- 这个id号是用来控制其显示与隐藏的 这个框写的是回复框 有输入框和回复列表 -->
+                            <script type="text/javascript">	
+$(function(){
+//不同的提交框
+ $('#form{ms:$vo.id}').ajaxForm({
+beforeSubmit:  checkForm1,  // pre-submit callback
+success:       complete,  // post-submit callback
+dataType: 'json'
+});
+$('#msg{ms:$vo.id}').keyup(function(){
+//定义最少输入数字
+var min=10;
+var max=500;
+var middle=400;
+not_state = '1';
+var g='g';
+var mvalue =trim($(this).val(),g);
+var length = mvalue.length;
+//取得用户输入的字符的长度
+		if(length == 0){
+		$('#notice{ms:$vo.id}').html("<em id='notice_span'>10-500</em>字");
+		}
+		if(length<min){
+		    $('#notice{ms:$vo.id}').html("<span style='color:rgb(3, 181, 246)'>已输入"+(length)+"个字<span>");
+		}else{
+			$("#notice{ms:$vo.id}").html("<span style='color:rgb(3, 181, 246)'>已输入"+(length)+"个字,可以发布了<span>");
+		}
+		if(length>middle){
+		 $("#notice{ms:$vo.id}").html("<span style='color:rgb(3, 181, 246)'>还能输入"+(max-length)+"字<span>");
+		}
+		if(length>max){
+		 $("#notice{ms:$vo.id}").html("<span style='color:#f30'>亲,您真是太有文采了,但是最多只能输入500个字哦("+(max-length)+"字)<span>");
+		}
+});
+function checkForm1(){
+var gg='g';										
+if( '' == trim($('#msg{ms:$vo.id}').val(),gg)){
+$("#notice{ms:$vo.id}").html("亲,内容为空你好意思吗");
+return false;
+}else{
+if( $.trim($('#msg{ms:$vo.id}').val(),gg).length < 10){
+alert("亲,多写点撒");
+return false;
+}
+if($.trim($('#msg{ms:$vo.id}').val(),gg).length > 500){
+alert("亲,您真是太有文采了,但是最多只能输入500个字哦");
+return false;
+}
+}
+}
+function complete(data){
+if (data.status==1){
+$('#notice{ms:$vo.id}').html("<em id='notice_span'>10-500</em>字");
+$('#msg{ms:$vo.id}').css({'height':'50px'});
+// 更新列表
+data = data.data;
+var html = '<dl class="dianping-box" > <dt><a href="#"><img src="{ms:$MS_PUB_PATH}/images/90_1.png" width="50" height="50" /></a></dt><dd class="dianping-box-text"><div class="xq_name"><a href="#" title="" class="ms_name">'+data.uname+'</a></div> <p>'+data.msg+'</p><div class="pj_time xq_pj_time"><div class="fr"><a class="view-del-btn no_icon_color" title="确定删除?" reviewid="'+data.id+'" action="del_postcomment" href="javascript:void(0);">删除</a><A href="javascript:void(0);" title="回复" class="no_tu pinglun-reply-btn">回复</A></div><i>'+data.pl_time+'</i></div></dd></dl>';
+$('#commentList{ms:$vo.id}').prepend(html);
+$("#msg{ms:$vo.id}").val("");
+  }else{
+$('#notice{ms:$vo.id}').html(data.info).show();
+}
+}
+	
+});
+</script>
+                                     
+          <div class="pl_hfu_top fix"><form  id="form{ms:$vo.id}" action="__URL__/addReviewComment" method="post">
+	      <p class="pl_hfu_p"></p>
+		  <textarea name="msg1" id="msg{ms:$vo.id}" class="msg1 textarea-txt"  value="请输入您的点评"/></textarea>
+		  <input type="hidden" name="aid" id="aid" value="{ms:$info.aid}" />
+		  <input type="hidden" name="id"  value="{ms:$vo.id}" />
+		  <button type="submit" class="xq_sub ms-btn">发布</button>
+		  <span class="zishu" id="notice{ms:$vo.id}"><em id="notice_span">10-500</em>字</span> 
+		  </form>
+		  </div>
+                                <div id="commentList{ms:$vo.id}">
+                                <volist name="vo.listR" id="vor">
+	                             	 <dl class="dianping-box">
+	                                    <dt><a href="__APP__/member/info/uid/"><img src="{ms:$MS_PUB_PATH}/images/90_1.png" width="50" height="50" /></a></dt>
+	                                    <dd class="dianping-box-text">
+	                                        <div class="xq_name">
+											<a href="__APP__/member/info/uid/" title="{ms:$vor.uname}" class="ms_name">{ms:$vor.uname}</a>
+	
+											</div>
+	                                        <p class="dd-s">{ms:$vor.msg|nl2p}</p>
+	                                        <div class="pj_time xq_pj_time">
+											<div class="fr ">
+											<if condition = "$userDataInfo.uid eq $vor['uid']">
+											<a class="no_icon_color view-del-btn" title="确定删除?" action="del_postcomment" reviewid="{ms:$vor.id}" href="javascript:void(0);">删除</a>
+											</if>
+											<A href="javascript:void(0);" title="" class="pinglun-reply-btn no_tu">回复</A>
+											</div>
+											<i>{ms:$vor.pl_time|date="Y-m-d",###}</i>
+											</div>
+	                                    </dd>
+	                                </dl>
+                                </volist>
+                            
+                                </div>
+                                <!-- 上边这个循环遍历的是回复列表 -->
+
+                                <!-- 下边这个是回复列表最下边显示的那个关闭按钮 -->
+                                <div class="xq_guanbi dianping-close"><A href="javascript:void(0)"></A></div>
+                            </div><!-- 到这儿一个回复框包含回复输入框和所有回复的内容算是结束了 这个默认是隐藏的 -->
+                            <!-- 上边这个是点击评论展开的那个框，里边有输入框和回复列表 -->
+                        </dd>
+                        <!-- 下边这个div是只有一条回复时显示的样式 -->
+						  <eq name= "vo.listR|count" value=" 1">
+                               <div class="xq_pl_hfu pl_hfu fix dianping-mini-list" id="div_{ms:$vo.id}_1" >
+						          <volist name="vo.listR" id="voll">
+                                     <p class="pl_hfu_p"></p>
+                                     <div class="max_wid fix"><a href="#"><img src="{ms:$MS_PUB_PATH}/images/90_1.png" width="40" height="40" /></a>{ms:$voll.msg|msubstr=1,10,'utf-8',false}...</div>
+							      </volist>
+                               </div>
+						  </eq>
+						   <egt name = "vo.listR|count" value="2">	
+						      <div class="xq_pl_hfu pl_hfu fix dianping-mini-list" id="div_{ms:$vo.id}_1">
+                               <p class="pl_hfu_p"></p>
+                                <div class="max_wid fix">
+							       <volist name="vo.listR" id="voll" offset="0" length='3'>
+							         <a href="__URL__/content/id/{ms:$voll.id}"><img src="{ms:$MS_PUB_PATH}/images/90_1.png" width="40" height="40" /></a>
+							       </volist>...
+							    </div>
+                               </div>
+						   </egt>
+						   <lt name = "vo.listR|count"  value="1">
+						    <div style="display:none" ></div>
+						   </lt>
+                        <!-- 上边这个div是有两个评论是显示的样式 -->
+						<!--兼容ie6-->
+						<if condition = "$vo.flag eq h">
+                        <div><div class="youliao"></div></div>
+						</if>
+                    </dl>
+
+                    </volist><!-- 这个循环遍历的是这篇文章所有的评论 -->

@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>添加活动</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<!--
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+-->
+<link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/js/asyncbox/skins/default.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/js/calendar/calendar-blue.css"/>
+<link href="{ms:$MS_PUB_PATH}/css/bootstrap/bootstrap.css" rel="stylesheet" media="screen">
+<link href="{ms:$MS_PUB_PATH}/css/bootstrap/bootstrap-datetimepicker.css" rel="stylesheet" media="screen">
+<script src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
+<script src="__PUBLIC__/js/jquery.lazyload.js"></script>
+<script src="__PUBLIC__/js/functions.js"></script>
+<script src="__PUBLIC__/js/jquery.form.js"></script>
+<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<script src="__PUBLIC__/js/calendar/calendar.js"></script>
+<script language="javascript" src="__PUBLIC__/js/common.js"></script>
+<script language="javascript">
+function imgdragstart(){return false;}
+</script>
+
+</head>
+
+<body>
+<script language="javascript">
+for(i in document.images)document.images[i].ondragstart=imgdragstart;
+</script>
+<div class="box">
+<!--***************************top******************************-->
+<include file="Public:header_a"/>   
+<!--***************************content******************************-->
+    <div class="content fix">
+        <div class="tg_content bk">
+            <div class="togo">添加活动</div>
+            <div class="tj_box fix">
+            	<div class="ti_dll_list fix">
+				  <form action="__URL__/index" method="POST">
+					<dl class="zc_dl ti_zc_dl">
+                        <dt>活动主题：</dt>
+                        <dd><input type="text" name="active_name" class="zc_input" value=""/></dd>
+                    </dl>
+					
+                    <dl class="zc_dl ti_textarea fix">
+                        <dt>活动介绍：</dt>
+                        <dd><textarea name="introduce" id="introduce">活动</textarea></dd>
+                    </dl>
+                    <dl class="zc_dl ti_zc_dl318">
+                        <dt>重要嘉宾：</dt>
+                        <dd><input type="text" name="superman" class="zc_input" value=""/></dd>
+                    </dl>
+					
+                    <dl class="zc_dl ti_zc_dl318">
+                        <dt>活动地点：</dt>
+                        <dd><input type="text" name="area" class="zc_input" value=""/></dd>
+                    </dl>
+					
+                    <dl class="zc_dl">
+                        <dt>活动时间：</dt>
+                        <dd class="ms_fu mrr_12" style="z-index:101">
+					<!-- 时间输入框    start -->
+<input id="from_datetime" name="start_time" type="text" class="zc_input" placeholder="开始日期" data-date-format="yyyy-mm-dd hh:ii" data-date="<?php echo date('Y-m-d',time());?>T14:25:07Z" />
+					<!-- 时间输入框    end -->
+                        </dd>
+                        <dd class="ms_fu" style="z-index:101">
+                    <!-- 时间输入框    start -->
+<input id="to_datetime" name="end_time" type="text" class="zc_input" placeholder="结束日期" data-date-format="yyyy-mm-dd hh:ii" data-date="<?php echo date('Y-m-d',time());?>T14:25:07Z" />
+            		<!-- 时间输入框    end -->
+                        </dd>
+                    </dl>
+					
+                    <dl class="zc_dl ti_zc_dl318">
+                        <dt>主办单位：</dt>
+                        <dd><input type="text" name="sponsor" class="zc_input" value=""/></dd>
+                    </dl>
+                    
+                    <dl class="zc_dl ti_zc_dl318">
+                        <dt>活动链接：</dt>
+                        <dd><input type="text" name="link" class="zc_input" value="http://" /></dd>
+                    </dl>
+					
+					
+				  </form>	
+                </div>
+            	<div class="tg_ck ti_tg_ck fix"><a class="pj_fb submit" href="javascript:void(0);">提 交</a></div>
+            </div>
+        </div>
+    </div>
+<!--***************************bottom******************************--> 
+<include file="Public:footer"/>
+</div>
+<script type="text/javascript" src="__PUBLIC__/js/iepng.js"></script>
+        <script type="text/javascript">
+		
+		function getLength(str) {
+           var realLength = 0, len = str.length;
+          return realLength;
+        };
+             $(".submit").click(function(){
+				 if($.trim($("input[name='active_name']").val())==''){
+					 popup.alert("亲,活动主题不能为空");
+					 return false;
+				 }
+				 var len =$('#introduce').val().length;
+				 if($.trim($("#introduce").val().length) < 50){
+					 popup.alert("亲,多多写一些,让更多的人关注");
+					 return false;
+				 }
+				 if($.trim($("input[name='superman']").val())==''){
+					 popup.alert("亲,请填写重要嘉宾");
+					 return false;
+				 }
+				 if($.trim($("input[name='area']").val())==''){
+					 popup.alert("亲,活动地点不能为空呀");
+					 return false;
+				 }
+				 if($.trim($("input[name='start_time']").val())==''){
+					 popup.alert("亲,活动开始时间不能为空呀");
+					 return false;
+				 }
+				 if($.trim($("input[name='end_time']").val())==''){
+					 popup.alert("亲,活动结束时间不能为空呀");
+					 return false;
+				 }
+				 if($.trim($("input[name='sponsor']").val())==''){
+					 popup.alert("亲,请填写主办单位");
+					 return false;
+				 }
+				 if($.trim($("input[name='link']").val())=='http://' || $("input[name='link']").val())==''){
+					 popup.alert("亲,请填写活动的具体链接地址");
+					 return false;
+				 }
+					
+                    commonAjaxSubmit();
+                    return false;
+                });
+        </script>
+<!--时间插件开始-->
+<script type="text/javascript" src="{ms:$MS_PUB_PATH}/jquery/bootstrap/bootstrap.js"></script>
+<script type="text/javascript" src="{ms:$MS_PUB_PATH}/jquery/bootstrap/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="{ms:$MS_PUB_PATH}/jquery/bootstrap/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('#from_datetime').datetimepicker({
+        language:  'zh-CN',
+        format: 'yyyy-mm-dd hh:ii',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1,
+		initialDate:2013-12-23
+        //pickerPosition: "bottom-left"
+    });
+    $('#to_datetime').datetimepicker({
+        language:  'zh-CN',
+        format: 'yyyy-mm-dd hh:ii',
+        weekStart: 1,
+        todayBtn:  0,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1,
+        //pickerPosition: "bottom-left"
+    });
+</script>
+<!--时间插件结束-->
+<script type="text/javascript" src="{ms:$MS_PUB_PATH}/js/iepng.js"></script>
+</body>
+</html>
+ 

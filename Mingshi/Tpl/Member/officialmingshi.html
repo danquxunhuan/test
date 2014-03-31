@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>我的名师—官方推荐名师</title>
+<link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/tanchu.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<link rel="stylesheet" id="change_css" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script language="javascript" src="__PUBLIC__/js/autoresize.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/common.js"></script>
+<!--ajax表单提交ms_center.js-->
+<script type="text/javascript" src="__PUBLIC__/js/ms_center.js"></script>
+<script src="__PUBLIC__/js/reg.js"></script>
+<script language="javascript">
+function imgdragstart(){return false;}
+</script>
+<script type="text/javascript">
+//提示框 3秒之后框框消失
+function outa(){$('#tipa').css('display','none');} //已提交过了
+function outb(){$('#tipb').css('display','none');} //已表过态了
+function titye(){alert('刷新页面试试');}
+</script>
+<style type="text/css">
+.prompt{ color:red; font-size:12px;}
+.yq_tab a:hover { background: url("__PUBLIC__/images/ge33.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.yq_tab li.yq_amo a, .yq_tab li.yq_amo a:hover { background: url("__PUBLIC__/images/ge22.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);}
+.yq_tab a { background: url("__PUBLIC__/images/ge11.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); width:99px;}
+.jz_geren_box .zzy_one{padding:10px 10px 5px 38px}
+</style>
+</head>
+
+<body>
+<script language="javascript">
+for(i in document.images)document.images[i].ondragstart=imgdragstart;
+</script>
+<!-- 提示框 start -->
+<div style="font-family:'微软雅黑';" >
+	<div id="tipa">
+		<div style="font-size:20px;"><b>提示信息</b></div>
+		<div style="font-size:14px;margin-top:5px;margin-left:2px;">添加成功</div>
+		<div style="font-size:14px;margin-top:5px;margin-left:2px;"><span style="cursor:pointer" onclick="outa()">关闭</span></div>
+	</div>
+	<!-- ------提交-表态-分割线------- -->
+	<div id="tipb">
+	<div style="font-size:20px;"><b>提示信息</b></div>
+		<div style="font-size:14px;margin-top:5px;margin-left:2px;">添加失败</div>
+		<div style="font-size:14px;margin-top:5px;margin-left:2px;color:red;"><span style="cursor:pointer" onclick="outb()">关闭</span></div>
+	</div>
+</div>
+<!-- 提示框  end-->
+<div class="box">
+<!--***************************top******************************-->
+<include file="Public:header_c"/>      
+<!--***************************content******************************-->
+<div class="content_geren fix">
+    <div class="jbxx_con fix">
+      	 <div class="jbxx_left fr">
+           <include file="Public:left_jz"/>           
+         </div>
+       <div class="jbxx_right nob_jbxx_right fl">
+            <div class="zyxx_box zyxx_box_fff">
+            	<div class="yk_title">我的名师</div>
+                <p class="yk_p">填写完整的认证信息，你的网站才精彩！</p>
+                <ul class="yq_tab" id="news">
+                	<span class="ge"></span>
+                	<li><a href="__APP__/member/mymingshi/uid/{ms:$_GET['uid']}">我预约的名师</a></li>
+                    <li class="yq_amo"><a href="__APP__/member/officialmingshi/uid/{ms:$_GET['uid']}">官方推荐名师</a></li>
+                </ul>
+
+<div class="jz_geren_box fix">
+    <!--名师列表-->   
+<volist name="teacherInfo" id="vo">                   
+    <div class="zzy_one">
+        <dl class="dl_list fl">
+            <dt><a href="__APP__/member/info/uid/{ms:$vo.uid}" target="_blank"><img src="__PUBLIC__/images/90_1.png"  /><div class="a_posi"></div></a></dt>
+            <dd>
+                <p class="ms_name"><a href="__APP__/member/info/uid/{ms:$vo.uid}" target="_blank">{ms:$vo.uname}</a></p>
+                <p>学 科：{ms:$vo.subject}</p>
+                <p>教 龄：{ms:$vo.teach_age}年</p>
+                <p>课 酬：{ms:$vo.keshifei}元/时</p>
+                <p>评 分：<i><php>echo number_format($vo['pingfen'],1);</php></i>分</p>
+            </dd>
+        </dl>
+        <div class="zy_ping zy_zy_ping">
+            <div class="zy_ping_s">全部评价（{ms:$vo.all}条）</div>
+            <ul class="zy_jdu">
+<li>好 评：<span class="zy_span"><span style="width:{ms:$vo.goodWidth}%;"></span></span><a><i>{ms:$vo.good}</i>条</a></li>
+<li>中 评：<span class="zy_span"><span style="width:{ms:$vo.betterWidth}%;"></span></span><a><i>{ms:$vo.better}</i>条</a></li>
+<li>差 评：<span class="zy_span"><span style="width:{ms:$vo.badWidth}%;"></span></span><a><i>{ms:$vo.bad}</i>条</a></li>
+            </ul>
+        </div>
+    </div>
+</volist>
+    <!--名师列表-->
+</div>
+                <!---->
+
+            </div>            	
+       </div>
+    </div>
+</div>
+<!--***************************bottom******************************-->  
+<include file="Public:footer"/>   
+</div>
+<script type="text/javascript" src="__PUBLIC__/js/iepng.js"></script>
+</body>
+</html>
+ 
