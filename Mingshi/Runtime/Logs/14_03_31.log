@@ -19,6 +19,7 @@ INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
 SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003418s ]
 SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.000398s ]
 
+<<<<<<< HEAD
 [ 2014-03-31T13:51:30+08:00 ] 127.0.0.1 /test/index/tougao
 INFO: [ route_check ] --START--
 INFO: CheckRoute Behavior ::run [ RunTime:0.000449s ]
@@ -276,4 +277,19 @@ INFO: [ app_begin ] --START--
 INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000392s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
 ERR: Action:init您所请求的方法不存在！
+=======
+[ 2014-03-31T13:15:31+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000925s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003429s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.000401s ]
+
+[ 2014-03-31T13:15:42+08:00 ] 127.0.0.1 /test/active/active_show?year=2014&month=3
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000827s ]
+SQL: SHOW COLUMNS FROM `ms_active` [ RunTime:0.003223s ]
+SQL: SELECT * FROM `ms_active` WHERE ( year='2014' and month=3 and day in (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31) )  [ RunTime:0.000356s ]
+>>>>>>> wangqing_mst
 
