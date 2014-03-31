@@ -6,7 +6,7 @@
 <title>精读</title>
 <link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
-<?php if($userDataInfo["style"] != ''): ?><link rel="stylesheet" href="__PUBLIC__/css/<?php echo ($userDataInfo["style"]); ?>_center.css" type="text/css" />
+<?php if($userDataInfo["style"] != ''): ?><link rel="stylesheet" href="__PUBLIC__/css/{ms:$userDataInfo.style}_center.css" type="text/css" />
 <?php else: ?>
 <link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" /><?php endif; ?>
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
@@ -41,7 +41,7 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
 				<a href="__APP__/index/find" class="lo_a">找名师</a>
 				
 				<a href="__APP__/index/tougao" class="to_bj">投 稿</a>
-				<a href="__APP__/member/center/uid/<?php echo ($userDataInfo["uid"]); ?>" class="a_nopad"><?php echo ($userDataInfo["uname"]); ?></a>
+				<a href="__APP__/member/center/uid/{ms:$userDataInfo.uid}" class="a_nopad">{ms:$userDataInfo.uname}</a>
 				<a href="javascript:;" class="lo_abj index_xiala"></a>
                     <ul class="lo_abj_ul" id="index_show">
                     	<li><a href="__APP__/index/loginout">退出登录</a></li>
@@ -54,23 +54,23 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
 				    <!--***************************点击显示的内容******************************-->
                 	  <div class="kefy_posi" id="kefy_posi">
                     <div class="phone_none"><i></i>有什么问题？尽管拨打！<br /><sapn style="margin-top:6px;text-align:left;display:block;margin-left:4px;">分享，不仅是一种美德，还传递着我们之间的友谊。把精彩信息分享给你的朋友吧！</span>
-                     <img width=100 height=100 src="<?php echo ($QRcodeUrl); ?>" style="margin:10px"/>
-<script type="text/javascript">document.write('<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(location.href)+'&title=<?php echo ($info["title"]); ?>&desc=【<?php echo ($info["title"]); ?>】<?php echo ($info["summary"]); ?>...@名师网&pics=<?php echo ($info["firstimage"]); ?>&summary='+encodeURIComponent('<?php echo (msubstr($info["summary"],1,100,'utf-8',false)); ?>')+'"  target="_blank"><img src="__PUBLIC__/images/share3.png" /></a>');</script>
-<script type="text/javascript">document.write('<a href="http://v.t.sina.com.cn/share/share.php?url='+encodeURIComponent(location.href)+'&appkey=3172366919&title='+encodeURIComponent('【<?php echo ($info["title"]); ?>】<?php echo ($info["summary"]); ?>...@名师网')+'&pic=<?php echo ($info["firstimage"]); ?>" title="分享到新浪微博"  target="_blank"><img src="__PUBLIC__/images/share1.png" /></a>');</script>
+                     <img width=100 height=100 src="{ms:$QRcodeUrl}" style="margin:10px"/>
+<script type="text/javascript">document.write('<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(location.href)+'&title={ms:$info.title}&desc=【{ms:$info.title}】{ms:$info.summary}...@名师网&pics={ms:$info.firstimage}&summary='+encodeURIComponent('{ms:$info.summary|msubstr=1,100,'utf-8',false}')+'"  target="_blank"><img src="__PUBLIC__/images/share3.png" /></a>');</script>
+<script type="text/javascript">document.write('<a href="http://v.t.sina.com.cn/share/share.php?url='+encodeURIComponent(location.href)+'&appkey=3172366919&title='+encodeURIComponent('【{ms:$info.title}】{ms:$info.summary}...@名师网')+'&pic={ms:$info.firstimage}" title="分享到新浪微博"  target="_blank"><img src="__PUBLIC__/images/share1.png" /></a>');</script>
                 <a href="javascript:void(0);" ><img src="__PUBLIC__/images/share2.png"  onclick="postToWb();" title="分享到腾讯微博"/></a>
 				     <script type="text/javascript">
 	                   function postToWb(){
-		               var _t = encodeURIComponent('【<?php echo ($info["title"]); ?>】<?php echo (msubstr($info["summary"],1,100,'utf-8',false)); ?>...名师网');
+		               var _t = encodeURIComponent('【{ms:$info.title}】{ms:$info.summary|msubstr=1,100,'utf-8',false}...名师网');
 		               var _url = encodeURIComponent(document.location);
 		               var _appkey = encodeURI("cba3558104094dbaa4148d8caa436a0b");
-		               var _pic = encodeURI('<?php echo ($info["firstimage"]); ?>');
+		               var _pic = encodeURI('{ms:$info.firstimage}');
 		               var _site = '';
-		               var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title=【<?php echo ($info["title"]); ?>】<?php echo ($info["summary"]); ?>...名师网';
+		               var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title=【{ms:$info.title}】{ms:$info.summary}...名师网';
 		               window.open( _u,'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
 	                   }
                     </script>
  <script type="text/javascript">
- document.write('<a href="http://connect.qq.com/widget/shareqq/index.html?site='+encodeURIComponent('名师网')+'&pics='+encodeURIComponent('<?php echo ($info["firstimage"]); ?>')+'&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent('<?php echo ($info["title"]); ?>')+'&desc='+encodeURIComponent('<?php echo (msubstr($info["summary"],1,100,'utf-8',false)); ?>')+'" target="_blank"><img src="__PUBLIC__/images/share4.png" /></a>');
+ document.write('<a href="http://connect.qq.com/widget/shareqq/index.html?site='+encodeURIComponent('名师网')+'&pics='+encodeURIComponent('{ms:$info.firstimage}')+'&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent('{ms:$info.title}')+'&desc='+encodeURIComponent('{ms:$info.summary|msubstr=1,100,'utf-8',false}')+'" target="_blank"><img src="__PUBLIC__/images/share4.png" /></a>');
  </script>	</div>
                     </div>
 
@@ -82,32 +82,32 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
     <div class="content">
         <div class="wz_content bk fix">
         	<div class="wz_left fl">
-			   <?php if(($_GET['p'] == 1) OR ($_GET['p'] == '')): ?><div class="wz_title"><a href="__URL__/content/aid/<?php echo ($top["aid"]); ?>"><?php echo ($top["title"]); ?></a></div>
-                <p class="wz_p"><?php echo (msubstr($top["summary"],0,100,'utf-8',false)); ?></p>
-                <div class="wz_img"><a href="__URL__/content/aid/<?php echo ($top["aid"]); ?>"><img src="<?php echo (UPLOADS); ?>article/<?php echo ($top["firstimage"]); ?>" alt="<?php echo ($top["title"]); ?>" /></a></div>
+			   <?php if(($_GET['p'] == 1) OR ($_GET['p'] == '')): ?><div class="wz_title"><a href="__URL__/content/aid/{ms:$top.aid}">{ms:$top.title}</a></div>
+                <p class="wz_p">{ms:$top.summary|msubstr=0,100,'utf-8',false}</p>
+                <div class="wz_img"><a href="__URL__/content/aid/{ms:$top.aid}"><img src="{ms:$Think.const.UPLOADS}article/{ms:$top.firstimage}" alt="{ms:$top.title}" /></a></div>
                     <div class="wz_time">
 
 <?php if($top['tid'] == 2): ?><!--作者为老师即可跳转到其个人空间-->
-    <a href="__APP__/member/info/uid/<?php echo ($top["uid"]); ?>"><?php echo ($top["uname"]); ?></a>  				     
+    <a href="__APP__/member/info/uid/{ms:$top.uid}">{ms:$top.uname}</a>  				     
 <?php else: ?>
-    <a><?php echo ($top["uname"]); ?></a><?php endif; ?>
+    <a>{ms:$top.uname}</a><?php endif; ?>
   
-                    <i class="wz_lr"><?php echo (date("Y-m-d",$top["create_time"])); ?></i>
+                    <i class="wz_lr">{ms:$top.create_time|date="Y-m-d",###}</i>
 				          <!------tag标签----->
       <?php for($i=0;$i<$tagCount;$i++){ echo "<a href='__URL__/search/tag/$tagInfo[$i]' class='wz_lixian'>".$tagInfo[$i]."</a>"; } ?>
-						<a href="__URL__/review/aid/<?php echo ($top["aid"]); ?>" class="wz_xinxi"><?php echo ($top["rnum"]); ?></a>
+						<a href="__URL__/review/aid/{ms:$top.aid}" class="wz_xinxi">{ms:$top.rnum}</a>
 				    </div><?php endif; ?>
 <!--------左侧.文章列表--------->	
                 <div class="wz_lists">
 				   <?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><dl class="fix">
-                      	<dt><a href="__URL__/content/aid/<?php echo ($vo["aid"]); ?>">
+                      	<dt><a href="__URL__/content/aid/{ms:$vo.aid}">
 						     <?php if(empty($vo[firstimage])): ?><img src="__PUBLIC__/images/thumb.jpg" />						     
 							 <?php else: ?>
-							 	<img src="<?php echo (UPLOADS); ?>article/<?php echo ($vo["firstimage"]); ?>" alt="<?php echo ($vo["title"]); ?>" /><?php endif; ?>
+							 	<img src="{ms:$Think.const.UPLOADS}article/{ms:$vo.firstimage}" alt="{ms:$vo.title}" /><?php endif; ?>
 						     </a>
 						 </dt>
                         <dd>
-<p class="wz_p1"><a href="__URL__/content/aid/<?php echo ($vo["aid"]); ?>"><?php echo ($vo["title"]); ?></a></p>
+<p class="wz_p1"><a href="__URL__/content/aid/{ms:$vo.aid}">{ms:$vo.title}</a></p>
 <p class="wz_p2">
 <?php if($vo['uid'] == 0): ?><!--游客-->
 	<a>游客</a>
@@ -116,26 +116,26 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
     	<a>佚名</a>
     <?php else: ?>
         <?php if($vo['tid'] == 2): ?><!--作者为老师即可跳转到其个人空间-->
-        	<a href="__APP__/member/info/uid/<?php echo ($vo["uid"]); ?>"><?php echo ($vo["uname"]); ?></a>  				     
+        	<a href="__APP__/member/info/uid/{ms:$vo.uid}">{ms:$vo.uname}</a>  				     
         <?php else: ?>
-            <a><?php echo ($vo["uname"]); ?></a><?php endif; endif; endif; ?>
-<?php echo (date("Y-m-d",$vo["up_time"])); ?></p>
-<p class="wz_p3">摘要：<?php echo (msubstr($vo["summary"],1,95,'utf-8',false)); ?></p>
+            <a>{ms:$vo.uname}</a><?php endif; endif; endif; ?>
+{ms:$vo.up_time|date="Y-m-d",###}</p>
+<p class="wz_p3">摘要：{ms:$vo.summary|msubstr=1,95,'utf-8',false}</p>
 <p class="wz_p4">
-      <a href="__URL__/review/aid/<?php echo ($vo["aid"]); ?>" class="wz_a1 fr"><?php echo ($vo["rNum"]); ?></a>
-          <?php if(is_array($vo["tag"])): foreach($vo["tag"] as $key=>$vo2): ?><a href='__URL__/search/tag/<?php echo ($vo2); ?>' class='wz_lixian'><?php echo ($vo2); ?></a><?php endforeach; endif; ?>
+      <a href="__URL__/review/aid/{ms:$vo.aid}" class="wz_a1 fr">{ms:$vo.rNum}</a>
+          <?php if(is_array($vo["tag"])): foreach($vo["tag"] as $key=>$vo2): ?><a href='__URL__/search/tag/{ms:$vo2}' class='wz_lixian'>{ms:$vo2}</a><?php endforeach; endif; ?>
 </p>
                         </dd>
                      </dl><?php endforeach; endif; else: echo "" ;endif; ?>
                 </div>
-                <div class="zy_fenye"><?php echo ($page); ?></div>
+                <div class="zy_fenye">{ms:$page}</div>
         	</div>
 <!--------右侧---------->
             <div class="wz_right fr">
             <!--------右侧.搜索---------->
             	<div class="wz_so">
                 	<div class="wz_so_t">
-					  <?php if(is_array($tags)): $i = 0; $__LIST__ = $tags;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><a href="__URL__/search/tag/<?php echo ($vo["tag"]); ?>"><?php echo ($vo["tag"]); ?></a><span>|</span><?php endforeach; endif; else: echo "" ;endif; ?>
+					  <?php if(is_array($tags)): $i = 0; $__LIST__ = $tags;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><a href="__URL__/search/tag/{ms:$vo.tag}">{ms:$vo.tag}</a><span>|</span><?php endforeach; endif; else: echo "" ;endif; ?>
 					</div>
 					<div class="wz_so_b"><input type="text" value="" name="tag" placeholder="搜索" id="tag" /><a href="javascript:void(0);" id="search">搜索</a></div>
                 </div>
@@ -172,14 +172,14 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
 <div class="wz_hot_titl">热门文章</div>
      <?php if(is_array($hot)): $i = 0; $__LIST__ = $hot;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$voh): $mod = ($i % 2 );++$i;?><dl class="wz_p_no">
         <dt>
-            <a href="__URL__/content/aid/<?php echo ($voh["aid"]); ?>">
+            <a href="__URL__/content/aid/{ms:$voh.aid}">
             <?php if(empty($voh[firstimage])): ?><img src="__PUBLIC__/images/100.png" />						     
             <?php else: ?>
-            	<img src="<?php echo (UPLOADS); ?>article/<?php echo ($voh["firstimage"]); ?>" alt="<?php echo ($voh["title"]); ?>" width=100 height=60 /><?php endif; ?>
+            	<img src="{ms:$Think.const.UPLOADS}article/{ms:$voh.firstimage}" alt="{ms:$voh.title}" width=100 height=60 /><?php endif; ?>
             </a>
         </dt>
         <dd>
-            <p><a href="__URL__/content/aid/<?php echo ($voh["aid"]); ?>"><?php echo (msubstr($voh["title"],0,12,'utf-8',false)); ?></a></p>
+            <p><a href="__URL__/content/aid/{ms:$voh.aid}">{ms:$voh.title|msubstr=0,12,'utf-8',false}</a></p>
             <div>
 <?php if($voh['uid'] == 0): ?><!--游客-->
 	<a class="su">游客</a>
@@ -188,13 +188,13 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
         <a class="su">佚名</a>
     <?php else: ?>
         <?php if($voh['tid'] == 2): ?><!--作者为老师即可跳转到其个人空间-->
-        	<a href="__APP__/member/info/uid/<?php echo ($voh["uid"]); ?>"><?php echo ($voh["uname"]); ?></a>			     
+        	<a href="__APP__/member/info/uid/{ms:$voh.uid}">{ms:$voh.uname}</a>			     
         <?php else: ?>
-            <a class="su"><?php echo ($voh["uname"]); ?></a><?php endif; endif; endif; ?>        
+            <a class="su">{ms:$voh.uname}</a><?php endif; endif; endif; ?>        
             
             </div>
 
-            <p class="wz_hot_p"><a href="__URL__/review/aid/<?php echo ($voh["aid"]); ?>"><?php echo ($voh["rNum"]); ?></a><span><?php echo (date("Y-m-d",$voh["up_time"])); ?></span></p>
+            <p class="wz_hot_p"><a href="__URL__/review/aid/{ms:$voh.aid}">{ms:$voh.rNum}</a><span>{ms:$voh.up_time|date="Y-m-d",###}</span></p>
         </dd>
     </dl><?php endforeach; endif; else: echo "" ;endif; ?>
 </div>
@@ -202,30 +202,30 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
 <div class="wz_jingcai">
 	<div class="wz_hot_titl wz_hot_titl2">精彩评论</div>
     <?php if(is_array($hotR)): $i = 0; $__LIST__ = $hotR;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vor): $mod = ($i % 2 );++$i;?><div class="wz_bor">
-            <p class="wz_y"><a href="__URL__/content/aid/<?php echo ($vor["aid"]); ?>">原文：<?php echo ($vor["title"]); ?></a></p>
+            <p class="wz_y"><a href="__URL__/content/aid/{ms:$vor.aid}">原文：{ms:$vor.title}</a></p>
             <dl class="wz_y_dl">
-                <dt><a href="__APP__/member/info/uid/<?php echo ($vor["uid"]); ?>"><img src="__PUBLIC__/images/37.png" alt="<?php echo ($vor["image"]); ?>" /></a></dt>
+                <dt><a href="__APP__/member/info/uid/{ms:$vor.uid}"><img src="__PUBLIC__/images/37.png" alt="{ms:$vor.image}" /></a></dt>
                 <dd>
-                    <p class="wz_mi"><a href="__APP__/member/info/uid/<?php echo ($vor["uid"]); ?>"><?php echo ($vor["username"]); ?></a></p>
+                    <p class="wz_mi"><a href="__APP__/member/info/uid/{ms:$vor.uid}">{ms:$vor.username}</a></p>
                     <p class="wz_mi_b">详细内容</p>
                 </dd>
             </dl>
-            <div class="wz_posi"><i></i><a href="__URL__/content/aid/<?php echo ($vor["aid"]); ?>#auto_<?php echo ($vor["id"]); ?>1"><?php echo ($vor["msg"]); ?>...</a></div>
+            <div class="wz_posi"><i></i><a href="__URL__/content/aid/{ms:$vor.aid}#auto_{ms:$vor.id}1">{ms:$vor.msg}...</a></div>
         </div><?php endforeach; endif; else: echo "" ;endif; ?>
 </div>
 <!--最新评论-->
 <div class="wz_jingcai">
 	<div class="wz_hot_titl wz_hot_titl2">最新评论</div>
 	<?php if(is_array($newR)): $i = 0; $__LIST__ = $newR;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$von): $mod = ($i % 2 );++$i;?><div class="wz_bor">
-    <p class="wz_y"><a href="__URL__/content/aid/<?php echo ($von["aid"]); ?>">原文：<?php echo ($von["title"]); ?></a></p>
+    <p class="wz_y"><a href="__URL__/content/aid/{ms:$von.aid}">原文：{ms:$von.title}</a></p>
     <dl class="wz_y_dl">
-        <dt><a href="__APP__/member/info/uid/<?php echo ($von["uid"]); ?>"><img src="__PUBLIC__/images/37.png" /></a></dt>
+        <dt><a href="__APP__/member/info/uid/{ms:$von.uid}"><img src="__PUBLIC__/images/37.png" /></a></dt>
         <dd>
-            <p class="wz_mi"><a href="__APP__/member/info/uid/<?php echo ($von["uid"]); ?>"><?php echo ($von["uname"]); ?></a></p>
+            <p class="wz_mi"><a href="__APP__/member/info/uid/{ms:$von.uid}">{ms:$von.uname}</a></p>
             <p class="wz_mi_b">详细内容</p>
         </dd>
     </dl>
-    <div class="wz_posi"><i></i><a href="__URL__/review/aid/<?php echo ($von["aid"]); ?>#auto_<?php echo ($von["id"]); ?>1"><?php echo ($von["msg"]); ?>...</a></div>
+    <div class="wz_posi"><i></i><a href="__URL__/review/aid/{ms:$von.aid}#auto_{ms:$von.id}1">{ms:$von.msg}...</a></div>
 </div><?php endforeach; endif; else: echo "" ;endif; ?>
 </div>
 <!--最新评论结束-->  
@@ -308,28 +308,28 @@ jQuery(document).ready(function($) {
 			   </div>
     	       <div class="jsu_2">2、对准下面的二维码扫描，跳转到这个页面</div>
                <div class="jsu_3">
-			          <img width=155 height=155 src="<?php echo ($QRcodeUrl); ?>"/>
+			          <img width=155 height=155 src="{ms:$QRcodeUrl}"/>
 			     </div>
                  <div class="jsu_1">3、点击微信右上角的<img src="__PUBLIC__/images/fx2.png" /> ,  就可以将这个页面分享、转发和收藏</div>	
                         <div class="jsu_4 fix"><div class="fl">分享给更多人，点击</div>
 						<div class="zy_share fl">
-<script type="text/javascript">document.write('<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(location.href)+'&title=<?php echo ($info["title"]); ?>&desc=【<?php echo ($info["title"]); ?>】<?php echo ($info["summary"]); ?>...@名师网&pics=<?php echo ($info["firstimage"]); ?>&summary='+encodeURIComponent('<?php echo ($info["summary"]); ?>')+'"  target="_blank"><img src="__PUBLIC__/images/share3.png" /></a>');</script>
-<script type="text/javascript">document.write('<a href="http://v.t.sina.com.cn/share/share.php?url='+encodeURIComponent(location.href)+'&appkey=3172366919&title='+encodeURIComponent('【<?php echo ($info["title"]); ?>】<?php echo ($info["summary"]); ?>...@名师网')+'&pic=<?php echo ($info["firstimage"]); ?>" title="分享到新浪微博"  target="_blank"><img src="__PUBLIC__/images/share1.png" /></a>');</script>
+<script type="text/javascript">document.write('<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(location.href)+'&title={ms:$info.title}&desc=【{ms:$info.title}】{ms:$info.summary}...@名师网&pics={ms:$info.firstimage}&summary='+encodeURIComponent('{ms:$info.summary}')+'"  target="_blank"><img src="__PUBLIC__/images/share3.png" /></a>');</script>
+<script type="text/javascript">document.write('<a href="http://v.t.sina.com.cn/share/share.php?url='+encodeURIComponent(location.href)+'&appkey=3172366919&title='+encodeURIComponent('【{ms:$info.title}】{ms:$info.summary}...@名师网')+'&pic={ms:$info.firstimage}" title="分享到新浪微博"  target="_blank"><img src="__PUBLIC__/images/share1.png" /></a>');</script>
  <a href="javascript:;"><img src="__PUBLIC__/images/share2.png"  onclick="postToWb();" class="cu" title="分享到腾讯微博"/></a>
  <script type="text/javascript">
 	                   function postToWb(){
 		               var _url = encodeURIComponent(document.location);
 		               var _appkey = encodeURI("cba3558104094dbaa4148d8caa436a0b");
-		               var _pic = encodeURI('<?php echo ($info["firstimage"]); ?>');
+		               var _pic = encodeURI('{ms:$info.firstimage}');
 		               var _site = '';
-		               var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title=【<?php echo ($info["title"]); ?>】<?php echo ($info["summary"]); ?>...名师网';
+		               var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title=【{ms:$info.title}】{ms:$info.summary}...名师网';
 		               window.open( _u,'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
 	                   }
  </script>
- <script type="text/javascript">document.write('<a href="http://widget.renren.com/dialog/share?resourceUrl='+encodeURIComponent(location.href)+'&title='+encodeURIComponent('<?php echo ($info["title"]); ?>')+'&pic=<?php echo ($info["firstimage"]); ?>&description='+encodeURIComponent('<?php echo ($info["summary"]); ?>')+'" title="分享到人人" target="_blank"><img src="__PUBLIC__/images/share5.png" /></a>');</script>
+ <script type="text/javascript">document.write('<a href="http://widget.renren.com/dialog/share?resourceUrl='+encodeURIComponent(location.href)+'&title='+encodeURIComponent('{ms:$info.title}')+'&pic={ms:$info.firstimage}&description='+encodeURIComponent('{ms:$info.summary}')+'" title="分享到人人" target="_blank"><img src="__PUBLIC__/images/share5.png" /></a>');</script>
 
  <script type="text/javascript">
- document.write('<a href="http://connect.qq.com/widget/shareqq/index.html?site='+encodeURIComponent('名师网')+'&pics='+encodeURIComponent('<?php echo ($info["firstimage"]); ?>')+'&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent('<?php echo ($info["title"]); ?>')+'&desc='+encodeURIComponent('名师网名师网')+'" target="_blank"><img src="__PUBLIC__/images/share4.png" /></a>');
+ document.write('<a href="http://connect.qq.com/widget/shareqq/index.html?site='+encodeURIComponent('名师网')+'&pics='+encodeURIComponent('{ms:$info.firstimage}')+'&url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent('{ms:$info.title}')+'&desc='+encodeURIComponent('名师网名师网')+'" target="_blank"><img src="__PUBLIC__/images/share4.png" /></a>');
  </script>
 						</div>
 				</div>
