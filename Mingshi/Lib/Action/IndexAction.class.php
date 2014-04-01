@@ -385,10 +385,10 @@ public function login(){
 			}
 			  
 			
-			$this->success('登陆成功');
+			$this->success('登陆成功',U('index/index'));
 			
-			header('Content-Type:application/json; charset=utf-8');
-			echo "<script>window.location.href='/test';</script>";
+			// header('Content-Type:application/json; charset=utf-8');
+			// echo "<script>window.location.href='/test';</script>";
 			
 			
 	  }else{
