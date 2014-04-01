@@ -16,6 +16,7 @@
 .tab1{width:100%;height:35px;margin-bottom:15px;line-height: 35px;}
 .current {border-bottom: 2px solid rgb(38, 106, 174);color: rgb(38, 106, 174);font-weight: 700;}
 tr{ height:34px;}
+th{ text-align:right;}
 </style>
 </head>
 

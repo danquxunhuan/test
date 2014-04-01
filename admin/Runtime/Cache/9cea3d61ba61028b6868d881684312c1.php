@@ -28,7 +28,7 @@
             	<div class="index_lm"><a href="mingshishouye.html" class="in_mo">名师</a><a href="wenzhang.html">精读</a><a href="#">教室</a></div>
             </div>
             <div class="lo_r fr">
-            	<div class="togao fr"><a href="__APP__/index/index" class="lo_a" class="to_bj">网站首页</a><a href="__APP__/Public/loginout" class="lo_a" class="to_bj">退出登录</a></div>  
+            	<div class="togao fr"><a href="__ROOT__/index/index" class="lo_a to_bj" target="_blank">网站首页</a><a href="__APP__/Public/loginout" class="lo_a to_bj">退出登录</a></div>  
             </div>
             
         </div>

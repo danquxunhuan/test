@@ -144,6 +144,7 @@
                     content = K.create('#content',{
 			allowFileManager : true,
 			autoHeightMode : true,
+            resizeType:0,
 			afterCreate : function() {
 				this.loadPlugin('autoheight');
 			},

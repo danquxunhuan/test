@@ -1127,15 +1127,9 @@ public function officialmingshi(){
 		if(isset($_SESSION['ms_user_id'])){
 			$uid = $_SESSION['ms_user_id'];
 		}
-		//var_dump($uid);
-		//die();
 		if($_POST){
-			//ajax
-			var_dump($uid);
-			die();
 		//------------
 		if($uid){
-			var_dump($uid);
 			if(!empty($info[0]['savename'])){
 				//图片上传类
 				import('ORG.Net.UploadFile');
@@ -1188,6 +1182,8 @@ public function officialmingshi(){
 		}
 		
 	   }
+
+
 	   
 /*
 * 修改头像（wyj）//////////做到这里了~！

@@ -666,10 +666,12 @@ add_jbxx(uname,phone,classid,obj_id,emile,teach_age,identity,province,city,area,
 		   ,title= box.find('input[name="title"]').val();
 		   var content= $('#case').val();
 		   if(title == ''){
-		    alert('亲，还没有填写标题');
-            return false;			
+			    alert('亲，还没有填写标题');
+	            return false;			
+		   }else{
+		   	  add_jiaoxue(title,content,$(this));
 		   }		   
-		   add_jiaoxue(title,content,$(this));		   
+		   		   
 	})
 	
 	$('.jiaoxue_edit').live('click',function(){

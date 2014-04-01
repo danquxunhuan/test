@@ -385,10 +385,10 @@ public function login(){
 			}
 			  
 			
-			$this->success('登陆成功');
+			$this->success('登陆成功',U('index/index'));
 			
-			header('Content-Type:application/json; charset=utf-8');
-			echo "<script>window.location.href='/test';</script>";
+			// header('Content-Type:application/json; charset=utf-8');
+			// echo "<script>window.location.href='/test';</script>";
 			
 			
 	  }else{
@@ -421,6 +421,18 @@ public function tougao(){
 	}
 
 }
+<<<<<<< HEAD
+=======
+/*
+*投稿——验证码（wyj）
+*/
+Public function verify(){
+	 import('ORG.Util.Image');
+	 //Image::buildImageVerify(4,5,'png',60,26);
+	 Image::buildImageVerify();
+	 //Image::GBVerify();
+}
+>>>>>>> 85910056687905679e4972bd8d68c2a91acb5462
 
 	
 /*

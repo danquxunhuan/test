@@ -21,7 +21,6 @@
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
 
-<div class="box">
 <!--***************************top******************************-->
 	<div class="top">
     	<div class="logo fix">
@@ -31,7 +30,7 @@
             	<div class="index_lm"><a href="mingshishouye.html" class="in_mo">名师</a><a href="wenzhang.html">精读</a><a href="#">教室</a></div>
             </div>
             <div class="lo_r fr">
-            	<div class="togao fr"><a href="__APP__/index/index" class="lo_a"" class="to_bj">网站首页</a><a href="__APP__/Public/loginout" class="lo_a"" class="to_bj">退出登录</a></div>  
+            	<div class="togao fr"><a href="__ROOT__/index/index" class="lo_a to_bj" target="_blank">网站首页</a><a href="__APP__/Public/loginout" class="lo_a to_bj">退出登录</a></div>  
             </div>
             
         </div>
@@ -39,23 +38,24 @@
 
 <!--***************************content--left---right******************************-->   
              <div class="wapper">
-                 <div class="left fl">
-        <ul class="ul1">
-		     <li><div class="current">&nbsp;&nbsp;&nbsp;常用操作</div></li>
-			 <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Article" >文章列表</a></li>
-			 <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Member" >会员列表</a></li>
-			 <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access" >管理员列表</a></li>
-			 <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodeList" >节点管理</a></li>
-			 <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/roleList" >角色管理</a></li>
-			 <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Tags" >标签管理</a></li>
-			 <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Active" >活动列表</a></li>
-			 <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Area" >地区管理</a></li>
-			 <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Index/yqm_list" >邀请码列表</a></li>
-			 <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Review" >评论列表</a></li>
-			 <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Yueke" >约课列表</a></li>
-			 <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Lesson" >课程列表</a></li>
-		 </ul>
-  </div>
+                <div class="left fl">
+    <ul class="ul1">
+        <li><div class="current">&nbsp;&nbsp;&nbsp;常用操作</div></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Article" >文章列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Member" >会员列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access" >管理员列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodeList" >节点管理</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/roleList" >角色管理</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Tags" >标签管理</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Active" >活动列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Area" >地区管理</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Index/yqm_list" >邀请码列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Review" >评论列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Yueke" >约课列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Fangan" >设计方案列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Lesson" >课程列表</a></li>
+     </ul>
+</div>
                 <div id="Right"  class="right">
 				   <div class="contentArea">
                     <div class="tab1">
