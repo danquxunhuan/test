@@ -426,7 +426,8 @@ public function tougao(){
 */
 Public function verify(){
 	 import('ORG.Util.Image');
-	 Image::buildImageVerify(4,5,'png',60,26);
+	 //Image::buildImageVerify(4,5,'png',60,26);
+	 Image::buildImageVerify();
 	 //Image::GBVerify();
 }
 
