@@ -31,6 +31,10 @@ function titye(){alert('刷新页面试试');}
 <style type="text/css">
 	#tishi{ color:red; font-size:12px;}
 </style>
+
+<!-- <script src="/Public/js/jquery-1.7.2.min.js" type="text/javascript"></script> -->
+<script src="__PUBLIC__/js/uploadifyjquery.uploadify.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/js/uploadify/uploadify.css">
 </head>
 
 <body>
@@ -163,8 +167,23 @@ $(function(){
     <img class="headpic" src="__PUBLIC__/images/90_1.png" width="40" height="40" alt="头像" />
 </div>
 <div class="zyxx_inp zyxx_285 xgtx_zyxx_inp">
-    <input type="file" name="image" id="image" /><span id="tishi"></span>
-    <a class="btn" id="xgtx">上 传</a>
+    <!-- <input type="file" name="image" id="image" /><span id="tishi"></span>
+    <a class="btn" id="xgtx">上 传</a> -->
+   <form>
+    <div id="queue"></div>
+    <input id="file_upload" name="file_upload" type="file" multiple="true">
+  </form>
+
+  <script type="text/javascript">
+    
+    $(function() {
+      $('#file_upload').uploadify({
+        
+        'swf'      : 'uploadify.swf',
+        'uploader' : 'uploadify.php'
+      });
+    });
+  </script>
 </div>
                                     </div>                                 
                                 </div>
