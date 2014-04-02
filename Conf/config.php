@@ -20,7 +20,7 @@ return array(
     'TOKEN_TYPE' => 'md5', //令牌哈希验证规则 默认为MD5
     'TOKEN_RESET' => FALSE, //令牌验证出错后是否重置令牌 默认为true
 	'TMPL_PARSE_STRING'  =>array(
-		 //'__PUBLIC__' => '/Public', // 更改默认的__PUBLIC__ 替换规则
+		 //'__PUBLIC__' => '/Public',  // 更改默认的__PUBLIC__ 替换规则
 		 //'__JS__' => '/Public/JS/', // 增加新的JS类库路径替换规则
 		 //'__SUGPIC__'  =>  __ROOT__.'/Uploads/suggest', // 增加新的上传路径替换规则(建议反馈)
      ),  
