@@ -93,7 +93,8 @@ public function regms(){
 		public function insert() {
         if (IS_POST) {
              //$this->checkULogin();
-			//var_dump($_POST);
+			var_dump($_POST);
+			exit;
             header('Content-Type:application/json; charset=utf-8');
             echo json_encode(D("Member")->addMember());
           } else {

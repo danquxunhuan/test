@@ -68,7 +68,7 @@
 </div>
                 <div id="Right"  class="right">
                     <div class="Item hr">
-                        <div class="current">节点管理--<a href="__URL__/addNode" title="添加节点" >添加节点</a></div>
+                        <div class="current">节点管理--<a href="__URL__/show_editnode" title="添加节点" >添加节点</a></div>
                     </div>
                     <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
                         <thead>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>编辑节点</title>
+<title>添加/编辑节点</title>
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
@@ -71,7 +71,7 @@ th{ text-align:right;}
                 <div id="Right"  class="right">
                 <div class="contentArea">
                     <div class="Item hr">
-                        <div class="current">添加编辑节点</div>
+                        <div class="current">添加/编辑节点</div>
                     </div>
                     <form action="" method="post">
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
@@ -103,12 +103,12 @@ th{ text-align:right;}
                                 <th>描 述：</th>
                                 <td><textarea name="remark" style="width: 400px;"><?php echo ($info["remark"]); ?></textarea></td>
                             </tr>
+                            <tr>
+                                <td><button class="btn submit">提交</button></td>
+                            </tr>
                         </table>
                         <input type="hidden" name="id" value="<?php echo ($info["id"]); ?>"/>
                     </form>
-                    <div class="commonBtnArea" >
-                        <button class="btn submit">提交</button>
-                    </div>
                 </div>
             </div>
         </div>

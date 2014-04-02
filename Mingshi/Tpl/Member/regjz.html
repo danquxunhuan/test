@@ -127,7 +127,7 @@ body{ font-size:12px;}
 				   <input type="hidden" name="tid" value="1" />
 				  
                 <div class="zc_check"><p class="fl"><input type="checkbox"  id="chk_treaty" /></p><p class="fl">我已阅读并同意<a href="#" class="zc_colo">《名师.SO用户使用协议》</a></p></div>
-                <div class="zc_login"><a href="javascript:void(0);" class="zc_mr submit">免费注册</a><a href="index.html">返回登录</a></div>
+                <div class="zc_login"><a class="zc_mr submit">免费注册</a><a href="index.html">返回登录</a></div>
                </form>
 			</div>
             <div class="zc_you">
@@ -167,6 +167,7 @@ body{ font-size:12px;}
  $(".submit").click(function(){
              regSubmit();
             commonAjaxSubmit('insert');
+            
 });
  $(".submit1").click(function(){
             regSubmit1();
