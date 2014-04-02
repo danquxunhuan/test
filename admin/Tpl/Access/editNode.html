@@ -87,7 +87,25 @@ th{ text-align:right;}
         });
 
         $(".submit").click(function(){
-            commonAjaxSubmit();
+            //commonAjaxSubmit();
+            var name=$("input[name='name']").val();
+            var title=$("input[name='title']").val();
+            var status=$("input[name='status']").val();
+            var level=$("input[name='level']").val();
+            var pid=$("input[name='pid']").val();
+            var sort=$("input[name='sort']").val();
+            var remark=$("input[name='remark']").val();
+            $.ajax({
+                url:'/admin.php/Access/addNode',
+                type:'POST',
+                cache:false,
+                dataType:'JSON',
+                data:{"name":"name","title":"title"},
+                success:function(msg){
+                    alert(msg);
+                }
+            });
+
         });
     });
 </script>

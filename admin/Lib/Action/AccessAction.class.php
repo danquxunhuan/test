@@ -207,14 +207,24 @@ public function delRole(){
     }
 
     public function addNode() {
-        if (IS_POST) {
-            $this->checkToken();
-            header('Content-Type:application/json; charset=utf-8');
-            echo json_encode(D("Access")->addNode());
-        } else {
-            $this->assign("info", $this->getPid(array('level' => 1)));
-            $this->display("editNode");
-        }
+        // //if (IS_POST) {
+        //     $this->checkToken();
+        //     header('Content-Type:application/json; charset=utf-8');
+        //     echo json_encode(D("Access")->addNode());
+        // // } else {
+        // //     $this->assign("info", $this->getPid(array('level' => 1)));
+        // //     $this->display("editNode");
+        // // }
+        $data=array(
+              'name'=>trim($_POST['name'])
+            );
+        echo json_encode($data);
+
+    }
+    //show role list
+    public function show_editnode(){
+        $this->assign("info", $this->getPid(array('level' => 1)));
+        $this->display("editNode");
     }
 
 /*
@@ -232,9 +242,9 @@ public function delNode(){
 
 
     /**
-      +----------------------------------------------------------
+     * +----------------------------------------------------------
      * 给用户组添加权限
-      +----------------------------------------------------------
+    *+----------------------------------------------------------
      */
     public function changeRole() {
         header('Content-Type:application/json; charset=utf-8');

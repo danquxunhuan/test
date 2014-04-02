@@ -43,7 +43,7 @@ a.yoo:hover i{color:#FA6628}
 .dl_list dt a{display:inline-block;width:94px;background:#fff;position:relative;}
 .dl_list dt a img{display:inline-block;margin:2px;}
 .a_posi{width:94px;height:2px;_height:5px;overflow:hidden;position:absolute;left:0;bottom:-2px;_bottom:-5px;background:url(../images/ticher_b.png) no-repeat;}
-.zy_a_posi{width:104px;height:2px;_height:5px;overflow:hidden;position:absolute;left:0;bottom:-5px;background:url(../images/ticher_b100.png) no-repeat;height:5px;}
+.zy_a_posi{width:104px;height:2px;_height:5px;overflow:hidden;position:absolute;left:0;bottom:-5px;/*background:url(../images/ticher_b100.png) no-repeat;*/height:5px;}
 .dl_list dd{margin-left:108px;}
 .dl_list dd p{line-height:20px;}
 .dl_list dd i{color:#FF6F3D;}

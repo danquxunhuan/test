@@ -25,6 +25,8 @@ function commonAjaxSubmit(url,formObj){
     $(formObj).ajaxSubmit({
         url:url,
         type:"POST",
+        dataType:'JSON',
+        cache:false,
         success:function(data, st) {
             //                var data = eval("(" + data + ")");
             if(data.status==1){
