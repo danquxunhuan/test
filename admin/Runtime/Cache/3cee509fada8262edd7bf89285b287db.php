@@ -58,7 +58,7 @@
    <div class="right">
           <div class="tab1"> <div class="current">会员管理---<a href="__URL__/add" >添加会员</a>---<a href="__URL__/del" >删除会员</a>---<a href="__URL__/add" >更新会员</a></div></div>
 		     <!-----列表页面------>
-		     <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
+		     <table width="93%" border="0" cellspacing="0" cellpadding="0" class="tab">
 			     <tr><th>用户id</th><th>用户名</th><th>类别</th><th>金币</th><th>注册时间</th><th>等级</th><th width="85">操作</th></tr>
 				  <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
 				  <td><?php echo ($vo["uid"]); ?></td>   

@@ -1556,6 +1556,31 @@ $this->display();
 		}
 		echo json_encode($msg);
 	}
+
+	public function add_teacher(){
+		$data=array(
+			  'uname'=>trim($_POST['uname']),
+			  'phone'=>trim($_POST['phone']),
+			  'password'=>md5($_POST['pwd']),
+			  'province'=>trim($_POST['province']),
+			  'city'=>trim($_POST['city'])?trim($_POST['city']):0,
+			  'area'=>trim($_POST['area'])?trim($_POST['area']):0,
+			  'classid'=>trim($_POST['classid']),
+			  'tid'=>2,
+			  'regdate'=>time(),
+			  'yqm_sn'=>trim($_POST['yqm_sn']),
+			  'obj_id'=>trim($_POST['obj_id'])
+			);
+		$user=M('Member');
+		$data=$user->add($data);
+		if($data){
+			$msg=1;
+		}else{
+			$msg=0;
+		}
+		echo json_encode($msg);
+	
+	}
 	
 	}
 ?>
