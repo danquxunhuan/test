@@ -21,6 +21,7 @@
 <script language="javascript" src="__PUBLIC__/js/common.js"></script>
 <script src="__PUBLIC__/js/reg.js"></script>
 <script src="__PUBLIC__/js/iepng.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 <style type="text/css"><!--
 body{ font-size:12px;}
 --></style>
@@ -44,7 +45,7 @@ body{ font-size:12px;}
             </div>
 			  <div class="jianzhang cons" id="con1">
              <div class="zc_zuo">
-			    <form method="post" action="__URL__/insert" id='form1' name='fm'  >
+			   <!--  <form method="post" action="__URL__/insert" id='form1' name='fm'  > -->
             	  <!--dl class="xinzc_dl">
                 	  <dt class="letter">邀请码：</dt>
                     <dd>
@@ -128,7 +129,7 @@ body{ font-size:12px;}
 				  
                 <div class="zc_check"><p class="fl"><input type="checkbox"  id="chk_treaty" /></p><p class="fl">我已阅读并同意<a href="#" class="zc_colo">《名师.SO用户使用协议》</a></p></div>
                 <div class="zc_login"><a class="zc_mr submit">免费注册</a><a href="index.html">返回登录</a></div>
-               </form>
+               <!-- </form> -->
 			</div>
             <div class="zc_you">
                 <div class="apple_title"><span>我们为家长做三件很酷的事情</span></div>
@@ -164,15 +165,54 @@ body{ font-size:12px;}
 <include file="Public:footer" />
 </div>
 <script type="text/javascript">
- $(".submit").click(function(){
-             regSubmit();
-            commonAjaxSubmit('insert');
-            
-});
- $(".submit1").click(function(){
-            regSubmit1();
-            commonAjaxSubmit('insert1');
-});	   
+$(function(){
+
+     $("#confirmpwd").blur(function(){
+        var pwd=$("#password").val();
+        var checkpwd=$(this).val();
+        if(!(pwd == checkpwd)){
+            $(".error").show();
+        }
+     });
+
+     $(".submit").click(function(){
+                //  regSubmit();
+                // commonAjaxSubmit('insert');
+                var name=$("#uname").val();
+                var phone=$("#phone").val();
+                var xinzc_input=$(".xinzc_input").val();
+                var classid=$("#m1").val();
+                var province=$("#province").val();
+                var city=$("#city").val();
+                var area=$("#area").val();
+                var pwd=$("#password").val();
+                $.ajax({
+                    url:'__URL__/add_user',
+                    type:'POST',
+                    dataType:'json',
+                    cache:false,
+                    data:{"uname":name,"phone":phone,"classid":classid,"province":province,"city":city,"area":area,"pwd":pwd},
+                    success:function(msg){
+                        if(msg==1){
+                            layer.alert('恭喜您,注册成功',2,'注册信息', function(){ 
+                              window.location.href="__APP__/index/login";
+                            });
+                        }else{
+                            layer.alert('很遗憾,注册失败',2,'注册信息', function(){});
+                        }
+                    }
+                });
+
+                
+                
+    });
+     $(".submit1").click(function(){
+                regSubmit1();
+                commonAjaxSubmit('insert1');
+    });	   
+
+
+ });
 </script>
 
 </body>

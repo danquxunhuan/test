@@ -397,3 +397,33 @@ ERR: 非法操作:statics
 [ 2014-04-02T15:22:17+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
 ERR: 非法操作:statics
 
+[ 2014-04-02T15:27:45+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-02T15:27:46+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-02T15:27:47+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-02T15:27:48+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-02T15:27:48+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-02T15:27:50+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-02T15:31:10+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-02T15:31:12+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-02T15:31:13+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-02T15:31:14+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+

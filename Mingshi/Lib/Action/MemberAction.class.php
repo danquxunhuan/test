@@ -1533,7 +1533,29 @@ $this->display();
 		$this->success('上传头像成功');
 	}
 	
-	
+
+	//insert member
+	public function add_user(){
+		$data=array(
+			  'uname'=>trim($_POST['uname']),
+			  'phone'=>trim($_POST['phone']),
+			  'password'=>md5($_POST['pwd']),
+			  'province'=>trim($_POST['province']),
+			  'city'=>trim($_POST['city'])?trim($_POST['city']):0,
+			  'area'=>trim($_POST['area'])?trim($_POST['area']):0,
+			  'classid'=>trim($_POST['classid']),
+			  'tid'=>1,
+			  'regdate'=>time()
+			);
+		$user=M('Member');
+		$data=$user->add($data);
+		if($data){
+			$msg=1;
+		}else{
+			$msg=0;
+		}
+		echo json_encode($msg);
+	}
 	
 	}
 ?>

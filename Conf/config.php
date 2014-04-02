@@ -25,5 +25,8 @@ return array(
 		 //'__SUGPIC__'  =>  __ROOT__.'/Uploads/suggest', // 增加新的上传路径替换规则(建议反馈)
      ),  
     'ms_webPath' => '/test/',
+    'APP_DEBUG'=>true,
+    'DB_FIELD_CACHE'=>false,
+    'HTML_CACHE_ON'=>false
 );
 ?>

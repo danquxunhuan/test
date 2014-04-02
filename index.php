@@ -11,10 +11,10 @@
  
 //把css和img图片路径定义为常量，以便使用
 //公共图片
-define('HOME_IMG',  __ROOT__.'/Public/images/'); 
+define('HOME_IMG','/Public/images/'); 
 //建议反馈图片上传文件
-define('UPLOADS', __ROOT__.'/Uploads/'); 
-define('SUGPIC', __ROOT__.'/Uploads/suggest/'); 
+define('UPLOADS','/Uploads/'); 
+define('SUGPIC','/Uploads/suggest/'); 
  
  require './ThinkPHP/ThinkPHP.php';
  

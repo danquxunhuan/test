@@ -421,8 +421,6 @@ public function tougao(){
 	}
 
 }
-<<<<<<< HEAD
-=======
 /*
 *投稿——验证码（wyj）
 */
@@ -432,7 +430,6 @@ Public function verify(){
 	 Image::buildImageVerify();
 	 //Image::GBVerify();
 }
->>>>>>> 85910056687905679e4972bd8d68c2a91acb5462
 
 	
 /*
