@@ -387,16 +387,12 @@ public function login(){
 			
 			$this->success('登陆成功',U('index/index'));
 			
-			// header('Content-Type:application/json; charset=utf-8');
-			// echo "<script>window.location.href='/test';</script>";
+		
 			
 			
 	  }else{
 		  // 如果创建失败 表示验证没有通过 输出错误提示信息
-		  /*
-		  *echo "<script>alert('用户名或密码错误');window.location.href='/test/index/login';</script>";
-		  */
-		  //$this->redirect();
+		  
 		  $this->error('用户名或密码错误');
 	  }
    }
