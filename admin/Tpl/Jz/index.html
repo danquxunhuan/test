@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>家长会员管理列表</title>
+<link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+
+</head>
+<body>
+
+<include file="Common:header" />
+<!--***************************content--left---right******************************-->
+ <div class="wapper">
+     <include file="Common:left" />
+   <div class="right">
+          <div class="tab1"> <div class="current">会员管理---<a href="__URL__/add" >添加会员</a></div></div>
+		     <!-----列表页面------>
+		     <table width="93%" border="0" cellspacing="0" cellpadding="0" class="tab">
+			     <tr><th>用户ID</th><th>用户名</th><th>金币</th><th>注册时间</th><th>等级</th><th width="85">操作</th></tr>
+				  <volist name="list" id="vo">
+				  <tr>
+				  <td>{ms:$vo.uid}</td>   
+				  <td>{ms:$vo.uname}</td>
+				  <td>{ms:$vo.coin}</td>
+				  <td>{ms:$vo.regdate|date='Y-m-d H:i',###}</td>
+				  <td>{ms:$vo.rankid}</td>
+				  <td>[ <a href="__URL__/editMember/uid/{ms:$vo.uid}">编辑</a> ][ <a link="__URL__/del/uid/{ms:$vo.uid}" href="javascript:void(0)" name="{ms:$vo.uname}" class="del">删除</a>]</td>
+				  </tr>
+                </volist>
+		     </table>
+			 
+			 <div class="result page">{ms:$page}</div>
+
+   </div>
+ </div>	
+<script type="text/javascript">
+	$(function(){
+		$(".del").click(function(){
+			var delLink=$(this).attr("link");
+			popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){
+				if(action == 'ok'){
+					top.window.location.href=delLink;
+				}
+			});
+			return false;
+		});
+	});
+</script>
+    
+</body>
+</html>
