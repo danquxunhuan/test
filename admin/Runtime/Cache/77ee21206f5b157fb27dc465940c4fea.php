@@ -92,7 +92,7 @@
                                 <td edit="0" fd="sort"><?php echo ($vo["sort"]); ?></td>
                                 <td><?php echo ($vo["level"]); ?></td>
                                 <td><?php echo ($vo["statusTxt"]); ?></td>
-                                <td>[ <a href="javascript:void(0);" class="opStatus" val="<?php echo ($vo["status"]); ?>"><?php echo ($vo["chStatusTxt"]); ?></a> ] [ <a href="__URL__/editNode?id=<?php echo ($vo["id"]); ?>" class="edit">编辑</a> ] [ <a link="__URL__/delNode/id/<?php echo ($vo['id']); ?>" href="javascript:void();" name="<?php echo ($vo['name']); ?>" class="del" onclick="delarea();" >删除</a> ]</td>
+                                <td>[ <a href="javascript:void(0);" class="opStatus" val="<?php echo ($vo["status"]); ?>"><?php echo ($vo["chStatusTxt"]); ?></a> ] [ <a href="__URL__/editNode?id=<?php echo ($vo["id"]); ?>" class="edit">编辑</a> ] [ <a  name="<?php echo ($vo['name']); ?>" class="del" tid="<?php echo ($vo["id"]); ?>" >删除</a> ]</td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>
                 </div>
@@ -101,15 +101,26 @@
         
 <script type="text/javascript">
     $(function(){
-        $(".del").click(function(){ 
-            var delLink=$(this).attr("link"); 
-            popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){ 
-                if(action == 'ok'){ 
-                    top.window.location.href=delLink; 
-                } 
-            }); 
-            return false; 
-        }); 
+       $(".del").click(function(){
+        var id=$(this).attr('tid');
+          if(confirm('删除不可恢复！你确认要删除？')){
+            $.ajax({
+                url:'__URL__/delNode',
+                data:{"id":id},
+                dataType:'json',
+                cache:false,    
+                success:function(msg){
+                    if(msg==1){
+                        alert('删除节点成功');
+                    }else{
+                       alert('删除节点失败'); 
+                    }
+                }
+            });
+          }else{
+           return false;
+          }
+       });
     });
 </script>
         <script type="text/javascript">

@@ -88,15 +88,13 @@
                             </tr>
                             <tr>
                                 <th>评论内容：</th>
-                                <td><textarea class="input" style="height: 60px; width: 600px;" id="msg" name="msg"><?php echo ($info["msg"]); ?></textarea> 评论介绍</td>
+                                <td><textarea class="input" style="height:180px; width:600px;" id="msg" name="msg"><?php echo ($info["msg"]); ?></textarea> 评论介绍</td>
                             </tr>
 
                         </table>
                         <input type="hidden" name="id" value="<?php echo ($info["id"]); ?>" />
-                    </form>
-                    <div class="commonBtnArea" >
                         <button class="btn submit">提交</button>
-                    </div>
+                    </form>
                 </div>
             </div>
 			 </div>

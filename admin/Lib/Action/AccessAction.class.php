@@ -191,35 +191,72 @@ public function delRole(){
     }
 
     public function editNode() {
-        if (IS_POST) {
-            $this->checkToken();
-            header('Content-Type:application/json; charset=utf-8');
-            echo json_encode(D("Access")->editNode());
-        } else {
-            $M = M("Node");
-            $info = $M->where("id=" . (int) $_GET['id'])->find();
-            if (empty($info['id'])) {
-                $this->error("不存在该节点", U('Access/nodeList'));
-            }
-            $this->assign("info", $this->getPid($info));
-            $this->display();
-        }
+        // if (IS_POST) {
+        //     $this->checkToken();
+        //     header('Content-Type:application/json; charset=utf-8');
+        //     echo json_encode(D("Access")->editNode());
+        // } else {
+        //     $M = M("Node");
+        //     $info = $M->where("id=" . (int) $_GET['id'])->find();
+        //     if (empty($info['id'])) {
+        //         $this->error("不存在该节点", U('Access/nodeList'));
+        //     }
+        //     $this->assign("info", $this->getPid($info));
+        //     $this->display();
+        // }
+        $id=trim($_GET['id']);
+        $node=M("Node");
+        $data=$node->where("id=$id")->find();
+
+        import("@.ORG.Category");
+        $cat = new Category('Node', array('id', 'pid', 'title', 'fullname'));
+        $temp = $cat->getList();  //获取树形结构
+        //$allNode = $node->select();
+        $this->assign('allNode',$temp);
+
+
+        $this->assign('info',$data);
+        $this->display();
     }
 
     public function addNode() {
-        // //if (IS_POST) {
+        // if (IS_POST) {
         //     $this->checkToken();
         //     header('Content-Type:application/json; charset=utf-8');
         //     echo json_encode(D("Access")->addNode());
-        // // } else {
-        // //     $this->assign("info", $this->getPid(array('level' => 1)));
-        // //     $this->display("editNode");
-        // // }
+        // } else {
+        //     $this->assign("info", $this->getPid(array('level' => 1)));
+        //     $this->display("editNode");
+        // }
+        $node=M('Node');
+         $id=trim($_POST['id']);
         $data=array(
-              'name'=>trim($_POST['name'])
+            'name'=>trim($_POST['name']),
+            'title'=>trim($_POST['title']),
+            'status'=>trim($_POST['status']),
+            'level'=>trim($_POST['level']),
+            'pid'=>trim($_POST['pid']),
+            'sort'=>trim($_POST['sort']),
+            'remark'=>trim($_POST['remark'])
             );
-        echo json_encode($data);
+        if(empty($id)){
+            $info=$node->add($data);
+            if($info){
+                $msg='添加节点成功';
+            }else{
+               $msg='添加节点失败'; 
+            }
+        }else{ 
+            $data['id']=$id;
+           $info=$node->save($data);
+           if($info){
+               $msg='修改节点成功';
+           }else{
+               $msg='修改节点失败';
+           }
+        }
 
+       echo json_encode($msg);
     }
     //show role list
     public function show_editnode(){
@@ -234,10 +271,11 @@ public function delNode(){
 	$art = D("Node");
 	$id = trim($_GET['id']);
 	if($art->where("id=".$id)->delete()){
-		$this->success("删除成功");
+	   $msg=1;
 	}else{
-		$this->error("删除失败");
+		$msg=0;
 	}	
+    echo json_encode($msg);
 }
 
 

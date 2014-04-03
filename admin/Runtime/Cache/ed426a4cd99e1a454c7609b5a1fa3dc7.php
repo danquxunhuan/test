@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 <style>
 .wapper{width:100%;height:auto;margin:auto 0px;}
 .right{float:right;width:78%;height:600px;box-shadow:0px 3px 6px #BDBFBE}
@@ -30,7 +31,6 @@ th{ text-align:right;}
 <script src="__PUBLIC__/js/functions.js"></script>
 <script src="__PUBLIC__/js/jquery.form.js"></script>
 <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
-<script src="__PUBLIC__/js/calendar/calendar.js"></script>
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
 
 <!--***************************top******************************-->
@@ -73,7 +73,7 @@ th{ text-align:right;}
                     <div class="Item hr">
                         <div class="current">添加/编辑节点</div>
                     </div>
-                    <form action="" method="post">
+                  <!--   <form action="" method="post" id="add_node"> -->
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
                             <tr>
                                 <th width="120">名称：</th>
@@ -89,11 +89,19 @@ th{ text-align:right;}
                             </tr>
                             <tr>
                                 <th>类型：</th>
-                                <td><select name="level" style="min-width: 80px;"><?php echo ($info["levelOption"]); ?></select> 项目（GROUP_NAME;  模块(MODEL_NAME); 操作（ACTION_NAME）</td>
+                                <td><select name="level" style="min-width: 80px;">
+<option value="1" <?php if($info['level'] == 1): ?>selected='selected'<?php endif; ?>>项目</option>
+<option value="2" <?php if($info['level'] == 2): ?>selected='selected'<?php endif; ?>>模块</option>
+<option value="3" <?php if($info['level'] == 3): ?>selected='selected'<?php endif; ?>>操作</option>
+                                </select> 项目（GROUP_NAME;  模块(MODEL_NAME); 操作（ACTION_NAME）</td>
                             </tr>
                             <tr>
                                 <th>父级节点：</th>
-                                <td><select name="pid" style="min-width: 80px;"><?php echo ($info["pidOption"]); ?></select></td>
+                                <td><select name="pid" style="min-width: 80px;">
+                                    <?php if(is_array($allNode)): $i = 0; $__LIST__ = $allNode;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><option value="<?php echo ($vo["id"]); ?>" <?php if($info['pid'] == $vo['id']): ?>selected='selected'<?php endif; ?>><?php echo ($vo["fullname"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                                <?php echo ($info["pidOption"]); ?>
+
+                                </select></td>
                             </tr>
                             <tr>
                                 <th>显示排序：</th>
@@ -108,7 +116,7 @@ th{ text-align:right;}
                             </tr>
                         </table>
                         <input type="hidden" name="id" value="<?php echo ($info["id"]); ?>"/>
-                    </form>
+                    <!-- </form> -->
                 </div>
             </div>
         </div>
@@ -129,20 +137,23 @@ th{ text-align:right;}
         });
 
         $(".submit").click(function(){
-            //commonAjaxSubmit();
+            // var url="/admin.php/Access/addNode";
+            // var formObj='add_node';
+            // commonAjaxSubmit();
+            var id=$("input[name='id']").val();
             var name=$("input[name='name']").val();
             var title=$("input[name='title']").val();
-            var status=$("input[name='status']").val();
-            var level=$("input[name='level']").val();
-            var pid=$("input[name='pid']").val();
+            var status=$("select[name='status']").val();
+            var level=$("select[name='level']").val();
+            var pid=$("select[name='pid']").val();
             var sort=$("input[name='sort']").val();
-            var remark=$("input[name='remark']").val();
+            var remark=$("textarea[name='remark']").val();
             $.ajax({
-                url:'/admin.php/Access/addNode',
+                url:'__URL__/addNode',
                 type:'POST',
                 cache:false,
                 dataType:'JSON',
-                data:{"name":"name","title":"title"},
+                data:{"name":name,"title":title,"status":status,"level":level,"pid":pid,"sort":sort,"remark":remark,"id":id},
                 success:function(msg){
                     alert(msg);
                 }
