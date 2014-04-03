@@ -59,8 +59,10 @@
                 $this->error("超级管理员信息不允许操作", U("Access/index"));
                 exit;
             }
-			$this->assign("sbj", M('Subject')->select());
-            $this->assign("info",$info);
+			//孩子年级
+			$class=M('Child_class')->where('id<13')->select();
+			$this->assign("class", $class);
+            $this->assign("info", $info);
             $this->display("add");
         }
     }
