@@ -31,7 +31,6 @@ th{ text-align:right;}
 <script src="__PUBLIC__/js/jquery.form.js"></script>
 <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
-<script src="__PUBLIC__/js/calendar/calendar.js"></script>
 
 <!--***************************top******************************-->
 	<div class="top">

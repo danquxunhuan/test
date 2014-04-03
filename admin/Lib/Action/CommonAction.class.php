@@ -225,7 +225,7 @@
     }
 	
 	Public function verify(){
-         import('ORG.Util.Image');
+         import('@.ORG.Image');
          Image::buildImageVerify(4,5,'png',100,40);
 		 //Image::GBVerify();
     }
