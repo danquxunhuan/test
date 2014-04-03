@@ -32,128 +32,49 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
                             <tr>
                                 <th width="120">账号：</th>
-                                <td><input <if condition="ACTION_NAME eq 'editMember'" >disabled="disabled"</if> name="uname" type="text" class="input" size="40" value="{ms:$info.uname}" /></td>
+                                <td><input name="uname" type="text" class="input" size="40" value="{ms:$info.uname}" /></td>
                             </tr>
                             <tr>
                                 <th>新密码：</th>
-                                <td><input class="input" name="password" type="password" size="40" value="" /></td>
+                                <td><input class="input" name="password" type="password" size="40" value="{ms:$info.password}" /></td>
                             </tr>
                             <tr>
-                                <th>状态：</th>
-                                <td>
-                                    <select name="status">
-                                        <if condition="$info.status eq 1">
-                                            <option value="1" selected>通过审核</option>
-                                            <option value="0">未通过审核</option>
-                                            <else/>
-                                            <option value="1">通过审核</option>
-                                            <option value="0" selected>未通过审核</option>
-                                        </if>
-                                    </select>
-                                    如果禁用了将无法登陆本系统
-									 </td>
+                                <th>手机号：</th>
+                                <td><input class="input" name="phone" type="text" size="40" value="{ms:$info.phone}" /></td>
                             </tr>
                             <tr>
-                                <th>用户类别：</th>
-                                <td> 
-								       <select name="tid">
-								        <if condition="$info.tid eq 1">
-								         <option value="1" selected>家长</option>
-										  <option value="2"> 老师</option>
-										 <else/>
-										 <option value="1">家长</option>
-										  <option value="2" selected> 老师</option>
-										 </if>
-										 </select>
-								    </td>
-                            </tr>
-							    <tr>
-                                <th>科目：</th>
-                                <td> 
-								    <select name="obj_id" style="width: 80px;">
-								    	<volist name="sbj" id="vo">
-<option  value="{ms:$vo.id}" <if condition="$vo.id eq $info['obj_id']">selected="selected"</if> >{ms:$vo.subject}</option>
-                                        </volist>
-									</select>
-								</td>
-                            </tr>
+                            
 							    <tr>
                                 <th>孩子年级：</th>
                                 <td> 
-								        <select name="classid" style="width: 80px;">
-											<if condition="$info.classid eq 0">
-                                              <option value="0">请选择</option>
-                                              <option value="1">一年级</option>
-                                              <option value="2">二年级</option>
-                                              <option value="3">三年级</option>
-                                            <else if condition="$info.classid eq 1"/>
-											    <option value="1" selected>一年级</option>
-                                            	<option value="2">二年级</option>
-											    <option value="3">三年级</option>
-                                            <else if condition="$info.classid eq 2"/>
-												<option value="1">一年级</option>
-                                            	<option value="2" selected>二年级</option>
-											    <option value="3">三年级</option>
-											<else/>
-												 <option value="1" >一年级</option>
-                                            	 <option value="2">二年级</option>
-											     <option value="3" selected>三年级</option>
-                                           </if>
-                                    </select>
+<select name="classid">
+    <volist name="class" id="cli">
+    <option value="{ms:$cli.id}" <if condition="$cli['id'] eq $info['classid']">selected='selected'</if>>{ms:$cli.name}</option>
+    </volist>
+</select>
 								    </td>
                             </tr>
 							    <tr><th>用户级别：</th>
-                                 <td><select name="rankid" style="min-width: 80px;">
-								     <option value="1" selected>注册用户</option>
-                                      <option value="2">认证用户</option>
-									<option value="3">VIP用户</option></select>
+                                 <td>
+<select name="rankid" style="min-width: 80px;">
+    <option value="1" <if condition="$info.rankid eq 1">selected='selected'</if>>注册用户</option>
+    <option value="2" <if condition="$info.rankid eq 2">selected='selected'</if>>认证用户</option>
+    <option value="3" <if condition="$info.rankid eq 3">selected='selected'</if>>VIP用户</option>
+</select>
 								</td>
                             </tr>
                             </tr>
-							    <tr><th>教师身份：</th>
-                                 <td><select name="identity" style="min-width: 80px;">
-								     <option value="1" selected>顶级名师</option>
-                                     <option value="2">VIP名师</option>
-									 <option value="3">一线名师</option>
-                                     <option value="4">机构名师</option>
-                                     <option value="5">名校学生</option></select><br /> confirm
-								</td>
-                            </tr>
-							     <tr>
+							 <tr>
                                 <th>金币：</th>
-                                <td><input  name="coin" class="input" style="min-width: 80px;" value="" /></td>
-                            </tr>
-							   <tr>
-                                <th>视频1：</th>
-                                <td><input type="file" name="video" style="min-width: 80px;" value="" /></td>
-                            </tr>
-							    <tr>
-                                <th>视频2：</th>
-                                <td><input type="file" name="video" style="min-width: 80px;" value="" /></td>
-                            </tr>
-							    <tr>
-                                <th>视频3：</th>
-                                <td><input type="file" name="video" style="min-width: 80px;" value="" /></td>
-                            </tr>
-							    <tr>
-                                <th>个人生活照1：</th>
-                                <td><input type="file" name="images" style="min-width: 80px;" value="" /></td>
-                            </tr>
-							    <tr>
-                                <th>个人生活照2：</th>
-                                <td><input type="file" name="images" style="min-width: 80px;" value="" /></td>
-                            </tr>
-							    <tr>
-                                <th>个人生活照3：</th>
-                                <td><input type="file" name="images" style="min-width: 80px;" value="" /></td>
+                                <td><input  name="coin" class="input" style="min-width: 80px;" value="{ms:$info.coin}" /></td>
                             </tr>
                             <tr>
-                                <th>备注：</th>
-                                <td><textarea name="" style="width:600px; height:170px;"></textarea></td>
+                                <td colspan="2"><button class="btn submit">提交</button></td>
                             </tr>
+
                         </table>
                         <input type="hidden" name="uid" value="{ms:$info.uid}"/>
-                        <button class="btn submit">提交</button>
+                       
                     </form>
                     
         
