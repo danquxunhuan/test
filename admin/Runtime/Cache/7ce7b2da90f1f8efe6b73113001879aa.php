@@ -183,14 +183,13 @@
                             </tr>
                             <tr>
                                 <th>备注：</th>
-                                <td><textarea name="" rows="5" cols="57"></textarea></td>
+                                <td><textarea name="" style="width:600px; height:170px;"></textarea></td>
                             </tr>
                         </table>
                         <input type="hidden" name="uid" value="<?php echo ($info["uid"]); ?>"/>
-                    </form>
-                    <div class="commonBtnArea">
                         <button class="btn submit">提交</button>
-                    </div>
+                    </form>
+                    
         
             </div>
         </div>

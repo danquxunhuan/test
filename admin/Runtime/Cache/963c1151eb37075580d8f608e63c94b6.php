@@ -28,7 +28,6 @@ input.ms_sub:hover{border:1px solid #545353;background:#5E5E5E}
 <script src="__PUBLIC__/js/jquery.form.js"></script>
 <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
-<script src="__PUBLIC__/js/calendar/calendar.js"></script>
 
 <!--***************************top******************************-->
 	<div class="top">
