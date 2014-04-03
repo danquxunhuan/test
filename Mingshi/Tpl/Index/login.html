@@ -14,6 +14,7 @@
 </if>
 <script language="javascript" src="__PUBLIC__/js/jquery-1.10.2.js"></script>
 <script language="javascript" src="__PUBLIC__/js/common.js"></script>
+<script language="javascript" src="__PUBLIC__/js/layer/layer.min.js"></script>
 
 </head>
 <body>
@@ -31,7 +32,7 @@
 			</div-->
             <div class="change"><a href="javascript:;"></a></div>
             <div class="user">用户登录</div>
-			<form name="frm1" method="post" action="__URL__/login">
+			<!-- <form name="frm1" method="post" action="__URL__/login"> -->
             <div class="forms">
             	<input type="text" value="用户名/手机号" class="inpu1" id="uname" name="uname" />
                 <input type="text" value="密码" class="inpu1" id="password" name="password" />
@@ -40,14 +41,51 @@
 					<i>下次自动登录</i>
 					<a href="javascript:;">忘记密码？</a></div>
                 <div class="login">
-                	<a href="javascript:fsubmit(document.frm1);" class="a1">登 录</a>
-					<a href="__APP__/Member/regjz" class="a2">注 册</a>
+                	<a class="a1">登 录</a>
+					<!-- <a href="__APP__/Member/regjz" class="a2">注 册</a> -->
+                    <a class="a2">注 册</a>
 				</div>
             </div>
-			</form>
+			<!-- </form> -->
         </div>
     </div>
-	
+	<script type="text/javascript">
+    $(function(){
+        $(".a2").click(function(){
+            $.ajax({
+                url:'__APP__/Member/regjz',
+                cache:false,
+                success:function(msg){
+                    if(msg==1){
+                        layer.alert('亲,您以登录,请先退出', 8,'友情提示');
+                    }else if(msg==0){
+                        window.location.href='__APP__/Member/go_reg';
+                    }
+                }
+            });
+        });
+        $(".a1").click(function(){
+            var name=$("#uname").val();
+            var pwd=$("#password").val();
+            $.ajax({
+                url:'__URL__/login',
+                data:{'uname':name,'password':pwd},
+                dataType:'json',
+                cache:false,
+                type:'post',
+                success:function(msg){
+                    if(msg==1){
+                        layer.alert('恭喜您!登录成功', 9,'友情提示',function(){window.location.href='index/index';});
+                    }else if(msg==0){
+                        layer.alert('很遗憾!登录失败', 8,'友情提示');
+                    }
+                }
+            });
+
+        });
+
+    });
+    </script>
     <div class="center fix">
     	<div class="mingshi fix">
         	<div class="titl"><span>顶级名师</span><a href="__APP__/member/all" target="_blank" class="fr you yoo">有<i>{ms:$teaNum}</i>位名师在这里</a></div>

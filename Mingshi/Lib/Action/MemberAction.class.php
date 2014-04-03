@@ -13,37 +13,46 @@
 			$this->assign('list',$list);
             $this->display();
 		}
-		
+		/*
+		 *注册跳转
+		 */
+		public function go_reg(){
+			   $area =M("Area");
+		        // 查询所有地区
+		        $list = $area->where('')->select();
+				$this->assign('list',$list);
+				
+				$plist = $area->where('pid=0')->select();
+				$this->assign('plist',$plist);
+				
+				$list2 = $area->where('pid=1')->select();
+				$this->assign('list2',$list2);
+				
+				$list3 = $area->where('pid>2')->select();
+				$this->assign('list3',$list3);
+				
+				$areaData =$area->field('id,name')->where('pid=0')->select();
+		        $this->assign('areaData',$areaData);		
+				//查询年级		  
+				$class=$area->query("select * from ms_child_class");  		  
+				$this->assign('class',$class);  		
+				//科目
+				$obj = D('Subject')->select();
+			    $this->assign('obj',$obj);
+		        $this->display('regjz');
+		}
 		/*
 		* 家长注册
 		*/
 		public function regjz(){
-		if($_SESSION['ms_user_id'] == true){
-		  $this->error('您已登录，请先退出');
-		}
-		 $area =M("Area");
-        // 查询所有地区
-        $list = $area->where('')->select();
-		$this->assign('list',$list);
-		
-		$plist = $area->where('pid=0')->select();
-		$this->assign('plist',$plist);
-		
-		$list2 = $area->where('pid=1')->select();
-		$this->assign('list2',$list2);
-		
-		$list3 = $area->where('pid>2')->select();
-		$this->assign('list3',$list3);
-		
-		$areaData =$area->field('id,name')->where('pid=0')->select();
-        $this->assign('areaData',$areaData);		
-		//查询年级		  
-		$class=$area->query("select * from ms_child_class");  		  
-		$this->assign('class',$class);  		
-		//科目
-		$obj = D('Subject')->select();
-	    $this->assign('obj',$obj);
-        $this->display();
+			if($_SESSION['ms_user_id'] == true){
+			  // $this->error('您已登录，请先退出');
+			  //echo json_encode(1);
+			  $msg=1;
+			}else{
+				$msg=0;
+	        }
+	        echo json_encode($msg);
 		}
 		
 /*
