@@ -385,18 +385,16 @@ public function login(){
 			}
 			  
 			
-			$this->success('登陆成功',U('index/index'));
-			
-		
-			
-			
+			// $this->success('登陆成功',U('index/index'));
+			$msg=1;		
 	  }else{
 		  // 如果创建失败 表示验证没有通过 输出错误提示信息
 		  
-		  $this->error('用户名或密码错误');
+		 $msg=0;
 	  }
    }
    
+   echo json_encode($msg);
 }
 	
 /*
