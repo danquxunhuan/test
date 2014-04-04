@@ -14,10 +14,12 @@ function isChinese(str){
     var reg = /[u00-uFF]/;       
     return !reg.test(str);      
 }
+
 function isEmail(email){
    var reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
    return reg.test(email);
 }
+
 function checkId(pId){
     var arrVerifyCode = [1,0,"x",9,8,7,6,5,4,3,2];
     var Wi = [7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2];
@@ -36,29 +38,29 @@ function checkId(pId){
     
 $(function(){
     //$("#province").change(function(){ (wyj)添加默认省份选择，市县保持联动
-            $("#area").empty();
-            $("<li value=\"\">选择县</li>").appendTo("#area");
-            var area = $("#province").val();
-            if(area!=""){
-                    $.ajax({
-                            type: "GET",
-                            url: "/test/public/getAreaName",
-                            datatype : "json",
-                            data: "&id="+encodeURIComponent(area)+"&math="+Math.floor(Math.random()*1000+1),
-                            success: function(msg){
-                                    if(msg!="0"){
-                                            var msg = eval("("+ msg+")");
-                                            var str = "<option value=\"\">选择区</option>";
-                                            for(var i in msg){
-                                                    str += "<option value="+msg[i].id+">"+msg[i].name+"</option>";
-                                            }
-                                            var city = $("#city");
-                                            city.empty();
-                                            $(str).appendTo("#city");
-                                    }
-                            }
-                    });
-            }
+		$("#area").empty();
+		$("<li value=\"\">选择县</li>").appendTo("#area");
+		var area = $("#province").val();
+		if(area!=""){
+			$.ajax({
+				type: "GET",
+				url: "__APP__/Public/getAreaName",
+				datatype : "json",
+				data: "&id="+encodeURIComponent(area)+"&math="+Math.floor(Math.random()*1000+1),
+				success: function(msg){
+					if(msg!="0"){
+							var msg = eval("("+ msg+")");
+							var str = "<option value=\"\">选择区</option>";
+							for(var i in msg){
+									str += "<option value="+msg[i].id+">"+msg[i].name+"</option>";
+							}
+							var city = $("#city");
+							city.empty();
+							$(str).appendTo("#city");
+					}
+				}
+			});
+		}
    // });
     //根据市查询县
     $("#city").change(function(){

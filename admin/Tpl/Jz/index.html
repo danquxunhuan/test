@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>家长会员管理列表</title>
+<title>家长管理列表</title>
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
@@ -15,21 +15,36 @@
  <div class="wapper">
      <include file="Common:left" />
    <div class="right">
-          <div class="tab1"> <div class="current">会员管理---<a href="__URL__/add" >添加会员</a></div></div>
-		     <!-----列表页面------>
-		     <table width="93%" border="0" cellspacing="0" cellpadding="0" class="tab">
-			     <tr><th>用户ID</th><th>用户名</th><th>金币</th><th>注册时间</th><th>等级</th><th width="85">操作</th></tr>
-				  <volist name="list" id="vo">
-				  <tr>
-				  <td>{ms:$vo.uid}</td>   
-				  <td>{ms:$vo.uname}</td>
-				  <td>{ms:$vo.coin}</td>
-				  <td>{ms:$vo.regdate|date='Y-m-d H:i',###}</td>
-				  <td>{ms:$vo.rankid}</td>
-				  <td>[ <a href="__URL__/editMember/uid/{ms:$vo.uid}">编辑</a> ][ <a link="__URL__/del/uid/{ms:$vo.uid}" href="javascript:void(0)" name="{ms:$vo.uname}" class="del">删除</a>]</td>
-				  </tr>
-                </volist>
-		     </table>
+          <div class="tab1"> <div class="current"><a href="__URL__/add" >&gt;&gt;添加家长</a></div></div>
+<!-----列表页面------>
+<table width="93%" border="0" cellspacing="0" cellpadding="0" class="tab">
+	<tr><th>用户ID</th><th>家长姓名</th><th>联系方式</th><th>金币</th><th>注册时间</th><th>等级</th><th>当前状态</th><th width="85">操作</th></tr>
+    <volist name="list" id="vo">
+    <tr>
+        <td>{ms:$vo.uid}</td>   
+        <td>{ms:$vo.uname}</td>
+        <td>{ms:$vo.phone}</td>
+        <td>{ms:$vo.coin}</td>
+        <td>{ms:$vo.regdate|date='Y-m-d H:i',###}</td>
+        <td>
+        <php>
+        if($vo['rankid']==3){
+        	echo 'VIP用户';
+        }elseif($vo['rankid']==2){
+        	echo '认证用户';
+        }else{
+        	echo '注册用户';
+        }
+        </php></td>
+        <td><if condition="$vo['status'] eq 1">
+          <span style="color:blue;">已审核</span>
+        <else />
+          <span style="color:red;">未审核</span>
+        </if></td>
+        <td>[ <a href="__URL__/edit/uid/{ms:$vo.uid}">编辑</a> ][ <a link="__URL__/del/uid/{ms:$vo.uid}" href="javascript:void(0)" name="{ms:$vo.uname}" class="del">删除</a>]</td>
+    </tr>
+    </volist>
+</table>
 			 
 			 <div class="result page">{ms:$page}</div>
 
@@ -47,7 +62,6 @@
 			return false;
 		});
 	});
-</script>
-    
+</script> 
 </body>
 </html>

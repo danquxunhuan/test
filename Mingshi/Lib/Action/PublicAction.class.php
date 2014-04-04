@@ -128,7 +128,7 @@
 	}	
 	
 	
-			 //AJAX查询市
+	//AJAX查询市
     public function getAreaName(){	
         $id = intval($_GET['id']);
         if($id){

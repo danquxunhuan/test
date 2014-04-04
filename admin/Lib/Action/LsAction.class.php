@@ -1,94 +1,186 @@
 <?php
-  class LsAction  extends CommonAction{
-  	/*
-	* 会员管理列表
-	*/
-    public function index() {
-        $User = M('Member'); // 实例化User对象
-        import('ORG.Util.Page');// 导入分页类
-        $count      = $User->count();// 查询满足要求的总记录数
-        $Page       = new Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
-        $show       = $Page->show();// 分页显示输出
-        // 进行分页数据查询 注意limit方法的参数要使用Page类的属性
-        $list = $User->where('tid=2')->limit($Page->firstRow.','.$Page->listRows)->select();
-        $this->assign('list',$list);// 赋值数据集
-        $this->assign('page',$show);// 赋值分页输出
-        $this->display();
-    }
+class LsAction extends CommonAction{
+/*
+* 会员管理列表
+*/
+public function index() {
+	$User = M('Member'); // 实例化User对象
+	import('ORG.Util.Page');// 导入分页类
+	$count      = $User->where('tid=2')->count();// 查询满足要求的总记录数
+	$Page       = new Page($count,15);// 实例化分页类 传入总记录数和每页显示的记录数
+	$show       = $Page->show();// 分页显示输出
+	// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
+	$list = $User->where('tid=2')->limit($Page->firstRow.','.$Page->listRows)->select();
+	$this->assign('list',$list);// 赋值数据集
+	$this->assign('page',$show);// 赋值分页输出
+	$this->display();
+}    
     
-	/*
-	* 删除会员
-	*/
-    public function del(){
-	   $this->checkToken();//检查是否登录
-	   $m= D("Member");
-	   $uid=trim($_GET['uid']);
-	   if($m->where("uid=".$uid."")->delete()){
-	   $this->success("删除成功");
-	   }else{
-	   $this->error("删除失败");
-	   }
-    }
-    
-    //public function add(){
-	  //var_dump($_POST);
-    	//$this->display();
-    //}
-	
-    /*
-	*修改会员信息
-	*/
-    public function editMember(){
-	  if (IS_POST)  {
-            $this->checkToken();
-            header('Content-Type:application/json; charset=utf-8');
-            echo json_encode(D("Member")->editMember());
-        } else {
-            $M = M("Member");
-            $uid = (int)$_GET['uid'];
-            $pre = C("DB_PREFIX");
-            $info = $M->where("`uid`=" . $uid)->find(); //取会员信息
-            
-			if (empty($info['uid'])) {
-                $this->error("不存在该会员ID", U('Member/index'));
-            }
-            if ($info['uname'] == C('ADMIN_AUTH_KEY')) {
-                $this->error("超级管理员信息不允许操作", U("Access/index"));
-                exit;
-            }
-			$this->assign("sbj", M('Subject')->select());
-            $this->assign("info",$info);
-            $this->display("add");
-        }
-    }
-	
-	  /**
-     *+----------------------------------------------------------
-     * 添加管理员
-     *+----------------------------------------------------------
-     */
-    public function add() {
-        if (IS_POST) {
-            $this->checkToken();
-			//var_dump($_POST);
-            header('Content-Type:application/json; charset=utf-8');
-            echo json_encode(D("Member")->addMember());
-        } else {
-            $this->assign("sbj", M('Subject')->select());
-			//$this->assign("info", M('Subject')->select());
-            $this->display();
-        }
-    }
-	
-	
-	public function getUserInfo(){
+/*
+* 删除会员
+*/
+public function del(){
+   $this->checkToken(); //令牌验证
+   $m= D("Member");
+   $uid=trim($_GET['uid']);
+   if($m->where("uid=".$uid."")->delete()){
+   $this->success("删除成功");
+   }else{
+   $this->error("删除失败");
+   }
+}
 
+
+/*
+* 添加教师展示页
+*/
+public function add(){
+	$M = M("Member");
+	if(isset($_GET['uid'])){  //修改页
+		$uid = (int)$_GET['uid'];
+		$pre = C("DB_PREFIX");
+		//取会员信息
+		$info = $M->where("`uid`=" . $uid)->find(); 
+		if (empty($info['uid'])) {
+			//$this->error("不存在该家长ID", U('Member/index'));
+			$msg = array('不存在该家长ID','Member/index');
+			exit;
+		}	
+		$this->assign('info', $info);
+		//取会员省市区具体信息
+		$city = M('Area')->field('id,name')->where('id='.$info['city'])->find();
+		$area = M('Area')->field('id,name')->where('id='.$info['area'])->find();
+		$this->assign('city',$city);
+		$this->assign('area',$area);
 	}
+
+	//孩子年级
+	$class = M('Child_class')->where('id>12')->select();
+	$this->assign("class", $class);
+	//科目
+	$subject = M('Subject')->select();
+	$this->assign("subject", $subject);
+	//教育机构
+	$edulist = M('Institution_edu')->select();
+	$this->assign("edulist", $edulist);
+	
+	$this->display();
+
+}
+
+/*
+* 添加教师方法
+*/	
+public function addMem(){
+	$obj=M('Member');
+	$data=array(
+		'uname'=>trim($_POST['uname']),
+		'password'=>md5(trim($_POST['password'])),
+		'phone'=>trim($_POST['phone']),
+		'classid'=>trim($_POST['classid']),
+		'rankid'=>trim($_POST['rankid']),
+		'coin'=>trim($_POST['coin']),
+		'province'=>trim($_POST['province']),
+		'city'=>trim($_POST['city']),
+		'area'=>trim($_POST['area']),
+		);
+	//增加家长固定信息
+	$data['status'] = 1;  //后台添加会员直接审核通过
+	$data['tid'] = 2;
+	$data['regdate'] = time();
+	$info = $obj -> add($data);
+	if($info){
+		$msg = '添加家长成功';
+	}else{
+		$msg = '添加家长失败';
+	}
+   echo json_encode($msg);	
+}	
+
+	
+/*
+* 修改教师展示页
+*/
+public function edit(){
+	$M = M("Member");
+	if(isset($_GET['uid'])){  //修改页
+		$uid = (int)$_GET['uid'];
+		$pre = C("DB_PREFIX");
+		//取会员信息
+		$info = $M->where("`uid`=" . $uid)->find(); 
+		if (empty($info['uid'])) {
+			$msg = array('不存在该家长ID','Member/index');
+			exit;
+		}	
+		$this->assign('info', $info);
+		//取会员省市区具体信息
+		$city = M('Area')->field('id,name')->where('id='.$info['city'])->find();
+		$area = M('Area')->field('id,name')->where('id='.$info['area'])->find();
+		$this->assign('city',$city);
+		$this->assign('area',$area);
+	}
+	
+	//地区——北京
+	$area= D('Area');
+	$areaData =$area->field('id,name')->where('pid=0')->select();
+	$this->assign('areaData',$areaData);		
+
+	//孩子年级
+	$class=M('Child_class')->where('id<13')->select();
+	$this->assign("class", $class);
+	
+	$this->display();
+}
+
+
+/*
+* 修改教师信息
+*/
+public function editMem() {
+	//$this->checkToken(); //令牌验证
+	$obj=M('Member');
+	$uid=trim($_POST['uid']);
+	$data=array(
+		'uname'=>trim($_POST['uname']),
+		'password'=>md5(trim($_POST['password'])),
+		'status'=>trim($_POST['status']),
+		'phone'=>trim($_POST['phone']),
+		'classid'=>trim($_POST['classid']),
+		'rankid'=>trim($_POST['rankid']),
+		'coin'=>trim($_POST['coin']),
+		'uid'=>trim($_POST['uid']),
+		'province'=>trim($_POST['province']),
+		'city'=>trim($_POST['city']),
+		'area'=>trim($_POST['area']),
+	);
+	//编辑
+   $data['uid'] = $uid;
+   $info = $obj -> save($data);
+   if($info){
+		$msg = '修改家长信息成功';
+   }else{
+		$msg = '修改家长信息失败';
+   }
+
+   echo json_encode($msg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-  
-  }
-  
-  
-  
-  
- ?>
+}

@@ -213,23 +213,15 @@ public function delRole(){
         $temp = $cat->getList();  //获取树形结构
         //$allNode = $node->select();
         $this->assign('allNode',$temp);
-
-
         $this->assign('info',$data);
         $this->display();
     }
 
+
     public function addNode() {
-        // if (IS_POST) {
-        //     $this->checkToken();
-        //     header('Content-Type:application/json; charset=utf-8');
-        //     echo json_encode(D("Access")->addNode());
-        // } else {
-        //     $this->assign("info", $this->getPid(array('level' => 1)));
-        //     $this->display("editNode");
-        // }
+        $this->checkToken();  //令牌验证
         $node=M('Node');
-         $id=trim($_POST['id']);
+        $id=trim($_POST['id']);
         $data=array(
             'name'=>trim($_POST['name']),
             'title'=>trim($_POST['title']),
@@ -247,7 +239,7 @@ public function delRole(){
                $msg='添加节点失败'; 
             }
         }else{ 
-            $data['id']=$id;
+           $data['id']=$id;
            $info=$node->save($data);
            if($info){
                $msg='修改节点成功';
@@ -258,6 +250,7 @@ public function delRole(){
 
        echo json_encode($msg);
     }
+	
     //show role list
     public function show_editnode(){
         $this->assign("info", $this->getPid(array('level' => 1)));
