@@ -54,7 +54,8 @@ th{ text-align:right;}
     <ul class="ul1">
         <li><div class="current">&nbsp;&nbsp;&nbsp;常用操作</div></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Article" >文章列表</a></li>
-        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Member" >会员列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Jz" >家长列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Ls" >老师列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access" >管理员列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodeList" >节点管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/roleList" >角色管理</a></li>
@@ -137,6 +138,7 @@ th{ text-align:right;}
         });
 
         $(".submit").click(function(){
+            
             // var url="/admin.php/Access/addNode";
             // var formObj='add_node';
             // commonAjaxSubmit();
@@ -155,7 +157,8 @@ th{ text-align:right;}
                 dataType:'JSON',
                 data:{"name":name,"title":title,"status":status,"level":level,"pid":pid,"sort":sort,"remark":remark,"id":id},
                 success:function(msg){
-                    alert(msg);
+                    popup.success(msg,'温馨提示');
+                    window.location.href='__URL__/nodeList';
                 }
             });
 
