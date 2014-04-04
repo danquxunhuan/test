@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/calendar/calendar-blue.css"/>
 <link rel="stylesheet" href="__PUBLIC__/css/admin.css"/>
 <script src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
-<script src="__PUBLIC__/js/jquery.lazyload.js"></script>
+<!-- <script src="__PUBLIC__/js/jquery.lazyload.js"></script> -->
 <script src="__PUBLIC__/js/functions.js"></script>
 <script src="__PUBLIC__/js/jquery.form.js"></script>
 <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
@@ -39,7 +39,8 @@
     <ul class="ul1">
         <li><div class="current">&nbsp;&nbsp;&nbsp;常用操作</div></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Article" >文章列表</a></li>
-        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Member" >会员列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Jz" >家长列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Ls" >老师列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access" >管理员列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodeList" >节点管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/roleList" >角色管理</a></li>
@@ -51,6 +52,7 @@
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Yueke" >约课列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Fangan" >设计方案列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Lesson" >课程列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Institution" >教育机构</a></li>
      </ul>
 </div>
                 <div id="Right"  class="right">

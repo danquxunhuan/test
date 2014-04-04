@@ -98,6 +98,7 @@ th{ text-align:right;}
         });
 
         $(".submit").click(function(){
+            
             // var url="/admin.php/Access/addNode";
             // var formObj='add_node';
             // commonAjaxSubmit();
@@ -116,7 +117,10 @@ th{ text-align:right;}
                 dataType:'JSON',
                 data:{"name":name,"title":title,"status":status,"level":level,"pid":pid,"sort":sort,"remark":remark,"id":id},
                 success:function(msg){
-                    alert(msg);
+                    if (popup.success(msg,'温馨提示')){
+                        window.location.href='__URL__/nodeList';
+                    };
+                    
                 }
             });
 

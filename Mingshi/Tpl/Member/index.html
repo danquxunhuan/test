@@ -1,4 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -12,15 +11,54 @@
 <else/>
 <link rel="stylesheet" href="__PUBLIC__/css/black.css" type="text/css" />
 </if>
-<script language="javascript" src="__PUBLIC__/js/jquery.min.js"></script>
+<script language="javascript" src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/ms_tab.js"></script>
-<script language="javascript" src="__PUBLIC__/js/common.js"></script>
+<!-- <script language="javascript" src="__PUBLIC__/js/common.js"></script> -->
 <script language="javascript">
 function imgdragstart(){return false;}
 </script>
 </head>
 <script type="text/javascript">
 for(i in document.images)document.images[i].ondragstart=imgdragstart;
+
+    $(function(){
+        $.ajax({
+            url:'__URL__/get_object_list',
+            data:{"id":"0"},
+            type:'post',
+            cache:false,
+            success:function(msg){
+                
+            }
+        });
+        
+        $("#all_tec a").click(function(){
+            $(this).attr("class","zy_a1 subject");
+            var prev=$(this).prevAll();
+            var next=$(this).nextAll();
+            prev.attr("class",'');
+            next.attr("class",'');
+            var id=$(this).attr("tid");
+            $.ajax({
+                url:'__URL__/get_object_list',
+                data:{"id":"0"},
+                type:'post',
+                cache:false,
+                success:function(msg){
+                
+            }
+            });
+        });
+
+        $("#jigou a").click(function(){
+            $(this).attr("class","zy_a1");
+            var prev=$(this).prevAll();
+            var next=$(this).nextAll();
+            prev.attr("class",'');
+            next.attr("class",'');
+        });
+        
+    });
 </script>
 
 <body>
@@ -33,26 +71,29 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
         <div class="sy_content_1 fix">
         	<div class="zy_title">
             	<div class="sy_left fl">小学名师榜</div>
-            	<div class="zy_one fl">
+            	<div class="zy_one fl" id="all_tec">
 				<if condition="$_GET['obj_id'] neq ''"> 
 				<A href="__URL__/index" >全 部</A>
 				<else/>
-				<A href="__URL__/index" class="zy_a1">全 部</A>
+				<A href="__URL__/index" class="zy_a1" tid='0'>全 部</A>
 				</if>
-<!----科目列表----->
-<volist name="obj" id='vo'>
-    <if condition="$vo.id eq $_GET['obj_id']">
-   		<a href="__URL__/index/obj_id/{ms:$vo.id}" class="zy_a1">{ms:$vo.subject}</a>
-    <else/>
-    	<a href="__URL__/index/obj_id/{ms:$vo.id}" >{ms:$vo.subject}</a>
-    </if>
-</volist>
+                    <!--科目列表-->
+                    <volist name="obj" id='vo'>
+                        <!-- <if condition="$vo.id eq $_GET['obj_id']"> -->
+                       		<!-- <a href="__URL__/index/obj_id/{ms:$vo.id}" tid='{ms:$vo.id}' class="zy_a1 subject">{ms:$vo.subject}</a> -->
+                            <!-- <a tid='{ms:$vo.id}'>{ms:$vo.subject}</a>
+                        <else/> -->
+                        	<!-- <a href="__URL__/index/obj_id/{ms:$vo.id}" tid='{ms:$vo.id}' >{ms:$vo.subject}</a> -->
+                            <!-- <a tid='{ms:$vo.id}' >{ms:$vo.subject}</a>
+                        </if> -->
+                        <a tid='{ms:$vo.id}' >{ms:$vo.subject}</a>
+                    </volist>
 				</div>
                 <div class="sy_r fr"><a href="__URL__/all">名师库</a></div>
             </div>
             <div class="zy_list_one">
             	<div class="zy_botom fix">
-<!-----------老师列表----------->
+<!--老师列表-->
 <volist name="list" id="voo" key="k">
     <div class="zzy_one">
         <div><div class="zy_xulie">{ms:$k}</div></div>
@@ -87,16 +128,20 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
         	<div class="sy_title">
             	<div class="sy_left sy_left fl">教育机构</div>
                 <div class="zy_one fl">
-				<ul id="jigou">
-				<li><A href="javascript:;" onmouseover="easytabs('2', '1');" onfocus="easytabs('2', '1');"  onclick="return false;" title="" id="anotherlink1" class="zy_a1">新东方</A></li>
-				<li><A href="javascript:;" onmouseover="easytabs('2', '2');" onfocus="easytabs('2', '2');"  onclick="return false;" title="" id="anotherlink2">学而思</A></li>
+				<ul id="jigou"><li>
+                    <volist name="list" id='vo'>
+                      <a tid="{ms:$vo.id}">{ms:$vo.name}</a>
+                    </volist><li>
+				<!-- <li><A href="javascript:;" onmouseover="easytabs('2', '1');" onfocus="easytabs('2', '1');"  onclick="return false;" title="" id="anotherlink1" class="zy_a1">{ms:$vo.name}</A></li> -->
+                
+				<!-- <li><A href="javascript:;" onmouseover="easytabs('2', '2');" onfocus="easytabs('2', '2');"  onclick="return false;" title="" id="anotherlink2">学而思</A></li>
 				<li><A href="javascript:;" onmouseover="easytabs('2', '3');" onfocus="easytabs('2', '3');"  onclick="return false;" title="" id="anotherlink3">巨 人</A></li>
 				<li><A href="javascript:;" onmouseover="easytabs('2', '4');" onfocus="easytabs('2', '4');"  onclick="return false;" title="" id="anotherlink4">高 思</A></li>
 				<li><A href="javascript:;" onmouseover="easytabs('2', '5');" onfocus="easytabs('2', '5');"  onclick="return false;" title="" id="anotherlink5">杰 睿</A></li>
 				<li><A href="javascript:;" onmouseover="easytabs('2', '6');" onfocus="easytabs('2', '6');"  onclick="return false;" title="" id="anotherlink6">学 大</A></li>
 				<li><A href="javascript:;" onmouseover="easytabs('2', '7');" onfocus="easytabs('2', '7');"  onclick="return false;" title="" id="anotherlink7">安 博</A></li>
 				<li><A href="javascript:;" onmouseover="easytabs('2', '8');" onfocus="easytabs('2', '8');"  onclick="return false;" title="" id="anotherlink8">京 翰</A></li>
-				<li><A href="javascript:;" onmouseover="easytabs('2', '9');" onfocus="easytabs('2', '9');"  onclick="return false;" title="" id="anotherlink9">优 胜</A></li>
+				<li><A href="javascript:;" onmouseover="easytabs('2', '9');" onfocus="easytabs('2', '9');"  onclick="return false;" title="" id="anotherlink9">优 胜</A></li> -->
 				</ul>
 				</div>
             </div>
@@ -230,6 +275,6 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
 <!--***************************bottom******************************-->  
 <include file="Public:footer"/>
 </div>
-<script type="text/javascript" src="__PUBLIC__/js/iepng.js"></script>
+<!-- <script type="text/javascript" src="__PUBLIC__/js/iepng.js"></script> -->
 </body>
 </html>
