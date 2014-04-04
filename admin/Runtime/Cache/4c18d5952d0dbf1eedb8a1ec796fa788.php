@@ -14,7 +14,7 @@
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/calendar/calendar-blue.css"/>
 <link rel="stylesheet" href="__PUBLIC__/css/admin.css"/>
 <script src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
-<script src="__PUBLIC__/js/jquery.lazyload.js"></script>
+<!--script src="__PUBLIC__/js/jquery.lazyload.js"></script-->
 <script src="__PUBLIC__/js/functions.js"></script>
 <script src="__PUBLIC__/js/jquery.form.js"></script>
 <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
