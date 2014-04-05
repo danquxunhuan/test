@@ -16,18 +16,20 @@ public function index() {
 	$this->display();
 }    
     
+
 /*
 * 删除会员
 */
 public function del(){
-   $this->checkToken(); //令牌验证
-   $m= D("Member");
-   $uid=trim($_GET['uid']);
-   if($m->where("uid=".$uid."")->delete()){
-   $this->success("删除成功");
-   }else{
-   $this->error("删除失败");
-   }
+	$this->checkToken(); //令牌验证
+	$m = D("Member");
+	$uid = trim($_GET['uid']);
+	if($m->where("uid=".$uid."")->delete()){
+		$msg = '删除成功';
+	}else{
+		$msg = '删除失败';
+	}
+	echo json_encode($msg);	
 }
 
 
@@ -43,7 +45,7 @@ public function add(){
 		$info = $M->where("`uid`=" . $uid)->find(); 
 		if (empty($info['uid'])) {
 			//$this->error("不存在该家长ID", U('Member/index'));
-			$msg = array('不存在该家长ID','Member/index');
+			$msg = '不存在该家长ID';
 			exit;
 		}	
 		$this->assign('info', $info);
@@ -103,7 +105,7 @@ public function edit(){
 		//取会员信息
 		$info = $M->where("`uid`=" . $uid)->find(); 
 		if (empty($info['uid'])) {
-			$msg = array('不存在该家长ID','Member/index');
+			$msg = '不存在该家长ID';
 			exit;
 		}	
 		$this->assign('info', $info);
