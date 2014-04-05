@@ -21,7 +21,7 @@
 .current a{color: #266AAE;}
 tr{ height:34px; }
 th{ text-align:right;}
-textarea{width: 300px;height: 150px;}
+textarea{width: 300px;height: 150px;resize:none;}
 </style>
 
 </head>
@@ -35,16 +35,16 @@ textarea{width: 300px;height: 150px;}
                 <div id="Right"  class="right">
                 <div class="contentArea">
                     <div class="Item hr">
-                        <div class="current"><a href="__URL__/index" >教育机构列表</a>--><a>添加教育机构</a></div>
+                        <div class="current"><a href="__URL__/index" >教育机构列表</a>--><a>修改教育机构</a></div>
                     </div>
                   <!--   <form action="" method="post" id="add_node"> -->
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
-                            <tr><td>机构名称</td><td><input type="text" name='name'/></td></tr>
-                            <tr><td>机构电话</td><td><input type="text" name='tel'/></td></tr>
-                            <tr><td>机构地址</td><td><input type="text" name='add'/></td></tr>
-                            <tr><td>联系人</td><td><input type="text" name='linkman'/></td></tr>
-                            <tr><td>机构介绍</td><td><textarea class="info"></textarea></td></tr>
-                            <tr><td><button class="submit">添加</button></td></tr>
+                            <tr><td>机构名称</td><td><input type="text" name='name' value="{ms:$info.name}" /></td></tr>
+                            <tr><td>机构电话</td><td><input type="text" name='tel' value="{ms:$info.tel}" /></td></tr>
+                            <tr><td>机构地址</td><td><input type="text" name='add' value="{ms:$info.address}" /></td></tr>
+                            <tr><td>联系人</td><td><input type="text" name='linkman' value="{ms:$info.linkman}" /></td></tr>
+                            <tr><td>机构介绍</td><td><textarea class="info">{ms:$info.info}</textarea></td></tr>
+                            <tr><td><button class="submit">确认修改</button></td><td><input type="hidden" tid="{ms:$info.id}" class="hd"></td></tr>
                         </table>
                        <!--  <input type="hidden" name="id" value="{ms:$info.id}"/> -->
                     <!-- </form> -->
@@ -57,23 +57,24 @@ textarea{width: 300px;height: 150px;}
 <script type="text/javascript">
  $(function(){
     $(".submit").click(function(){
+        var id=$(".hd").attr("tid");
         var name=$("input[name='name']").val();
         var tel=$("input[name='tel']").val();
         var add=$("input[name='add']").val();
         var linkman=$("input[name='linkman']").val();
         var info=$(".info").val();
         $.ajax({
-            url:'__URL__/add_edu',
+            url:'__URL__/modify_info',
             type:'post',
             dataType:'json',
-            data:{"name":name,"tel":tel,"add":add,"linkman":linkman,"info":info},
+            data:{"name":name,"tel":tel,"add":add,"linkman":linkman,"info":info,"id":id},
             cache:false,
             success:function(msg){
                 if(msg==1){
-                  alert('添加成功');
+                  alert('修改成功');
                   window.location.href='__URL__/index';
                 }else if(msg==0){
-                  alert('添加失败');
+                  alert('修改失败');
                 }
             }
         });

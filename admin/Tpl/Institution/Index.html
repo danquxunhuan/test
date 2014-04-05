@@ -2,11 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>家长会员管理列表</title>
+<title>教育机构列表</title>
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
-
+<style type="text/css">
+	.current a{color: #266AAE;}
+</style>
 </head>
 <body>
 
@@ -15,7 +17,7 @@
  <div class="wapper">
      <include file="Common:left" />
    <div class="right">
-          <div class="tab1"> <div class="current">教育机构管理---<a href="__URL__/add" >添加机构</a></div></div>
+          <div class="tab1"> <div class="current"><a href="__URL__/index" >教育机构列表</a>--><a>添加教育机构</a></a></div></div>
 		     <!-----列表页面------>
 		     <table width="93%" border="0" cellspacing="0" cellpadding="0" class="tab">
 			     <tr><th>机构ID</th><th>名称</th><th>电话</th><th>地址</th><th width="85">操作</th></tr>
@@ -25,7 +27,7 @@
 				  <td>{ms:$vo.name}</td>
 				  <td>{ms:$vo.tel}</td>
 				  <td>{ms:$vo.address}</td>
-				  <td>[ <a href="__URL__/editMember/uid/{ms:$vo.uid}">编辑</a> ][ <a tid="{ms:$vo.id}" class="del">删除</a>]</td>
+				  <td>[ <a href="__URL__/modify/id/{ms:$vo.id}">编辑</a> ][ <a tid="{ms:$vo.id}" class="del">删除</a>]</td>
 				  </tr>
                 </volist>
 		     </table>
@@ -48,6 +50,7 @@
 				success:function(msg){
 					if(msg==1){
 						alert('删除成功');
+						window.location.href='__URL__/index';
 					}else{
 						alert('删除失败');
 					}
