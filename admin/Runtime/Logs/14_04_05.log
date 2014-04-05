@@ -454,3 +454,19 @@ ERR: 非法操作:statics
 [ 2014-04-05T11:04:06+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
 ERR: 非法操作:statics
 
+[ 2014-04-05T11:20:45+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-05T11:20:50+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-05T11:20:54+08:00 ] 127.0.0.1 /test/admin.php/Public/getAreaName?&id=1&math=240
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+SQL: SHOW COLUMNS FROM `ms_area` [ RunTime:0.002385s ]
+SQL: SELECT `id`,`name` FROM `ms_area` WHERE ( pid=1 )  [ RunTime:0.000197s ]
+
+[ 2014-04-05T11:20:58+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
