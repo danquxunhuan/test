@@ -2,11 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>添加/编辑老师会员信息</title>
+<title>修改教师信息</title>
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
-
 <style>
 .wapper{width:100%;height:auto;margin:auto 0px;}
 .right{float:right;width:78%;height:600px;box-shadow:0px 3px 6px #BDBFBE}
@@ -16,77 +15,198 @@
 .left .cycz{background:#dedbdb no-repeat;}
 .tab1{width:100%;height:35px;margin-bottom:15px;line-height: 35px;}
 .current {border-bottom: 2px solid rgb(38, 106, 174);color: rgb(38, 106, 174);font-weight: 700;}
+.table1 th{ text-align:right; height:30px;}
+.input{ height:18px; line-height:18px;}
 </style>
 </head>
-
 <body>
 
 <include file="Common:header" />
-<!--***************************content--left---right******************************-->   
-             <div class="wapper">
-                <include file="Common:left" />
-                <div id="Right"  class="right">
-                    <div class="tab1">
-                        <div class="current">添加管理员</div>
-                    </div>
-                    <form action="" method="post">
+<!--***************************content--left---right******************************-->
+ <div class="wapper">
+     <include file="Common:left" />
+	  <div id="Right"  class="right">
+          <div class="tab1"> <div class="current"><a href="__URL__/index">&gt;&gt;返回教师列表</a></div></div>     
+                    <!--form action="" method="post"-->
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
                             <tr>
-                                <th width="120">账号邮件地址：</th>
-                                <td><input <if condition="ACTION_NAME eq 'editMember'" > disabled="disabled"</if> name="username" type="text" class="input" size="40" value="{ms:$info.username}" /></td>
+                                <th width="120">用户名：</th>
+                                <td><input name="uname" type="text" class="input" size="40" value="{ms:$info.uname}" /></td>
                             </tr>
                             <tr>
-                                <th>新密码：</th>
-                                <td><input class="input" name="password" type="password" size="40" value="" /></td>
+                                <th width="120">审核：</th>
+                                <td><input type="radio" name="status" value="0" <if condition="$info['status'] eq 0">checked="checked"</if> />未审核
+                                <input type="radio" name="status" value="1" <if condition="$info['status'] eq 0">checked="checked"</if> />已审核</td>
                             </tr>
                             <tr>
-                                <th>状态：</th>
+                                <th>登录密码：</th>
+                                <td><input class="input" name="password" type="password" size="40" value="{ms:$info.password}" /></td>
+                            </tr>
+                            <tr>
+                                <th>简历密码：</th>
+                                <td><input class="input" name="jlpwd" type="password" size="40" value="{ms:$info.jlpwd}" /></td>
+                            </tr>
+                             <tr>
+                                <th>手机：</th>
+                                <td><input class="input" name="phone" type="text" size="40" value="{ms:$info.phone}" /></td>
+                            </tr>
+                             <tr>
+                                <th>年级/科目：</th>
+                                <td> 
+<select name="classid">
+    <volist name="class" id="cli">
+    <option value="{ms:$cli.id}" <if condition="$cli['id'] eq $info['classid']">selected='selected'</if>>{ms:$cli.name}</option>
+    </volist>
+</select> 
+<select name="obj_id">
+    <volist name="subject" id="sli">
+    <option value="{ms:$sli.id}" <if condition="$sli['id'] eq $info['obj_id']">selected='selected'</if>>{ms:$sli.subject}</option>
+    </volist>
+</select> 
+								    </td>
+                            </tr>
+                             <tr>
+                            	<th>常住地区：</th>
                                 <td>
-                                    <select name="status" style="width: 80px;">
-                                        <if condition="$info.status eq 1">
-                                            <option value="1" selected>审核通过</option>
-                                            <option value="0">未审核</option>
-                                            <else/>
-                                            <option value="1">审核通过</option>
-                                            <option value="0" selected>未审核</option>
-                                        </if>
+<div class="zc_text_box">
+   <select id="province" name="province" class="select6">
+        <option value="0">市</option>
+        <volist name="areaData"  id="val">
+             <option value="{ms:$val.id}" <if condition="$val['id'] eq $info['province']">selected="selected"</if>>{ms:$val.name}</option>
+        </volist>
+    </select>&nbsp;&nbsp;&nbsp;
+    <select id="city" name="city" class="select6">
+        <option selected="selected" value="{ms:$city['id']}">{ms:$city['name']}</option>
+    </select>&nbsp;&nbsp;&nbsp;
+    <select id="area" name="area" class="select6">
+        <option selected="selected" value="{ms:$area['id']}">{ms:$area['name']}</option>
+    </select>
+</div>
+				                </td>
+                            </tr>
+							<tr><th>用户级别：</th>
+                                 <td><select name="rankid" style="min-width: 80px;">
+<option value="1" <if condition="$info.rankid eq 1">selected='selected'</if>>注册用户</option>
+<option value="2" <if condition="$info.rankid eq 2">selected='selected'</if>>认证用户</option>
+<option value="3" <if condition="$info.rankid eq 3">selected='selected'</if>>VIP用户</option>
                                     </select>
-                                    如果禁用了将无法登陆本系统
-									 </td>
+								</td>
+                            </tr>
+                            <tr><th>教育机构：</th>
+                                 <td><select name="edu_id">
+								     <option value="0" selected>--请选择--</option>
+<volist name="edulist" id="eli">
+    <option value="{ms:$eli.id}" <if condition="$eli['id'] eq $info['edu_id']">selected="selected"</if>>{ms:$eli.name}</option>
+</volist></select>
+								</td>
+                            </tr>
+							 <tr>
+                                <th>金币：</th>
+                                <td><input type="text"  name="coin" class="input" style="min-width: 80px;" value="{ms:$info.coin}" /></td>
                             </tr>
                             <tr>
-                                <th>所属用户组</th>
-                                <td><select name="role_id" style="min-width: 80px;">{ms:$info.roleOption}</select></td>
+                                <th>会员头像：</th>
+                                <td><input type="file" name="image" value="{ms:$info.image}" /></td>
                             </tr>
                             <tr>
                                 <th>备注：</th>
-                                <td><textarea name="remark" rows="5" cols="57">{ms:$info.remark}</textarea></td>
+                                <td><textarea name="remarks" style="width:300px; height:100px; resize:none;">{ms:$info.coin}</textarea></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><button class="btn wyjsubmit">提交</button></td>
                             </tr>
                         </table>
-                        <input type="hidden" name="aid" value="{ms:$info.aid}"/>
-                         <button class="btn submit">提交</button>
-                    </form>
-                   <!--  <div class="commonBtnArea">
-                        <button class="btn submit">提交</button>
-                    </div> -->
-                </div>
+                        <input type="hidden" name="uid" value="{ms:$info.uid}"/> 
+                    <!--/form-->
             </div>
+        </div>
     <div class="clear"></div>
 <include file="Common:foot" />
-<script type="text/javascript">
-    $(".submit").click(function(){
-            <if condition="ACTION_NAME neq 'editAdmin'">
-            if($.trim($("input[name='username']").val())==''){
-            popup.alert("用户名不能为空");
-            return false;
-        }
-        if($.trim($("input[name='password']").val())==''){
-            popup.alert("密码不能为空");
-            return false;
-        }
-            </if>
-            commonAjaxSubmit();
+<script type="text/javascript">	
+$(function(){
+	//表单提交
+	$(".wyjsubmit").click(function(){
+		var uname=$("input[name='uname']").val();
+		var password=$("input[name='password']").val();
+		var jlpwd=$("input[name='jlpwd']").val();
+		var phone=$("input[name='phone']").val();
+		var classid=$("select[name='classid']").val();
+		var obj_id=$("select[name='obj_id']").val();
+		var province=$("select[name='province']").val();
+		var city=$("select[name='city']").val();
+		var area=$("select[name='area']").val();
+		var rankid=$("select[name='rankid']").val();
+		var edu_id=$("select[name='edu_id']").val();
+		var coin=$("input[name='coin']").val();
+		var image=$("input[name='image']").val();
+		var remarks=$("textarea[name='remarks']").val();
+		var uid=$("input[name='uid']").val();
+		
+		$.ajax({
+			url:'__URL__/editMem',
+			type:'POST',
+			cache:false,
+			dataType:'JSON',
+			data:{"uname":uname,"password":password,"jlpwd":jlpwd,"phone":phone,"classid":classid,"obj_id":obj_id,"province":province,"city":city,"area":area,"rankid":rankid,"edu_id":edu_id,"coin":coin,"image":image,"remarks":remarks,"uid":uid},
+			success:function(msg){
+				alert(msg);
+				history.go(-1);  //返回上一页
+			}
+		});
+	});
+	
+	//省市区联动
+    //$("#province").change(function(){ 
+		$("#area").empty();
+		$("<option value=\"\">选择县</option>").appendTo("#area");
+		var area = $("#province").val();
+		if(area!=""){
+			$.ajax({
+				type: "GET",
+				url: "__APP__/Public/getAreaName",
+				datatype : "json",
+				data: "&id="+encodeURIComponent(area)+"&math="+Math.floor(Math.random()*1000+1),
+				success: function(msg){
+					if(msg!="0"){
+						var msg = eval("("+ msg+")");
+						var str = "<option value=\"\">选择区</option>";
+						for(var i in msg){
+								str += "<option value="+msg[i].id+">"+msg[i].name+"</option>";
+						}
+						var city = $("#city");
+						city.empty();
+						$(str).appendTo("#city");
+					}
+				}
+			});
+		}
+   // });
+    //根据市查询县
+    $("#city").change(function(){
+		var city = $("#city").val();			
+		if(city!=""){
+			$.ajax({
+				type: "GET",
+				url: "/test/public/getAreaName",
+				datatype : "json",
+				data: "&id="+encodeURIComponent(city)+"&math="+Math.floor(Math.random()*1000+1),
+				success: function(msg){
+					if(msg!="0"){
+						var msg = eval("("+ msg+")");
+						var str = "<option value=\"\">选择县</option>";
+						for(var i in msg){
+							str += "<option value="+msg[i].id+">"+msg[i].name+"</option>";
+						}
+						var area = $("#area");
+						area.empty();
+						$(str).appendTo("#area");
+					}
+				}
+			});
+		}
     });
+    
+});
 </script>
 </body>
 </html>

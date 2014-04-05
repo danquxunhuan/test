@@ -11,6 +11,12 @@ public function index() {
 	$show       = $Page->show();// 分页显示输出
 	// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
 	$list = $User->where('tid=2')->limit($Page->firstRow.','.$Page->listRows)->select();
+	
+	//添加教育机构信息
+	foreach($list as $key=>$val){
+		$list[$key]['edu'] = M('Institution_edu')->where('id='.$val['edu_id'])->getfield('name');
+	}
+	
 	$this->assign('list',$list);// 赋值数据集
 	$this->assign('page',$show);// 赋值分页输出
 	$this->display();
@@ -20,14 +26,15 @@ public function index() {
 * 删除会员
 */
 public function del(){
-   $this->checkToken(); //令牌验证
-   $m= D("Member");
-   $uid=trim($_GET['uid']);
-   if($m->where("uid=".$uid."")->delete()){
-   $this->success("删除成功");
-   }else{
-   $this->error("删除失败");
-   }
+	$this->checkToken(); //令牌验证
+	$m = D("Member");
+	$uid = trim($_GET['uid']);
+	if($m->where("uid=".$uid."")->delete()){
+		$msg = '删除成功';
+	}else{
+		$msg = '删除失败';
+	}
+	echo json_encode($msg);	
 }
 
 
@@ -43,7 +50,7 @@ public function add(){
 		$info = $M->where("`uid`=" . $uid)->find(); 
 		if (empty($info['uid'])) {
 			//$this->error("不存在该家长ID", U('Member/index'));
-			$msg = array('不存在该家长ID','Member/index');
+			$msg = '不存在该教师ID';
 			exit;
 		}	
 		$this->assign('info', $info);
@@ -65,7 +72,6 @@ public function add(){
 	$this->assign("edulist", $edulist);
 	
 	$this->display();
-
 }
 
 /*
@@ -76,23 +82,29 @@ public function addMem(){
 	$data=array(
 		'uname'=>trim($_POST['uname']),
 		'password'=>md5(trim($_POST['password'])),
+		'jlpwd'=>md5(trim($_POST['jlpwd'])),
 		'phone'=>trim($_POST['phone']),
 		'classid'=>trim($_POST['classid']),
-		'rankid'=>trim($_POST['rankid']),
-		'coin'=>trim($_POST['coin']),
+		'obj_id'=>trim($_POST['obj_id']),
 		'province'=>trim($_POST['province']),
 		'city'=>trim($_POST['city']),
 		'area'=>trim($_POST['area']),
-		);
-	//增加家长固定信息
+		'rankid'=>trim($_POST['rankid']),
+		'edu_id'=>trim($_POST['edu_id']),
+		'coin'=>trim($_POST['coin']),
+		'image'=>trim($_POST['image']),
+		'remarks'=>trim($_POST['remarks']),		
+	);
+	
+	//增加教师固定信息
 	$data['status'] = 1;  //后台添加会员直接审核通过
 	$data['tid'] = 2;
 	$data['regdate'] = time();
 	$info = $obj -> add($data);
 	if($info){
-		$msg = '添加家长成功';
+		$msg = '添加教师成功';
 	}else{
-		$msg = '添加家长失败';
+		$msg = '添加教师失败';
 	}
    echo json_encode($msg);	
 }	
@@ -109,7 +121,7 @@ public function edit(){
 		//取会员信息
 		$info = $M->where("`uid`=" . $uid)->find(); 
 		if (empty($info['uid'])) {
-			$msg = array('不存在该家长ID','Member/index');
+			$msg = '不存在该教师ID';
 			exit;
 		}	
 		$this->assign('info', $info);
@@ -126,8 +138,14 @@ public function edit(){
 	$this->assign('areaData',$areaData);		
 
 	//孩子年级
-	$class=M('Child_class')->where('id<13')->select();
+	$class=M('Child_class')->where('id>12')->select();
 	$this->assign("class", $class);
+	//科目
+	$subject = M('Subject')->select();
+	$this->assign("subject", $subject);
+	//教育机构
+	$edulist = M('Institution_edu')->select();
+	$this->assign("edulist", $edulist);
 	
 	$this->display();
 }
@@ -144,24 +162,28 @@ public function editMem() {
 		'uname'=>trim($_POST['uname']),
 		'password'=>md5(trim($_POST['password'])),
 		'status'=>trim($_POST['status']),
+		'jlpwd'=>md5(trim($_POST['jlpwd'])),
 		'phone'=>trim($_POST['phone']),
 		'classid'=>trim($_POST['classid']),
-		'rankid'=>trim($_POST['rankid']),
-		'coin'=>trim($_POST['coin']),
-		'uid'=>trim($_POST['uid']),
+		'obj_id'=>trim($_POST['obj_id']),
 		'province'=>trim($_POST['province']),
 		'city'=>trim($_POST['city']),
 		'area'=>trim($_POST['area']),
+		'rankid'=>trim($_POST['rankid']),
+		'edu_id'=>trim($_POST['edu_id']),
+		'coin'=>trim($_POST['coin']),
+		'image'=>trim($_POST['image']),
+		'remarks'=>trim($_POST['remarks']),		
+		'uid'=>trim($_POST['uid']),
 	);
 	//编辑
    $data['uid'] = $uid;
    $info = $obj -> save($data);
    if($info){
-		$msg = '修改家长信息成功';
+		$msg = '修改教师信息成功';
    }else{
-		$msg = '修改家长信息失败';
+		$msg = '修改教师信息失败';
    }
-
    echo json_encode($msg);
 }
 
