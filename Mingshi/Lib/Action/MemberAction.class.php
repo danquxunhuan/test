@@ -5,7 +5,7 @@
     class MemberAction extends PublicAction{
 	  
 		public function index(){
-		    //科目
+		    //科目列表
 		    $obj = D('Subject')->select();
 			$this->assign('obj',$obj);
 			//名师排行榜
@@ -14,72 +14,78 @@
 			//获取教学机构列表
 			$edu_list=M("Institution_edu")->select();
 			$this->assign('list',$edu_list);
+			
             $this->display();
 		}
 
-		//获取科目列表
-		public function get_object_list(){
-			$id=trim($_POST['id']);
-			$mode = new Model();
-			if($id==0){
-			 $sql="SELECT a.uid,a.image,a.uname,a.obj_id,b.identity,b.teach_age,b.keshifei,c.subject FROM ms_member as a LEFT JOIN ms_teacher_info as b on a.uid=b.uid LEFT JOIN ms_subject as c on a.obj_id=c.id where a.status=1 AND a.classid in (13,14) ORDER BY a.uid DESC limit 0,9";
-			}else{
-			 $sql="SELECT a.uid,a.image,a.uname,a.obj_id,b.identity,b.teach_age,b.keshifei,c.subject FROM ms_member as a LEFT JOIN ms_teacher_info as b on a.uid=b.uid LEFT JOIN ms_subject as c on a.obj_id=c.id where a.status=1 AND a.classid in (13,14) and a.obj_id=$id ORDER BY a.uid DESC limit 0,9";
-			}
-			$date=$mode->query($sql);
-			for($i=0;$i<count($date);$i++){
-				//得到老师的评分
-				$sql_pf="select AVG(scores) as pf from ms_reviewinfo where uid=".$date[$i]['uid'];
-				$pf=$mode->query($sql_pf);
-				$date[$i]['pf']=$pf[0]['pf'];
-				//得到老师评价总记录
-				$sql_count_pj="select count(*) as count from ms_reviewinfo where uid=".$date[$i]['uid'];
-				$count_pj=$mode->query($sql_count_pj);
-				$date[$i]['count']=$count_pj[0]['count'];
-				//获取老师的评价信息
-				  //获取好评
-				 $hp=$mode->query("select count(*) as count_hp from ms_reviewinfo where scores >= 80 and uid=".$date[$i]['uid']);
-				 $date[$i]['count_hp']=$hp[0]['count_hp'];
-				  //获取中评
-				 $zp=$mode->query("select count(*) as count_zp from ms_reviewinfo where scores >60 and scores < 80 and uid=".$date[$i]['uid']);
-				 $date[$i]['count_zp']=$zp[0]['count_zp'];
-				  //获取差评
-				 $cp=$mode->query("select count(*) as count_cp from ms_reviewinfo where scores <=60 and uid=".$date[$i]['uid']);
-				 $date[$i]['count_cp']=$cp[0]['count_cp'];
-
-			}
+	//获取名师榜.教师列表
+	public function get_object_list(){
+		$id = trim($_POST['id']);
+		$mode = new Model();
+		if($id==0){
+		 $sql="SELECT a.uid,a.image,a.uname,a.obj_id,b.identity,b.teach_age,b.keshifei,c.subject,b.msg FROM ms_member as a LEFT JOIN ms_teacher_info as b on a.uid=b.uid LEFT JOIN ms_subject as c on a.obj_id=c.id where a.status=1 AND a.classid in (13,14) ORDER BY a.uid DESC limit 0,9";
+		}else{
+		 $sql="SELECT a.uid,a.image,a.uname,a.obj_id,b.identity,b.teach_age,b.keshifei,c.subject,b.msg FROM ms_member as a LEFT JOIN ms_teacher_info as b on a.uid=b.uid LEFT JOIN ms_subject as c on a.obj_id=c.id where a.status=1 AND a.classid in (13,14) and a.obj_id=$id ORDER BY a.uid DESC limit 0,9";
 		}
+		$date = $mode->query($sql);
+		for($i=0;$i<count($date);$i++){
+			//得到老师的评分
+			$sql_pf="select AVG(scores) as pf from ms_reviewinfo where perid=".$date[$i]['uid'];
+			$pf=$mode->query($sql_pf);
+			$date[$i]['pf'] = number_format($pf[0]['pf'],1);
+			//得到老师评价总记录
+			$sql_count_pj="select count(*) as count from ms_reviewinfo where perid=".$date[$i]['uid'];
+			$count_pj=$mode->query($sql_count_pj);
+			$date[$i]['count']=$count_pj[0]['count'];
+			//获取老师的评价信息
+			  //获取好评
+			 $hp=$mode->query("select count(*) as count_hp from ms_reviewinfo where scores >= 80 and perid=".$date[$i]['uid']);
+			 $date[$i]['count_hp']=$hp[0]['count_hp'];
+			  //获取中评
+			 $zp=$mode->query("select count(*) as count_zp from ms_reviewinfo where scores >60 and scores < 80 and perid=".$date[$i]['uid']);
+			 $date[$i]['count_zp']=$zp[0]['count_zp'];
+			  //获取差评
+			 $cp=$mode->query("select count(*) as count_cp from ms_reviewinfo where scores <=60 and perid=".$date[$i]['uid']);
+			 $date[$i]['count_cp']=$cp[0]['count_cp'];
+		}
+		
+		echo json_encode($date);
+	}
+		
+		
 		//教育机构老师列表
 		public function get_eud_teach_list(){
            $id=trim($_POST['id']);
+		   $mode = new Model();
            if($id==0){
-			 $sql="SELECT a.uid,a.image,a.uname,a.obj_id,b.identity,b.teach_age,b.keshifei,c.subject FROM ms_member as a LEFT JOIN ms_teacher_info as b on a.uid=b.uid LEFT JOIN ms_subject as c on a.obj_id=c.id where a.status=1 limit 0,9";
+			 $sql="SELECT a.uid,a.image,a.uname,a.obj_id,b.identity,b.teach_age,b.keshifei,c.subject FROM ms_member as a LEFT JOIN ms_teacher_info as b on a.uid=b.uid LEFT JOIN ms_subject as c on a.obj_id=c.id where a.status=1 and a.tid=2 limit 0,9";
 			}else{
-			 $sql="SELECT a.uid,a.image,a.uname,a.obj_id,b.identity,b.teach_age,b.keshifei,c.subject FROM ms_member as a LEFT JOIN ms_teacher_info as b on a.uid=b.uid LEFT JOIN ms_subject as c on a.obj_id=c.id where a.status=1 and a.edu_id=$id limit 0,9";
+			 $sql="SELECT a.uid,a.image,a.uname,a.obj_id,b.identity,b.teach_age,b.keshifei,c.subject FROM ms_member as a LEFT JOIN ms_teacher_info as b on a.uid=b.uid LEFT JOIN ms_subject as c on a.obj_id=c.id where a.status=1 and a.edu_id=$id and a.tid=2 limit 0,9";
 			}
 			$date=$mode->query($sql);
 			for($i=0;$i<count($date);$i++){
 				//得到老师的评分
-				$sql_pf="select AVG(scores) as pf from ms_reviewinfo where uid=".$date[$i]['uid'];
+				$sql_pf="select AVG(scores) as pf from ms_reviewinfo where perid=".$date[$i]['uid'];
 				$pf=$mode->query($sql_pf);
-				$date[$i]['pf']=$pf[0]['pf'];
+				$date[$i]['pf'] = number_format($pf[0]['pf'],1);
 				//得到老师评价总记录
-				$sql_count_pj="select count(*) as count from ms_reviewinfo where uid=".$date[$i]['uid'];
+				$sql_count_pj="select count(*) as count from ms_reviewinfo where perid=".$date[$i]['uid'];
 				$count_pj=$mode->query($sql_count_pj);
 				$date[$i]['count']=$count_pj[0]['count'];
 				//获取老师的评价信息
 				  //获取好评
-				 $hp=$mode->query("select count(*) as count_hp from ms_reviewinfo where scores >= 80 and uid=".$date[$i]['uid']);
+				 $hp=$mode->query("select count(*) as count_hp from ms_reviewinfo where scores >= 80 and perid=".$date[$i]['uid']);
 				 $date[$i]['count_hp']=$hp[0]['count_hp'];
 				  //获取中评
-				 $zp=$mode->query("select count(*) as count_zp from ms_reviewinfo where scores >60 and scores < 80 and uid=".$date[$i]['uid']);
+				 $zp=$mode->query("select count(*) as count_zp from ms_reviewinfo where scores >60 and scores < 80 and perid=".$date[$i]['uid']);
 				 $date[$i]['count_zp']=$zp[0]['count_zp'];
 				  //获取差评
-				 $cp=$mode->query("select count(*) as count_cp from ms_reviewinfo where scores <=60 and uid=".$date[$i]['uid']);
+				 $cp=$mode->query("select count(*) as count_cp from ms_reviewinfo where scores <=60 and perid=".$date[$i]['uid']);
 				 $date[$i]['count_cp']=$cp[0]['count_cp'];
-
 			}
+			echo json_encode($date);
 		}
+		
 		/*
 		 *注册跳转
 		 */
@@ -108,6 +114,7 @@
 			    $this->assign('obj',$obj);
 		        $this->display('regjz');
 		}
+		
 		/*
 		* 家长注册
 		*/

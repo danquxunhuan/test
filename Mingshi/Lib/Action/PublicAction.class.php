@@ -131,6 +131,8 @@
 	//AJAX查询市
     public function getAreaName(){	
         $id = intval($_GET['id']);
+		//var_dump($id);
+		//exit;
         if($id){
            $data = M("Area")->field('id,name')->where("pid=$id")->select();
            if($data){

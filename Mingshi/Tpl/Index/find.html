@@ -37,7 +37,7 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
 <!--***************************content******************************-->
     <div class="content fix">
         <div class="ms_content bk fix">
-            <div class="ms_title">五种方式 帮您孩子找名师</div>
+            <div class="ms_title"><a href="__ROOT__" title="132">五种方式 帮您孩子找名师</a></div>
             <p class="ms_p">名师.SO聘请各科名师，并将名师信息以文字、图片、视频等多种方式全面展现，还请顶级专家为名师评价打分。在这里，家长们可以真的了解名师，找到自己孩子的名师，因材施教，高效培优。
 </p>
             <ul class="ms_5 fix">
@@ -93,22 +93,22 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
                             </dd>
                         </dl>
                          <dl class="ms_form fix">
-                            <dt>上课区域：</dt>
+                            <dt>上课区域：<a href="/Public/getAreaName">123</a></dt>
                             <dd class="zc_tab">
-                                        <div class="zc_text_box">
-                                               <select id="province" name="province">
-                                                    <!--option value="1">市</option-->
-                                                <volist name="areaData"  id="val">
-                                                     <option value="{ms:$val.id}">{ms:$val.name}</option>
-                                                </volist>
-                                                </select>&nbsp;&nbsp;&nbsp;
-                                                <select id="city" name="city" class="select6">
-                                                    <option value="">区</option>
-                                                </select>&nbsp;&nbsp;&nbsp;
-                                                <select id="area" name="area" class="select6">
-                                                    <option value="">县</option>
-                                                </select>
-					                        </div>
+                                    <div class="zc_text_box">
+                                           <select id="province" name="province">
+                                                <!--option value="1">市</option-->
+                                            <volist name="areaData"  id="val">
+                                                 <option value="{ms:$val.id}">{ms:$val.name}</option>
+                                            </volist>
+                                            </select>&nbsp;&nbsp;&nbsp;
+                                            <select id="city" name="city" class="select6">
+                                                <option value="">区</option>
+                                            </select>&nbsp;&nbsp;&nbsp;
+                                            <select id="area" name="area" class="select6">
+                                                <option value="">县</option>
+                                            </select>
+                                        </div>
 				                </dd>
                           </dl>
 						<dl class="ms_form fix">

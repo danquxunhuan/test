@@ -74,18 +74,20 @@ public	function edit(){
 *删除地区
 */	
 public function del(){
+	$this->checkToken(); //令牌验证
 	$id=isset($_GET['id'])?$_GET['id']+0:0;
 	//删除地区前应保证其为最下级
 	$zi = M('Area')->where('pid='.(int)$id)->find();
 	if($zi){
-		$this->error("该地区下存在子地区，不可删除！");
+		$msg = '该地区下存在子地区，不可删除！';
 	}else{
 		if(M('Area')->where('id='.(int)$id)->delete()){
-			$this->success("成功删除");
+			$msg = '删除成功';
 		}else{
-			$this->error("删除失败，可能是不存在该ID的记录");
+			$msg = '删除失败，可能是不存在该ID的记录';
 		}
 	}
+	echo json_encode($msg);	
 }
 
 	

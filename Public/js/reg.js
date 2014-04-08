@@ -44,7 +44,7 @@ $(function(){
 		if(area!=""){
 			$.ajax({
 				type: "GET",
-				url: "__APP__/Public/getAreaName",
+				url: "/test/Public/getAreaName",
 				datatype : "json",
 				data: "&id="+encodeURIComponent(area)+"&math="+Math.floor(Math.random()*1000+1),
 				success: function(msg){
@@ -52,7 +52,7 @@ $(function(){
 							var msg = eval("("+ msg+")");
 							var str = "<option value=\"\">选择区</option>";
 							for(var i in msg){
-									str += "<option value="+msg[i].id+">"+msg[i].name+"</option>";
+								str += "<option value="+msg[i].id+">"+msg[i].name+"</option>";
 							}
 							var city = $("#city");
 							city.empty();
@@ -64,11 +64,11 @@ $(function(){
    // });
     //根据市查询县
     $("#city").change(function(){
-            var city = $("#city").val();			
+            var city = $("#city").val();	
             if(city!=""){
                     $.ajax({
                             type: "GET",
-                            url: "/test/public/getAreaName",
+                            url: "/test/Public/getAreaName",
                             datatype : "json",
                             data: "&id="+encodeURIComponent(city)+"&math="+Math.floor(Math.random()*1000+1),
                             success: function(msg){
