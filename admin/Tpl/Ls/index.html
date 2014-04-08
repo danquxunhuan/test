@@ -18,7 +18,7 @@
           <div class="tab1"> <div class="current"><a href="__URL__/add" >&gt;&gt;添加教师</a></div></div>
 		     <!-----列表页面------>
 		     <table width="93%" border="0" cellspacing="0" cellpadding="0" class="tab">
-			     <tr><th>用户ID</th><th>教师姓名</th><th>教育机构</th><th>联系方式</th><th>金币</th><th>注册时间</th><th>教师等级</th><th width="170">操作</th></tr>
+			     <tr><th>用户ID</th><th>教师姓名</th><th>教育机构</th><th>联系方式</th><th>金币</th><th>注册时间</th><th>教师等级</th><th>当前状态</th><th width="170">操作</th></tr>
 				  <volist name="list" id="vo">
 				  <tr>
 				  <td>{ms:$vo.uid}</td>   
@@ -37,7 +37,12 @@ if($vo['rankid']==3){
 	echo '注册用户';
 }
 </php></td>
-				  <td>[ <a href="__URL__/edit/uid/{ms:$vo.uid}">编辑</a> ][ <a href="#">编辑详细信息</a> ][ <a href="javascript:void(0)" uname="{ms:$vo.uname}" uid="{ms:$vo.uid}" class="del">删除</a> ]</td>
+                <td><if condition="$vo['status'] eq 1">
+                	<span style="color:blue;">已审核</span>
+                <else />
+                	<span style="color:red;">未审核</span>
+                </if></td>
+				  <td>[ <a href="__URL__/edit/uid/{ms:$vo.uid}">编辑</a> ][ <a href="__URL__/editinfo/uid/{ms:$vo.uid}">详细信息编辑</a> ][ <a href="javascript:void(0)" uname="{ms:$vo.uname}" uid="{ms:$vo.uid}" class="del">删除</a> ]</td>
 				  </tr>
                 </volist>
 		     </table>

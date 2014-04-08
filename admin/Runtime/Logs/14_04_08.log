@@ -1034,3 +1034,273 @@ ERR: 非法操作:statics
 >>>>>>> wyj
 ERR: 非法操作:statics
 
+[ 2014-04-08T15:12:02+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:16:18+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:16:22+08:00 ] 127.0.0.1 /test/admin.php/jz/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004082s ]
+SQL: UPDATE `ms_member` SET `uname`='魏志国',`password`='74e59720dd08b1db45f7152d082c5051',`status`=0,`phone`='1367892675',`classid`='1',`rankid`=1,`coin`=6,`province`=1,`city`=4,`area`=11 WHERE ( `uid` = 6 ) [ RunTime:0.000641s ]
+
+[ 2014-04-08T15:16:24+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:16:28+08:00 ] 127.0.0.1 /test/admin.php/jz/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.003971s ]
+SQL: UPDATE `ms_member` SET `uname`='王家长',`password`='c56d0e9a7ccec67b4ea131655038d604',`status`=0,`phone`='15210651512',`classid`='2',`rankid`=1,`coin`=5,`province`=1,`city`=7,`area`=8 WHERE ( `uid` = 20 ) [ RunTime:0.000571s ]
+
+[ 2014-04-08T15:16:30+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:16:32+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:19:17+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:20:04+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:20:46+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:21:07+08:00 ] 127.0.0.1 /test/admin.php/jz/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004011s ]
+SQL: UPDATE `ms_member` SET `uname`='魏志国',`password`='c9130efba1317c16406d67270f657af3',`status`=0,`phone`='1367892675',`classid`='1',`rankid`=1,`coin`=6,`province`=1,`city`=4,`area`=11 WHERE ( `uid` = 6 ) [ RunTime:0.000579s ]
+
+[ 2014-04-08T15:21:09+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:21:12+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:22:03+08:00 ] 127.0.0.1 /test/admin.php/jz/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004017s ]
+SQL: UPDATE `ms_member` SET `uname`='魏志国',`password`='708574aadf1838a3c6bd6420bb70b4ae',`status`=0,`phone`='1367892675',`classid`='1',`rankid`=1,`coin`=6,`province`=1,`city`=4,`area`=11 WHERE ( `uid` = 6 ) [ RunTime:0.000472s ]
+
+[ 2014-04-08T15:22:17+08:00 ] 127.0.0.1 /test/admin.php/jz/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.003972s ]
+SQL: UPDATE `ms_member` SET `uname`='魏志国',`password`='708574aadf1838a3c6bd6420bb70b4ae',`status`=0,`phone`='1367892675',`classid`='1',`rankid`=1,`coin`=6,`province`=1,`city`=4,`area`=11 WHERE ( `uid` = 6 ) [ RunTime:0.000880s ]
+
+[ 2014-04-08T15:22:20+08:00 ] 127.0.0.1 /test/admin.php/jz/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004018s ]
+SQL: UPDATE `ms_member` SET `uname`='魏志国',`password`='708574aadf1838a3c6bd6420bb70b4ae',`status`=0,`phone`='1367892675',`classid`='1',`rankid`=1,`coin`=6,`province`=1,`city`=4,`area`=11 WHERE ( `uid` = 6 ) [ RunTime:0.000582s ]
+
+[ 2014-04-08T15:22:33+08:00 ] 127.0.0.1 /test/admin.php/jz/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.003987s ]
+SQL: UPDATE `ms_member` SET `uname`='魏志国',`password`='708574aadf1838a3c6bd6420bb70b4ae',`status`=0,`phone`='1367892675',`classid`='1',`rankid`=1,`coin`=6,`province`=1,`city`=4,`area`=11 WHERE ( `uid` = 6 ) [ RunTime:0.000564s ]
+
+[ 2014-04-08T15:23:23+08:00 ] 127.0.0.1 /test/admin.php/jz/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001263s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004027s ]
+NOTIC: [8] Undefined index:  status D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Action\JzAction.class.php 第 142 行.
+SQL: UPDATE `ms_member` SET `uname`='魏志国',`password`='68c7f78d53fc6cb65ba5aae6f44c4036',`status`=0,`phone`='1367892675',`classid`='1',`rankid`=1,`coin`=6,`province`=1,`city`=4,`area`=11 WHERE ( `uid` = 6 ) [ RunTime:0.000343s ]
+
+[ 2014-04-08T15:23:25+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:23:33+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:24:20+08:00 ] 127.0.0.1 /test/admin.php/jz/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004020s ]
+NOTIC: [8] Undefined index:  status D:\www\APMServ5.2.6\www\htdocs\test\admin\Lib\Action\JzAction.class.php 第 142 行.
+
+[ 2014-04-08T15:27:27+08:00 ] 127.0.0.1 /test/admin.php/jz/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004162s ]
+
+[ 2014-04-08T15:27:49+08:00 ] 127.0.0.1 /test/admin.php/jz/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004209s ]
+SQL: UPDATE `ms_member` SET `uname`='魏志国',`password`='614b8e510efc167704a728634b1a7f5f',`status`=1,`phone`='1367892675',`classid`='1',`rankid`=1,`coin`=6,`province`=1,`city`=4,`area`=11 WHERE ( `uid` = 6 ) [ RunTime:0.000463s ]
+
+[ 2014-04-08T15:27:51+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:27:54+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:28:27+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:28:31+08:00 ] 127.0.0.1 /test/admin.php/Public/getAreaName?&id=1&math=290
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001228s ]
+SQL: SHOW COLUMNS FROM `ms_area` [ RunTime:0.003514s ]
+SQL: SELECT `id`,`name` FROM `ms_area` WHERE ( pid=1 )  [ RunTime:0.000991s ]
+
+[ 2014-04-08T15:28:33+08:00 ] 127.0.0.1 /test/admin.php/ls/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.003975s ]
+SQL: UPDATE `ms_member` SET `uname`='刘创',`password`='614b8e510efc167704a728634b1a7f5f',`status`=1,`jlpwd`='1f16a6c017f12c1539c4947e234de78a',`phone`='18001208807',`classid`='13',`obj_id`=3,`province`=1,`city`=0,`area`=0,`rankid`=1,`edu_id`=2,`coin`=0,`image`='',`remarks`='0' WHERE ( `uid` = 1 ) [ RunTime:0.000487s ]
+
+[ 2014-04-08T15:28:35+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:28:42+08:00 ] 127.0.0.1 /test/admin.php/Public/getAreaName?&id=1&math=146
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `ms_area` [ RunTime:0.003609s ]
+SQL: SELECT `id`,`name` FROM `ms_area` WHERE ( pid=1 )  [ RunTime:0.001017s ]
+
+[ 2014-04-08T15:28:45+08:00 ] 127.0.0.1 /test/admin.php/ls/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004117s ]
+SQL: UPDATE `ms_member` SET `uname`='刘创',`password`='227e731c7c1b1b7dadd2bf96808a0a10',`status`=0,`jlpwd`='02a161a8fb9666ad1de7029668df86c1',`phone`='18001208807',`classid`='13',`obj_id`=3,`province`=1,`city`=0,`area`=0,`rankid`=1,`edu_id`=2,`coin`=0,`image`='',`remarks`='0' WHERE ( `uid` = 1 ) [ RunTime:0.000419s ]
+
+[ 2014-04-08T15:28:47+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:28:50+08:00 ] 127.0.0.1 /test/admin.php/Public/getAreaName?&id=1&math=34
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+SQL: SHOW COLUMNS FROM `ms_area` [ RunTime:0.003521s ]
+SQL: SELECT `id`,`name` FROM `ms_area` WHERE ( pid=1 )  [ RunTime:0.001008s ]
+
+[ 2014-04-08T15:28:55+08:00 ] 127.0.0.1 /test/admin.php/ls/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004030s ]
+SQL: UPDATE `ms_member` SET `uname`='刘创',`password`='087b3236f6e20d06a717820dd708b7d0',`status`=0,`jlpwd`='b9d10f268fdc769283fb585b34c93901',`phone`='18001208807',`classid`='13',`obj_id`=3,`province`=1,`city`=0,`area`=0,`rankid`=1,`edu_id`=2,`coin`=0,`image`='',`remarks`='0' WHERE ( `uid` = 1 ) [ RunTime:0.000391s ]
+
+[ 2014-04-08T15:28:57+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:29:01+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:31:37+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:31:43+08:00 ] 127.0.0.1 /test/admin.php/Public/getAreaName?&id=0&math=838
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+
+[ 2014-04-08T15:31:46+08:00 ] 127.0.0.1 /test/admin.php/Public/getAreaName?&id=1&math=85
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `ms_area` [ RunTime:0.003708s ]
+SQL: SELECT `id`,`name` FROM `ms_area` WHERE ( pid=1 )  [ RunTime:0.001036s ]
+
+[ 2014-04-08T15:31:51+08:00 ] 127.0.0.1 /test/admin.php/ls/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.003974s ]
+SQL: UPDATE `ms_member` SET `uname`='易中天',`password`='10ed1697617fe7758b4236d5b791286c',`status`=1,`jlpwd`='30cd2f99101cdd52cc5fda1e996ee137',`phone`='1535645456',`classid`='13',`obj_id`=2,`province`=1,`city`=4,`area`=6,`rankid`=2,`edu_id`=1,`coin`=5,`image`='',`remarks`='5' WHERE ( `uid` = 3 ) [ RunTime:0.000595s ]
+
+[ 2014-04-08T15:31:53+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T15:31:58+08:00 ] 127.0.0.1 /test/admin.php/ls/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004008s ]
+SQL: UPDATE `ms_member` SET `uname`='易中天',`password`='74e59720dd08b1db45f7152d082c5051',`status`=1,`jlpwd`='b58c50e209762c24adb9f29daffe249c',`phone`='1535645456',`classid`='13',`obj_id`=2,`province`=1,`city`=4,`area`=6,`rankid`=2,`edu_id`=1,`coin`=5,`image`='',`remarks`='5' WHERE ( `uid` = 3 ) [ RunTime:0.000563s ]
+
+[ 2014-04-08T15:32:00+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T16:00:32+08:00 ] 127.0.0.1 /test/admin.php/ls/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T16:00:32+08:00 ] 127.0.0.1 /test/admin.php/Public/getAreaName?&id=1&math=907
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001278s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001408s ]
+SQL: SHOW COLUMNS FROM `ms_area` [ RunTime:0.005115s ]
+SQL: SELECT `id`,`name` FROM `ms_area` WHERE ( pid=1 )  [ RunTime:0.000976s ]
+
+[ 2014-04-08T16:19:21+08:00 ] 127.0.0.1 /test/admin.php/ls/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T16:20:40+08:00 ] 127.0.0.1 /test/admin.php/ls/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T16:25:17+08:00 ] 127.0.0.1 /test/admin.php/ls/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T16:25:48+08:00 ] 127.0.0.1 /test/admin.php/ls/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T16:25:48+08:00 ] 127.0.0.1 /test/admin.php/Public/getAreaName?&id=1&math=330
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001843s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001966s ]
+SQL: SHOW COLUMNS FROM `ms_area` [ RunTime:0.003614s ]
+SQL: SELECT `id`,`name` FROM `ms_area` WHERE ( pid=1 )  [ RunTime:0.000849s ]
+
+[ 2014-04-08T16:26:41+08:00 ] 127.0.0.1 /test/admin.php/ls/addMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002143s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.004108s ]
+SQL: INSERT INTO `ms_member` (`uname`,`password`,`jlpwd`,`phone`,`classid`,`obj_id`,`province`,`city`,`area`,`rankid`,`edu_id`,`coin`,`image`,`remarks`,`status`,`tid`,`regdate`) VALUES ('新老师','202cb962ac59075b964b07152d234b70','202cb962ac59075b964b07152d234b70','15210651512','14',4,1,7,10,2,1,10,'','这里一个备注信息，是给管理员看的~！',1,2,1396945601) [ RunTime:0.000555s ]
+SQL: SHOW COLUMNS FROM `ms_teacher_info` [ RunTime:0.004119s ]
+SQL: INSERT INTO `ms_teacher_info` (`uid`) VALUES (39) [ RunTime:0.000972s ]
+
+[ 2014-04-08T16:26:43+08:00 ] 127.0.0.1 /test/admin.php/ls/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T16:26:46+08:00 ] 127.0.0.1 /test/admin.php/ls/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T16:50:10+08:00 ] 127.0.0.1 /test/admin.php/ls/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T17:29:21+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T17:34:07+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T18:10:48+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T18:10:51+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+

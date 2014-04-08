@@ -39,7 +39,7 @@ public function del(){
 
 
 /*
-* 添加教师展示页
+* 添加教师.展示页
 */
 public function add(){
 	$M = M("Member");
@@ -75,7 +75,7 @@ public function add(){
 }
 
 /*
-* 添加教师方法
+* 添加教师.方法
 */	
 public function addMem(){
 	$obj=M('Member');
@@ -102,7 +102,14 @@ public function addMem(){
 	$data['regdate'] = time();
 	$info = $obj -> add($data);
 	if($info){
-		$msg = '添加教师成功';
+		//教师附属信息表，相应生成对应教师数据ms_teacher_info
+		$data2 = array(
+			'uid' => $info,
+		);
+		$info2 = M('Teacher_info') -> add($data2);
+		if($info2){
+			$msg = '添加教师成功';
+		}
 	}else{
 		$msg = '添加教师失败';
 	}
@@ -111,7 +118,7 @@ public function addMem(){
 
 	
 /*
-* 修改教师展示页
+* 修改教师.展示页
 */
 public function edit(){
 	$M = M("Member");
@@ -152,9 +159,71 @@ public function edit(){
 
 
 /*
-* 修改教师信息
+* 修改教师.方法
 */
 public function editMem() {
+	//$this->checkToken(); //令牌验证
+	$obj=M('Member');
+	$uid=trim($_POST['uid']);
+	$data=array(
+		'uname'=>trim($_POST['uname']),
+		'password'=>md5(trim($_POST['password'])),
+		'status'=>trim($_POST['status']),
+		'jlpwd'=>md5(trim($_POST['jlpwd'])),
+		'phone'=>trim($_POST['phone']),
+		'classid'=>trim($_POST['classid']),
+		'obj_id'=>trim($_POST['obj_id']),
+		'province'=>trim($_POST['province']),
+		'city'=>trim($_POST['city']),
+		'area'=>trim($_POST['area']),
+		'rankid'=>trim($_POST['rankid']),
+		'edu_id'=>trim($_POST['edu_id']),
+		'coin'=>trim($_POST['coin']),
+		'image'=>trim($_POST['image']),
+		'remarks'=>trim($_POST['remarks']),		
+		'uid'=>trim($_POST['uid']),
+	);
+	//编辑
+   $data['uid'] = $uid;
+   $info = $obj -> save($data);
+   if($info){
+		$msg = '修改教师信息成功';
+   }else{
+		$msg = '修改教师信息失败';
+   }
+   echo json_encode($msg);
+}
+
+
+/*
+* 修改教师附属表.展示页 ms_teacher_info
+*/
+public function editinfo(){
+	$M = M("Teacher_info");
+	if(isset($_GET['uid'])){  //修改页
+		$uid = (int)$_GET['uid'];
+		$pre = C("DB_PREFIX");
+		//取会员信息
+		$sql = "SELECT a.uname,b.* FROM ms_member as a LEFT JOIN ms_teacher_info as b ON a.uid=b.uid WHERE a.uid=".$uid;
+		//$info = $M->where("`uid`=" . $uid)->join('ms_member')->find(); 
+		$info = M()->query($sql);
+		if (empty($info[0]['uid'])) {
+			$msg = '不存在该教师附属信息ID';
+		}	
+		$this->assign('info', $info[0]);
+		//教学风格各标签 ms_tag
+		$tags=M('Tag')->select();
+		$this->assign("tags", $tags);
+		
+	}		
+	$this->display();
+}
+
+
+/*
+* 修改教师附属表.方法 ms_teacher_info
+*/
+public function editinfoMem() {
 	//$this->checkToken(); //令牌验证
 	$obj=M('Member');
 	$uid=trim($_POST['uid']);

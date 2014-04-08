@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>修改教师信息</title>
+<title>修改教师附属信息</title>
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
@@ -13,7 +13,7 @@
 .footer{width:99%;height:100px;margin-top:20px;border:solid 1px #F1F1F1;clear:both;}
 .left ul li{list-style:none;height:35px;border-bottom:1px solid #F3F3F3;line-height:36px;font-weight: 700;tezt-align:center;}
 .left .cycz{background:#dedbdb no-repeat;}
-.tab1{width:100%;height:35px;margin-bottom:15px;line-height: 35px;}
+.tab1{width:100%;height:35px;margin-bottom:15px;line-height:35px;}
 .current {border-bottom: 2px solid rgb(38, 106, 174);color: rgb(38, 106, 174);font-weight: 700;}
 .table1 th{ text-align:right; height:30px;}
 .input{ height:18px; line-height:18px;}
@@ -30,26 +30,92 @@
                     <!--form action="" method="post"-->
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
                             <tr>
-                                <th width="120">用户名：</th>
-                                <td><input name="uname" type="text" class="input" size="40" value="{ms:$info.uname}" /></td>
+                                <th width="120">用户名：</th><td>{ms:$info.uname}</td>
                             </tr>
                             <tr>
-                                <th width="120">审核：</th>
-                                <td><input type="radio" name="status" value="0" <if condition="$info['status'] eq 0">checked="checked"</if> />未审核
-                                <input type="radio" name="status" value="1" <if condition="$info['status'] eq 1">checked="checked"</if> />已审核</td>
+                                <th>注册页推荐名师：</th>
+                                <td><input class="input" name="recommend" type="checkbox" value="1" <if condition="$info['recommend'] eq 1">checked="checked"</if> /></td>
                             </tr>
                             <tr>
-                                <th>登录密码：</th>
-                                <td><input class="input" name="password" type="password" size="40" value="{ms:$info.password}" /></td>
+                                <th width="120">是否隐藏：</th>
+                                <td><input type="radio" name="status" value="0" <if condition="$info['status'] eq 0">checked="checked"</if> />所有人可见
+                                <input type="radio" name="status" value="1" <if condition="$info['status'] eq 1">checked="checked"</if> />自己可见</td>
                             </tr>
                             <tr>
-                                <th>简历密码：</th>
-                                <td><input class="input" name="jlpwd" type="password" size="40" value="{ms:$info.jlpwd}" /></td>
+                                <th>教学年限：</th>
+                                <td><input class="input" name="teach_age" type="text" size="40" value="{ms:$info.teach_age}" /></td>
+                            </tr>
+                            <tr>
+                                <th>课时费：</th>
+                                <td><input class="input" name="keshifei" type="text" size="40" value="{ms:$info.keshifei}" /></td>
                             </tr>
                              <tr>
-                                <th>手机：</th>
-                                <td><input class="input" name="phone" type="text" size="40" value="{ms:$info.phone}" /></td>
+                                <th>现在的工作：</th>
+                                <td><input class="input" name="now_job" type="text" size="40" value="{ms:$info.now_job}" /></td>
                             </tr>
+                            <tr>
+                                <th>我的强项：</th>
+                                <td><input class="input" name="mystrong" type="text" size="40" value="{ms:$info.mystrong}" /></td>
+                            </tr>
+                            <tr>
+                                <th>教学风格：</th>
+                                <td>
+                                <volist name="tags" id="vo">
+                                	<input type="checkbox" name="teach_style" value="{ms:$vo.id}" />&nbsp;{ms:$vo.name}&nbsp;&nbsp;
+                                </volist></td>
+                            </tr>
+                            <tr>
+                                <th>邮 箱：</th>
+                                <td><input class="input" name="email" type="text" size="40" value="{ms:$info.email}" /></td>
+                            </tr>
+                            <tr>
+                                <th>教师身份：</th>
+<td><select name="identity">
+<option value="">--请选择--</option>
+<option value="1" <if condition="$info['identity'] eq 1">selected='selected'</if>>顶级名师</option>
+<option value="2" <if condition="$info['identity'] eq 2">selected='selected'</if>>VIP名师</option>
+<option value="3" <if condition="$info['identity'] eq 3">selected='selected'</if>>一线名师</option>
+<option value="4" <if condition="$info['identity'] eq 4">selected='selected'</if>>机构名师</option>
+<option value="5" <if condition="$info['identity'] eq 5">selected='selected'</if>>名校学生</option>
+<option value="6" <if condition="$info['identity'] eq 6">selected='selected'</if>>外教名师</option>
+</select> </td>
+                            </tr>
+                            <tr>
+                                <th>学 历：</th>
+<td><select name="education">
+<option value="">--请选择--</option>
+<option value="1" <if condition="$info['education'] eq 1">selected='selected'</if>>大 专</option>
+<option value="2" <if condition="$info['education'] eq 2">selected='selected'</if>>本 科</option>
+<option value="3" <if condition="$info['education'] eq 3">selected='selected'</if>>研究生</option>
+<option value="4" <if condition="$info['education'] eq 4">selected='selected'</if>>硕 士</option>
+<option value="5" <if condition="$info['education'] eq 5">selected='selected'</if>>博 士</option>
+<option value="6" <if condition="$info['education'] eq 6">selected='selected'</if>>博士后</option>
+</select> </td>
+                            </tr>
+                            <tr>
+                                <th>毕业院校：</th>
+								<td><input class="input" name="school" type="text" size="40" value="{ms:$info.school}" /></td>
+                            </tr>
+                            <tr>
+                                <th>所学专业：</th>
+								<td><input class="input" name="major" type="text" size="40" value="{ms:$info.major}" /></td>
+                            </tr>
+                            <tr>
+                                <th>家乡(省市)：</th>
+								<td><input class="input" name="home" type="text" size="40" value="{ms:$info.home}" /></td>
+                            </tr>
+                            <tr>
+                                <th>个人爱好：</th>
+								<td><input class="input" name="hobby" type="text" size="40" value="{ms:$info.hobby}" /></td>
+                            </tr>
+                            <tr>
+                                <th>生日：</th>
+								<td><input class="input" name="hobby" type="text" size="40" value="{ms:$info.hobby}" /></td>
+                            </tr>
+                            
+                            
+                            
+                            
                              <tr>
                                 <th>年级/科目：</th>
                                 <td> 
