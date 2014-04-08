@@ -1,0 +1,738 @@
+[ 2014-04-08T09:45:39+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+NOTIC: [8] Undefined index: verify C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 24 行.
+NOTIC: [8] Undefined index: username C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 31 行.
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 34 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.009685s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = null ) LIMIT 1   [ RunTime:0.000217s ]
+NOTIC: [8] Undefined index: password C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 40 行.
+
+[ 2014-04-08T09:45:39+08:00 ] 127.0.0.1 /test/admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: select node.id,node.name from ms_role as role,ms_role_user as user,ms_access as access ,ms_node as node where user.user_id='' and user.role_id=role.id and ( access.role_id=role.id  or (access.role_id=role.pid and role.pid!=0 ) ) and role.status=1 and access.node_id=node.id and node.level=1 and node.status=1 [ RunTime:0.000357s ]
+
+[ 2014-04-08T09:45:39+08:00 ] 127.0.0.1 /test/admin.php/Public/login
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.004858s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004922s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000324s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000360s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000274s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001510s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000449s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000500s ]
+
+[ 2014-04-08T10:06:57+08:00 ] 127.0.0.1 /test/admin.php/public/checklogins
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+NOTIC: [8] Undefined index: username C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 54 行.
+NOTIC: [8] Undefined index: password C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 55 行.
+NOTIC: [8] Undefined index: verify C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 56 行.
+
+[ 2014-04-08T10:07:52+08:00 ] 127.0.0.1 /test/admin.php/public/checklogins
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+NOTIC: [8] Undefined index: username C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 54 行.
+NOTIC: [8] Undefined index: password C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 55 行.
+NOTIC: [8] Undefined index: verify C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 56 行.
+
+[ 2014-04-08T10:09:42+08:00 ] 127.0.0.1 /test/admin.php/public/checklogins
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+NOTIC: [8] Undefined index: username C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 54 行.
+NOTIC: [8] Undefined index: password C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 55 行.
+NOTIC: [8] Undefined index: verify C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 56 行.
+
+[ 2014-04-08T10:10:45+08:00 ] 127.0.0.1 /test/admin.php/public/checklogins
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+NOTIC: [8] Undefined index: username C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 54 行.
+NOTIC: [8] Undefined index: password C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 55 行.
+NOTIC: [8] Undefined index: verify C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 56 行.
+
+[ 2014-04-08T10:11:55+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000496s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+
+[ 2014-04-08T10:16:31+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+
+[ 2014-04-08T10:18:23+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001187s ]
+NOTIC: [8] Undefined index: username C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 16 行.
+
+[ 2014-04-08T10:22:57+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001061s ]
+NOTIC: [8] Undefined index: username C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 16 行.
+
+[ 2014-04-08T10:23:24+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+
+[ 2014-04-08T10:24:15+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001115s ]
+
+[ 2014-04-08T10:24:34+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+
+[ 2014-04-08T10:25:18+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000670s ]
+
+[ 2014-04-08T10:26:17+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000536s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002459s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000255s ]
+
+[ 2014-04-08T10:26:17+08:00 ] 127.0.0.1 /test/admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.159807s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.159964s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000848s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000860s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000587s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000889s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003549s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000996s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001115s ]
+
+[ 2014-04-08T10:27:38+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002275s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000190s ]
+
+[ 2014-04-08T10:27:38+08:00 ] 127.0.0.1 /test/admin.php/public/admin.php/Index/index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+ERR: 非法操作:admin.php
+
+[ 2014-04-08T10:28:22+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002314s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000265s ]
+
+[ 2014-04-08T10:29:25+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002239s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000209s ]
+
+[ 2014-04-08T10:29:25+08:00 ] 127.0.0.1 /test/admin.php/admin.php/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+NOTIC: [8] Undefined variable: group C:\wamp\www\test\ThinkPHP\Lib\Core\App.class.php 第 95 行.
+ERR: 无法加载模块:Admin.php
+
+[ 2014-04-08T10:30:29+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002180s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000169s ]
+
+[ 2014-04-08T10:30:29+08:00 ] 127.0.0.1 /test/admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006309s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000398s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000401s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000295s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001683s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000483s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000535s ]
+
+[ 2014-04-08T10:31:09+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002238s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000232s ]
+
+[ 2014-04-08T10:31:09+08:00 ] 127.0.0.1 /test/admin.php/admin.php/Index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+NOTIC: [8] Undefined variable: group C:\wamp\www\test\ThinkPHP\Lib\Core\App.class.php 第 95 行.
+ERR: 无法加载模块:Admin.php
+
+[ 2014-04-08T10:35:32+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001078s ]
+
+[ 2014-04-08T10:36:46+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+
+[ 2014-04-08T10:38:22+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000605s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+
+[ 2014-04-08T10:38:28+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002364s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000209s ]
+
+[ 2014-04-08T10:40:50+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001254s ]
+
+[ 2014-04-08T10:40:57+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002793s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000242s ]
+
+[ 2014-04-08T10:40:57+08:00 ] 127.0.0.1 /test/admin.php/admin.php/Index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+NOTIC: [8] Undefined variable: group C:\wamp\www\test\ThinkPHP\Lib\Core\App.class.php 第 95 行.
+ERR: 无法加载模块:Admin.php
+
+[ 2014-04-08T10:43:31+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000929s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003813s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000314s ]
+
+[ 2014-04-08T10:43:31+08:00 ] 127.0.0.1 /test/admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009486s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009580s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000372s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000365s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000267s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000408s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001566s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000460s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2014-04-08T10:44:10+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002170s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000191s ]
+
+[ 2014-04-08T10:44:10+08:00 ] 127.0.0.1 /test/admin.php/admin.php/Index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+NOTIC: [8] Undefined variable: group C:\wamp\www\test\ThinkPHP\Lib\Core\App.class.php 第 95 行.
+ERR: 无法加载模块:Admin.php
+
+[ 2014-04-08T10:45:36+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002176s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000209s ]
+
+[ 2014-04-08T10:45:36+08:00 ] 127.0.0.1 /test/admin.php/admin.php/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+NOTIC: [8] Undefined variable: group C:\wamp\www\test\ThinkPHP\Lib\Core\App.class.php 第 95 行.
+ERR: 无法加载模块:Admin.php
+
+[ 2014-04-08T10:46:27+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002474s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000219s ]
+
+[ 2014-04-08T10:46:27+08:00 ] 127.0.0.1 /test/admin.php/admin.php/m/Index/a/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+NOTIC: [8] Undefined variable: group C:\wamp\www\test\ThinkPHP\Lib\Core\App.class.php 第 95 行.
+ERR: 无法加载模块:Admin.php
+
+[ 2014-04-08T10:48:53+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002847s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000321s ]
+
+[ 2014-04-08T10:50:43+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002225s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000192s ]
+
+[ 2014-04-08T10:50:43+08:00 ] 127.0.0.1 /test/admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006266s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006325s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000390s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000416s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000291s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001682s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000505s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2014-04-08T10:52:40+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002586s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000202s ]
+
+[ 2014-04-08T10:52:41+08:00 ] 127.0.0.1 /test/admin.php/public/admin.php/index/index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+ERR: 非法操作:admin.php
+
+[ 2014-04-08T10:53:39+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002440s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000251s ]
+
+[ 2014-04-08T10:57:37+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002496s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000225s ]
+
+[ 2014-04-08T10:57:37+08:00 ] 127.0.0.1 /test/admin.php/index/index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006085s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006154s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000396s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000408s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000296s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001707s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000478s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2014-04-08T11:07:28+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002203s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000215s ]
+
+[ 2014-04-08T11:07:28+08:00 ] 127.0.0.1 /test/admin.php/index/index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006194s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000506s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000430s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000296s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000434s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001822s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000469s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2014-04-08T11:07:42+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T11:09:09+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000883s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003908s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000386s ]
+
+[ 2014-04-08T11:09:59+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003095s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000259s ]
+
+[ 2014-04-08T11:13:32+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002408s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000227s ]
+
+[ 2014-04-08T11:13:32+08:00 ] 127.0.0.1 /test/admin.php/Public/admin.php/index/index
+ERR: 非法操作:admin.php
+
+[ 2014-04-08T11:13:57+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000404s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002208s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000236s ]
+
+[ 2014-04-08T11:16:35+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000854s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003131s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000282s ]
+
+[ 2014-04-08T11:16:35+08:00 ] 127.0.0.1 /test/admin.php/admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+NOTIC: [8] Undefined variable: group C:\wamp\www\test\ThinkPHP\Lib\Core\App.class.php 第 95 行.
+ERR: 无法加载模块:Admin.php
+
+[ 2014-04-08T11:17:04+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001082s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002200s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000209s ]
+
+[ 2014-04-08T11:17:04+08:00 ] 127.0.0.1 /test/admin.php/admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+NOTIC: [8] Undefined variable: group C:\wamp\www\test\ThinkPHP\Lib\Core\App.class.php 第 95 行.
+ERR: 无法加载模块:Admin.php
+
+[ 2014-04-08T11:17:18+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000759s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002536s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000232s ]
+
+[ 2014-04-08T11:17:18+08:00 ] 127.0.0.1 /test/admin.php/admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+NOTIC: [8] Undefined variable: group C:\wamp\www\test\ThinkPHP\Lib\Core\App.class.php 第 95 行.
+ERR: 无法加载模块:Admin.php
+
+[ 2014-04-08T11:18:01+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002225s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000211s ]
+
+[ 2014-04-08T11:18:01+08:00 ] 127.0.0.1 /test/admin.php//index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006074s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000368s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000349s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000255s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000412s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001541s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000454s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000510s ]
+
+[ 2014-04-08T11:18:33+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001139s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002451s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000231s ]
+
+[ 2014-04-08T11:18:33+08:00 ] 127.0.0.1 /test/admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005832s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005904s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000395s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000406s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000311s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001742s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000518s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000569s ]
+
+[ 2014-04-08T11:18:49+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T11:19:05+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T11:19:35+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002231s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000199s ]
+
+[ 2014-04-08T11:19:35+08:00 ] 127.0.0.1 /test/admin.php/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005790s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000412s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000391s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000332s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001801s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000508s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2014-04-08T11:19:55+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T11:20:02+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T11:24:23+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002474s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000216s ]
+
+[ 2014-04-08T11:24:45+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T11:28:01+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001135s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002438s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000257s ]
+
+[ 2014-04-08T11:28:01+08:00 ] 127.0.0.1 /test/admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005966s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006028s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000344s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000327s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000228s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000456s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001518s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000498s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000552s ]
+
+[ 2014-04-08T11:28:53+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002844s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000264s ]
+
+[ 2014-04-08T11:28:53+08:00 ] 127.0.0.1 /test/admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007905s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007996s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000477s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000459s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000333s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000493s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001954s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000428s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2014-04-08T11:29:16+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T11:29:47+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000664s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.003790s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000353s ]
+
+[ 2014-04-08T11:29:47+08:00 ] 127.0.0.1 /test/admin.php/index/index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.006039s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006100s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000433s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000433s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000390s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001924s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000554s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000607s ]
+
+[ 2014-04-08T11:31:22+08:00 ] 127.0.0.1 /test/admin.php/public/checkLogin
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001141s ]
+NOTIC: [8] Use of undefined constant Admin - assumed 'Admin' C:\wamp\www\test\admin\Lib\Action\PublicAction.class.php 第 32 行.
+SQL: SHOW COLUMNS FROM `ms_admin` [ RunTime:0.002852s ]
+SQL: SELECT * FROM `ms_admin` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000268s ]
+
+[ 2014-04-08T11:31:22+08:00 ] 127.0.0.1 /test/admin.php/admin.php/Index.html
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+NOTIC: [8] Undefined variable: group C:\wamp\www\test\ThinkPHP\Lib\Core\App.class.php 第 95 行.
+ERR: 无法加载模块:Admin.php
+
+[ 2014-04-08T11:33:24+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T11:33:30+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T11:33:32+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T11:36:40+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T11:36:42+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T11:36:47+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T11:36:51+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T11:36:53+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T11:36:57+08:00 ] 127.0.0.1 /test/admin.php/review/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T11:51:50+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-08T14:44:35+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-08T14:44:39+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
