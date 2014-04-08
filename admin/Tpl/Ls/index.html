@@ -37,7 +37,7 @@ if($vo['rankid']==3){
 	echo '注册用户';
 }
 </php></td>
-				  <td>[ <a href="__URL__/edit/uid/{ms:$vo.uid}">编辑</a> ][ <a href="#">编辑详细信息</a> ][ <a link="__URL__/del/uid/{ms:$vo.uid}" href="javascript:void(0)" name="{ms:$vo.uname}" class="del">删除</a>]</td>
+				  <td>[ <a href="__URL__/edit/uid/{ms:$vo.uid}">编辑</a> ][ <a href="#">编辑详细信息</a> ][ <a href="javascript:void(0)" uname="{ms:$vo.uname}" uid="{ms:$vo.uid}" class="del">删除</a> ]</td>
 				  </tr>
                 </volist>
 		     </table>
@@ -47,17 +47,25 @@ if($vo['rankid']==3){
    </div>
  </div>	
 <script type="text/javascript">
-	$(function(){
-		$(".del").click(function(){
-			var delLink=$(this).attr("link");
-			popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){
-				if(action == 'ok'){
-					top.window.location.href=delLink;
+$(function(){
+	$('.del').click(function(){
+		var uid = $(this).attr('uid');
+		var uname = $(this).attr('uname');
+		if(confirm('删除不可恢复！您确认要删除【'+$(this).attr("uname")+'】吗？')){
+			$.ajax({
+				url:'__URL__/del',
+				data:{"uid":uid},
+				dataType:'json',
+				cache:false,
+				success:function(msg){
+					alert(msg);
 				}
 			});
+		}else{
 			return false;
-		});
+		}
 	});
+});
 </script> 
 </body>
 </html>

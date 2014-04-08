@@ -42,19 +42,27 @@ $(function(){
 <volist name="alist" id="tree">
 <tr pid="{ms:$tree.pid}" cid="{ms:$tree.id}">
 <td align="left" class="tree" style="cursor: pointer;">{ms:$tree['fullname']}</td>
-<td>[ <a href="__URL__/edit/id/{ms:$tree['id']}">编辑</a> ][ <a link="__URL__/del/id/{ms:$tree['id']}" href="javascript:void();" name="{ms:$tree['name']}" class="del" onclick="delarea();" >删除</a> ]</td></tr>
+<td>[ <a href="__URL__/edit/id/{ms:$tree['id']}">编辑</a> ][ <a href="javascript:void(0)" name="{ms:$tree['name']}" id="{ms:$tree['id']}" class="del">删除</a> ]</td></tr>
 </volist>
 <script type="text/javascript">
 	$(function(){
 		//删除
-		$(".del").click(function(){
-			var delLink=$(this).attr("link");
-			popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){
-				if(action == 'ok'){
-					top.window.location.href=delLink;
-				}
-			});
-			return false;
+		$('.del').click(function(){
+			var id = $(this).attr('id');
+			var name = $(this).attr('name');
+			if(confirm('删除不可恢复！您确认要删除【'+$(this).attr("name")+'】吗？')){
+				$.ajax({
+					url:'__URL__/del',
+					data:{"id":id},
+					dataType:'json',
+					cache:false,
+					success:function(msg){
+						alert(msg);
+					}
+				});
+			}else{
+				return false;
+			}
 		});
 		//树形图
 		var chn=function(cid,op){

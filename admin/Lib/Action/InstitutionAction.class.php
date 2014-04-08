@@ -2,13 +2,8 @@
 /*
  *author:wangqing
  *教育机构操作action
- *
- *
  */
 
-/**
-* 
-*/
 class InstitutionAction extends CommonAction{
 	
 	public function index(){
