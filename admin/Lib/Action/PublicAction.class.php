@@ -45,7 +45,7 @@
 
 			// 缓存访问权限
             RBAC::saveAccessList();
-			$this->success('登录成功！');
+			// $this->success('登录成功！');
             $this->redirect('admin.php/Index/index','页面跳转中...');//跳转
 		}
 	}
