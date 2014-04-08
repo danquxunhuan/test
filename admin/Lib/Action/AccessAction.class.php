@@ -91,10 +91,13 @@ public function delAdmin(){
 	$art = D("Admin");
 	$id = trim($_GET['aid']);
 	if($art->where("aid=".$id)->delete()){
-		$this->success("删除成功");
+		// $this->success("删除成功");
+        $msg='删除成功';
 	}else{
-		$this->error("删除失败");
+		// $this->error("删除失败");
+        $msg='删除失败';
 	}	
+    echo json_encode($msg);
 }
 
 /*
@@ -162,10 +165,13 @@ public function delRole(){
 	$art = D("Role");
 	$id = trim($_GET['id']);
 	if($art->where("id=".$id)->delete()){
-		$this->success("删除成功");
+		$msg='删除成功';
+        //$this->success("删除成功");
 	}else{
-		$this->error("删除失败");
-	}	
+		$msg='删除失败';
+        //$this->error("删除失败");
+	}
+    echo json_encode($msg);	
 }
 
     public function opNodeStatus() {
@@ -264,9 +270,9 @@ public function delNode(){
 	$art = D("Node");
 	$id = trim($_GET['id']);
 	if($art->where("id=".$id)->delete()){
-	   $msg=1;
+	   $msg='删除成功';
 	}else{
-		$msg=0;
+		$msg='删除失败';
 	}	
     echo json_encode($msg);
 }

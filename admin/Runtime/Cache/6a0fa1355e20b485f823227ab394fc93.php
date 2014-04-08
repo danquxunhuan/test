@@ -6,6 +6,9 @@
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<link rel="stylesheet" href="__PUBLIC__/css/admin.css"/>
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 </head>
 
 <body>
@@ -16,7 +19,7 @@
 <!--script src="__PUBLIC__/js/jquery.lazyload.js"></script-->
 <script src="__PUBLIC__/js/functions.js"></script>
 <script src="__PUBLIC__/js/jquery.form.js"></script>
-<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<!-- <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script> -->
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
 
 <!--***************************top******************************-->
@@ -33,7 +36,8 @@
             
         </div>
     </div>    
-
+  
+ 
 <!--***************************content--left---right******************************-->   
              <div class="wapper">
                 <div class="left fl">
@@ -69,7 +73,7 @@
             <td><?php if($vo['status'] == 1): ?>已发布<?php else: ?>未审核<?php endif; ?></td>
             <td><?php echo (date("Y-m-d H:i",$vo["create_time"])); ?></td>
             <td><?php echo (date("Y-m-d H:i",$vo["up_time"])); ?></td>
-            <td>[ <a href="__URL__/edit?aid=<?php echo ($vo["aid"]); ?>">编辑 </a> ] [ <a link="__URL__/del/aid/<?php echo ($vo["aid"]); ?>" href="javascript:void(0)" name="<?php echo ($vo["title"]); ?>" class="del">删除 </a> ]</td>
+            <td>[ <a href="__URL__/edit?aid=<?php echo ($vo["aid"]); ?>">编辑 </a> ] [ <a href='#' tid='<?php echo ($vo["aid"]); ?>' name="<?php echo ($vo["title"]); ?>" class="del">删除 </a> ]</td>
         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 </table>
 					
@@ -81,15 +85,25 @@
         
         <script type="text/javascript">
             $(function(){
+                function del(){
+
+                }
                 $(".del").click(function(){
-                    var delLink=$(this).attr("link");
-                    popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){
-                        if(action == 'ok'){
-                            top.window.location.href=delLink;
-                        }
-                    });
-                    return false;
-                });
+                  var id=$(this).attr('tid');
+                        $.ajax({
+                            url:'__URL__/del',
+                            dataType:'json',
+                            cache:false,
+                            data:{"id":id},
+                            success:function(msg){
+                                if(msg==1){
+                                    layer.alert('删除成功',9,'操作提示',function(){window.location.href='__URL__/index'});
+                                }else if(msg==0){
+                                    layer.alert('删除失败',9,'操作提示');
+                                }
+                            }
+                         });
+              });
             });
         </script>
     </body>

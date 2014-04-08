@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 <style>
 .wapper{width:100%;height:auto;margin:auto 0px;}
 .right{float:right;width:78%;height:600px;box-shadow:0px 3px 6px #BDBFBE}
@@ -27,7 +29,7 @@
 <!--script src="__PUBLIC__/js/jquery.lazyload.js"></script-->
 <script src="__PUBLIC__/js/functions.js"></script>
 <script src="__PUBLIC__/js/jquery.form.js"></script>
-<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<!-- <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script> -->
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
 
 <!--***************************top******************************-->
@@ -54,7 +56,7 @@
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Jz" >家长列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Ls" >老师列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access" >管理员列表</a></li>
-        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodeList" >节点管理</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodelist" >节点管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/roleList" >角色管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Tags" >标签管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Active" >活动列表</a></li>
@@ -75,7 +77,7 @@
                         <thead>
                             <tr>
                                 <th>序号</th>
-                                <th>节点结构  <b title="单击分类隐藏/显示该分类下在子类">[i]</b></th>
+                                <th>节点结构 <b title="单击分类隐藏/显示该分类下在子类">[i]</b></th>
                                 <th>节点ID</th>
                                 <th>名称</th>
                                 <th>显示名</th>
@@ -105,23 +107,18 @@
     $(function(){
        $(".del").click(function(){
         var id=$(this).attr('tid');
-          if(confirm('删除不可恢复！你确认要删除？')){
-            $.ajax({
-                url:'__URL__/delNode',
-                data:{"id":id},
-                dataType:'json',
-                cache:false,    
-                success:function(msg){
-                    if(msg==1){
-                        alert('删除节点成功');
-                    }else{
-                       alert('删除节点失败'); 
-                    }
-                }
-            });
-          }else{
-           return false;
-          }
+          layer.confirm('确认删除?',function(index){
+                 $.ajax({
+                   url:'__URL__/delNode',
+                   data:{"id":id},
+                   type:'get',
+                   dataType:'json',
+                   cache:false,
+                   success:function(msg){
+                     layer.alert(msg,9,'提示信息',function(){window.location.href='__URL__/nodeList';})
+                   }
+                 });
+           });
        });
     });
 </script>

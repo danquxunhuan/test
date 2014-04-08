@@ -207,12 +207,15 @@ public function edit() {
 
 
     public function del() {
-        if (M("Article")->where("aid=" . (int) $_GET['aid'])->delete()) {
-            $this->success("成功删除");
+        if (M("Article")->where("aid=" . (int) $_GET['id'])->delete()) {
+            $msg=1;
+            //$this->success("成功删除");
 //           echo json_encode(array("status"=>1,"info"=>""));
         } else {
-            $this->error("删除失败，可能是不存在该ID的记录");
+            // $this->error("删除失败，可能是不存在该ID的记录");
+            $msg=0;
         }
+        echo json_encode($msg);
     }
 	
 	

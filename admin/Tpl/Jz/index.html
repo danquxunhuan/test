@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 
 </head>
 <body>
@@ -55,19 +57,18 @@ $(function(){
 	$('.del').click(function(){
 		var uid = $(this).attr('uid');
 		var uname = $(this).attr('uname');
-		if(confirm('删除不可恢复！您确认要删除【'+$(this).attr("uname")+'】吗？')){
-			$.ajax({
-				url:'__URL__/del',
-				data:{"uid":uid},
-				dataType:'json',
-				cache:false,
-				success:function(msg){
-					alert(msg);
-				}
-			});
-		}else{
-			return false;
-		}
+   layer.confirm('确认删除?',function(index){
+         $.ajax({
+           url:'__URL__/del',
+           data:{"uid":uid},
+           dataType:'json',
+           cache:false,
+           success:function(msg){
+             layer.alert(msg,9,'提示信息',function(){window.location.href='__URL__/index';});
+           }
+         });
+    });
+		
 	});
 });
 </script> 

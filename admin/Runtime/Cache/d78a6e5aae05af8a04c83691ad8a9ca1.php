@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 <style>
 .wapper{width:100%;height:auto;margin:auto 0px;}
 .right{float:right;width:78%;height:600px;box-shadow:0px 3px 6px #BDBFBE}
@@ -27,7 +29,7 @@
 <!--script src="__PUBLIC__/js/jquery.lazyload.js"></script-->
 <script src="__PUBLIC__/js/functions.js"></script>
 <script src="__PUBLIC__/js/jquery.form.js"></script>
-<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<!-- <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script> -->
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
 
 <!--***************************top******************************-->
@@ -54,7 +56,7 @@
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Jz" >家长列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Ls" >老师列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access" >管理员列表</a></li>
-        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodeList" >节点管理</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodelist" >节点管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/roleList" >角色管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Tags" >标签管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Active" >活动列表</a></li>
@@ -88,7 +90,7 @@
                                 <td><?php echo ($vo["name"]); ?></td>
                                 <td align="left"><?php echo ($vo["remark"]); ?></td>
                                 <td><?php echo ($vo["statusTxt"]); ?></td>
-                                <td><?php if($vo["pid"] == 0): ?>--<?php else: ?>[ <a href="javascript:void(0);" class="opStatus" val="<?php echo ($vo["status"]); ?>"><?php echo ($vo["chStatusTxt"]); ?></a> ] [ <a href="__URL__/editRole?id=<?php echo ($vo["id"]); ?>" class="edit">编辑</a> ] [<a link="__URL__/delRole/id/<?php echo ($vo['id']); ?>" href="javascript:void();" name="<?php echo ($vo['name']); ?>" class="del" onclick="del();" >删除</a>] [ <a href="__URL__/changeRole?id=<?php echo ($vo["id"]); ?>" class="edit">权限分配</a> ]<?php endif; ?></td>
+                                <td><?php if($vo["pid"] == 0): ?>--<?php else: ?>[ <a href="javascript:void(0);" class="opStatus" val="<?php echo ($vo["status"]); ?>"><?php echo ($vo["chStatusTxt"]); ?></a> ] [ <a href="__URL__/editRole?id=<?php echo ($vo["id"]); ?>" class="edit">编辑</a> ] [<a tid="<?php echo ($vo['id']); ?>" name="<?php echo ($vo['name']); ?>" class="del" >删除</a>] [ <a href="__URL__/changeRole?id=<?php echo ($vo["id"]); ?>" class="edit">权限分配</a> ]<?php endif; ?></td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>
                 </div>
@@ -98,13 +100,19 @@
 <script type="text/javascript">
     $(function(){
         $(".del").click(function(){ 
-            var delLink=$(this).attr("link"); 
-            popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){ 
-                if(action == 'ok'){ 
-                    top.window.location.href=delLink; 
-                } 
-            }); 
-            return false; 
+            var id=$(this).attr("tid"); 
+            layer.confirm('确认删除?',function(index){
+                 $.ajax({
+                   url:'__URL__/delRole',
+                   data:{"id":id},
+                   type:'get',
+                   dataType:'json',
+                   cache:false,
+                   success:function(msg){
+                     layer.alert(msg,9,'提示信息',function(){window.location.href='__URL__/roleList';})
+                   }
+                 });
+           });
         }); 
     });
 </script>

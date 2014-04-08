@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 <style>
 .wapper{width:100%;height:auto;margin:auto 0px;}
 .right{float:right;width:78%;height:600px;box-shadow:0px 3px 6px #BDBFBE}
@@ -27,7 +29,7 @@
 <!--script src="__PUBLIC__/js/jquery.lazyload.js"></script-->
 <script src="__PUBLIC__/js/functions.js"></script>
 <script src="__PUBLIC__/js/jquery.form.js"></script>
-<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<!-- <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script> -->
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
 
 <!--***************************top******************************-->
@@ -93,7 +95,7 @@
                                 <td><?php echo ($vo["statusTxt"]); ?></td>
                                 <td><?php echo ($vo["remark"]); ?></td>
                                 <td><?php echo (date('Y-m-d H:i',$vo["time"])); ?></td>
-                                <td><?php if($vo["email"] == C('ADMIN_AUTH_KEY')): ?>--<?php else: ?>[ <a href="__URL__/editAdmin?aid=<?php echo ($vo["aid"]); ?>">编辑</a> ] [ <a link="__URL__/delAdmin/aid/<?php echo ($vo['aid']); ?>" href="javascript:void();" name="<?php echo ($vo['username']); ?>" class="del" onclick="delarea();" >删除</a> ]<?php endif; ?></td>
+                                <td><?php if($vo["email"] == C('ADMIN_AUTH_KEY')): ?>--<?php else: ?>[ <a href="__URL__/editAdmin?aid=<?php echo ($vo["aid"]); ?>">编辑</a> ] [ <a tid="<?php echo ($vo['aid']); ?>" class="del"  >删除</a> ]<?php endif; ?></td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>
                 </div>
@@ -105,13 +107,19 @@
 <script type="text/javascript">
     $(function(){
         $(".del").click(function(){ 
-            var delLink=$(this).attr("link"); 
-            popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){ 
-                if(action == 'ok'){ 
-                    top.window.location.href=delLink; 
-                } 
-            }); 
-            return false; 
+            var id=$(this).attr("tid"); 
+             layer.confirm('确认删除?',function(index){
+                 $.ajax({
+                   url:'__URL__/delAdmin',
+                   data:{"aid":id},
+                   type:'get',
+                   dataType:'json',
+                   cache:false,
+                   success:function(msg){
+                     layer.alert(msg,9,'提示信息',function(){window.location.href='__URL__/index';})
+                   }
+                 });
+           });
         }); 
     });
 </script>
