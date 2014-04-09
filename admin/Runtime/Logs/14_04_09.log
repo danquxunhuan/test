@@ -1083,3 +1083,28 @@ ERR: 非法操作:public
 [ 2014-04-09T14:57:44+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
 ERR: 非法操作:statics
 
+[ 2014-04-09T15:25:57+08:00 ] 127.0.0.1 /test/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T15:26:01+08:00 ] 127.0.0.1 /test/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T16:00:36+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T16:00:37+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T16:00:41+08:00 ] 127.0.0.1 /test/admin.php/ls/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.002658s ]
+SQL: UPDATE `ms_member` SET `uname`='王宇浩',`password`='37ef52d2d013a1427e9ac1a7eb72163f',`status`=1,`jlpwd`='d41d8cd98f00b204e9800998ecf8427e',`phone`='13141402547',`classid`='null',`obj_id`=5,`province`=1,`city`=0,`area`=0,`rankid`=1,`edu_id`=0,`coin`=0,`image`='',`remarks`='0' WHERE ( `uid` = 33 ) [ RunTime:0.000308s ]
+
+[ 2014-04-09T16:00:42+08:00 ] 127.0.0.1 /test/admin.php/ls/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T16:20:11+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
