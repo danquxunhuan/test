@@ -60,10 +60,10 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
                 <p class="yk_p">填写完整的认证信息，你的网站才精彩！</p>
                 <ul class="yq_tab" id="news">
                 	<span class="ge"></span>
-                	<li><a href="__APP__/member/renzheng/uid/{ms:$_GET['uid']}"  >个人资料</a></li>
-                    <li><a href="__APP__/teachcase/index/uid/{ms:$_GET['uid']}"  >教学案例</a></li>
-                    <li><a href="__APP__/mystory/index/uid/{ms:$_GET['uid']}" >我的故事</a></li>
-                    <li><a href="__APP__/member/shezhi/uid/{ms:$_GET['uid']}" >我的设置</a></li>
+                	<li><a href="__APP__/member/renzheng/uid/{ms:$_GET['uid']}">个人资料</a></li>
+                    <li><a href="__APP__/teachcase/index/uid/{ms:$_GET['uid']}">教学案例</a></li>
+                    <li><a href="__APP__/mystory/index/uid/{ms:$_GET['uid']}">我的故事</a></li>
+                    <li><a href="__APP__/member/shezhi/uid/{ms:$_GET['uid']}">我的设置</a></li>
                     <li class="yq_guize yq_amo"><a href="__APP__/member/guanfang/uid/{ms:$_GET['uid']}">官方信息</a></li>
                 </ul>
 				 <!----------------官方信息------------------>
@@ -72,7 +72,7 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
                         <dt><a href="javascript:void(0);"><img src="__PUBLIC__/images/gf.png" /></a></dt>
                         <dd>
                            <h3>官方身份</h3>
-                           <div class="gfxx">在校大学生</div>
+                           <div class="gfxx">{ms:$info['shenfen']}</div>
                        </dd>
                    </dl>
                 </div>
@@ -81,7 +81,7 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
                         <dt class="ms_xiugai"><a href="javascript:void(0);"><img src="__PUBLIC__/images/gf.png" /></a></dt>
                         <dd>
                            <h3>课时费</h3>
-                           <div class="gfxx"><span>300</span> 元/时</div>
+                           <div class="gfxx"><span>{ms:$info['keshifei']}</span> 元/时</div>
                        </dd>
                    </dl>
                 </div>
@@ -90,7 +90,7 @@ for(i in document.images)document.images[i].ondragstart=imgdragstart;
                         <dt class="ms_xiugai"><a href="javascript:void(0);"><img src="__PUBLIC__/images/gf.png" /></a></dt>
                         <dd>
                            <h3>退课次数</h3>
-                           <div class="gfxx"><i>已通过本站成功为8位学生授课，<em>0</em>次退课记录</i></div>
+                           <div class="gfxx"><i>已通过本站成功为{ms:$info['shouke']}位学生授课，<em>{ms:$info['tuike']}</em>次退课记录</i></div>
                        </dd>
                    </dl>
                 </div>

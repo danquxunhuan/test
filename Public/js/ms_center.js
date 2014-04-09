@@ -217,35 +217,36 @@ $(function(){
         //alert($(this).parent().attr("id"));
         });
 		
-	//点击显示  年月日  有bug 重复点击  重复添加	
+//点击显示  年月日  有bug 重复点击  重复添加	
 $('#xuanze_riqi').click(function(){
-   for(var i = 115;i >0;i--){
-    var year =1900 + i;
-    var html = '<option value="'+year+'">'+year+'</option>';
-	 // $('#xuanze_riqi').click(function(event){
-     //    event.stopPropagation();
-     // });
-   $('#xuanze_year').append(html);
-  }
-})
+	$('#xuanze_year').html('');
+	for(var i = 115;i >0;i--){
+		var year =1900 + i;
+		var html = '<option value="'+year+'">'+year+'</option>';
+		 // $('#xuanze_riqi').click(function(event){
+		 //    event.stopPropagation();
+		 // });
+		$('#xuanze_year').append(html);
+	}
+});
 
 $('#xuanze_year').click(function(){
-   for(var i = 12;i >0;i--){
-    var month =0 + i;
-    var html = '<option value="'+month+'">'+month+'</option>';
-	 $('#xuanze_month').append(html);
-  }
- 
-})
+	$('#xuanze_month').html('');
+	for(var i = 12;i >0;i--){
+		var month =0 + i;
+		var html = '<option value="'+month+'">'+month+'</option>';
+		$('#xuanze_month').append(html);
+	}
+});
 
 $('#xuanze_month').click(function(){
-   for(var i = 31;i >0;i--){
-    var day =0 + i;
-    var html = '<option value="'+day+'">'+day+'</option>'; 
-	 $('#xuanze_day').append(html);	
-  }
-	
-})	
+	$('#xuanze_day').html('');	
+	for(var i = 31;i >0;i--){
+		var day =0 + i;
+		var html = '<option value="'+day+'">'+day+'</option>'; 
+		$('#xuanze_day').append(html);	
+	}
+});	
 	
 	 /*********************	
 	 **  by sasa  点击修改

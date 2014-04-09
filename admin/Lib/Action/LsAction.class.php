@@ -225,33 +225,45 @@ public function editinfo(){
 */
 public function editinfoMem() {
 	//$this->checkToken(); //令牌验证
-	$obj=M('Member');
-	$uid=trim($_POST['uid']);
+	$obj=M('Teacher_info');
+	$id=trim($_POST['id']);
 	$data=array(
-		'uname'=>trim($_POST['uname']),
-		'password'=>md5(trim($_POST['password'])),
+		'demain_name'=>trim($_POST['demain_name']),
+		'recommend'=>trim($_POST['recommend']),
+		'sex'=>trim($_POST['sex']),
 		'status'=>trim($_POST['status']),
-		'jlpwd'=>md5(trim($_POST['jlpwd'])),
-		'phone'=>trim($_POST['phone']),
-		'classid'=>trim($_POST['classid']),
-		'obj_id'=>trim($_POST['obj_id']),
-		'province'=>trim($_POST['province']),
-		'city'=>trim($_POST['city']),
-		'area'=>trim($_POST['area']),
-		'rankid'=>trim($_POST['rankid']),
-		'edu_id'=>trim($_POST['edu_id']),
-		'coin'=>trim($_POST['coin']),
-		'image'=>trim($_POST['image']),
-		'remarks'=>trim($_POST['remarks']),		
-		'uid'=>trim($_POST['uid']),
+		'teach_age'=>trim($_POST['teach_age']),
+		'keshifei'=>trim($_POST['keshifei']),
+		'shouke'=>trim($_POST['shouke']),
+		'tuike'=>trim($_POST['tuike']),
+		'distence'=>trim($_POST['distence']),
+		'now_job'=>trim($_POST['now_job']),
+		'mystrong'=>trim($_POST['mystrong']),
+		'teach_style'=>trim($_POST['teach_style']),
+		'email'=>trim($_POST['email']),
+		'identity'=>trim($_POST['identity']),
+		'education'=>trim($_POST['education']),
+		'school'=>trim($_POST['school']),	
+		'major'=>trim($_POST['major']),	
+		'home'=>trim($_POST['home']),	
+		'hobby'=>trim($_POST['hobby']),	
+		'bir_type'=>trim($_POST['bir_type']),	
+		'year'=>trim($_POST['year']),	
+		'month'=>trim($_POST['month']),
+		'day'=>trim($_POST['day']),	
+		'honor'=>trim($_POST['honor']),
+		'space_img'=>trim($_POST['space_img']),	
+		'space_video'=>trim($_POST['space_video']),		
+		'msg'=>trim($_POST['msg']),
+		'id'=>trim($_POST['id']),
 	);
 	//编辑
-   $data['uid'] = $uid;
+   $data['id'] = $id;
    $info = $obj -> save($data);
    if($info){
-		$msg = '修改教师信息成功';
+		$msg = '修改教师附属信息成功';
    }else{
-		$msg = '修改教师信息失败';
+		$msg = '修改教师附属信息失败';
    }
    echo json_encode($msg);
 }

@@ -1321,12 +1321,24 @@ $this->display();
 }
 	   
 	   
-	   //官方信息
-	   public  function guanfang(){
-	    $this->checkULogin();//检查是否登录
-        $this->checkUid();	
-	    $this->display();
-	   }
+//官方信息
+public  function guanfang(){
+	$this->checkULogin();//检查是否登录
+	$this->checkUid();	
+	//读取ms_teacher_info中信息
+	$uid = trim($_GET['uid']);
+	$info = M('Teacher_info')->where('uid='.$uid)->field('identity,keshifei,shouke,tuike,space_img,space_video')->find();
+	switch($info['identity']){
+		case 1:$info['shenfen'] = '顶级名师';break;
+		case 2:$info['shenfen'] = 'VIP名师';break;
+		case 3:$info['shenfen'] = '一线名师';break;
+		case 4:$info['shenfen'] = '机构名师';break;
+		case 5:$info['shenfen'] = '名校学生';break;
+		case 6:$info['shenfen'] = '外教名师';break;
+	}
+	$this->assign('info',$info);
+	$this->display();
+}
 	   
 	   
        //金币管理

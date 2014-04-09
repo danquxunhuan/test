@@ -33,21 +33,42 @@
                                 <th width="120">用户名：</th><td>{ms:$info.uname}</td>
                             </tr>
                             <tr>
+                                <th>二级域名：</th>
+                                <td><input class="input" name="demain_name" type="text" size="40" value="{ms:$info.demain_name}" /></td>
+                            </tr>
+                            <tr>
                                 <th>注册页推荐名师：</th>
                                 <td><input class="input" name="recommend" type="checkbox" value="1" <if condition="$info['recommend'] eq 1">checked="checked"</if> /></td>
                             </tr>
                             <tr>
+                                <th width="120">性 别：</th>
+                                <td><input type="radio" name="sex" value="0" <if condition="$info['sex'] eq 0">checked="checked"</if> />男&nbsp;&nbsp;
+                                <input type="radio" name="sex" value="1" <if condition="$info['sex'] eq 1">checked="checked"</if> />女</td>
+                            </tr>
+                            <tr>
                                 <th width="120">是否隐藏：</th>
-                                <td><input type="radio" name="status" value="0" <if condition="$info['status'] eq 0">checked="checked"</if> />所有人可见
+                                <td><input type="radio" name="status" value="0" <if condition="$info['status'] eq 0">checked="checked"</if> />所有人可见&nbsp;&nbsp;
                                 <input type="radio" name="status" value="1" <if condition="$info['status'] eq 1">checked="checked"</if> />自己可见</td>
                             </tr>
                             <tr>
                                 <th>教学年限：</th>
-                                <td><input class="input" name="teach_age" type="text" size="40" value="{ms:$info.teach_age}" /></td>
+                                <td><input class="input" name="teach_age" type="text" size="10" value="{ms:$info.teach_age}" /> 年</td>
                             </tr>
                             <tr>
                                 <th>课时费：</th>
-                                <td><input class="input" name="keshifei" type="text" size="40" value="{ms:$info.keshifei}" /></td>
+                                <td><input class="input" name="keshifei" type="text" size="10" value="{ms:$info.keshifei}" /> 元/时</td>
+                            </tr>
+                            <tr>
+                                <th>总授课次数：</th>
+                                <td><input class="input" name="shouke" type="text" size="10" value="{ms:$info.shouke}" /> 次</td>
+                            </tr>
+                            <tr>
+                                <th>退课次数：</th>
+                                <td><input class="input" name="tuike" type="text" size="10" value="{ms:$info.tuike}" /> 次</td>
+                            </tr>
+                            <tr>
+                                <th>距 离：</th>
+                                <td><input class="input" name="distence" type="text" size="40" value="{ms:$info.distence}" /></td>
                             </tr>
                              <tr>
                                 <th>现在的工作：</th>
@@ -61,7 +82,7 @@
                                 <th>教学风格：</th>
                                 <td>
                                 <volist name="tags" id="vo">
-                                	<input type="checkbox" name="teach_style" value="{ms:$vo.id}" />&nbsp;{ms:$vo.name}&nbsp;&nbsp;
+                                	<input type="checkbox" class="teaStyle" name="teach_style[]" value="{ms:$vo.id}" />&nbsp;{ms:$vo.name}&nbsp;&nbsp;
                                 </volist></td>
                             </tr>
                             <tr>
@@ -110,111 +131,132 @@
                             </tr>
                             <tr>
                                 <th>生日：</th>
-								<td><input class="input" name="hobby" type="text" size="40" value="{ms:$info.hobby}" /></td>
-                            </tr>
+								<td> 
+							   <select name="bir_type" id="xuanze_riqi">
+                                  <option value="" selected>选择类型</option>
+								  <option value="0">阳历</option>
+								  <option value="1">公立</option>
+							   </select>
                             
+                                <select name="year" style="margin-left:8px;" class="select8" id="xuanze_year">
+							    </select>
                             
-                            
-                            
+							    <select name="month" style="margin-left:8px;" class="select8" id="xuanze_month">
+							    </select>
+						    
+                                <select name="day" style="margin-left:8px;" class="select8" id="xuanze_day">
+							    </select></td></tr>
                              <tr>
-                                <th>年级/科目：</th>
-                                <td> 
-<select name="classid">
-    <volist name="class" id="cli">
-    <option value="{ms:$cli.id}" <if condition="$cli['id'] eq $info['classid']">selected='selected'</if>>{ms:$cli.name}</option>
-    </volist>
-</select> 
-<select name="obj_id">
-    <volist name="subject" id="sli">
-    <option value="{ms:$sli.id}" <if condition="$sli['id'] eq $info['obj_id']">selected='selected'</if>>{ms:$sli.subject}</option>
-    </volist>
-</select> 
-								    </td>
-                            </tr>
-                             <tr>
-                            	<th>常住地区：</th>
-                                <td>
-<div class="zc_text_box">
-   <select id="province" name="province" class="select6">
-        <option value="0">市</option>
-        <volist name="areaData"  id="val">
-             <option value="{ms:$val.id}" <if condition="$val['id'] eq $info['province']">selected="selected"</if>>{ms:$val.name}</option>
-        </volist>
-    </select>&nbsp;&nbsp;&nbsp;
-    <select id="city" name="city" class="select6">
-        <option selected="selected" value="{ms:$city['id']}">{ms:$city['name']}</option>
-    </select>&nbsp;&nbsp;&nbsp;
-    <select id="area" name="area" class="select6">
-        <option selected="selected" value="{ms:$area['id']}">{ms:$area['name']}</option>
-    </select>
-</div>
-				                </td>
-                            </tr>
-							<tr><th>用户级别：</th>
-                                 <td><select name="rankid" style="min-width: 80px;">
-<option value="1" <if condition="$info.rankid eq 1">selected='selected'</if>>注册用户</option>
-<option value="2" <if condition="$info.rankid eq 2">selected='selected'</if>>认证用户</option>
-<option value="3" <if condition="$info.rankid eq 3">selected='selected'</if>>VIP用户</option>
-                                    </select>
-								</td>
-                            </tr>
-                            <tr><th>教育机构：</th>
-                                 <td><select name="edu_id">
-								     <option value="0" selected>--请选择--</option>
-<volist name="edulist" id="eli">
-    <option value="{ms:$eli.id}" <if condition="$eli['id'] eq $info['edu_id']">selected="selected"</if>>{ms:$eli.name}</option>
-</volist></select>
-								</td>
-                            </tr>
-							 <tr>
-                                <th>金币：</th>
-                                <td><input type="text"  name="coin" class="input" style="min-width: 80px;" value="{ms:$info.coin}" /></td>
+                                <th>荣誉证书：</th>
+								<td><input name="honor" type="file" size="40" /></td>
                             </tr>
                             <tr>
-                                <th>会员头像：</th>
-                                <td><input type="file" name="image" value="{ms:$info.image}" /></td>
+                                <th>个人空间三张图片：</th>
+                                <td><input type="file" name="space_img" value="{ms:$info.space_img}" /></td>
                             </tr>
                             <tr>
-                                <th>备注：</th>
-                                <td><textarea name="remarks" style="width:300px; height:100px; resize:none;">{ms:$info.coin}</textarea></td>
+                                <th>1分钟宣传片：</th>
+                                <td><input class="input" size="40" type="text" name="space_video1" value="{ms:$info.space_video}" /></td>
                             </tr>
+                            <tr>
+                                <th>10分钟网课：</th>
+                                <td><input class="input" size="40" type="text" name="space_video2" value="{ms:$info.space_video}" /></td>
+                            </tr>
+                            <tr>
+                                <th>5分钟才艺展示：</th>
+                                <td><input class="input" size="40" type="text" name="space_video3" value="{ms:$info.space_video}" /></td>
+                            </tr>
+                            <tr>
+                                <th>简 介：</th>
+                                <td><textarea name="msg" style="width:300px; height:100px; resize:none;">{ms:$info.msg}</textarea></td>
+                            </tr>
+                            
+                            
                             <tr>
                                 <td colspan="2"><button class="btn wyjsubmit">提交</button></td>
                             </tr>
                         </table>
-                        <input type="hidden" name="uid" value="{ms:$info.uid}"/> 
+                        <input type="hidden" name="id" value="{ms:$info.id}"/> 
                     <!--/form-->
             </div>
         </div>
     <div class="clear"></div>
 <include file="Common:foot" />
 <script type="text/javascript">	
+//点击显示  年月日  有bug 重复点击  重复添加	
+$('#xuanze_riqi').click(function(){
+	$('#xuanze_year').html('');
+	for(var i = 115;i >0;i--){
+		var year =1900 + i;
+		var html = '<option value="'+year+'">'+year+'</option>';
+		 // $('#xuanze_riqi').click(function(event){
+		 //    event.stopPropagation();
+		 // });
+		$('#xuanze_year').append(html);
+	}
+});
+
+$('#xuanze_year').click(function(){
+	$('#xuanze_month').html('');
+	for(var i = 12;i >0;i--){
+		var month =0 + i;
+		var html = '<option value="'+month+'">'+month+'</option>';
+		$('#xuanze_month').append(html);
+	}
+});
+
+$('#xuanze_month').click(function(){
+	$('#xuanze_day').html('');	
+	for(var i = 31;i >0;i--){
+		var day =0 + i;
+		var html = '<option value="'+day+'">'+day+'</option>'; 
+		$('#xuanze_day').append(html);	
+	}
+});	
+
 $(function(){
 	//表单提交
 	$(".wyjsubmit").click(function(){
-		var uname=$("input[name='uname']").val();
+		var demain_name=$("input[name='demain_name']").val();
+		var recommend=$("checkbox[name='recommend']").val();
+		var sex=$("input[name='sex']:checked").val();
 		var status=$("input[name='status']:checked").val();
-		var password=$("input[name='password']").val();
-		var jlpwd=$("input[name='jlpwd']").val();
-		var phone=$("input[name='phone']").val();
-		var classid=$("select[name='classid']").val();
-		var obj_id=$("select[name='obj_id']").val();
-		var province=$("select[name='province']").val();
-		var city=$("select[name='city']").val();
-		var area=$("select[name='area']").val();
-		var rankid=$("select[name='rankid']").val();
-		var edu_id=$("select[name='edu_id']").val();
-		var coin=$("input[name='coin']").val();
-		var image=$("input[name='image']").val();
-		var remarks=$("textarea[name='remarks']").val();
-		var uid=$("input[name='uid']").val();
+		var teach_age=$("input[name='teach_age']").val();
+		var keshifei=$("input[name='keshifei']").val();
+		var shouke=$("input[name='shouke']").val();
+		var tuike=$("input[name='tuike']").val();
+		var distence=$("input[name='distence']").val();
+		var now_job=$("input[name='now_job']").val();
+		var mystrong=$("input[name='mystrong']").val();
+		var email=$("input[name='email']").val();
+		var identity=$("select[name='identity']").val();
+		var education=$("select[name='education']").val();
+		var school=$("input[name='school']").val();
+		var major=$("input[name='major']").val();
+		var home=$("input[name='home']").val();
+		var hobby=$("input[name='hobby']").val();
+		var bir_type=$("select[name='bir_type']").val();
+		var year=$("select[name='year']").val();
+		var month=$("select[name='month']").val();
+		var day=$("select[name='day']").val();
+		var honor=$("input[name='honor']").val();
+		var space_img=$("input[name='space_img']").val();
+		var space_video=$("input[name='space_video']").val();
+		var msg=$("input[name='msg']").val();
+		var id=$("input[name='id']").val();
+		//遍历取出复选框中的值var teach_style=$(".teaStyle:checked").val();
+		var teach_style ='';
+		for(var i=0;i<$('.teaStyle:checked').length;i++){
+			teach_style += $('.teaStyle:checked:eq('+i+')').val()+',';
+		}
+		
 		
 		$.ajax({
-			url:'__URL__/editMem',
+			url:'__URL__/editinfoMem',
 			type:'POST',
 			cache:false,
 			dataType:'JSON',
-			data:{"uname":uname,"status":status,"password":password,"jlpwd":jlpwd,"phone":phone,"classid":classid,"obj_id":obj_id,"province":province,"city":city,"area":area,"rankid":rankid,"edu_id":edu_id,"coin":coin,"image":image,"remarks":remarks,"uid":uid},
+			data:{"demain_name":demain_name,"recommend":recommend,"sex":sex,"status":status,"teach_age":teach_age,"keshifei":keshifei,"shouke":shouke,"tuike":tuike,"distence":distence,"now_job":now_job,"mystrong":mystrong,"teach_style":teach_style,"email":email,"identity":identity,"education":education,"school":school,"major":major,"home":home,"hobby":hobby,"bir_type":bir_type,"year":year,"month":month,"day":day,"honor":honor,"space_img":space_img,"space_video":space_video,"msg":msg,"id":id},
 			success:function(msg){
 				alert(msg);
 				history.go(-1);  //返回上一页
