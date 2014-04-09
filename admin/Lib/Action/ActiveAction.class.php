@@ -51,10 +51,14 @@ class ActiveAction extends CommonAction{
 	   $m= D("Active");
 	   $id=trim($_GET['id']);
 	   if($m->where("id=".$id."")->delete()){
-		   $this->success("删除成功");
+		   $msg='删除成功';
+		   //$this->success("删除成功");
 	   }else{
-		   $this->error("删除失败");
+	   	   $msg='删除失败';
+		   //$this->error("删除失败");
 	   }
+
+	   echo json_encode($msg);
 	
 	
 	}

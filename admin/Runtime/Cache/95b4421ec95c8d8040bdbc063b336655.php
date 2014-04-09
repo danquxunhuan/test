@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 <style>
 .wapper{width:100%;height:auto;margin:auto 0px;}
 .right{float:right;width:78%;height:600px;box-shadow:0px 3px 6px #BDBFBE}
@@ -30,11 +32,11 @@ div.page a{color:white;}
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/calendar/calendar-blue.css"/>
 <link rel="stylesheet" href="__PUBLIC__/css/admin.css"/>
 <script src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
-<!-- <script src="__PUBLIC__/js/jquery.lazyload.js"></script> -->
+<!--script src="__PUBLIC__/js/jquery.lazyload.js"></script-->
 <script src="__PUBLIC__/js/functions.js"></script>
 <script src="__PUBLIC__/js/jquery.form.js"></script>
-<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
-<!-- <script src="__PUBLIC__/js/calendar/calendar.js"></script> -->
+<!-- <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script> -->
+<script src="__PUBLIC__/js/calendar/calendar.js"></script>
 
 <!--***************************top******************************-->
 	<div class="top">
@@ -61,7 +63,7 @@ div.page a{color:white;}
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Jz" >家长列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Ls" >老师列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access" >管理员列表</a></li>
-        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodeList" >节点管理</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodelist" >节点管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/roleList" >角色管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Tags" >标签管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Active" >活动列表</a></li>
@@ -71,6 +73,7 @@ div.page a{color:white;}
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Yueke" >约课列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Fangan" >设计方案列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Lesson" >课程列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Institution" >教育机构</a></li>
      </ul>
 </div>
    <div class="right">
@@ -83,13 +86,31 @@ div.page a{color:white;}
 				   <td><?php echo ($vo["user_id"]); ?></td>
 				   <td><?php echo ($vo["status"]); ?></td>
 				   <td><?php echo (date('Y-m-d H:i',$vo["use_time"])); ?></td>
-				   <td><a href="__URL__/del_yqm/id/<?php echo ($vo["id"]); ?>">删除</a></td>
+				   <td><a  class="del" tid='<?php echo ($vo["id"]); ?>'>删除</a></td>
 				  </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 		     </table>
 			 <div class="result page"><?php echo ($page); ?></div>		  
    </div>
    
    <div class="footer"></div>
-  </div>	   
+  </div>	  <!--  href="__URL__/del_yqm/id/<?php echo ($vo["id"]); ?>" -->
+<script type="text/javascript">
+	$(function(){
+		$(".del").click(function(){
+			var id=$(this).attr("tid");
+			layer.confirm('确认删除?',function(){
+                 $.ajax({
+                   url:'__URL__/del_yqm',
+                   data:{"id":id},
+                   dataType:'json',
+                   cache:false,
+                   success:function(msg){
+                     layer.alert(msg,9,'提示信息',function(){window.location.href='__URL__/yqm_list';})
+                   }
+                 });
+           });
+		});
+	});
+</script>
 </body>
 </html>

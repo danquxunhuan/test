@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="__PUBLIC__/css/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 </head>
 <body>
 <link rel="stylesheet" href="__PUBLIC__/Js/asyncbox/skins/default.css"/>
@@ -15,8 +17,10 @@
 <!--script src="__PUBLIC__/js/jquery.lazyload.js"></script-->
 <script src="__PUBLIC__/js/functions.js"></script>
 <script src="__PUBLIC__/js/jquery.form.js"></script>
-<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<!-- <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script> -->
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 
 <!--***************************top******************************-->
 	<div class="top">
@@ -42,7 +46,7 @@
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Jz" >家长列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Ls" >老师列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access" >管理员列表</a></li>
-        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodeList" >节点管理</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodelist" >节点管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/roleList" >角色管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Tags" >标签管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Active" >活动列表</a></li>
@@ -81,7 +85,7 @@
                                  <td><?php echo ($vo["msg"]); ?></td>
 								      <td><?php echo (date("Y-m-d h:i",$vo["pl_time"])); ?></td>
                                
-                                <td>[ <a href="__URL__/edit?id=<?php echo ($vo["id"]); ?>">编辑 </a> ] [ <a link="__URL__/del/id/<?php echo ($vo["id"]); ?>" href="javascript:void(0)" name="<?php echo ($vo["active_name"]); ?>" class="del">删除 </a> ]</td>
+                                <td>[ <a href="__URL__/edit?id=<?php echo ($vo["id"]); ?>">编辑 </a> ] [ <a tid="<?php echo ($vo["id"]); ?>" name="<?php echo ($vo["active_name"]); ?>" class="del">删除 </a> ]</td>
                             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>
 					
@@ -93,13 +97,19 @@
         <script type="text/javascript">
             $(function(){
                 $(".del").click(function(){
-                    var delLink=$(this).attr("link");
-                    popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){
-                        if(action == 'ok'){
-                            top.window.location.href=delLink;
-                        }
-                    });
-                    return false;
+                    var id=$(this).attr("tid");
+                    layer.confirm('确认删除?',function(){
+                         $.ajax({
+                           url:'__URL__/del',
+                           data:{"id":id},
+                           dataType:'json',
+                           cache:false,
+                           success:function(msg){
+                             layer.alert(msg,9,'提示信息',function(){window.location.href='__URL__/index';})
+                           }
+                         });
+                   });
+                   
                 });
             });
         </script>
