@@ -37,7 +37,7 @@
                             <tr>
                                 <th width="120">审核：</th>
                                 <td><input type="radio" name="status" value="0" <if condition="$info['status'] eq 0">checked="checked"</if> />未审核
-                                <input type="radio" name="status" value="1" <if condition="$info['status'] eq 0">checked="checked"</if> />已审核</td>
+                                <input type="radio" name="status" value="1" <if condition="$info['status'] eq 1">checked="checked"</if> />已审核</td>
                             </tr>
                             <tr>
                                 <th>新密码：</th>
@@ -108,7 +108,7 @@ $(function(){
 	//表单提交
 	$(".wyjsubmit").click(function(){
 		var uname=$("input[name='uname']").val();
-		var status=$("input[name='status']").val();
+		var status=$("input[name='status']:checked").val();
 		var password=$("input[name='password']").val();
 		var phone=$("input[name='phone']").val();
 		var classid=$("select[name='classid']").val();
