@@ -10,6 +10,8 @@
 <script type="text/javascript" src="__PUBLIC__/js/formvalidator.js" charset="UTF-8"></script>
 <script type="text/javascript" src="__PUBLIC__/js/formvalidatorregex.js" charset="UTF-8"></script>
 <script type="text/javascript" src="__PUBLIC__/js/admin.js" charset="UTF-8"></script>
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 <script type="text/javascript">
 $(function(){
     checkSubmit();
@@ -50,19 +52,30 @@ $(function(){
 		$('.del').click(function(){
 			var id = $(this).attr('id');
 			var name = $(this).attr('name');
-			if(confirm('删除不可恢复！您确认要删除【'+$(this).attr("name")+'】吗？')){
-				$.ajax({
-					url:'__URL__/del',
-					data:{"id":id},
-					dataType:'json',
-					cache:false,
-					success:function(msg){
-						alert(msg);
-					}
-				});
-			}else{
-				return false;
-			}
+			layer.confirm('确认删除?',function(){
+                 $.ajax({
+                   url:'__URL__/del',
+                   data:{"id":id},
+                   dataType:'json',
+                   cache:false,
+                   success:function(msg){
+                     layer.alert(msg,9,'提示信息',function(){window.location.href='__URL__/index';})
+                   }
+                 });
+           });
+		// 	if(confirm('删除不可恢复！您确认要删除【'+$(this).attr("name")+'】吗？')){
+		// 		$.ajax({
+		// 			url:'__URL__/del',
+		// 			data:{"id":id},
+		// 			dataType:'json',
+		// 			cache:false,
+		// 			success:function(msg){
+		// 				alert(msg);
+		// 			}
+		// 		});
+		// 	}else{
+		// 		return false;
+		// 	}
 		});
 		//树形图
 		var chn=function(cid,op){

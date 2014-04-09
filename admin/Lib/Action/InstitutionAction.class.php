@@ -17,9 +17,9 @@ class InstitutionAction extends CommonAction{
 		$inst=M("Institution_edu");
 		$info=$inst->where('id='.$id)->delete();
 		if($info){
-			$msg=1;
+			$msg='删除成功';
 		}else{
-			$msg=0;
+			$msg='删除失败';
 		}
 		echo json_encode($msg);
 	}

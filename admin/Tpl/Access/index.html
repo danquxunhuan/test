@@ -67,7 +67,7 @@
     $(function(){
         $(".del").click(function(){ 
             var id=$(this).attr("tid"); 
-             layer.confirm('确认删除?',function(index){
+             layer.confirm('确认删除?',function(){
                  $.ajax({
                    url:'__URL__/delAdmin',
                    data:{"aid":id},

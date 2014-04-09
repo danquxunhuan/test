@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 </head>
 <body>
 <div class="box">
@@ -37,7 +39,7 @@
         <td><a href="{ms:$vo.link}" target="_blank">点击查看</a></td>
         <td>{ms:$vo.start_time}</td>
         <td>{ms:$vo.statusTxt}</td>
-        <td>[ <a href="__URL__/edit?id={ms:$vo.id}">编辑</a> ] [ <a link="__URL__/del/id/{ms:$vo.id}" href="javascript:void(0)" name="{ms:$vo.active_name}" class="del">删除</a> ]</td>
+        <td>[ <a href="__URL__/edit?id={ms:$vo.id}">编辑</a> ] [ <a tid="{ms:$vo.id}" name="{ms:$vo.active_name}" class="del">删除</a> ]</td>
     </tr>
 </volist>
             </table>
@@ -51,13 +53,19 @@
     <script type="text/javascript">
         $(function(){
             $(".del").click(function(){
-                var delLink=$(this).attr("link");
-                popup.confirm('你真的打算删除【<b>'+$(this).attr("name")+'</b>】吗?','温馨提示',function(action){
-                    if(action == 'ok'){
-                        top.window.location.href=delLink;
-                    }
-                });
-                return false;
+                var id=$(this).attr("tid");
+                  layer.confirm('确认删除?',function(){
+                 $.ajax({
+                   url:'__URL__/del',
+                   data:{"id":id},
+                   type:'get',
+                   dataType:'json',
+                   cache:false,
+                   success:function(msg){
+                     layer.alert(msg,9,'提示信息',function(){window.location.href='__URL__/index';})
+                   }
+                 });
+              });
             });
         });
     </script>

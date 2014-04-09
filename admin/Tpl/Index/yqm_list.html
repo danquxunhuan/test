@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="__PUBLIC__/css/admin/style.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/css/mstang123.css" type="text/css" />
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 <style>
 .wapper{width:100%;height:auto;margin:auto 0px;}
 .right{float:right;width:78%;height:600px;box-shadow:0px 3px 6px #BDBFBE}
@@ -42,7 +44,7 @@ div.page a{color:white;}
 				   <td>{ms:$vo.user_id}</td>
 				   <td>{ms:$vo.status}</td>
 				   <td>{ms:$vo.use_time|date='Y-m-d H:i',###}</td>
-				   <td><a href="__URL__/del_yqm/id/{ms:$vo.id}">删除</a></td>
+				   <td><a  class="del" tid='{ms:$vo.id}'>删除</a></td>
 				  </tr>
                 </volist>
 		     </table>
@@ -50,6 +52,24 @@ div.page a{color:white;}
    </div>
    
    <div class="footer"></div>
-  </div>	   
+  </div>	  <!--  href="__URL__/del_yqm/id/{ms:$vo.id}" -->
+<script type="text/javascript">
+	$(function(){
+		$(".del").click(function(){
+			var id=$(this).attr("tid");
+			layer.confirm('确认删除?',function(){
+                 $.ajax({
+                   url:'__URL__/del_yqm',
+                   data:{"id":id},
+                   dataType:'json',
+                   cache:false,
+                   success:function(msg){
+                     layer.alert(msg,9,'提示信息',function(){window.location.href='__URL__/yqm_list';})
+                   }
+                 });
+           });
+		});
+	});
+</script>
 </body>
 </html>

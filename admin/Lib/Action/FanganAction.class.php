@@ -39,19 +39,22 @@ public function edit(){
 	}
 	
 }	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public function del(){
+		if($_GET['id']){
+			$mode=M("Fangan");
+			if($mode->where("id=".$_GET['id'])->delete()){
+				$msg='删除成功';
+			}else{
+			    $msg='删除失败';
+			}
+		}else{
+			$msg='删除失败';
+		}
+		echo json_encode($msg);
+
+	}
+		
 	
 }
 

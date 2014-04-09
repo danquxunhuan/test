@@ -1,0 +1,346 @@
+[ 2014-04-09T09:33:01+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:33:05+08:00 ] 127.0.0.1 /test/admin.php/Access/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:33:11+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T09:33:17+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T09:33:23+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T09:36:03+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T09:36:25+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T09:37:04+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T09:37:13+08:00 ] 127.0.0.1 /test/admin.php/area/del?id=19&_=1397007424164
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001225s ]
+SQL: SHOW COLUMNS FROM `ms_area` [ RunTime:0.003167s ]
+SQL: SELECT * FROM `ms_area` WHERE ( pid=19 ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: DELETE FROM `ms_area` WHERE ( id=19 ) [ RunTime:0.000347s ]
+
+[ 2014-04-09T09:37:14+08:00 ] 127.0.0.1 /test/admin.php/area/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:37:21+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:37:43+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:40:00+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:42:13+08:00 ] 127.0.0.1 /test/admin.php/Index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:42:19+08:00 ] 127.0.0.1 /test/admin.php/index/del_yqm?id=13&_=1397007733758
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.002436s ]
+SQL: DELETE FROM `ms_yqm` WHERE ( id=13 ) [ RunTime:0.000243s ]
+
+[ 2014-04-09T09:42:20+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:42:26+08:00 ] 127.0.0.1 /test/admin.php/index/del_yqm?id=12&_=1397007740483
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001103s ]
+SQL: SHOW COLUMNS FROM `ms_yqm` [ RunTime:0.020212s ]
+SQL: DELETE FROM `ms_yqm` WHERE ( id=12 ) [ RunTime:0.000223s ]
+
+[ 2014-04-09T09:42:27+08:00 ] 127.0.0.1 /test/admin.php/index/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:43:02+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T09:49:57+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T09:50:01+08:00 ] 127.0.0.1 /test/admin.php/review/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:50:08+08:00 ] 127.0.0.1 /test/admin.php/review/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:50:15+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T09:50:18+08:00 ] 127.0.0.1 /test/admin.php/review/del?id=1&_=1397008215289
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+SQL: SHOW COLUMNS FROM `ms_review` [ RunTime:0.004105s ]
+SQL: DELETE FROM `ms_review` WHERE ( id=1 ) [ RunTime:0.000398s ]
+
+[ 2014-04-09T09:50:20+08:00 ] 127.0.0.1 /test/admin.php/review/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:50:23+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T09:53:16+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T09:53:19+08:00 ] 127.0.0.1 /test/admin.php/yueke/del?id=1&_=1397008399531
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001293s ]
+SQL: SHOW COLUMNS FROM `ms_yueke` [ RunTime:0.003226s ]
+SQL: DELETE FROM `ms_yueke` WHERE ( id=1 ) [ RunTime:0.000288s ]
+
+[ 2014-04-09T09:53:20+08:00 ] 127.0.0.1 /test/admin.php/yueke/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T09:54:19+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:00:42+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:01:23+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:01:26+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397008886465
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000673s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.003691s ]
+ERR: Model:del您所请求的方法不存在！
+
+[ 2014-04-09T10:01:35+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:01:58+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397008918408
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.002369s ]
+ERR: Model:del您所请求的方法不存在！
+
+[ 2014-04-09T10:02:52+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397008972926
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.002829s ]
+ERR: Model:del您所请求的方法不存在！
+
+[ 2014-04-09T10:02:55+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:03:03+08:00 ] 127.0.0.1 /test/admin.php/fangan/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T10:03:11+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:03:13+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397008993416
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.002355s ]
+ERR: Model:del您所请求的方法不存在！
+
+[ 2014-04-09T10:03:15+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397008995884
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000688s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.003189s ]
+ERR: Model:del您所请求的方法不存在！
+
+[ 2014-04-09T10:04:21+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:04:29+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397009069247
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000704s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.003222s ]
+ERR: Model:del您所请求的方法不存在！
+
+[ 2014-04-09T10:05:07+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:05:10+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397009109964
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000920s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001066s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.002804s ]
+ERR: Model:del您所请求的方法不存在！
+
+[ 2014-04-09T10:05:48+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:05:51+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397009151739
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001019s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.002534s ]
+ERR: Model:del您所请求的方法不存在！
+
+[ 2014-04-09T10:05:53+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397009152978
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.002344s ]
+ERR: Model:del您所请求的方法不存在！
+
+[ 2014-04-09T10:05:53+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397009153178
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000712s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000821s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.003253s ]
+ERR: Model:del您所请求的方法不存在！
+
+[ 2014-04-09T10:05:53+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397009153379
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000899s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001013s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.002646s ]
+ERR: Model:del您所请求的方法不存在！
+
+[ 2014-04-09T10:05:53+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397009153537
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000931s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.004198s ]
+ERR: Model:del您所请求的方法不存在！
+
+[ 2014-04-09T10:06:24+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:06:27+08:00 ] 127.0.0.1 /test/admin.php/fangan/del?id=1&_=1397009187074
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `ms_fangan` [ RunTime:0.002864s ]
+SQL: DELETE FROM `ms_fangan` WHERE ( id=1 ) [ RunTime:0.000288s ]
+
+[ 2014-04-09T10:06:28+08:00 ] 127.0.0.1 /test/admin.php/fangan/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T10:06:31+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:06:33+08:00 ] 127.0.0.1 /test/admin.php/lesson/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T10:06:38+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:06:44+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:06:48+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:07:30+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:07:32+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:07:35+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:09:06+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:09:09+08:00 ] 127.0.0.1 /test/admin.php/institution/del
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001261s ]
+SQL: SHOW COLUMNS FROM `ms_institution_edu` [ RunTime:0.003101s ]
+SQL: DELETE FROM `ms_institution_edu` WHERE ( id=5 ) [ RunTime:0.000304s ]
+
+[ 2014-04-09T10:09:10+08:00 ] 127.0.0.1 /test/admin.php/institution/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T10:09:53+08:00 ] 127.0.0.1 /test/admin.php/institution/modify_info
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `ms_institution_edu` [ RunTime:0.002673s ]
+SQL: UPDATE `ms_institution_edu` SET `name`='北大',`tel`=100125,`address`='海淀区上地南口',`info`='1231阿什顿发斯蒂芬asdfsadf',`linkman`='王玉洁' WHERE ( `id` = 4 ) [ RunTime:0.000238s ]
+
+[ 2014-04-09T10:09:55+08:00 ] 127.0.0.1 /test/admin.php/institution/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T10:12:31+08:00 ] 127.0.0.1 /test/admin.php/institution/modify_info
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000706s ]
+SQL: SHOW COLUMNS FROM `ms_institution_edu` [ RunTime:0.002817s ]
+SQL: UPDATE `ms_institution_edu` SET `name`='北大教育机构',`tel`=100125,`address`='海淀区上地南口',`info`='1231阿什顿发斯蒂芬asdfsadf',`linkman`='王玉洁' WHERE ( `id` = 4 ) [ RunTime:0.000265s ]
+
+[ 2014-04-09T10:12:33+08:00 ] 127.0.0.1 /test/admin.php/institution/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T10:12:39+08:00 ] 127.0.0.1 /test/admin.php/institution/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T10:12:48+08:00 ] 127.0.0.1 /test/admin.php/institution/add_edu
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+SQL: SHOW COLUMNS FROM `ms_institution_edu` [ RunTime:0.002563s ]
+SQL: INSERT INTO `ms_institution_edu` (`name`,`tel`,`address`,`info`,`linkman`) VALUES ('22222222222222',11111111,'111111111111','123123','') [ RunTime:0.000198s ]
+
+[ 2014-04-09T10:12:50+08:00 ] 127.0.0.1 /test/admin.php/institution/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T10:13:48+08:00 ] 127.0.0.1 /test/admin.php/institution/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T10:14:02+08:00 ] 127.0.0.1 /test/admin.php/institution/add_edu
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `ms_institution_edu` [ RunTime:0.002552s ]
+SQL: INSERT INTO `ms_institution_edu` (`name`,`tel`,`address`,`info`,`linkman`) VALUES ('请问请问',123456,'阿斯蒂芬','第三方','爱的色放') [ RunTime:0.000214s ]
+
+[ 2014-04-09T10:14:04+08:00 ] 127.0.0.1 /test/admin.php/institution/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T10:14:10+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:14:13+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:14:15+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:14:22+08:00 ] 127.0.0.1 /test/admin.php/article/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:public
+
+[ 2014-04-09T10:14:35+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:14:41+08:00 ] 127.0.0.1 /test/admin.php/jz/editMem
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001190s ]
+SQL: SHOW COLUMNS FROM `ms_member` [ RunTime:0.003506s ]
+SQL: UPDATE `ms_member` SET `uname`='魏志国',`password`='14e1b600b1fd579f47433b88e8d85291',`status`=0,`phone`='1367892675',`classid`='1',`rankid`=1,`coin`=5,`province`=1,`city`=4,`area`=11 WHERE ( `uid` = 6 ) [ RunTime:0.000329s ]
+
+[ 2014-04-09T10:14:43+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+
+[ 2014-04-09T10:15:11+08:00 ] 127.0.0.1 /test/admin.php/Public/statics/js/calendar/calendar-blue.css
+ERR: 非法操作:statics
+

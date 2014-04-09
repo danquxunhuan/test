@@ -30,7 +30,7 @@ th{ text-align:right;}
 <!--script src="__PUBLIC__/js/jquery.lazyload.js"></script-->
 <script src="__PUBLIC__/js/functions.js"></script>
 <script src="__PUBLIC__/js/jquery.form.js"></script>
-<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<!-- <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script> -->
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
 
 <!--***************************top******************************-->
@@ -57,7 +57,7 @@ th{ text-align:right;}
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Jz" >家长列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Ls" >老师列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access" >管理员列表</a></li>
-        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodeList" >节点管理</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodelist" >节点管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/roleList" >角色管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Tags" >标签管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Active" >活动列表</a></li>

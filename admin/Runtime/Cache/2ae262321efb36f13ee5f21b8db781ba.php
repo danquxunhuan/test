@@ -12,15 +12,13 @@
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/calendar/calendar-blue.css"/>
 <link rel="stylesheet" href="__PUBLIC__/css/admin.css"/>
 <script src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
-<<<<<<< HEAD
 <!--script src="__PUBLIC__/js/jquery.lazyload.js"></script-->
-=======
-<!-- <script src="__PUBLIC__/js/jquery.lazyload.js"></script> -->
->>>>>>> 996b563ea41b372ae68cfd7cf8768ed2d5057c50
 <script src="__PUBLIC__/js/functions.js"></script>
 <script src="__PUBLIC__/js/jquery.form.js"></script>
-<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<!-- <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script> -->
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 
 <!--***************************top******************************-->
 	<div class="top">
@@ -46,7 +44,7 @@
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Jz" >家长列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Ls" >老师列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access" >管理员列表</a></li>
-        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodeList" >节点管理</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodelist" >节点管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/roleList" >角色管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Tags" >标签管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Active" >活动列表</a></li>
@@ -61,7 +59,7 @@
 </div>
                 <div id="Right"  class="right">
                     <div class="tab1">
-                        <div class="current">活动列表---<a href="__URL__/add">添加活动</a></div>
+                        <div class="current">课程列表---<a href="__URL__/add">添加课程</a></div>
                     </div> 
                     <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tab">
                         <tr>
