@@ -37,6 +37,8 @@ div.page a{color:white;}
 <script src="__PUBLIC__/js/jquery.form.js"></script>
 <!-- <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script> -->
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 
 <!--***************************top******************************-->
 	<div class="top">

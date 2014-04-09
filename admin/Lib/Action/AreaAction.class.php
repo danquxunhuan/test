@@ -17,16 +17,23 @@ public	function index(){
 */	
 public	function add(){
 	if(IS_POST){  //添加
-		$cate=new AreaModel();
-		if($vo=$cate->create()){
-			if($cate->add()){
-				$this->success('添加成功');
-			}else{
-				$this->error('添加栏目失败');
-			}
+		$cate=M("Area");
+		$data=array(
+			'pid'=>$_POST['pid'],
+			'name'=>$_POST['name']
+			);
+		if($data['pid']==0){
+			$data['path']=0;
 		}else{
-			$this->error($cate->getError());
+			$list=$cate->where("id=".$data['pid'])->find();
+			$data['path']=$list['path'].'-'.$list['id'];
 		}
+		if($cate->add($data)){
+			echo json_encode(1);
+		}else{
+			echo json_encode(0);
+		}
+		
 	}else{	//展示
 		//全部地区树形图
 		import("@.ORG.Category");
@@ -44,14 +51,16 @@ public	function add(){
 public	function edit(){
 	if(IS_POST){  //编辑
 		$cate=new AreaModel();
-		if($vo=$cate->create()){
-			if($cate->save($_POST)){
-				$this->success('编辑成功',U('Area/index'));
-			}else{
-				$this->error('编辑失败');
-			}
+		$data=array(
+			'pid'=>$_POST['pid'],
+			'name'=>trim($_POST['name'])
+			);
+		
+		$id=$_POST['id'];
+		if($cate->where("id=".$id)->save($data)){
+			echo json_encode('操作成功');
 		}else{
-			$this->error($cate->getError());
+			echo json_encode('操作失败');
 		}
 	}else{	//展示
 		$info = M('Area')->where("id=" . (int) $_GET['id'])->find();
@@ -74,7 +83,7 @@ public	function edit(){
 *删除地区
 */	
 public function del(){
-	$this->checkToken(); //令牌验证
+	//$this->checkToken(); //令牌验证
 	$id=isset($_GET['id'])?$_GET['id']+0:0;
 	//删除地区前应保证其为最下级
 	$zi = M('Area')->where('pid='.(int)$id)->find();

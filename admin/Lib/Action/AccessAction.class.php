@@ -49,7 +49,7 @@ public function addAdmin() {
 */
 public function editAdmin() {
 	if (IS_POST)  {
-		$this->checkToken();
+		//$this->checkToken();
 		//header('Content-Type:application/json; charset=utf-8');
 		//echo json_encode(D("Access")->editAdmin());
 		$M = M("Admin");
@@ -83,6 +83,37 @@ public function editAdmin() {
 		$this->display("addAdmin");
 	}
 }
+
+
+    public function modify_admin(){
+        $aid=$_POST['aid'];
+        $data=array(
+              'username'=>$_POST['username'],
+              'realname'=>$_POST['realname'],
+              'email'=>$_POST['email'],
+              'password'=>md5($_POST['password']),
+              'status'=>$_POST['status'],
+              'role_id'=>$_POST['role_id'],
+              'remark'=>$_POST['remark']
+            );
+        $admin=M("Admin");
+        if(empty($aid)){
+            $info=$admin->add($data);
+            if($info){
+                $msg=1;
+            }else{
+                $msg=0;
+            }
+        }else{
+            $info=$admin->where("aid=".$aid)->save($data);
+            if($info){
+                $msg=1;
+            }else{
+                $msg=0;
+            }
+        }
+        echo json_encode($msg);
+    }
 
 /*
 * 删除管理员

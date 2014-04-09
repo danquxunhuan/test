@@ -49,7 +49,7 @@ public function html_add(){
 * @author shasha 2013-11-01
 */
 public  function add_yqm(){
-	$this->checkToken();//检查是否登录
+	//$this->checkToken();//检查是否登录
 	$yqm= D("Yqm");
 	
 	$data['use_time'] = time();
@@ -59,7 +59,9 @@ public  function add_yqm(){
 		$data['yqm_sn']=$this->get_unique_id(6);
 		$yqm->add($data);	
 	}
-	$this->success("添加成功",U('Index/yqm_list'));
+	$msg='添加成功';
+	echo json_encode($msg);
+	//$this->success("添加成功",U('Index/yqm_list'));
 }
 
     	
@@ -68,7 +70,7 @@ public  function add_yqm(){
      * @author shasha 2013-11-01
      */
     public  function del_yqm(){
-	   $this->checkToken();//检查是否登录
+	   //$this->checkToken();//检查是否登录
 	   $yqm= D("Yqm");
 	   $id=trim($_GET['id']);
 	   if($yqm->where("id=".$id."")->delete()){

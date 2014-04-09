@@ -63,7 +63,7 @@ input.ms_sub:hover{border:1px solid #545353;background:#5E5E5E}
         <dt><a href="__ROOT__/member/info/uid/{ms:$vo.uid}" target="_blank"><img src="__PUBLIC__/images/90.png"  /><div class="a_posi"></div></a></dt>
         <dd>
             <p class="ms_name"><a href="__ROOT__/member/info/uid/{ms:$vo.uid}" target="_blank">{ms:$vo.uname}</a>&nbsp;&nbsp;
-            <input type="checkbox" name="tjid[]" value="{ms:$vo.uid}" 
+            <input type="checkbox" name="tjid[]" value="{ms:$vo.uid}" id='stjid'
             <php>//判断已经推荐的老师，反选
             $arr = explode(',',$info['tjid']);
             if(in_array($vo['uid'],$arr)){
@@ -83,8 +83,8 @@ input.ms_sub:hover{border:1px solid #545353;background:#5E5E5E}
     </div>
 </div>
 </td></tr></notempty>
-<tr><td align="right"><input type="submit" name="act" value="提 交" class="ms_sub" /></td></tr></table>
-</form>
+<tr><td align="right"><input type="button" name="act" value="提 交" class="ms_sub" /></td></tr></table>
+<!-- </form> -->
                   </div>
                 </div>
             </div>
@@ -92,5 +92,31 @@ input.ms_sub:hover{border:1px solid #545353;background:#5E5E5E}
              </div>
              </div>
         <div class="clear"></div>
+<script type="text/javascript">
+    $(function(){
+        $(".ms_sub").click(function(){
+            var id=$("input[name='id']").val();
+            var msg=$("textarea[name='msg']").val();
+            var status=$("input[name='status']:checked").val();
+            var tjid=$("stjid").val();
+            $.ajax({
+                url:'',
+                type:'post',
+                dataType:'json',
+                data:{"id":id,"msg":msg,"status":status,"tjid":tjid},
+                cache:false,
+                success:function(msg){
+                  if(msg==1){
+                    layer.alert('编辑成功',9,'提示信息',function(){window.location.href='__URL__/index';});
+                  }else if(msg==0){
+                    layer.alert('编辑失败',8,'提示信息');
+                  }
+                }
+            });
+
+        });
+    });
+</script>
+
  </body>
 </html>

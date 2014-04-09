@@ -187,9 +187,9 @@ public function editMem() {
    $data['uid'] = $uid;
    $info = $obj -> save($data);
    if($info){
-		$msg = '修改教师信息成功';
+		$msg = 1;
    }else{
-		$msg = '修改教师信息失败';
+		$msg = 0;
    }
    echo json_encode($msg);
 }

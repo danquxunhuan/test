@@ -125,8 +125,13 @@ $(function(){
 			dataType:'JSON',
 			data:{"uname":uname,"status":status,"password":password,"phone":phone,"classid":classid,"rankid":rankid,"coin":coin,"uid":uid,"province":province,"city":city,"area":area},
 			success:function(msg){
-				alert(msg);
-				history.go(-1);  //返回上一页
+				if(msg==1){
+					layer.alert('修改成功',9,'提示信息',function(){window.location.href='__URL__/index'});
+				}else if(msg==0){
+					layer.alert('修改失败',8,'提示信息');
+				}
+				// alert(msg);
+				// history.go(-1);  //返回上一页
 			}
 		});
 	});

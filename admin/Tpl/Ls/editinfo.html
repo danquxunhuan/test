@@ -216,8 +216,11 @@ $(function(){
 			dataType:'JSON',
 			data:{"uname":uname,"status":status,"password":password,"jlpwd":jlpwd,"phone":phone,"classid":classid,"obj_id":obj_id,"province":province,"city":city,"area":area,"rankid":rankid,"edu_id":edu_id,"coin":coin,"image":image,"remarks":remarks,"uid":uid},
 			success:function(msg){
-				alert(msg);
-				history.go(-1);  //返回上一页
+				if(msg==1){
+                    layer.alert('操作成功',9,'提示信息',function(){window.location.href='__URL__/index';});
+                }else if(msg==0){
+                    layer.alert('操作成功',9,'提示信息');
+                }
 			}
 		});
 	});

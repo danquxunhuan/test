@@ -36,7 +36,7 @@ $(function(){
        <div class="tab1"> <div class="current"><a href="__URL__/index">地区列表</a>---<a href="__URL__/add">添加地区</a></div></div>
 		  
 		  <div class="right_list">
-<form action="__URL__/edit" method="POST">
+<!-- <form action="__URL__/edit" method="POST"> -->
 <table>
 <tr height="40"><td>父级地区：</td><td><select name="pid" class="inpu2">
 <volist name="alist" id="vo">
@@ -45,13 +45,31 @@ $(function(){
 </select></td></tr>
 
 <tr height="40"><td>地区名称：</td><td><input type="text" name="name" class="inpu2" value="{ms:$info.name}" /></td></tr>
-<tr height="40"><td><input type="submit" value="修 改" class="btn submit" /></td></tr>
+<tr height="40"><td><input type="submit" value="修 改" class="btn submit" id='btn' /></td></tr>
 <input type="hidden" value="{ms:$info.id}" name="id" />
 </table>
-</form>
+<!-- </form> -->
 		   </div>
    </div>
-   
+<script type="text/javascript">
+  $(function(){
+    $("#btn").click(function(){
+      var pid=$("select[name='pid']").val();
+      var id=$("input[name='id']").val();
+      var name=$("input[name='name']").val();
+      $.ajax({
+          url:'',
+          cache:false,
+          dataType:'json',
+          type:'POST',
+          data:{"pid":pid,"id":id,"name":name},
+          success:function(msg){
+            layer.alert(msg,9,'提示信息',function(){window.location.href='__URL__/index';});
+          }
+      });
+    });
+  });
+</script>
    <div class="footer"></div>
 </div>	   
 </body>

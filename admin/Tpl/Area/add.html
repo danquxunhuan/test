@@ -36,7 +36,7 @@ $(function(){
        <div class="tab1"> <div class="current"><a href="__URL__/index">地区列表</a>---<a href="__URL__/add">添加地区</a></div></div>
 		  
 		  <div class="right_list">
-<form action="__URL__/add" method="POST">
+<!-- <form action="__URL__/add" method="POST"> -->
 <table>
 <tr height="40"><td>请选择父级地区：</td><td><select name="pid" class="inpu2">
 <option value="0">根地区</option>
@@ -46,9 +46,32 @@ $(function(){
 </select></td></tr>
 
 <tr height="40"><td>新的地区名称：</td><td><input type="text" name="name" class="inpu2" /></td></tr>
-<tr height="40"><td><input type="submit" value="添加地区" class="btn submit" /></td></tr>
+<tr height="40"><td><input type="submit" value="添加地区" class="btn submit" id='btn'/></td></tr>
 </table>
-</form>
+<!-- </form> -->
+<script type="text/javascript">
+  $(function(){
+      $("#btn").click(function(){
+        var pid=$("select[name='pid']").val();
+        var name=$("input[name='name']").val();
+        $.ajax({
+           url:'',
+           dataType:'json',
+           data:{"pid":pid,"name":name},
+           cache:false,
+           type:'POST',
+           success:function(msg){
+              if(msg==1){
+                layer.alert('添加成功',9,'提示信息',function(){window.location.href='__URL__/index'});
+              }else if(msg==0){
+                layer.alert('添加失败',8);
+              }
+           }
+        });
+     });
+  });
+
+</script>
 		   </div>
    </div>
    

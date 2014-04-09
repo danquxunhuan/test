@@ -26,11 +26,13 @@ th{ text-align:right;}
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/calendar/calendar-blue.css"/>
 <link rel="stylesheet" href="__PUBLIC__/css/admin.css"/>
 <script src="__PUBLIC__/js/jquery-1.9.0.min.js"></script>
-<script src="__PUBLIC__/js/jquery.lazyload.js"></script>
+<!--script src="__PUBLIC__/js/jquery.lazyload.js"></script-->
 <script src="__PUBLIC__/js/functions.js"></script>
 <script src="__PUBLIC__/js/jquery.form.js"></script>
-<script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script>
+<!-- <script src="__PUBLIC__/js/asyncbox/asyncbox.js"></script> -->
 <script src="__PUBLIC__/js/calendar/calendar.js"></script>
+<script src="__PUBLIC__/js/jquery-1.7.2.min.js"></script>
+<script src="__PUBLIC__/js/layer/layer.min.js"></script>
 
 <!--***************************top******************************-->
 	<div class="top">
@@ -56,7 +58,7 @@ th{ text-align:right;}
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Jz" >家长列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Ls" >老师列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access" >管理员列表</a></li>
-        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodeList" >节点管理</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/nodelist" >节点管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Access/roleList" >角色管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Tags" >标签管理</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Active" >活动列表</a></li>
@@ -66,6 +68,7 @@ th{ text-align:right;}
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Yueke" >约课列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Fangan" >设计方案列表</a></li>
         <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Lesson" >课程列表</a></li>
+        <li>&nbsp;&nbsp;&nbsp;<a href="__APP__/Institution" >教育机构</a></li>
      </ul>
 </div>
                 <div id="Right"  class="right">
@@ -73,7 +76,7 @@ th{ text-align:right;}
                     <div class="Item hr">
                         <div class="current">添加/编辑管理员</div>
                     </div>
-                    <form action="" method="post">
+                 <!--    <form action="" method="post"> -->
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table1">
                             <tr>
                                 <th width="120">登录账号：</th>
@@ -120,7 +123,7 @@ th{ text-align:right;}
                             </tr>
                         </table>
                         <input type="hidden" name="aid" value="<?php echo ($info["aid"]); ?>"/>
-                    </form>
+                    <!-- </form> -->
                 </div>
             </div>
         </div>
@@ -128,15 +131,45 @@ th{ text-align:right;}
 
 <script type="text/javascript">
     $(".submit").click(function(){
-            <?php if(ACTION_NAME != 'editAdmin'): ?>if($.trim($("input[name='username']").val())==''){
-				popup.alert("用户名不能为空");
-				return false;
-			}
-			if($.trim($("input[name='password']").val())==''){
-				popup.alert("密码不能为空");
-				return false;
-			}<?php endif; ?>
-            commonAjaxSubmit();
+        var aid=$("input[name='aid']").val();
+        var username=$("input[name='username']").val();
+        var realname=$("input[name='realname']").val();
+        var email=$("input[name='email']").val();
+        var password=$("input[name='password']").val();
+        var status=$("select[name='status']").val();
+        var role_id=$("select[name='role_id']").val();
+        var remark=$("textarea[name='remark']").val();
+
+     if(username=='' || password==''){
+        layer.alert("用户名或密码不能为空！",8,'提示信息');
+     }else{ 
+        $.ajax({
+            url:'__URL__/modify_admin',
+            dataType:'json',
+            cache:false,
+            type:'post',
+            data:{"username":username,"realname":realname,"email":email,"password":password,"status":status,"role_id":role_id,"remark":remark,"aid":aid},
+            success:function(msg){
+                if(msg==1){
+                    layer.alert("操作成功",9,'提示信息',function(){window.location.href='__URL__/index'});
+                }else if(msg==0){
+                     layer.alert("操作失败",8,'提示信息');
+                }
+            }
+        });
+
+     }
+    
+   //          <?php if(ACTION_NAME != 'editAdmin'): ?>//          if($.trim($("input[name='username']").val())==''){
+			// 	layer.alert("用户名不能为空",8,'提示信息');
+			// 	return false;
+			// }
+			// if($.trim($("input[name='password']").val())==''){
+			// 	layer.alert("密码不能为空",8,'提示信息');
+			// 	return false;
+			// }
+   //<?php endif; ?>
+   //          commonAjaxSubmit();
     });
 </script>
 </body>

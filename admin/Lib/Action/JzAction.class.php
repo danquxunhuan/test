@@ -86,9 +86,9 @@ public function addMem(){
 	$data['regdate'] = time();
 	$info = $obj -> add($data);
 	if($info){
-		$msg = '添加家长成功';
+		$msg = 1;
 	}else{
-		$msg = '添加家长失败';
+		$msg = 0;
 	}
    echo json_encode($msg);	
 }	
@@ -153,9 +153,9 @@ public function editMem() {
    $data['uid'] = $uid;
    $info = $obj -> save($data);
    if($info){
-		$msg = '修改家长信息成功';
+		$msg = 1;
    }else{
-		$msg = '修改家长信息失败';
+		$msg = 0;
    }
 
    echo json_encode($msg);

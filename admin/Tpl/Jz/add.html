@@ -108,8 +108,13 @@ $(function(){
 			dataType:'JSON',
 			data:{"uname":uname,"password":password,"phone":phone,"classid":classid,"rankid":rankid,"coin":coin,"province":province,"city":city,"area":area},
 			success:function(msg){
-				alert(msg);
-				history.go(-1);  //返回上一页
+				if(msg==1){
+					layer.alert('亲！添加成功',9,'提示信息',function(){window.location.href='__URL__/index';});
+				}else if(msg==0){
+					layer.alert('亲！添加失败',8,'提示信息');
+				}
+				// alert(msg);
+				// history.go(-1);  //返回上一页
 			}
 		});
 	});

@@ -51,26 +51,24 @@ public function index(){
         }
 		
 /*
-* 编辑约课信息（wyj）
+* 编辑约课信息（wyj）  
 */
 public function edit(){
-	$this->checkToken();//检查是否登录
+	//$this->checkToken();//检查是否登录
 	if (IS_POST)  {
 		$M = D("Yueke");
 		$id = trim($_POST['id']);
-		//echo '<pre>';
-		//var_dump($_POST);
-		//die();
-		//TP只能插入一位数组，整理一下从表单获取的数据吧
 		$data['id']=$_POST['id'];
 		$data['msg']=$_POST['msg'];
 		$data['status']=$_POST['status'];
 		$data['tjid']=implode(',',$_POST['tjid']) ;
 		
 		if ($M->save($data)) {
-			$this->success('编辑成功',U('Yueke/index'));
+			echo json_encode(1);
+			// $this->success('编辑成功',U('Yueke/index'));
 		} else {
-			$this->success('编辑失败');
+			echo json_encode(0);
+			// $this->success('编辑失败');
 		}
 	} else {
 		$M = M("Yueke");
@@ -128,6 +126,7 @@ public function edit(){
 		$this->display("add");
 	}
 }
+
     
 	
 	public function del(){	
